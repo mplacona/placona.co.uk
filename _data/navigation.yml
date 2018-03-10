@@ -1,0 +1,13 @@
+# Site navigation links
+
+- title: Home
+  url: /
+
+- title: About
+  url: /about/
+
+- title: Speaker Timeline
+  url: /speaker-timeline/
+
+- title: Search
+  url: /search/

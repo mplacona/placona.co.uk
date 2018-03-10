@@ -1,0 +1,78 @@
+# Site settings
+title:                    Marcos Placona's Blog
+locale:                   en_GB
+email:                    marcos@placona.co.uk
+description:              Programming, technology and musings.    
+logo:                     /images/placona-logo.png
+search_full_content:      true
+baseurl:                  "" # the subpath of your site, e.g. /blog
+url:                      "http://placona.co.uk" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username:         marcos_placona
+github_username:          mplacona
+future:                   true
+port:                     4002
+read_time:                true
+words_per_minute:         130
+
+# Pagination - https://jekyllrb.com/docs/pagination/
+paginate: 10
+paginate_path: page:num
+
+# Search
+search_full_content: false
+
+# Front Matter Defaults
+defaults:
+  # Posts defaults
+  - scope:
+      path: "_posts"
+      type: posts
+    values:
+      layout: post
+      share: true
+
+# Build settings
+markdown:                 kramdown
+permalink:                /:title/
+theme:                    jekyll-theme-so-simple
+feed:
+  path:                   atom.xml
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-assets
+  - jekyll-gist
+  - jekyll-paginate
+
+# Exclude from processing.
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", ".less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md", "vendor"]
+
+# Site Author
+author:
+  name: Marcos Placona
+  picture: /images/marcos_bw_200_optim.jpg
+  email: marcos@placona.co.uk
+  disqus-shortname: placona
+  twitter: marcos_placona
+copyright: "© 2018 Marcos Placona's Blog. Made with ❤️ by me"
+
+# Footer Links
+footer_links:
+  - title: Twitter
+    url: https://twitter.com/marcos_placona
+    icon: fab fa-twitter-square
+  - title: GitHub
+    url: https://github.com/mplacona
+    icon: fab fa-github-square
+  - title: Feed
+    url: atom.xml
+    icon: fas fa-rss-square
+
+# Comments
+disqus:
+  shortname: placona
+
+# Analytics
+google_analytics: UA-1027425-2
