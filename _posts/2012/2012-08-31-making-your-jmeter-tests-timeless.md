@@ -28,7 +28,7 @@ I could also put a date very far in the future, but my business rules again dict
 
 With JMeter, you can create "**user defined variables**" (add -> config element -> user defined variables) and assign values to it. Those variables can be created with JavaScript, so you could potentially create a variable in there, that would always default to today's date plus a given number of days (in this example anything that didn't exceed 60 days)
 
-[<img class="aligncenter size-full wp-image-1131" title="JMeter - User Defined Variables" alt="JMeter - User Defined Variables" src="http://www.placona.co.uk/wp-content/uploads/2012/08/30-08-2012-09-45-581.png" width="765" height="156" srcset="https://www.placona.co.uk/wp-content/uploads/2012/08/30-08-2012-09-45-581.png 765w, https://www.placona.co.uk/wp-content/uploads/2012/08/30-08-2012-09-45-581-300x61.png 300w" sizes="(max-width: 765px) 100vw, 765px" />](http://www.placona.co.uk/wp-content/uploads/2012/08/30-08-2012-09-45-581.png)
+[<img class="aligncenter size-full wp-image-1131" title="JMeter - User Defined Variables" alt="JMeter - User Defined Variables" src="/images/2012/08/30-08-2012-09-45-581.png" width="765" height="156" srcset="/images/2012/08/30-08-2012-09-45-581.png 765w, /images/2012/08/30-08-2012-09-45-581-300x61.png 300w" sizes="(max-width: 765px) 100vw, 765px" />](/images/2012/08/30-08-2012-09-45-581.png)
 
 The code for your user defined variable would look like this:
 

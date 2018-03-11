@@ -13,9 +13,8 @@ layout: post
 excerpt: "This post will take you through the steps of using environment variables from within you Visual Studio Code or Visual Studio for Mac"
 comments: true
 share: true
+image: images/2016/11/vs-mac-slide.png
 ---
-<img class="aligncenter size-full wp-image-1594" src="https://www.placona.co.uk/wp-content/uploads/2016/11/vs-mac-slide.png" alt="vs-mac-slide" width="620" height="347" srcset="https://www.placona.co.uk/wp-content/uploads/2016/11/vs-mac-slide.png 620w, https://www.placona.co.uk/wp-content/uploads/2016/11/vs-mac-slide-300x168.png 300w" sizes="(max-width: 620px) 100vw, 620px" />
-
 I use [environment variables](https://en.wikipedia.org/wiki/Environment_variable) in all my apps to make sure none of my secret keys end up in GitHub. In C#, if you want to get environment variables in your app you just need to use the [Environment class](https://msdn.microsoft.com/en-us/library/system.environment(v=vs.110).aspx) and call the method `GetEnvironmentVariable()` passing the name of the variable you've already defined.
 
 ```csharp

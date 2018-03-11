@@ -24,7 +24,7 @@ But let's look at a more real-life example.
 
 I would like to have a reactive login form that updates itself according to the values entered. Such that:
 
-<img class="wp-image-1581 alignright" style="padding-right: 10px;" src="https://www.placona.co.uk/wp-content/uploads/2016/11/AndroidRx-1.gif" alt="androidrx" width="146" height="299" />
+<img class="wp-image-1581 alignright" style="padding-right: 10px;" src="/images/2016/11/AndroidRx-1.gif" alt="androidrx" width="146" height="299" />
 
   * It only shows a login button once the username and password have been validated
   * It lets me know that values I entered for each field are correct so I can start working on the next field.
@@ -133,7 +133,7 @@ protected void onCreate(Bundle savedInstanceState) {
         ButterKnife.bind(this);
 ```
 
-<img class="size-full wp-image-1585 alignleft" src="https://www.placona.co.uk/wp-content/uploads/2016/11/rxAndroid1.1.png" alt="rxandroid1-1" width="139" height="280" />Give that a spin and you should see our form, and really nothing else.
+<img class="size-full wp-image-1585 alignleft" src="/images/2016/11/rxAndroid1.1.png" alt="rxandroid1-1" width="139" height="280" />Give that a spin and you should see our form, and really nothing else.
 
 But now we know our form is working and all the fields are displaying and bound correctly. You will notice that if you try to do anything with this form though, no validation kicks in.
 

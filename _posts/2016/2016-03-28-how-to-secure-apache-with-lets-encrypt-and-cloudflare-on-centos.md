@@ -79,7 +79,7 @@ We've used the following flags for this setup.
 After you run that you should get a message saying your certificate chain has been saved.
 
 <div id="attachment_1537" style="width: 697px" class="wp-caption aligncenter">
-  <img class="wp-image-1537 size-full" src="https://www.placona.co.uk/wp-content/uploads/2016/03/letsencrypt.png" alt="letsencrypt" width="687" height="354" srcset="https://www.placona.co.uk/wp-content/uploads/2016/03/letsencrypt.png 687w, https://www.placona.co.uk/wp-content/uploads/2016/03/letsencrypt-300x155.png 300w, https://www.placona.co.uk/wp-content/uploads/2016/03/letsencrypt-676x348.png 676w" sizes="(max-width: 687px) 100vw, 687px" />
+  <img class="wp-image-1537 size-full" src="/images/2016/03/letsencrypt.png" alt="letsencrypt" width="687" height="354" srcset="/images/2016/03/letsencrypt.png 687w, images/2016/03/letsencrypt-300x155.png 300w, images/2016/03/letsencrypt-676x348.png 676w" sizes="(max-width: 687px) 100vw, 687px" />
   
   <p class="wp-caption-text">
     Apparently I also need to read about upgrading Python on Centos without breaking everything
@@ -96,23 +96,23 @@ sudo ./letsencrypt-auto --apache -d placona.co.uk -d www.placona.co.uk
 
 And you should get a screen that looks like this:
 
-<img class="aligncenter size-full wp-image-1538" src="https://www.placona.co.uk/wp-content/uploads/2016/03/letsencrypt2.png" alt="letsencrypt2" width="574" height="293" srcset="https://www.placona.co.uk/wp-content/uploads/2016/03/letsencrypt2.png 574w, https://www.placona.co.uk/wp-content/uploads/2016/03/letsencrypt2-300x153.png 300w" sizes="(max-width: 574px) 100vw, 574px" />
+<img class="aligncenter size-full wp-image-1538" src="/images/2016/03/letsencrypt2.png" alt="letsencrypt2" width="574" height="293" srcset="/images/2016/03/letsencrypt2.png 574w, images/2016/03/letsencrypt2-300x153.png 300w" sizes="(max-width: 574px) 100vw, 574px" />
 
 Apache still doesn't know about this new certificate but we're about to change that by selecting option 1 and on the subsequent screen choosing whether we want to make HTTP required or optional. I chose _Secure_ here as I want all of my requests to be redirected to HTTPS.
 
 You should then end up with a confirmation screen that tells you to check that your certificates are correctly installed. This procedure will have modified your httpd.conf file to add redirects so all requests that are non HTTPS are now redirected to be HTTPS.
 
-<img class="aligncenter size-full wp-image-1539" src="https://www.placona.co.uk/wp-content/uploads/2016/03/letsencrypt3.png" alt="letsencrypt3" width="665" height="269" srcset="https://www.placona.co.uk/wp-content/uploads/2016/03/letsencrypt3.png 665w, https://www.placona.co.uk/wp-content/uploads/2016/03/letsencrypt3-300x121.png 300w" sizes="(max-width: 665px) 100vw, 665px" />
+<img class="aligncenter size-full wp-image-1539" src="/images/2016/03/letsencrypt3.png" alt="letsencrypt3" width="665" height="269" srcset="/images/2016/03/letsencrypt3.png 665w, images/2016/03/letsencrypt3-300x121.png 300w" sizes="(max-width: 665px) 100vw, 665px" />
 
 Go ahead and hit those URL's and you should see that they both get a grade A pass.
 
-<img class="aligncenter size-full wp-image-1540" src="https://www.placona.co.uk/wp-content/uploads/2016/03/letsencrypt4.png" alt="letsencrypt4" width="1097" height="514" srcset="https://www.placona.co.uk/wp-content/uploads/2016/03/letsencrypt4.png 1097w, https://www.placona.co.uk/wp-content/uploads/2016/03/letsencrypt4-300x141.png 300w, https://www.placona.co.uk/wp-content/uploads/2016/03/letsencrypt4-768x360.png 768w, https://www.placona.co.uk/wp-content/uploads/2016/03/letsencrypt4-1024x480.png 1024w, https://www.placona.co.uk/wp-content/uploads/2016/03/letsencrypt4-676x317.png 676w" sizes="(max-width: 1097px) 100vw, 1097px" />
+<img class="aligncenter size-full wp-image-1540" src="/images/2016/03/letsencrypt4.png" alt="letsencrypt4" width="1097" height="514" srcset="/images/2016/03/letsencrypt4.png 1097w, images/2016/03/letsencrypt4-300x141.png 300w, images/2016/03/letsencrypt4-768x360.png 768w, images/2016/03/letsencrypt4-1024x480.png 1024w, images/2016/03/letsencrypt4-676x317.png 676w" sizes="(max-width: 1097px) 100vw, 1097px" />
 
 ### Updating Cloudflare
 
 We need to tell CloudFlare that we now have an SSL certificate and want the communication to our website to use it. On CloudFlare's dashboard for your chosen website choose _Crypto_ and under _SSL_ choose _Full (Strict)_. You will probably want to use _Flexible_ here if during the previous step you chose HTTPS to be optional.
 
-<img class="aligncenter size-full wp-image-1541" src="https://www.placona.co.uk/wp-content/uploads/2016/03/letsencrypt5.png" alt="letsencrypt5" width="973" height="495" srcset="https://www.placona.co.uk/wp-content/uploads/2016/03/letsencrypt5.png 973w, https://www.placona.co.uk/wp-content/uploads/2016/03/letsencrypt5-300x153.png 300w, https://www.placona.co.uk/wp-content/uploads/2016/03/letsencrypt5-768x391.png 768w, https://www.placona.co.uk/wp-content/uploads/2016/03/letsencrypt5-676x344.png 676w" sizes="(max-width: 973px) 100vw, 973px" />
+<img class="aligncenter size-full wp-image-1541" src="/images/2016/03/letsencrypt5.png" alt="letsencrypt5" width="973" height="495" srcset="/images/2016/03/letsencrypt5.png 973w, images/2016/03/letsencrypt5-300x153.png 300w, images/2016/03/letsencrypt5-768x391.png 768w, images/2016/03/letsencrypt5-676x344.png 676w" sizes="(max-width: 973px) 100vw, 973px" />
 
 At this point you should be done and your website should be showing a nice green padlock on the URL bar.
 
@@ -120,6 +120,6 @@ At this point you should be done and your website should be showing a nice green
 
 You're using WordPress. In this case you will also want to update it so the URL is always HTTPS. You can do that by going into WordPress Admin, and then navigating to Settings > General.
 
-<img class="aligncenter size-full wp-image-1542" src="https://www.placona.co.uk/wp-content/uploads/2016/03/letsencrypt6.png" alt="letsencrypt6" width="957" height="327" srcset="https://www.placona.co.uk/wp-content/uploads/2016/03/letsencrypt6.png 957w, https://www.placona.co.uk/wp-content/uploads/2016/03/letsencrypt6-300x103.png 300w, https://www.placona.co.uk/wp-content/uploads/2016/03/letsencrypt6-768x262.png 768w, https://www.placona.co.uk/wp-content/uploads/2016/03/letsencrypt6-676x231.png 676w" sizes="(max-width: 957px) 100vw, 957px" />
+<img class="aligncenter size-full wp-image-1542" src="/images/2016/03/letsencrypt6.png" alt="letsencrypt6" width="957" height="327" srcset="/images/2016/03/letsencrypt6.png 957w, images/2016/03/letsencrypt6-300x103.png 300w, images/2016/03/letsencrypt6-768x262.png 768w, images/2016/03/letsencrypt6-676x231.png 676w" sizes="(max-width: 957px) 100vw, 957px" />
 
 And that will make sure every image and every URL on your WordPress site is served via HTTPS.

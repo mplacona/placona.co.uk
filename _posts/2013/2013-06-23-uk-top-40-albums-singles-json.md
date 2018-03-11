@@ -11,7 +11,7 @@ tags:
   - General Techie Stuff
 
 ---
-[<img class="aligncenter size-full wp-image-1286" alt="top-40-albuns-singles" src="http://www.placona.co.uk/wp-content/uploads/2013/06/top-40-albuns-singles.png" width="560" height="350" srcset="https://www.placona.co.uk/wp-content/uploads/2013/06/top-40-albuns-singles.png 560w, https://www.placona.co.uk/wp-content/uploads/2013/06/top-40-albuns-singles-300x187.png 300w" sizes="(max-width: 560px) 100vw, 560px" />](http://www.placona.co.uk/wp-content/uploads/2013/06/top-40-albuns-singles.png)
+[<img class="aligncenter size-full wp-image-1286" alt="top-40-albuns-singles" src="/images/2013/06/top-40-albuns-singles.png" width="560" height="350" srcset="/images/2013/06/top-40-albuns-singles.png 560w, /images/2013/06/top-40-albuns-singles-300x187.png 300w" sizes="(max-width: 560px) 100vw, 560px" />](/images/2013/06/top-40-albuns-singles.png)
 
 So I had this idea for a little application and wanted to get the UK's Top40 singles to use in it. I started by writing something that would scrape <a title="Radio 1's Top 40 chart" href="http://www.bbc.co.uk/radio1/chart/singles" target="_blank">Radio 1's Top 40</a> chart and return me a list of songs since I couldn't find any feeds that would give me that.
 

@@ -9,7 +9,7 @@ tags:
   - Open Source
 excerpt: "In this post I will show you how to retrieve GitHub gists with Dart Language"
 ---
-<img class="alignnone size-full wp-image-1434" src="http://www.placona.co.uk/wp-content/uploads/2014/04/dart_gists.gif" alt="Dart Gists" width="542" height="495" />
+<img class="alignnone size-full wp-image-1434" src="/images/2014/04/dart_gists.gif" alt="Dart Gists" width="542" height="495" />
 
 I just thought I'd write this simple example that shows how to retrieve your GitHub's <abbr title='code snippets' rel='tooltip'>gists</abbr> with Dart language. The focus on this is to show how to handle [Futures](https://www.dartlang.org/docs/tutorials/futures/ "Dart - What is a Future") and make HTTP requests in Dart.
 

@@ -9,9 +9,9 @@ categories:
   - dotnet
 tags:
   - Technology
+image: 
+  path: /images/2014/03/teamcity-logo.png
 ---
-<img class="size-full wp-image-1337 alignnone" alt="TeamCity Logo" src="http://www.placona.co.uk/wp-content/uploads/2014/03/teamcity-logo.png" width="512" height="112" srcset="https://www.placona.co.uk/wp-content/uploads/2014/03/teamcity-logo.png 512w, https://www.placona.co.uk/wp-content/uploads/2014/03/teamcity-logo-300x65.png 300w" sizes="(max-width: 512px) 100vw, 512px" />
-
 At work, I'm gradually moving our <abbr title='Continuous Integration' rel='tooltip'>CI</abbr> server from Hudson to TeamCity.
 
 Nothing against Hudson really, but I feel that TeamCity is a much more robust CI Server when it comes to integrating with .Net. It allows you to publish artifacts from your builds, and has a killer integration between developers IDE's and itself, which is amazingly helpful to help developrs make sure they're not going to break the build... well before they break it.
@@ -34,19 +34,19 @@ Get the latest version of the MS Windows Installer at http://your\_local\_teamci
 
 Run agentInstaller.exe and when the Choose Components screen is displayed, deselect "Windows Service" - I'll explain this later
 
-<img class="size-full wp-image-1329 alignnone" alt="TeamCity install screen 1" src="http://www.placona.co.uk/wp-content/uploads/2014/03/img_1.png" width="498" height="380" srcset="https://www.placona.co.uk/wp-content/uploads/2014/03/img_1.png 498w, https://www.placona.co.uk/wp-content/uploads/2014/03/img_1-300x228.png 300w" sizes="(max-width: 498px) 100vw, 498px" />
+<img class="size-full wp-image-1329 alignnone" alt="TeamCity install screen 1" src="/images/2014/03/img_1.png" width="498" height="380" />
 
 Choose a location where you would like to install
 
 > Team City as of the current version is not particularly smart about suggesting a location, and will always suggest the location of an existing Agent, which will then overwrite your agent and mess things up. So make sure you chose one that doesn't already exist
 
-<img class="size-full wp-image-1330 alignnone" alt="TeamCity install screen 2" src="http://www.placona.co.uk/wp-content/uploads/2014/03/img_2.png" width="500" height="383" srcset="https://www.placona.co.uk/wp-content/uploads/2014/03/img_2.png 500w, https://www.placona.co.uk/wp-content/uploads/2014/03/img_2-300x229.png 300w" sizes="(max-width: 500px) 100vw, 500px" />
+<img class="size-full wp-image-1330 alignnone" alt="TeamCity install screen 2" src="/images/2014/03/img_2.png" width="500" height="383" srcset="/images/2014/03/img_2.png 500w, /images/2014/03/img_2-300x229.png 300w" sizes="(max-width: 500px) 100vw, 500px" />
 
 ### Configure
 
 The following screen will then be shown once the installation is completed
 
-<img class="size-full wp-image-1331 alignnone" alt="TeamCity installation screen 3" src="http://www.placona.co.uk/wp-content/uploads/2014/03/img_3.png" width="696" height="515" srcset="https://www.placona.co.uk/wp-content/uploads/2014/03/img_3.png 696w, https://www.placona.co.uk/wp-content/uploads/2014/03/img_3-300x221.png 300w, https://www.placona.co.uk/wp-content/uploads/2014/03/img_3-676x500.png 676w" sizes="(max-width: 696px) 100vw, 696px" />
+<img class="size-full wp-image-1331 alignnone" alt="TeamCity installation screen 3" src="/images/2014/03/img_3.png" width="696" height="515" srcset="/images/2014/03/img_3.png 696w, /images/2014/03/img_3-300x221.png 300w, /images/2014/03/img_3-676x500.png 676w" sizes="(max-width: 696px) 100vw, 696px" />
 
 Configure it as follows:
 
@@ -65,7 +65,7 @@ Edit the file wrapper.conf that has been created on the folder where you have in
 
 In that file, scroll all the way down and find:
 
-<img class="size-full wp-image-1332 alignnone" alt="TeamCity wrapper.conf 1" src="http://www.placona.co.uk/wp-content/uploads/2014/03/img_4.png" width="840" height="381" srcset="https://www.placona.co.uk/wp-content/uploads/2014/03/img_4.png 840w, https://www.placona.co.uk/wp-content/uploads/2014/03/img_4-300x136.png 300w, https://www.placona.co.uk/wp-content/uploads/2014/03/img_4-676x306.png 676w" sizes="(max-width: 840px) 100vw, 840px" />
+<img class="size-full wp-image-1332 alignnone" alt="TeamCity wrapper.conf 1" src="/images/2014/03/img_4.png" width="840" height="381" srcset="/images/2014/03/img_4.png 840w, /images/2014/03/img_4-300x136.png 300w, /images/2014/03/img_4-676x306.png 676w" sizes="(max-width: 840px) 100vw, 840px" />
 
 These will need to be updated so when you install this as a service, so you aren't overwriting an existing service you may already have.
 
@@ -77,10 +77,10 @@ For consistency we have named it after our initial configuration by appending th
 
 From command prompt, go to the bin folder in your agent (D:\apps\teamcity\buildAgent5\bin in our case) and run the following:
 
-<img class="size-full wp-image-1334 alignnone" alt="TeamCity install build agent terminal" src="http://www.placona.co.uk/wp-content/uploads/2014/03/img_6.png" width="661" height="153" srcset="https://www.placona.co.uk/wp-content/uploads/2014/03/img_6.png 661w, https://www.placona.co.uk/wp-content/uploads/2014/03/img_6-300x69.png 300w" sizes="(max-width: 661px) 100vw, 661px" />
+<img class="size-full wp-image-1334 alignnone" alt="TeamCity install build agent terminal" src="/images/2014/03/img_6.png" width="661" height="153" srcset="/images/2014/03/img_6.png 661w, /images/2014/03/img_6-300x69.png 300w" sizes="(max-width: 661px) 100vw, 661px" />
 
 Verify that your service has been installed:
 
-<img class="size-full wp-image-1335 alignnone" alt="TeamCity - List of services" src="http://www.placona.co.uk/wp-content/uploads/2014/03/img_7.png" width="611" height="88" srcset="https://www.placona.co.uk/wp-content/uploads/2014/03/img_7.png 611w, https://www.placona.co.uk/wp-content/uploads/2014/03/img_7-300x43.png 300w" sizes="(max-width: 611px) 100vw, 611px" />
+<img class="size-full wp-image-1335 alignnone" alt="TeamCity - List of services" src="/images/2014/03/img_7.png" width="611" height="88" srcset="/images/2014/03/img_7.png 611w, /images/2014/03/img_7-300x43.png 300w" sizes="(max-width: 611px) 100vw, 611px" />
 
 Start it, and it should now appear as an active Build Agent in TeamCity agents

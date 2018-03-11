@@ -11,7 +11,7 @@ tags:
   - JQuery
   - Reviews
 ---
-<img class=" wp-image-1259   alignleft" style="padding-right: 15px;" alt="" src="http://www.placona.co.uk/wp-content/uploads/2013/05/unclesam2.jpg" width="185" height="281" srcset="https://www.placona.co.uk/wp-content/uploads/2013/05/unclesam2.jpg 264w, https://www.placona.co.uk/wp-content/uploads/2013/05/unclesam2-197x300.jpg 197w" sizes="(max-width: 185px) 100vw, 185px" />
+<img class=" wp-image-1259   alignleft" style="padding-right: 15px;" alt="" src="/images/2013/05/unclesam2.jpg" width="185" height="281" srcset="/images/2013/05/unclesam2.jpg 264w, /images/2013/05/unclesam2-197x300.jpg 197w" sizes="(max-width: 185px) 100vw, 185px" />
 
 No catches here, all you need to do to get a free e-copy of my new book
 

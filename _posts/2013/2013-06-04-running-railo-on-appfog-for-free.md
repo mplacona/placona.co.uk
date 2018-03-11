@@ -17,13 +17,13 @@ However, I do sometimes want to post working examples written in CFML, and I cou
 
 So for a blog post I've been working on, I decided I'd give cloud hosting a go. I've been playing with <a title="AppFog" href="https://www.appfog.com/" target="_blank">AppFog</a> for a few weeks now, and noticed it's got a Java Application option listed on the application types it supports. I then went ahead and created one of them called `railo.`
 
-<img class="size-full wp-image-1275 alignnone" alt="AppFog Java App" src="http://www.placona.co.uk/wp-content/uploads/2013/06/Screen-Shot-2013-06-04-at-21.31.032.png" width="560" height="285" srcset="https://www.placona.co.uk/wp-content/uploads/2013/06/Screen-Shot-2013-06-04-at-21.31.032.png 560w, https://www.placona.co.uk/wp-content/uploads/2013/06/Screen-Shot-2013-06-04-at-21.31.032-300x152.png 300w" sizes="(max-width: 560px) 100vw, 560px" />
+<img class="size-full wp-image-1275 alignnone" alt="AppFog Java App" src="/images/2013/06/Screen-Shot-2013-06-04-at-21.31.032.png" width="560" height="285" srcset="/images/2013/06/Screen-Shot-2013-06-04-at-21.31.032.png 560w, /images/2013/06/Screen-Shot-2013-06-04-at-21.31.032-300x152.png 300w" sizes="(max-width: 560px) 100vw, 560px" />
 
 This now gave me an empty Java Application.
 
 Knowing the folks at Railo provide a download in [war](http://en.wikipedia.org/wiki/WAR_(Sun_file_format) "Java War") format, I went ahead and downloaded it
 
-<img class="alignnone size-full wp-image-1276" alt="Railo .war download" src="http://www.placona.co.uk/wp-content/uploads/2013/06/Screen-Shot-2013-06-04-at-21.37.44.png" width="560" height="472" srcset="https://www.placona.co.uk/wp-content/uploads/2013/06/Screen-Shot-2013-06-04-at-21.37.44.png 560w, https://www.placona.co.uk/wp-content/uploads/2013/06/Screen-Shot-2013-06-04-at-21.37.44-300x252.png 300w" sizes="(max-width: 560px) 100vw, 560px" />
+<img class="alignnone size-full wp-image-1276" alt="Railo .war download" src="/images/2013/06/Screen-Shot-2013-06-04-at-21.37.44.png" width="560" height="472" srcset="/images/2013/06/Screen-Shot-2013-06-04-at-21.37.44.png 560w, /images/2013/06/Screen-Shot-2013-06-04-at-21.37.44-300x252.png 300w" sizes="(max-width: 560px) 100vw, 560px" />
 
 I've put it on $ ~/marcos/railo, but you can put it anywhere you want.
 

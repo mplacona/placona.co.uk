@@ -218,7 +218,7 @@ It really is very simple and only creates some divs (which will be manipulated),
   
 The css is then applied, so all the images load, and show the pretty stuff.
   
-I've added comments to my code, so I think it's pretty simple to follow it. I'll be using this same code for a next example which will add a little more functionality to it. In the meantime, you can check the [working example](http://examples.placona.co.uk/drag_drop "Complex Drag & Drop - example"){.broken_link} or [download the code](http://www.placona.co.uk/wp-content/uploads/2009/08/example.rar "Drag & Drop example").
+I've added comments to my code, so I think it's pretty simple to follow it. I'll be using this same code for a next example which will add a little more functionality to it. In the meantime, you can check the [working example](http://examples.placona.co.uk/drag_drop "Complex Drag & Drop - example"){.broken_link} or [download the code](/images/2009/08/example.rar "Drag & Drop example").
   
 And that's my take on it. Obviously someone might have a better way of doing it, so if you do, by all means  bring it on, and I shall update this post.
   

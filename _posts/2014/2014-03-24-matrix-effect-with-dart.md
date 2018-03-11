@@ -12,7 +12,7 @@ So what better than a couple of hours on a Sunday evening to write some code and
 
 I tried my best to be as descriptive as I could on the code. But it's so simple... some things are better left unsaid.
 
-<img class="alignnone size-full wp-image-1362" alt="Dart Matrix" src="http://www.placona.co.uk/wp-content/uploads/2014/03/dart_matrix.gif" width="542" height="337" />
+<img class="alignnone size-full wp-image-1362" alt="Dart Matrix" src="/images/2014/03/dart_matrix.gif" width="542" height="337" />
 
 The premise of the code, is the following:
 

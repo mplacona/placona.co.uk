@@ -27,7 +27,7 @@ The queues we will be seeing in this post are [FIFO](http://en.m.wikipedia.org/w
 A simple queue with multiple consumers could be represented the following way:
 
 <p style="text-align: center;">
-  <img class=" wp-image-771 aligncenter" title="Queue with two consumers" src="http://www.placona.co.uk/wp-content/uploads/2012/07/python-two-300x100.png" alt="Queue with two consumers" srcset="https://www.placona.co.uk/wp-content/uploads/2012/07/python-two-300x100.png 300w, https://www.placona.co.uk/wp-content/uploads/2012/07/python-two.png 332w" sizes="(max-width: 300px) 100vw, 300px" />
+  <img class=" wp-image-771 aligncenter" title="Queue with two consumers" src="/images/2012/07/python-two-300x100.png" alt="Queue with two consumers" srcset="/images/2012/07/python-two-300x100.png 300w, /images/2012/07/python-two.png 332w" sizes="(max-width: 300px) 100vw, 300px" />
 </p>
 
 <p style="text-align: left;">
@@ -48,7 +48,7 @@ What the last point it trying to say, is that an application doesn't necessarily
 
 
   
-[<img class="alignleft  wp-image-774" title="RabbitMQLogo" src="http://www.placona.co.uk/wp-content/uploads/2012/07/RabbitMQLogo.png" alt="" srcset="https://www.placona.co.uk/wp-content/uploads/2012/07/RabbitMQLogo.png 328w, https://www.placona.co.uk/wp-content/uploads/2012/07/RabbitMQLogo-300x79.png 300w" sizes="(max-width: 328px) 100vw, 328px" />](http://www.placona.co.uk/wp-content/uploads/2012/07/RabbitMQLogo.png)I will first start by pointing you towards where to start. I won't get into too many details about how to setup everything, since the guys over at <a title="RabbitMQ" href="http://www.rabbitmq.com/" target="_blank">RabbitMQ</a> have done a pretty good job when exemplifying every all possible installations that might suit your needs <a title="RabbitMQ download and installation" href="http://www.rabbitmq.com/download.html" target="_blank">here</a>.
+[<img class="alignleft  wp-image-774" title="RabbitMQLogo" src="/images/2012/07/RabbitMQLogo.png" alt="" srcset="/images/2012/07/RabbitMQLogo.png 328w, /images/2012/07/RabbitMQLogo-300x79.png 300w" sizes="(max-width: 328px) 100vw, 328px" />](/images/2012/07/RabbitMQLogo.png)I will first start by pointing you towards where to start. I won't get into too many details about how to setup everything, since the guys over at <a title="RabbitMQ" href="http://www.rabbitmq.com/" target="_blank">RabbitMQ</a> have done a pretty good job when exemplifying every all possible installations that might suit your needs <a title="RabbitMQ download and installation" href="http://www.rabbitmq.com/download.html" target="_blank">here</a>.
 
 RabbitMQ is the enterprise queue application we will be using for this blog post, but after analysing other products, I came to the conclusion that they all work pretty much the same way. Rabbit is only the one I chose as it ticks all the boxes for my current requirements and is also open source, which in my opinion makes all the difference when getting support and updates.
 
@@ -69,7 +69,7 @@ Notice on the code above, I am simply declaring what queue I would like to use, 
 A few things to keep in mind are:
 
   1. There can be two kinds of delivery mode. Persistent and non-persistent. Where persistent messages will be kept even if Rabbit's service is restarted. This is because when you set a message to be persistent, it is stored in disk. Non-persistent messages will be lost if the service is restarted. When benchmarking persistent against non-persistent messages (with the message of the message _{"product":"1552,1559,1683","order":8445689,"email":"john@doe.com"}_ to check what the overhead was, I observed the following: <p style="text-align: center;">
-      <img class=" wp-image-788  aligncenter" title="RabbitMQ Persistent vs Non-Persistent" src="http://www.placona.co.uk/wp-content/uploads/2012/07/rabbitMQ_analizis-300x180.png" alt="RabbitMQ Persistent vs Non-Persistent" srcset="https://www.placona.co.uk/wp-content/uploads/2012/07/rabbitMQ_analizis-300x180.png 300w, https://www.placona.co.uk/wp-content/uploads/2012/07/rabbitMQ_analizis.png 481w" sizes="(max-width: 300px) 100vw, 300px" />
+      <img class=" wp-image-788  aligncenter" title="RabbitMQ Persistent vs Non-Persistent" src="/images/2012/07/rabbitMQ_analizis-300x180.png" alt="RabbitMQ Persistent vs Non-Persistent" srcset="/images/2012/07/rabbitMQ_analizis-300x180.png 300w, /images/2012/07/rabbitMQ_analizis.png 481w" sizes="(max-width: 300px) 100vw, 300px" />
     </p>
 
   2. Messages have to be passed in to RabbitMQ as byte arrays, so you can't simply bung any old string into the queue, and expect it will work.
@@ -140,7 +140,7 @@ To extend a bit on acknowledges, I think it's worth mentioning that had you set
 Going back to my use case, remember when I said sending emails was pretty important as it provides customers with information about their purchase? Well the word **important** makes all the difference here, since we need to guarantee that customers will at least be sent an email (we will ignore undelivered emails here). SO imagine the following scenario:
 
 <p style="text-align: center;">
-  <img class=" wp-image-792 aligncenter" title="Queue Flow" src="http://www.placona.co.uk/wp-content/uploads/2012/07/queue_flow.png" alt="Queue Flow" srcset="https://www.placona.co.uk/wp-content/uploads/2012/07/queue_flow.png 400w, https://www.placona.co.uk/wp-content/uploads/2012/07/queue_flow-300x145.png 300w" sizes="(max-width: 400px) 100vw, 400px" />
+  <img class=" wp-image-792 aligncenter" title="Queue Flow" src="/images/2012/07/queue_flow.png" alt="Queue Flow" srcset="/images/2012/07/queue_flow.png 400w, /images/2012/07/queue_flow-300x145.png 300w" sizes="(max-width: 400px) 100vw, 400px" />
 </p>
 
 As you will have noticed, multiple consumers can take one item at a time from the queue. When it comes to processing it, you could for example be querying the database in order to get more details about the purchase so you can build the email. But what happens if your database returns a _connection reset _ at this exact time? Well, if you used **autoack**, your message has long gone from the queue, and your only option would be to wrap it on a try-catch block and re-queue it.
@@ -148,7 +148,7 @@ As you will have noticed, multiple consumers can take one item at a time from 
 Or, you could simply turn **autoack** off, and acknowledge the message yourself. That way, you would only "tell" the queue to let go of the item once you were happy that it can. Your flow without **autoack** would the look like this:
 
 <p style="text-align: center;">
-  <img class=" wp-image-793 aligncenter" title="Queue Flow with manual acknowledgement" src="http://www.placona.co.uk/wp-content/uploads/2012/07/queue_flow_ack.png" alt="Queue Flow with manual acknowledgement" srcset="https://www.placona.co.uk/wp-content/uploads/2012/07/queue_flow_ack.png 400w, https://www.placona.co.uk/wp-content/uploads/2012/07/queue_flow_ack-300x121.png 300w" sizes="(max-width: 400px) 100vw, 400px" />
+  <img class=" wp-image-793 aligncenter" title="Queue Flow with manual acknowledgement" src="/images/2012/07/queue_flow_ack.png" alt="Queue Flow with manual acknowledgement" srcset="/images/2012/07/queue_flow_ack.png 400w, /images/2012/07/queue_flow_ack-300x121.png 300w" sizes="(max-width: 400px) 100vw, 400px" />
 </p>
 
 And with that we have managed to add items into a queue, and read them back by making sure nothing is lost should we have an exception or a service failure.

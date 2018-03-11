@@ -16,7 +16,7 @@ As per the previous example, I will be using canvas to display my animation.
 
 The final product should look like the following:
 
-<img class="alignnone size-full wp-image-1368" alt="Dart Snow" src="http://www.placona.co.uk/wp-content/uploads/2014/03/dart_snow.gif" width="542" height="337" />
+<img class="alignnone size-full wp-image-1368" alt="Dart Snow" src="/images/2014/03/dart_snow.gif" width="542" height="337" />
 
 Although the animation will be way better than the gif image above.
 
@@ -96,7 +96,7 @@ void snowFall(){
 Notice we use <a title="W3Schools beginPath" href="http://www.w3schools.com/tags/canvas_beginpath.asp" target="_blank">beginPath</a> every time we call the `snowFall()` method. This is to make sure the path for each of our flakes get reset, and don't end up drawing its entire path ton the screen. If we hadn't used that, we would end up with something like:
 
 <div id="attachment_1369" style="width: 552px" class="wp-caption alignnone">
-  <img class="size-full wp-image-1369" alt="Dart Rain" src="http://www.placona.co.uk/wp-content/uploads/2014/03/dart_rain.gif" width="542" height="337" />
+  <img class="size-full wp-image-1369" alt="Dart Rain" src="/images/2014/03/dart_rain.gif" width="542" height="337" />
   
   <p class="wp-caption-text">
     This could be useful if you wanted rain instead of snow 🙂

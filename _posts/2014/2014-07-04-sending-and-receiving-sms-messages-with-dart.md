@@ -11,7 +11,7 @@ categories:
 tags:
   - Open Source
 ---
-<img class="aligncenter size-full wp-image-1468" src="http://www.placona.co.uk/wp-content/uploads/2014/07/dart_sms.png" alt="Dart - SMS example" width="695" height="170" srcset="https://www.placona.co.uk/wp-content/uploads/2014/07/dart_sms.png 695w, https://www.placona.co.uk/wp-content/uploads/2014/07/dart_sms-300x73.png 300w, https://www.placona.co.uk/wp-content/uploads/2014/07/dart_sms-676x165.png 676w" sizes="(max-width: 695px) 100vw, 695px" />
+<img class="aligncenter size-full wp-image-1468" src="/images/2014/07/dart_sms.png" alt="Dart - SMS example" width="695" height="170" srcset="/images/2014/07/dart_sms.png 695w, images/2014/07/dart_sms-300x73.png 300w, images/2014/07/dart_sms-676x165.png 676w" sizes="(max-width: 695px) 100vw, 695px" />
 
 I wanted to be able to send SMS messages with Dart, and because it doesn't actually support it natively (not that I would expect it to anyway), I decided to write a library that allows me to do just that.
 

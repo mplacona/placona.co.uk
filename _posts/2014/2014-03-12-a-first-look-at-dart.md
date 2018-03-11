@@ -16,7 +16,7 @@ I had a chance to look at Dart before, and was interested in finding out more th
 Dart is also very (very, very) fast, and is in fact faster than V8 (VM used by NodeJS). A performance comparison can be seen below.
 
 <div id="attachment_1342" style="width: 952px" class="wp-caption alignnone">
-  <a href="https://www.dartlang.org/performance/"><img class="size-full wp-image-1342 " alt="Dart vs V8 Engine" src="http://www.placona.co.uk/wp-content/uploads/2014/03/Screen-Shot-2014-03-05-at-09.00.47.png" width="942" height="425" srcset="https://www.placona.co.uk/wp-content/uploads/2014/03/Screen-Shot-2014-03-05-at-09.00.47.png 942w, https://www.placona.co.uk/wp-content/uploads/2014/03/Screen-Shot-2014-03-05-at-09.00.47-300x135.png 300w, https://www.placona.co.uk/wp-content/uploads/2014/03/Screen-Shot-2014-03-05-at-09.00.47-676x304.png 676w, https://www.placona.co.uk/wp-content/uploads/2014/03/Screen-Shot-2014-03-05-at-09.00.47-900x406.png 900w" sizes="(max-width: 942px) 100vw, 942px" /></a>
+  <a href="https://www.dartlang.org/performance/"><img class="size-full wp-image-1342 " alt="Dart vs V8 Engine" src="/images/2014/03/Screen-Shot-2014-03-05-at-09.00.47.png" width="942" height="425" srcset="/images/2014/03/Screen-Shot-2014-03-05-at-09.00.47.png 942w, images/2014/03/Screen-Shot-2014-03-05-at-09.00.47-300x135.png 300w, images/2014/03/Screen-Shot-2014-03-05-at-09.00.47-676x304.png 676w, images/2014/03/Screen-Shot-2014-03-05-at-09.00.47-900x406.png 900w" sizes="(max-width: 942px) 100vw, 942px" /></a>
   
   <p class="wp-caption-text">
     Data gathered from https://www.dartlang.org/performance/

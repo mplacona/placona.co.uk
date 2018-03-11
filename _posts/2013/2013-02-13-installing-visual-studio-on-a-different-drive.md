@@ -19,7 +19,7 @@ I then set off about installing VS2012, and the first screen I was presented wit
 To my surprise, this is what I saw in the next screen:
 
 <div id="attachment_1198" style="width: 460px" class="wp-caption aligncenter">
-  <img class="size-full wp-image-1198" alt="VS2012 Install screen" src="http://www.placona.co.uk/wp-content/uploads/2013/02/batVv.jpg" width="450" height="512" srcset="https://www.placona.co.uk/wp-content/uploads/2013/02/batVv.jpg 450w, https://www.placona.co.uk/wp-content/uploads/2013/02/batVv-263x300.jpg 263w" sizes="(max-width: 450px) 100vw, 450px" />
+  <img class="size-full wp-image-1198" alt="VS2012 Install screen" src="/images/2013/02/batVv.jpg" width="450" height="512" srcset="/images/2013/02/batVv.jpg 450w, /images/2013/02/batVv-263x300.jpg 263w" sizes="(max-width: 450px) 100vw, 450px" />
   
   <p class="wp-caption-text">
     VS2012 Installation screen

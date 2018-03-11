@@ -9,9 +9,9 @@ categories:
   - technology
 tags:
   - VPS
-  - Website Optimization
+  - Website Optimization 
+image: /images/2014/04/varnishcache_rgb-gimp2-alpha_opt.png
 ---
-<img class="alignnone size-full wp-image-1420" src="http://www.placona.co.uk/wp-content/uploads/2014/04/varnishcache_rgb-gimp2-alpha_opt.png" alt="Varnish Cache" width="512" height="127" srcset="https://www.placona.co.uk/wp-content/uploads/2014/04/varnishcache_rgb-gimp2-alpha_opt.png 512w, https://www.placona.co.uk/wp-content/uploads/2014/04/varnishcache_rgb-gimp2-alpha_opt-300x74.png 300w" sizes="(max-width: 512px) 100vw, 512px" />
 
 Varnish is wicked! It works on your webserver as a reverse proxy to cache HTTP requests. According to their website:
 
@@ -57,7 +57,7 @@ chkconfig --level 345 varnish on
 
 You are probably running your website through port 80 (which is the most often used port by HTTP). that is fine, and you obviously already have it running fine. But because we will be running Varnish before our webserver, we will also need to use another port, which means we need to make sure that port also accepts TCP connections. We will be using port 8080 here, which is fine if you're not running tomcat (it normally defaults to this port), but you can use any other port you want really, as long as it's not already in use by anything else. We will end up with the following architecture:
 
-<img class="alignnone size-full wp-image-1414" src="http://www.placona.co.uk/wp-content/uploads/2014/04/Varnish-+-Apache1.gif" alt="Varnish + Apache" width="683" height="336" />
+<img class="alignnone size-full wp-image-1414" src="/images/2014/04/Varnish-+-Apache1.gif" alt="Varnish + Apache" width="683" height="336" />
 
 To be able to use this port, we need to make sure our firewall actually allows that port to receive HTTP connections. luckily I have already written an article about this, so [give it a read](http://www.placona.co.uk/172/linux/iptables-opening-server-ports-to-specific-ip-addresses/ "IPTABLES – Opening server ports to specific IP addresses") to understand a little better why we're doing this. a <abbr title='Too long; Didn't read' rel='tooltip'>tl;dr</abbr> version of it would be as such:
 
