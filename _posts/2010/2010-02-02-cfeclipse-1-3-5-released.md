@@ -6,11 +6,10 @@ categories:
   - coldfusion
 tags:
   - 'CFML - 101'
+image: 
+  path: /images/2010/02/cfeclipse.jpg
+  caption: "Photo by: [http://www.flickr.com/photos/stevenerat/](TalkingTree)"
 ---
-<p style="text-align: center;">
-  <img src=" http://files.placona.co.uk/cfeclipse_release/cfeclipse.jpg" alt="CFEclipse 1.3.5 Release news" width="480" height="276" /><br /> <span style="align: left;">(Photo: <a title="Photo by TalkingTree" rel="nofollow" href="http://www.flickr.com/photos/stevenerat/" target="_blank">TalkingTree</a>)</span>
-</p>
-
 It just came to my attention that CFEclipse 1.3.5 has been released, and as usual I am a bit late announcing it.
   
 From the <a title="What's new on CFEclipse 1.3.5" href="http://www.cfeclipse.org/update/web/doc/intro/doc/new.html" target="_blank" class="broken_link">what's new</a> page, we can see that loads have been added to it, but the highlights in my opinion are:

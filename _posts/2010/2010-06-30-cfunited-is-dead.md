@@ -9,15 +9,10 @@ tags:
   - coldfusion
   - Railo
   - Technology
+image: 
+  path: /images/2010/07/fud.jpg
+  caption: "Photo by: [http://www.flickr.com/photos/cote/](cote)"
 ---
-<div class="mceTemp mceIEcenter">
-  <dl class="wp-caption aligncenter" style="width: 454px;">
-    <dt class="wp-caption-dt">
-      <img title="CFUnited is Dead!" src="http://files.placona.co.uk/cfunited_dead/fud.jpg" alt="CFUnited is dead, but ColdFusion is alive" width="444" height="333" />Photo by: <a rel="nofollow" href="http://www.flickr.com/photos/cote/">cote</a>
-    </dt>
-  </dl>
-</div>
-
 It came to my attention today that one of the most famous ColdFusion conferences, <a title="CFUnited" href="http://cfunited.com/2010/" target="_blank">CFUnited</a>,  <a title="CFUnited is dead!" href="http://cfunited.com/blog/index.cfm/2010/6/30/Farewell-to-CFUnited-Early-Bird-Extended" target="_blank">will cease to exist</a> from 2011 onwards. While the fact that one of the most important and longest running ColdFusion conferences in the world will not be around next year deeply saddens me, but at the same time I see it as a door opener for the new and more modern conference models.
 
 I have never been to the American version of CFUnited myself, and believe everyone that say it's a Summer Camp for developers. On the other hand, I have been to the European Version back in 2008, and have to say I wasn't impressed at all. After talking to people during the conference who have actually been to the American version, I was left underwhelmed by their comments about it being 50% marketing. My first impression about the whole thing was the companies would pay a top price to have their stands around and offer their products while we tried to get something out of the conference itself. While I understand conferences aren't cheap, i've been to other conferences before, and marketing wasn't so aggressive.

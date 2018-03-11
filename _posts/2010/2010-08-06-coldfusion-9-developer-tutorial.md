@@ -6,8 +6,9 @@ categories:
   - Books
 tags:
   - coldfusion
+image: /images/2010/08/ColdFusion9.jpg
 ---
-[<img class="alignleft" title="ColdFusion 9 Developer Tutorial - By John Farrar" src="http://files.placona.co.uk/coldfusion_9_developer_tutorial/ColdFusion9.jpg" alt="ColdFusion 9 Developer Tutorial - By John Farrar" width="125" height="152" />](http://www.packtpub.com/coldfusion-9-developer-tutorial/book?utm_source=placona.co.uk&utm_medium=bookrev&utm_content=blog&utm_campaign=mdb_004149)I'm delighted to say <a title="John Farrar" href="http://twitter.com/sosensible" target="_blank">John Farrar</a> has released his new <a title="ColdFusion 9 Developer Tutorial" href="http://www.packtpub.com/coldfusion-9-developer-tutorial/book?utm_source=placona.co.uk&utm_medium=bookrev&utm_content=blog&utm_campaign=mdb_004149" target="_blank">ColdFusion 9 Developer Tutorial</a> book, and it's now available from all the major retailers around the world.
+I'm delighted to say <a title="John Farrar" href="http://twitter.com/sosensible" target="_blank">John Farrar</a> has released his new <a title="ColdFusion 9 Developer Tutorial" href="http://www.packtpub.com/coldfusion-9-developer-tutorial/book?utm_source=placona.co.uk&utm_medium=bookrev&utm_content=blog&utm_campaign=mdb_004149" target="_blank">ColdFusion 9 Developer Tutorial</a> book, and it's now available from all the major retailers around the world.
 
 I've already ordered mine, and am expecting to get it at some time next week.
 

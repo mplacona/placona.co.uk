@@ -8,11 +8,10 @@ categories:
   - Technology
 tags:
   - Website Optimization
+image: 
+  path: /images/2010/02/hate_ie.jpg
+  caption: "Photo by: [http://www.flickr.com/photos/blubrblog/](BlubrNL)"
 ---
-<p style="text-align: center;">
-  <img src="http://files.placona.co.uk/the_unreliable_ie/hate_ie.jpg" alt="The unreliable IE" width="480" height="276" /><br /> (Photo: <a title="Photo by BlubrNL" href="http://www.flickr.com/photos/blubrblog/" target="_blank">BlubrNL</a>)
-</p>
-
 I was stuck with this problem today, and thought I should write a blog post about it, so should anyone encounter the same thing, they won't waste time trying to track exactly what's happening.
 
 Basically it was flagged to me this morning by my project manager that when you tried to submit a form that calls for a report generation using the enter key, the report would not be generated.

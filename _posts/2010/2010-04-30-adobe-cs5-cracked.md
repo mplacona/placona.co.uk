@@ -7,15 +7,10 @@ categories:
 tags:
   - Adobe
   - General Techie Stuff
+image: 
+  path: /images/2010/04/adobe_cs5_cracked.jpg
+  caption: "Photo by: [http://www.flickr.com/photos/JonathanCohen/](JonathanCohen)"
 ---
-<div class="mceTemp mceIEcenter">
-  <dl class="wp-caption aligncenter" style="width: 510px;">
-    <dt class="wp-caption-dt">
-      <img title="Adobe CS5 cracked" src="http://files.placona.co.uk/adobe_cs5_cracked/adobe_cs5_cracked.jpg" alt="Adobe CS5 ready for download" width="500" height="333" />Photo by: <a rel="nofollow" href="http://www.flickr.com/photos/JonathanCohen/">JonathanCohen</a>
-    </dt>
-  </dl>
-</div>
-
 ...the eggshell and has now been released for <a title="Adobe CS5 Download" href="http://www.adobe.com/downloads/" target="_blank">trial downloads</a>.
 
 So go get your's while it's hot.

@@ -10,9 +10,8 @@ tags:
   - Javascript
   - JQuery
   - Reviews
+image: /images/2013/05/unclesam2-197x300.jpg  
 ---
-<img class=" wp-image-1259   alignleft" style="padding-right: 15px;" alt="" src="/images/2013/05/unclesam2.jpg" width="185" height="281" srcset="/images/2013/05/unclesam2.jpg 264w, /images/2013/05/unclesam2-197x300.jpg 197w" sizes="(max-width: 185px) 100vw, 185px" />
-
 No catches here, all you need to do to get a free e-copy of my new book
 
 <a title="Instant jQuery Drag-and-Drop Grids How-to, Packt Pub" href="http://www.packtpub.com/jquery-drag-and-drop-grids/book" target="_blank">jQuery Drag-and-Drop Grids How-to</a> (<a title="jQuery Drag-and-Drop Grids How-to UK Link" href="http://www.amazon.co.uk/gp/product/1782165002/ref=as_li_ss_tl?ie=UTF8&camp=1634&creative=19450&creativeASIN=1782165002&linkCode=as2&tag=marplasblo-21" target="_blank">UK</a> , <a title="jQuery Drag-and-Drop Grids How-to, US Link" href="http://www.amazon.com/gp/product/1782165002/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1782165002&linkCode=as2&tag=placona-20" target="_blank">US</a>)

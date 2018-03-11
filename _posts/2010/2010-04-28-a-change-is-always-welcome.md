@@ -7,15 +7,10 @@ categories:
 tags:
   - Mango Blog
   - Misc
+image: 
+  path: /images/2010/04/a_change_is_always_welcome.jpg
+  caption: "Photo by: [http://www.flickr.com/photos/huasonic/](Huasonic)"
 ---
-<div class="mceTemp mceIEcenter">
-  <dl class="wp-caption aligncenter" style="width: 510px;">
-    <dt class="wp-caption-dt">
-      <img title="Wordpress Goodies" src="http://files.placona.co.uk/a_change_is_always_welcome/a_change_is_always_welcome.jpg" alt="Wordpress Goodies" width="500" height="333" />Photo by: <a rel="nofollow" href="http://www.flickr.com/photos/huasonic/">Huasonic</a>
-    </dt>
-  </dl>
-</div>
-
 I've been procrastinating for too long, and somehow trying to avoid the inevitable. As must of you might have noticed, it's been a long time I don't blog about anything.
 
 It's mainly because I have been tto busy at work, and am not even having time to read blogs. If I can't read blogs, you can pretty much guess where all the writing goes.

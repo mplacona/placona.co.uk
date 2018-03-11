@@ -4,8 +4,8 @@ title: Mobile and Tablet development - My Saga I
 date: 2011-10-27T08:27:00+00:00
 categories:
   - Mobile Development
+image: /images/2011/10/playbook1-300x228.jpg
 ---
-[<img class=" wp-image-712 alignleft" title="Playbook" src="/images/2011/10/playbook1-300x228.jpg" alt="" srcset="/images/2011/10/playbook1-300x228.jpg 300w, /images/2011/10/playbook1.jpg 500w" sizes="(max-width: 300px) 100vw, 300px" />](http://www.flickr.com/photos/thegameway/5512101841/)
 
 So I believe by my last posts here you may have guessed I've been doing lots of mobile development in the last few months.
 

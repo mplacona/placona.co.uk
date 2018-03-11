@@ -8,14 +8,10 @@ tags:
   - General Techie Stuff
   - Mango Blog
   - Railo
+image: 
+  path: /images/2010/05/migrating_from_mango_to_wordpress.jpg
+  caption: "Photo by: [http://www.flickr.com/photos/gagilas/](gagilas)"
 ---
-<div class="mceTemp mceIEcenter">
-  <dl class="wp-caption aligncenter" style="width: 510px;">
-    <dt class="wp-caption-dt">
-      <img title="Migrating from Mango to WordPress" src="http://files.placona.co.uk/migrating_mango_wordpress/migrating_from_mango_to_wordpress.jpg" alt="Migration in action" width="500" height="333" />Photo by: <a rel="nofollow" href="http://www.flickr.com/photos/gagilas/">gagilas</a>
-    </dt>
-  </dl>
-</div>
 
 As <a title="A change is always welcome" href="http://www.placona.co.uk/293/misc/a-change-is-always-welcome/" target="_self">previously promised</a>, today I'll be publishing my migration scrips from <a title="Mango Blog" href="http://www.mangoblog.org/" target="_blank">Mango Blog</a> to <a title="Wordpress" href="http://wordpress.org/" target="_blank">WordPress</a>.
 

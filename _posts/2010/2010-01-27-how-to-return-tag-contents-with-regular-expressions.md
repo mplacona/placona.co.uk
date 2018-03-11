@@ -6,10 +6,10 @@ dsq_thread_id:
   - "5434820446"
 categories:
   - Regular Expressions
+image: 
+  path: /images/2010/01/mastering_regular_expression.jpg
+  caption: "Photo by: [http://www.flickr.com/photos/kubina/](Jeff Kubina)"
 ---
-<p style="text-align: center;">
-  <img src="http://files.placona.co.uk/regular_expression_tag_contents/mastering_regular_expression.jpg" alt="How to return tag contents with regular expressions" width="480" height="276" /><br /> (Photo: <a title="Photo by Jeff Kubina" rel="nofollow" href="http://www.flickr.com/photos/kubina/" target="_blank">Jeff Kubina</a>)
-</p>
 
 As most of you already know, I LOVE **regular expressions**, and think they are great to solve simple and complex tasks involving strings.
   

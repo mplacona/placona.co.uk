@@ -8,15 +8,10 @@ categories:
   - General Techie Stuff
   - Linux
   - Technology
+image: 
+  path: /images/2010/05/serial_ports_ubuntu.jpg
+  caption: "Photo by: [http://www.flickr.com/photos/lilit/](lilit)"
 ---
-<div class="mceTemp mceIEcenter">
-  <dl class="wp-caption aligncenter" style="width: 510px;">
-    <dt class="wp-caption-dt">
-      <img title="Getting serial ports to work on Ubuntu" src="http://files.placona.co.uk/serial_ports_ubuntu/serial_ports_ubuntu.jpg" alt="Migration in action" width="500" height="333" />Photo by: <a rel="nofollow" href="http://www.flickr.com/photos/lilit/">lilit</a>
-    </dt>
-  </dl>
-</div>
-
 I've recently been "forced" to move my desktop from Windows to Linux again. Basically my current desktop "decided" it won't support Windows anymore, and any attempt to start it ends up in a <a title="Blue Screen of Death" href="http://en.wikipedia.org/wiki/Blue_Screen_of_Death" target="_blank">BSOD</a>, and I just got fed-up of trying to get it to work.
 
 In fact, all of my development at home is done on Linux anyway, and I was just using windows as my dummy operating system, and using virtualization with my development environment. move to Linux works just as well.

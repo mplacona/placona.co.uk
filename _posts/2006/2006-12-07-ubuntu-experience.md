@@ -1,13 +1,13 @@
 ---
 id: 30
-title: Ubuntu Experience.
+title: Ubuntu Experience
 date: 2006-12-07T00:00:00+00:00
 categories:
   - Linux
+image: /images/2006/12/powered_by_ubuntu.jpg
 ---
-<span style="float:left"><a href="http://www.ubuntu.com" target="_blank"><img style="border: 0;" src="http://files.placona.co.uk/ubuntu_posts/powered_by_ubuntu.jpg" border="0" alt="Powered by Ubuntu" width="175" height="175" /></a></span>
 
-Following the [last post](http://www.placona.co.uk/25/misc/breaking-the-network/) about network problems and dodgy **Firewalls**. This time I decided to install **Ubuntu** on my laptop. I have to be honest saying that it was my first time installing something *nix.
+Following the [last post](/25/misc/breaking-the-network/) about network problems and dodgy **Firewalls**. This time I decided to install **Ubuntu** on my laptop. I have to be honest saying that it was my first time installing something *nix.
 
 This time I received some cd's from <a href="http://www.ubuntu.com" target="_blank">Ubuntu.com</a>.
 
