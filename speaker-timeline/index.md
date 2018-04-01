@@ -60,3 +60,5 @@ modified: 2018-04-01 21:20:00
   ### 2018
 
   * [NDC London](https://ndc-london.com/) (London, UK)
+  * [Take Off Conf 2018](https://www.takeoffconf.io) (Lille, France)
+  * [NDC Oslo](https://ndcoslo.com) (Oslo, Norway)
