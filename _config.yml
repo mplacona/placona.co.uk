@@ -3,7 +3,7 @@ title:                    Marcos Placona's Blog
 locale:                   en_GB
 email:                    marcos@placona.co.uk
 description:              Programming, technology and musings.    
-logo:                     /images/placona-logo.png
+logo:                     /images/placona-logo-small.png
 search_full_content:      true
 baseurl:                  "" # the subpath of your site, e.g. /blog
 url:                      "https://placona.co.uk" # the base hostname & protocol for your site, e.g. http://example.com
