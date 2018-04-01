@@ -54,7 +54,7 @@ author:
   name: Marcos Placona
   picture: /images/marcos_bw_200_optim.jpg
   email: marcos@placona.co.uk
-  disqus-shortname: placona
+  #disqus-shortname: placona
   twitter: marcos_placona
 copyright: "© 2018 Marcos Placona's Blog. Made with ❤️ by me"
 
@@ -71,8 +71,8 @@ footer_links:
     icon: fas fa-rss-square
 
 # Comments
-disqus:
-  shortname: placona
+#disqus:
+  #shortname: placona
 
 # Analytics
 google_analytics: UA-1027425-2
