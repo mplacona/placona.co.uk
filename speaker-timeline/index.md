@@ -57,7 +57,7 @@ modified: 2018-04-01 21:20:00
   * [Kotlin Conf](https://www.kotlinconf.com/) (San Francisco, USA)
   * [Buildstuff Lithuania](http://buildstuff.lt/) (Vilnius, Lithuania)
 
-  ### 2018
+### 2018
 
   * [NDC London](https://ndc-london.com/) (London, UK)
   * [Take Off Conf 2018](https://www.takeoffconf.io) (Lille, France)
