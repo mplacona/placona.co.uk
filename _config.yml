@@ -74,5 +74,9 @@ footer_links:
 #disqus:
   #shortname: placona
 
+# Sass/SCSS
+sass:
+  style: compressed
+
 # Analytics
 google_analytics: UA-1027425-2
