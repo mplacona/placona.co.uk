@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Speaker Timeline
-modified: 2017-09-10 19:16:58
+modified: 2018-04-01 21:20:00
 ---
 ### 2013
 
@@ -47,3 +47,16 @@ modified: 2017-09-10 19:16:58
   * [Topconf Linz 2017](http://topconf.com/linz-2017/) (Linz, Austria)
   * [Codemotion Rome](http://rome2017.codemotionworld.com/) (Rome, Italy)
   * [CodeMobile](http://www.codemobile.co.uk/) (Chester, England)
+  * [App Builders 2017](https://2017.appbuilders.ch/) (Lauzane, Switzerland)
+  * [Code Europe](https://www.codeeurope.pl/en) (Krakow, Poland)
+  * [Riga Dev Days 2017](https://rigadevdays.lv/) (Riga, Latvia)
+  * [Øredev 2017](http://www.oredev.org/gen/oredev-2017) (Malmo, Sweden)
+  * [Mobile Era 2017](https://mobileera.rocks/) (Oslo, Norway)
+  * [Devfest Lviv](https://devfest.gdg.org.ua/) (Lviv, Ukraine)
+  * [Droidcon London](http://uk.droidcon.com/conferences/8265-droidcon-london-2017) (London, UK)
+  * [Kotlin Conf](https://www.kotlinconf.com/) (San Francisco, USA)
+  * [Buildstuff Lithuania](http://buildstuff.lt/) (Vilnius, Lithuania)
+
+  ### 2018
+
+  * [NDC London](https://ndc-london.com/) (London, UK)
