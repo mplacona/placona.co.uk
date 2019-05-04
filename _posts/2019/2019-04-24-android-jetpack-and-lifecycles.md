@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Android JetPack and Lifecycles
+title: Android Jetpack and Lifecycles
 date: 2019-05-04T10:41:43+00:00
 categories:
   - Android
@@ -8,7 +8,7 @@ tags:
   - jetpack
   - architecture
   - android
-excerpt: "This post highlights the benefits of using Android JetPack and the Lifecycles components to guarantee integrity of your view's data"
+excerpt: "This post highlights the benefits of using Android Jetpack and the Lifecycles components to guarantee integrity of your view's data"
 comments: true
 share: true
 image: images/2019/04/android-jetpack-header.png
