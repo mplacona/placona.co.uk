@@ -25,7 +25,6 @@ I'll post my resolutions as they come to my mind, and don't really wanna have an
   * blog more
   * write more technical articles
   * publish the book I've been planing to for a few years
-  * update my ColdFusion certification
   * start contributing with an open-source project
 
 Well, I can't remember anything other than that right now, but I'll keep updating the list.

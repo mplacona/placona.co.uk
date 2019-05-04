@@ -3,10 +3,10 @@ title:                    Marcos Placona's Blog
 locale:                   en_GB
 email:                    marcos@placona.co.uk
 description:              Programming, technology and musings.    
-logo:                     /images/placona-logo.png
+logo:                     /images/placona-logo-small.png
 search_full_content:      true
 baseurl:                  "" # the subpath of your site, e.g. /blog
-url:                      "http://placona.co.uk" # the base hostname & protocol for your site, e.g. http://example.com
+url:                      "https://placona.co.uk" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username:         marcos_placona
 github_username:          mplacona
 future:                   true
@@ -55,7 +55,7 @@ author:
   bio: "Developer evangelist at <a href='http://www.twilio.com'>Twilio</a>, GDE and in ❤️ with Open Source"
   picture: /images/marcos_bw_200_optim.jpg
   email: marcos@placona.co.uk
-  disqus-shortname: placona
+  #disqus-shortname: placona
   twitter: marcos_placona
   links:
     - title: Twitter
@@ -83,8 +83,12 @@ footer_links:
     icon: fas fa-rss-square
 
 # Comments
-disqus:
-  shortname: placona
+#disqus:
+  #shortname: placona
+
+# Sass/SCSS
+sass:
+  style: compressed
 
 # Analytics
 google_analytics: UA-1027425-2

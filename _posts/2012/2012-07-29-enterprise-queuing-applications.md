@@ -45,7 +45,7 @@ A simple queue with multiple consumers could be represented the following way:
 What the last point it trying to say, is that an application doesn't necessarily need to have things that aren't related to its main purpose (selling products in this case).
 
 <figure style="width: 150px" class="align-left">
-  <img src="{{ '/images/2012/07/RabbitMQLogo.png' | absolute_url }}" alt="">
+  <img src="{{ '/images/2012/07/RabbitMQLogo.png' | relative_url }}" alt="">
 </figure> 
 I will first start by pointing you towards where to start. I won't get into too many details about how to setup everything, since the guys over at <a title="RabbitMQ" href="http://www.rabbitmq.com/" target="_blank">RabbitMQ</a> have done a pretty good job when exemplifying every all possible installations that might suit your needs <a title="RabbitMQ download and installation" href="http://www.rabbitmq.com/download.html" target="_blank">here</a>.
 
