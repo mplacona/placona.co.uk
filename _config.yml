@@ -52,10 +52,22 @@ exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.
 # Site Author
 author:
   name: Marcos Placona
+  bio: "Developer evangelist at <a href='http://www.twilio.com'>Twilio</a>, GDE and in ❤️ with Open Source"
   picture: /images/marcos_bw_200_optim.jpg
   email: marcos@placona.co.uk
   disqus-shortname: placona
   twitter: marcos_placona
+  links:
+    - title: Twitter
+      url: https://twitter.com/marcos_placona
+      icon: fab fa-twitter
+    - title: GitHub
+      url: https://github.com/mplacona
+      icon: fab fa-github
+    - title: StackOverflow
+      url: https://stackoverflow.com/users/279395/marcos-placona
+      icon: fab fa-stack-overflow
+      
 copyright: "© 2018 Marcos Placona's Blog. Made with ❤️ by me"
 
 # Footer Links
