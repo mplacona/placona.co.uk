@@ -55,7 +55,6 @@ author:
   bio: "Developer evangelist at <a href='http://www.twilio.com'>Twilio</a>, GDE and in ❤️ with Open Source"
   picture: /images/marcos_bw_200_optim.jpg
   email: marcos@placona.co.uk
-  #disqus-shortname: placona
   twitter: marcos_placona
   links:
     - title: Twitter
@@ -69,6 +68,10 @@ author:
       icon: fab fa-stack-overflow
       
 copyright: "© 2018 Marcos Placona's Blog. Made with ❤️ by me"
+
+# Disqus Comments
+disqus:
+  shortname: placona-co-uk
 
 # Footer Links
 footer_links:
