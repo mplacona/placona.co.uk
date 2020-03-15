@@ -28,6 +28,12 @@ layout: default
             {% endif %}
           {{ content }}
         </div>
+        
+        <div class="also-read">
+          {% if page.related %}
+            {% include page-related.html %}
+          {% endif %}
+        </div>
 
         {% if page.share %}
           {% include social-share.html %}

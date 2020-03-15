@@ -29,7 +29,8 @@ defaults:
       type: posts
     values:
       layout: post
-      share: true
+      share: false
+      related: true
 
 # Build settings
 markdown:                 kramdown
