@@ -1,5 +1,5 @@
 GIT
-  remote: https://github.com/jekyll/jekyll.git
+  remote: git://github.com/jekyll/jekyll.git
   revision: 88360bd17d5824a5cff01321722a3f0e7418a620
   specs:
     jekyll (4.0.0)
@@ -123,7 +123,7 @@ PLATFORMS
 DEPENDENCIES
   jekyll!
   jekyll-assets
-  jekyll-feed (~> 0.6)
+  jekyll-feed
   jekyll-gist
   jekyll-paginate
   jekyll-seo-tag
