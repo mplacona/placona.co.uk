@@ -3,3 +3,4 @@ _site
 .jekyll-metadata
 images/.DS_Store
 .jekyll-cache
+Gemfile.lock
