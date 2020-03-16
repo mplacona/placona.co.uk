@@ -12,8 +12,7 @@ sitemap: false
     font-family: helvetica;
 }
 
-.rect {
-    border-top: 3px solid #333;
+.page-share {
     border-bottom: 3px solid #333;
     padding-top: 15px;
     margin: 0 auto;
@@ -45,7 +44,16 @@ sitemap: false
         width: 250px;
         display: inline-block;
         opacity: 0.8;
-        
+    }
+
+    .rect {
+        border-top: 3px solid #333;
+        border-bottom: 3px solid #333;
+        padding-top: 15px;
+        margin: 0 auto;
+        h3{
+            color: red;
+        }
     }
 
     .shadow-sm--hover:hover {
