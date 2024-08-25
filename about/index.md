@@ -1,14 +1,19 @@
 ---
 layout: page
 title: About
-modified: 2018-03-31 01:04:44
+modified: 2024-08-25 01:04:44
 ---
 
-Marcos is a Director of Developer Relations & Community. He is passionate about technology and security and spends a great deal of his time building mobile and web apps, and often connecting them to physical devices.
+Marcos an experienced Developer Relations leader turned solopreneur. With a passion for simplifying complex technologies, He's led DevRel teams at Circle and Twilio, shaping developer experiences for millions.
 
-Marcos is also a Google Developer Expert and a great believer in open source projects. When he’s not writing open source code, he’s probably blogging about code here, on [androidsecurity.info](https://androidsecurity.info) or [androidthings.rocks](https://androidthings.rocks).
+## Currently:
+- Founder of [JustDeploy](http://justdeploy.tech) - Revolutionizing deployment with our 'deploy to your server in minutes' solution.
+- Founder of [MicroWidgets](https://MicroWidgets.dev) - Website Widgets that convert for developers who'd rather code.
+- Advisor at KrunchData - Guiding the next generation of data analytics tools.
 
-He’s also a great API enthusiast and believes they bring peace to the Software Engineering world. 
+My mission is to empower developers and startups to ship faster, scale effortlessly, and focus on what truly matters - building great products.
+
+Throughout my career, I've bridged the gap between complex technologies and developer needs. Now, I'm channelling that expertise into creating tools and helping other companies make developers' lives easier.
 
 ### Disclosure
 
