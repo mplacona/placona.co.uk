@@ -7,7 +7,7 @@ modified: 2024-08-25 01:04:44
 Marcos an experienced Developer Relations leader turned solopreneur. With a passion for simplifying complex technologies, He's led DevRel teams at Circle and Twilio, shaping developer experiences for millions.
 
 ## Currently:
-- Founder of [JustDeploy](http://justdeploy.tech) - Revolutionizing deployment with our 'deploy to your server in minutes' solution.
+- Founder of [JustDeploy](https://justdeploy.tech) - Revolutionizing deployment with our 'deploy to your server in minutes' solution.
 - Founder of [MicroWidgets](https://MicroWidgets.dev) - Website Widgets that convert for developers who'd rather code.
 - Advisor at KrunchData - Guiding the next generation of data analytics tools.
 
