@@ -13,4 +13,4 @@ Basically on PC(don't know if it works on MAC) you go to Fireworks 8, click on h
 
 It'll show the developers names. Just ctrl+click the number 8 on the Fireworks 8 logo, and you'll see some strange animals like this:
 
-![](http://www.placona.co.uk/blog/images/easter.jpg)
+![](https://www.placona.co.uk/blog/images/easter.jpg)

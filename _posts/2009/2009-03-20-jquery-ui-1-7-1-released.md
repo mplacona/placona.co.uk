@@ -8,7 +8,7 @@ tags:
   - JQuery
   - Technology
 ---
-The jQuery UI team have done it again. This Friday is only a point release to the jQuery UI 1.7 <a href="http://www.placona.co.uk/95/javascript/jquery-ui-1-7-released/" target="_blank">released last week</a> but with some great improvements.
+The jQuery UI team have done it again. This Friday is only a point release to the jQuery UI 1.7 <a href="https://www.placona.co.uk/95/javascript/jquery-ui-1-7-released/" target="_blank">released last week</a> but with some great improvements.
 
 ### Droppable 
 

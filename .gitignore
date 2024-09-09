@@ -5,3 +5,4 @@ images/.DS_Store
 .jekyll-cache
 Gemfile.lock
 .DS_Store
+.vscode/settings.json

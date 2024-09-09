@@ -11,7 +11,7 @@ tags:
 ---
 So the time has come for me to move on and accept a new challenge. As of the October 20th, I'll be joining <a title="Twilio" href="https://www.twilio.com/" target="_blank">Twilio</a> as a Developer Evangelist.
 
-Twilio has been [no stranger](http://github.com/mplacona/twilio-dart "Twilio-Dart") [to me](http://www.placona.co.uk/1467/open-source/sending-and-receiving-sms-messages-with-dart/ "Sending and Receiving SMS messages with Dart") for quite a while now,  and when I saw an open position in their [devangelism team](http://ahoy.twilio.com/heroes),  I wasted no time and applied for it.
+Twilio has been [no stranger](http://github.com/mplacona/twilio-dart "Twilio-Dart") [to me](https://www.placona.co.uk/1467/open-source/sending-and-receiving-sms-messages-with-dart/ "Sending and Receiving SMS messages with Dart") for quite a while now,  and when I saw an open position in their [devangelism team](http://ahoy.twilio.com/heroes),  I wasted no time and applied for it.
 
 The whole process took a bit of time, but both Twilio and I were quite keen to make sure we would be a good fit for each other.
 

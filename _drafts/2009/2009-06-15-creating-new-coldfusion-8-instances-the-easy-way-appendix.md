@@ -9,7 +9,7 @@ tags:
   - 'CFML - 101'
   - VPS
 ---
-Following [Andy Allan's comment](http://www.placona.co.uk/148/coldfusion/creating-new-coldfusion-8-instances-the-easy-way/ "New ColdFusion 8 instances - The easy way") on my previous post, I decided to write a new post and make some things clear here.
+Following [Andy Allan's comment](https://www.placona.co.uk/148/coldfusion/creating-new-coldfusion-8-instances-the-easy-way/ "New ColdFusion 8 instances - The easy way") on my previous post, I decided to write a new post and make some things clear here.
 
 In fact, I didn't realize that creating the new instance as a Windows Service through **ColdFusion Administrator** would cause so much trouble as it does. Basically, if you do check "_Create Windows Service_", your new instnace will automatically be created as a Windows Service. It's not too bad, as you would normally want your new ColdFusion instance to start-up with your server.
 

@@ -5,7 +5,7 @@ date: 2006-12-08T00:00:00+00:00
 categories:
   - Linux
 ---
-As [previously](http://www.placona.co.uk/30/misc/ubuntu-experience/) [said](http://www.placona.co.uk/32/coldfusion/coldfusion-on-ubuntu/) I was having some kind of troubles with my wireless connection on Ubuntu.
+As [previously](https://www.placona.co.uk/30/misc/ubuntu-experience/) [said](https://www.placona.co.uk/32/coldfusion/coldfusion-on-ubuntu/) I was having some kind of troubles with my wireless connection on Ubuntu.
 
 Yesterday I found that the Ubuntu community really works. I was able to get some replies about how to install my wireless using WPA encryption in less than 5 minutes.
 

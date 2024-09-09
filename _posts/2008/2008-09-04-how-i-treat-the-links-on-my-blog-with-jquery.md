@@ -47,7 +47,7 @@ On the top of my main page (<span style="text-decoration: line-through;">layout.
 		//Tell the browser to run it when the page loads
 		jQuery(document).ready(function(){
 			//Use XPath selectors to find what I'm looking for
-	    	jQuery("a:not([href*=http://www.placona.co.uk])").not("[href*=##]").not("[href*=javascript]").attr({
+	    	jQuery("a:not([href*=https://www.placona.co.uk])").not("[href*=##]").not("[href*=javascript]").attr({
 
 			//Add a target where appropriate
 	        target: "_blank",

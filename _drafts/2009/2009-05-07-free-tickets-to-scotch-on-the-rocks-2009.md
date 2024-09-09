@@ -7,7 +7,7 @@ categories:
 ---
 My friend <a style="text-decoration:underline;" href="http://www.andyjarrett.com/blog/" target="_blank">Andy Jarrett</a> along with <a style="text-decoration:underline;" href="http://talkwebsolutions.co.uk" target="_blank">TalkWebSolutions.co.uk</a> are giving away one free ticket to <a style="text-decoration:underline;" href="http://www.scotch-on-the-rocks.co.uk/" target="_blank">Scotch On the Road 2009</a>.
   
-If you don't know what SOTR09 is, you can read up on my posts <a class="noBorder" style="text-decoration:underline;" href="http://www.placona.co.uk/88/coldfusion/scotch-on-the-rocks-2009/">here</a> and <a class="noBorder" style="text-decoration:underline;" href="http://www.placona.co.uk/90/coldfusion/scotch-on-the-strike-rocks-strike-road-2009-all-venues-confirmed/">here</a>.
+If you don't know what SOTR09 is, you can read up on my posts <a class="noBorder" style="text-decoration:underline;" href="https://www.placona.co.uk/88/coldfusion/scotch-on-the-rocks-2009/">here</a> and <a class="noBorder" style="text-decoration:underline;" href="https://www.placona.co.uk/90/coldfusion/scotch-on-the-strike-rocks-strike-road-2009-all-venues-confirmed/">here</a>.
   
 To grab this freebie, which can be used on **ANY** one of the three venues, you simply need to send Andy a joke making sure it's anything related to scotch. He'll then pick the best ones, and give away a few prizes.
   

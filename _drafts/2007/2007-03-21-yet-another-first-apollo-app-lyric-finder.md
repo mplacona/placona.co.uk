@@ -76,7 +76,7 @@ And it also helped me to realize that I'm still pretty bad in AS3.
 ```
 
 ```xml
-<mx:HTTPService url="http://www.placona.co.uk" id="pageRequest" method="GET" resultFormat="text" result="getResults(event)"/>
+<mx:HTTPService url="https://www.placona.co.uk" id="pageRequest" method="GET" resultFormat="text" result="getResults(event)"/>
 
     <mx:TextInput 
         id="artistCriteria" 

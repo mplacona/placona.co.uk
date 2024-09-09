@@ -53,7 +53,7 @@ exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.
 # Site Author
 author:
   name: Marcos Placona
-  bio: "Developer evangelist at <a href='http://www.twilio.com'>Twilio</a>, GDE and in ❤️ with Open Source"
+  bio: "Marcos an experienced Developer Relations leader turned solopreneur, GDE and in ❤️ with Open Source"
   picture: /images/marcos_bw_200_optim.jpg
   email: marcos@placona.co.uk
   twitter: marcos_placona
@@ -68,7 +68,7 @@ author:
       url: https://stackoverflow.com/users/279395/marcos-placona
       icon: fab fa-stack-overflow
       
-copyright: "© 2018 Marcos Placona's Blog. Made with ❤️ by me"
+copyright: "© 2024 Marcos Placona's Blog. Made with ❤️ by me"
 
 # Footer Links
 footer_links:

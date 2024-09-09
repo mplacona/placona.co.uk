@@ -11,7 +11,7 @@ tags:
 ---
 You will have noticed I deviated my blog posts quite a bit from CFML in the last couple of months. That doesn't mean I don't love it anymore, but just that I've been "putting my eggs on lots of other baskets" lately.
 
-This blog is hosted on a VPS, and I haven't really found it necessary to have any CFML engine running on it. I could allocate some memory to have a tiny instance of Railo running, but I'd prefer not having to deal with something else running, since it could easily crash, and take me months to actually realize it. This happened to my <a title="Langithub" href="http://www.placona.co.uk/1244/general-techie-stuff/my-nodejs-app-development-experience/" target="_blank">Langithub</a> project the other day, and I simply didn't notice until someone pinged me to let me know.
+This blog is hosted on a VPS, and I haven't really found it necessary to have any CFML engine running on it. I could allocate some memory to have a tiny instance of Railo running, but I'd prefer not having to deal with something else running, since it could easily crash, and take me months to actually realize it. This happened to my <a title="Langithub" href="https://www.placona.co.uk/1244/general-techie-stuff/my-nodejs-app-development-experience/" target="_blank">Langithub</a> project the other day, and I simply didn't notice until someone pinged me to let me know.
 
 However, I do sometimes want to post working examples written in CFML, and I could simply use some of the few free services out there, but... <a href="http://cfmlblog.adamcameron.me/2013/05/we-interrupt-this-service.html" target="_blank">I'd rather not</a>.
 

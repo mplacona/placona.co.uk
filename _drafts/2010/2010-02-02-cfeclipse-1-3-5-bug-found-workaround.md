@@ -10,7 +10,7 @@ image:
   path: /images/2010/02/screen_bug.jpg
   caption: "Photo by: [http://www.flickr.com/photos/slowafternoon/](slowdown)"
 ---
-Earlier today, I <a title="CFEclipse 1.3.5 Released" href="http://www.placona.co.uk/180/coldfusion/cfeclipse-1-3-5-released/" target="_self">posted about CFEclipse 1.3.5</a> being released. Right after doing that, I found this and tried reporting on track, but it wouldn't let me register for some reason.
+Earlier today, I <a title="CFEclipse 1.3.5 Released" href="https://www.placona.co.uk/180/coldfusion/cfeclipse-1-3-5-released/" target="_self">posted about CFEclipse 1.3.5</a> being released. Right after doing that, I found this and tried reporting on track, but it wouldn't let me register for some reason.
 
 This will only work for newly installed CFE 1.3.5, as if you've already tweaked your install, you most likely "fixed" it.
 

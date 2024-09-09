@@ -11,7 +11,7 @@ tags:
 ---
 Assets such as stylesheets, images and videos are often the major hit taken by a webserver when a webpage is loaded. I'm often trying to improve my page loads by using published pages (flat html) and rewrites, so I don't need to run a dynamic page when it's not necessary.
 
-Publishing usually brings a great deal of improvement, and <a title="Apache 101 - Cache Control" href="http://www.placona.co.uk/126/vps/apache-101-cache-control/" target="_self">browser cache</a> and [compression](http://www.placona.co.uk/124/vps/apache-101-compressing-files/ "Apache 101 - Compressing Files") often help a lot too, but sometimes you just need to load assets on every single page load, and if you have lots of new users every day, browser cache will usually do very little, as this new users will need to hit the webserver and get the images for the first time in order to have it cached.
+Publishing usually brings a great deal of improvement, and <a title="Apache 101 - Cache Control" href="https://www.placona.co.uk/126/vps/apache-101-cache-control/" target="_self">browser cache</a> and [compression](https://www.placona.co.uk/124/vps/apache-101-compressing-files/ "Apache 101 - Compressing Files") often help a lot too, but sometimes you just need to load assets on every single page load, and if you have lots of new users every day, browser cache will usually do very little, as this new users will need to hit the webserver and get the images for the first time in order to have it cached.
 
 It's been proved that loading assets from different domains helps "trick" the browser into multi-tasking, so it doesn't have to wait until **asset1** on the domain **domain.com** is loaded to start downloading **asset2** on the same domain.
 

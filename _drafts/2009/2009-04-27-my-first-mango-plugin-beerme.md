@@ -5,7 +5,7 @@ date: 2009-04-27T00:00:00+00:00
 categories:
   - coldfusion
 ---
-Yes, I went on and got into [Mango's plugin development](http://www.mangoblog.org/docs/documentation/extending-mango/creating-a-plugin). Basically on Saturday I was a bit bored monitoring [my new server's](http://www.placona.co.uk/114/railo/placona-co-uk-has-a-new-home-1/) performance, and decided to look at plugins development for <a href="http://www.mangoblog.org/" target="_blank">Mango Blog</a>.
+Yes, I went on and got into [Mango's plugin development](http://www.mangoblog.org/docs/documentation/extending-mango/creating-a-plugin). Basically on Saturday I was a bit bored monitoring [my new server's](https://www.placona.co.uk/114/railo/placona-co-uk-has-a-new-home-1/) performance, and decided to look at plugins development for <a href="http://www.mangoblog.org/" target="_blank">Mango Blog</a>.
   
 It's pretty straight forward really, and you only have to create a few files with some pre-defined functions, and off you go.
   

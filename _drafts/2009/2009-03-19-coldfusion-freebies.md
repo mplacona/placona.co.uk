@@ -8,11 +8,11 @@ tags:
   - Adobe
   - Technology
 ---
-I just wanted to dump some of the news for this week in the <a href="http://www.adobe.com/products/coldfusion-family.html" target="_blank">Adobe ColdFusion</a> World. Looks like we are getting loads of <a href="http://www.placona.co.uk/70/coldfusion/coldfusion-free-for-students-and-educators/" target="_self">free</a> stuff recently.
+I just wanted to dump some of the news for this week in the <a href="http://www.adobe.com/products/coldfusion-family.html" target="_blank">Adobe ColdFusion</a> World. Looks like we are getting loads of <a href="https://www.placona.co.uk/70/coldfusion/coldfusion-free-for-students-and-educators/" target="_self">free</a> stuff recently.
 
-It all started with ColdFusion being <a href="http://www.placona.co.uk/70/coldfusion/coldfusion-free-for-students-and-educators/" target="_self">free for educational purposes</a> a few months ago
+It all started with ColdFusion being <a href="https://www.placona.co.uk/70/coldfusion/coldfusion-free-for-students-and-educators/" target="_self">free for educational purposes</a> a few months ago
 
-Than, in a few more months, a <a href="http://www.placona.co.uk/82/coldfusion/free-coldfusion-8-hosting/" target="_self" class="broken_link">free ColdFusion hosting</a> was anounced.
+Than, in a few more months, a <a href="https://www.placona.co.uk/82/coldfusion/free-coldfusion-8-hosting/" target="_self" class="broken_link">free ColdFusion hosting</a> was anounced.
 
 Now, to the latest news, you can get <a href="http://www.adobe.com/education/instruction/teach/cfcurriculum.html" target="_self">free ColdFusion training</a> by using Adobe's ColdFusion 8 project-based curriculum.
 

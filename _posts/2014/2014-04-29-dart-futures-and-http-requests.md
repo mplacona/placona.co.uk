@@ -6,7 +6,7 @@ date: 2014-04-29T20:14:51+00:00
 categories:
   - Dart
 ---
-I [wrote a little article](http://www.placona.co.uk/1433/open-source/retrieving-githubs-gists-with-dart/ "Retrieving GitHub’s gists with Dart") about how to retrieve <abbr title='code snippets' rel='tooltip'>gists</abbr> from GitHub, and [+Seth Ladd](http://www.placona.co.uk/1433/open-source/retrieving-githubs-gists-with-dart/ "Retrieving GitHub’s gists with Dart") quite rightly pointed something out.
+I [wrote a little article](https://www.placona.co.uk/1433/open-source/retrieving-githubs-gists-with-dart/ "Retrieving GitHub’s gists with Dart") about how to retrieve <abbr title='code snippets' rel='tooltip'>gists</abbr> from GitHub, and [+Seth Ladd](https://www.placona.co.uk/1433/open-source/retrieving-githubs-gists-with-dart/ "Retrieving GitHub’s gists with Dart") quite rightly pointed something out.
 
 <img class="alignnone size-full wp-image-1440" src="/images/2014/04/seth_makes_a_good_point.png" alt="Seth Ladd makes a good point" width="517" height="156" srcset="/images/2014/04/seth_makes_a_good_point.png 517w, images/2014/04/seth_makes_a_good_point-300x90.png 300w" sizes="(max-width: 517px) 100vw, 517px" />
 

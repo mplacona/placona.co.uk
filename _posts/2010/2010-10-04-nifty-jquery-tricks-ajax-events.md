@@ -7,7 +7,7 @@ dsq_thread_id:
 categories:
   - JavaScript
 ---
-As previously mentioned on my [other post](http://www.placona.co.uk/606/jquery/nifty-jquery-tricks-avoid-cache/ "Placona - Nifty jQuery tricks – Avoid Cache"), I'm working on improving usability and user experience within one of our applications.
+As previously mentioned on my [other post](https://www.placona.co.uk/606/jquery/nifty-jquery-tricks-avoid-cache/ "Placona - Nifty jQuery tricks – Avoid Cache"), I'm working on improving usability and user experience within one of our applications.
 
 This application has a somehow complex authentication system managed by <a title="Fusebox" href="http://www.fusebox.org/" target="_blank">Fusebox</a>.
 
