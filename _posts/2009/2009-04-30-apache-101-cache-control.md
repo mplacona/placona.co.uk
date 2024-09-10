@@ -22,7 +22,7 @@ sudo a2enmod expires
 sudo a2enmod headers
 ```
 
-We are also gonna be using **mod_deflate**, but since you probably read <a style="text-decoration:underline;" href="https://www.placona.co.uk/124/vps/apache-101-compressing-files/" target="_self">my last post</a> where I tell how to install and configure it, I won't be covering its usagein this post.
+We are also gonna be using **mod_deflate**, but since you probably read <a style="text-decoration:underline;" href="https://www.placona.co.uk/apache-101-compressing-files/" target="_self">my last post</a> where I tell how to install and configure it, I won't be covering its usagein this post.
 
 Now, on our vhost file, we will add a few directives. This is how I do when using this website as an example:
 

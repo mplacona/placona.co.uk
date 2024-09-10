@@ -5,7 +5,7 @@ date: 2008-09-10T00:00:00+00:00
 tweetbackscheck:
   - "1346187123"
 shorturls:
-  - 'a:4:{s:9:"permalink";s:51:"https://www.placona.co.uk/78/railo/railo-3-released/";s:7:"tinyurl";s:26:"http://tinyurl.com/2a7dpbs";s:4:"isgd";s:18:"http://is.gd/bKJ1l";s:5:"bitly";s:20:"http://bit.ly/bAfwmt";}'
+  - 'a:4:{s:9:"permalink";s:51:"https://www.placona.co.uk/railo-3-released/";s:7:"tinyurl";s:26:"http://tinyurl.com/2a7dpbs";s:4:"isgd";s:18:"http://is.gd/bKJ1l";s:5:"bitly";s:20:"http://bit.ly/bAfwmt";}'
 twittercomments:
   - 'a:0:{}'
 tweetcount:

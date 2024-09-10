@@ -18,7 +18,7 @@ This week they came up with a list of companies using jQuery UI:
   * LiveSlices
   * DotNetShoutout
 
-And to my surprise I was mentioned on the book section, due to my <a href="https://www.placona.co.uk/99/jquery/jquery-ui-1-6-book-review/" target="_blank">book review</a> on jQuery UI 1.6: The User Interface Library for jQuery.
+And to my surprise I was mentioned on the book section, due to my <a href="https://www.placona.co.uk/jquery-ui-1-6-book-review/" target="_blank">book review</a> on jQuery UI 1.6: The User Interface Library for jQuery.
   
 They've also featured some tutorials and a Q&A
   

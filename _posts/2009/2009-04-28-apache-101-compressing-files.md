@@ -5,7 +5,7 @@ date: 2009-04-28T00:00:00+00:00
 categories:
   - Technology
 ---
-I'm going to start a server configuration series here, where I'll be talking about my goals and frustrations when configuring my own webserver. As most of you know, I've been using <a style="text-decoration:underline;" href="https://www.placona.co.uk/114/railo/placona-co-uk-has-a-new-home-1/" target="_blank">my own VPS</a> for the last two weeks, and promised to post everything about it here.
+I'm going to start a server configuration series here, where I'll be talking about my goals and frustrations when configuring my own webserver. As most of you know, I've been using <a style="text-decoration:underline;" href="https://www.placona.co.uk/placona-co-uk-has-a-new-home-1/" target="_blank">my own VPS</a> for the last two weeks, and promised to post everything about it here.
 
 I won't be covering things like basic installation, or server set-up. There's tons of them all over the web, and I 'm sure most of them would beat anything I wrote here, as some of those guys are real *nix gurus, while I'm only a learner.
 

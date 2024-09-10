@@ -18,13 +18,13 @@ and more excited at every new release, and the more I read about it,
   
 the more I think this is really a great library.
 
-As you <a href="https://www.placona.co.uk/74/coldfusion/how-i-treat-the-links-on-my-blog-with-jquery/" mce_href="/blog/post.cfm/how-i-treat-the-links-on-my-blog-with-jquery">might</a> <a href="https://www.placona.co.uk/89/jquery/things-you-may-not-know-about-jquery/" mce_href="/blog/post.cfm/things-you-may-not-know-about-jquery">have</a> <a href="https://www.placona.co.uk/93/javascript/quick-and-dirty-jquery-drag-drop/" mce_href="/blog/post.cfm/quick-and-dirty-jquery-drag-drop">noticed</a>,
+As you <a href="https://www.placona.co.uk/how-i-treat-the-links-on-my-blog-with-jquery/" mce_href="/blog/post.cfm/how-i-treat-the-links-on-my-blog-with-jquery">might</a> <a href="https://www.placona.co.uk/things-you-may-not-know-about-jquery/" mce_href="/blog/post.cfm/things-you-may-not-know-about-jquery">have</a> <a href="https://www.placona.co.uk/quick-and-dirty-jquery-drag-drop/" mce_href="/blog/post.cfm/quick-and-dirty-jquery-drag-drop">noticed</a>,
   
 on the past few months I've been actively using jQuery on all of my
   
 projects, and recently at work, we even replaced most of our <a href="http://labs.adobe.com/technologies/spry/" mce\_href="http://labs.adobe.com/technologies/spry/" class="broken\_link">Spry</a> stuff with <a href="http://jquery.com/" mce_href="http://jquery.com/">jQuery</a>. I think Spry is a great library, but jQuery is simply easier to use, and a lot lighter.
 
-I aim here to give a brief, but well elaborated review of the book <a href="http://www.amazon.co.uk/dp/1847195121?tag=marplasblo-21&camp=1406&creative=6394&linkCode=as1&creativeASIN=1847195121&adid=0S2PG49J7XJRK6CC0KFH&" mce_href="http://www.amazon.co.uk/dp/1847195121?tag=marplasblo-21&camp=1406&creative=6394&linkCode=as1&creativeASIN=1847195121&adid=0S2PG49J7XJRK6CC0KFH&">jQuery UI 1.6</a>. I know the new version of the jQuery UI <a href="https://www.placona.co.uk/95/javascript/jquery-ui-1-7-released/" mce_href="/blog/post.cfm/jquery-ui-1-7-released">was released</a>
+I aim here to give a brief, but well elaborated review of the book <a href="http://www.amazon.co.uk/dp/1847195121?tag=marplasblo-21&camp=1406&creative=6394&linkCode=as1&creativeASIN=1847195121&adid=0S2PG49J7XJRK6CC0KFH&" mce_href="http://www.amazon.co.uk/dp/1847195121?tag=marplasblo-21&camp=1406&creative=6394&linkCode=as1&creativeASIN=1847195121&adid=0S2PG49J7XJRK6CC0KFH&">jQuery UI 1.6</a>. I know the new version of the jQuery UI <a href="https://www.placona.co.uk/jquery-ui-1-7-released/" mce_href="/blog/post.cfm/jquery-ui-1-7-released">was released</a>
   
 just a few days ago (second week of March 2009), but there weren't any
   

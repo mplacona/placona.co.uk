@@ -11,7 +11,7 @@ tags:
 ---
 To continue with our series of website optimization tricks, I'll talk a little bit more about <a title="Content Delivery Network" href="http://en.wikipedia.org/wiki/Content_delivery_network" target="_blank">Content Delivery Network (CDN)</a>, and will talk you though the steps of creating a totally **free** CDN for your website.
   
-Basically, as I've already stated on my <a title="Speed up your website - Part 1" href="https://www.placona.co.uk/160/general-techie-stuff/speed-up-yor-website-part-1/" target="_self">previous post</a>, a CDN is an external network which specializes in serving static content. It normally consists of a few servers spread around the world, so the data will travel the shortest route to get to their destination based on <a title="Wikipedia - Geolocation" href="http://en.wikipedia.org/wiki/Geolocation" target="_blank">Geolocation</a>.
+Basically, as I've already stated on my <a title="Speed up your website - Part 1" href="https://www.placona.co.uk-techie-stuff/speed-up-yor-website-part-1/" target="_self">previous post</a>, a CDN is an external network which specializes in serving static content. It normally consists of a few servers spread around the world, so the data will travel the shortest route to get to their destination based on <a title="Wikipedia - Geolocation" href="http://en.wikipedia.org/wiki/Geolocation" target="_blank">Geolocation</a>.
   
 In other words, if you're in Japan, why should you have to wait for the data to travel from Europe, if there's a server just next door to you.
 

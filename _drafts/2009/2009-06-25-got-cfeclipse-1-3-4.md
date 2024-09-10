@@ -5,7 +5,7 @@ date: 2009-06-25T00:00:00+00:00
 categories:
   - coldfusion
 ---
-Yep, after <a title="Galileo is here" href="https://www.placona.co.uk/152/general-techie-stuff/galileo-is-here/" target="_self">my post from yesterday</a> talking about Eclipse Galileo release, I'm here yet again to announce another release.
+Yep, after <a title="Galileo is here" href="https://www.placona.co.uk-techie-stuff/galileo-is-here/" target="_self">my post from yesterday</a> talking about Eclipse Galileo release, I'm here yet again to announce another release.
   
 The [CFEclipse team](http://www.cfeclipse.org/team.cfm "CFEclipse Team") has just released it's version 1.3.4 with a <a title="CFEclipse Trac" href="http://trac.cfeclipse.org/" target="_blank" class="broken_link">ton of bugfixes</a> and some improvements.
   

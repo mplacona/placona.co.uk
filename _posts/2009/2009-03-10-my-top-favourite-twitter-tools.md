@@ -10,7 +10,7 @@ tags:
 ---
 UPDATEI'm constantly finding new tools that help me to use <a href="http://twitter.com/marcos_placona" target="_blank">my twitter account</a> in a better way. Some of the tools are really great, but I can't be bothered to remember all of the URLs, and bookmarking doesn't seem to help at all.
   
-So I decided to compile a list and post here. I'll update the list as I find new tools, so keep an eye on this space, and instead of bookmarking all the url's, simply [bookmark this post](https://www.placona.co.uk/97/misc/my-top-favourite-twitter-tools/ "Placona.co.uk - My top favourite twitter tools"){.jqbookmark}.
+So I decided to compile a list and post here. I'll update the list as I find new tools, so keep an eye on this space, and instead of bookmarking all the url's, simply [bookmark this post](https://www.placona.co.uk/my-top-favourite-twitter-tools/ "Placona.co.uk - My top favourite twitter tools"){.jqbookmark}.
 
   * <a href="http://www.tweetdeck.com/" target="_blank">http://www.tweetdeck.com/</a>  
     TweetDeck is an Adobe Air desktop application that is currently in public beta. It aims to evolve the existing functionality of Twitter by taking an abundance of information i.e twitter feeds, and breaking it down into more manageable bite sized pieces.

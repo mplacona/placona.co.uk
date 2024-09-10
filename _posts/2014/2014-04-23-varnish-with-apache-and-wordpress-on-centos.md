@@ -59,7 +59,7 @@ You are probably running your website through port 80 (which is the most often u
 
 <img class="alignnone size-full wp-image-1414" src="/images/2014/04/Varnish-+-Apache1.gif" alt="Varnish + Apache" width="683" height="336" />
 
-To be able to use this port, we need to make sure our firewall actually allows that port to receive HTTP connections. luckily I have already written an article about this, so [give it a read](https://www.placona.co.uk/172/linux/iptables-opening-server-ports-to-specific-ip-addresses/ "IPTABLES – Opening server ports to specific IP addresses") to understand a little better why we're doing this. a <abbr title='Too long; Didn't read' rel='tooltip'>tl;dr</abbr> version of it would be as such:
+To be able to use this port, we need to make sure our firewall actually allows that port to receive HTTP connections. luckily I have already written an article about this, so [give it a read](https://www.placona.co.uk/iptables-opening-server-ports-to-specific-ip-addresses/ "IPTABLES – Opening server ports to specific IP addresses") to understand a little better why we're doing this. a <abbr title='Too long; Didn't read' rel='tooltip'>tl;dr</abbr> version of it would be as such:
 
 ```bash
 sudo vim /etc/sysconfig/iptables
@@ -381,7 +381,7 @@ If you refresh the page, you should see two things here:
   1. Your page load is now much faster
   2. X-Cache now says HIT
 
-Because you're now caching your request, your page loads will be much faster in general. Obviously this won't account for page loads on external resources, but you can use other methods to cache those resources (see my <abbr title='Content Delivery Network' rel='tooltip'>CDN</abbr> post [here](https://www.placona.co.uk/159/general-techie-stuff/speed-up-yor-website-part-2-the-free-cdn/ "Speed up your website – Part 2 – The Free CDN")).
+Because you're now caching your request, your page loads will be much faster in general. Obviously this won't account for page loads on external resources, but you can use other methods to cache those resources (see my <abbr title='Content Delivery Network' rel='tooltip'>CDN</abbr> post [here](https://www.placona.co.uk-techie-stuff/speed-up-yor-website-part-2-the-free-cdn/ "Speed up your website – Part 2 – The Free CDN")).
 
 Every subsequent request you make to that page will also come from cache. The more hits you get in different pages, the best results your users will get. <abbr title='Web Crawlers' rel='tooltip'>Spiders</abbr> also work in your favour here as by hitting pages, they are also warming up your cache for you.
 

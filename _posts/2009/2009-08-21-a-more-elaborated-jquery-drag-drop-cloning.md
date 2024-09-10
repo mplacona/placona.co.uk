@@ -10,7 +10,7 @@ tags:
   - JQuery
   - Technology
 ---
-I've decided to get back at jQuery <a title="jQuery - Draggables" href="http://docs.jquery.com/UI/Draggables" target="_blank">draggable</a> and <a title="jQuery - Droppables" href="https://docs.jquery.com/UI/Droppables" target="_blank">droppable</a> to a personal project I've been working on. In the past, I've demonstrated how to do <a title="Quick and Dirty jQuery Drag and Drop" href="https://www.placona.co.uk/93/javascript/quick-and-dirty-jquery-drag-drop/" target="_blank">basic drag and drop</a>, but this time I needed something a little bit more elaborated.
+I've decided to get back at jQuery <a title="jQuery - Draggables" href="http://docs.jquery.com/UI/Draggables" target="_blank">draggable</a> and <a title="jQuery - Droppables" href="https://docs.jquery.com/UI/Droppables" target="_blank">droppable</a> to a personal project I've been working on. In the past, I've demonstrated how to do <a title="Quick and Dirty jQuery Drag and Drop" href="https://www.placona.co.uk/quick-and-dirty-jquery-drag-drop/" target="_blank">basic drag and drop</a>, but this time I needed something a little bit more elaborated.
   
 I won't spoil my personal project by showing what it before it gets done, but I'll show here an example of what I wanted to accomplish which will use pretty much the same functionality, but in other application.
   

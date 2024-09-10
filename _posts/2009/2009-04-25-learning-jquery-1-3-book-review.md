@@ -13,7 +13,7 @@ _Book reviewer Marcos Placona | Publisher: Packt. Author(s): Jonathan Chaffer, K
 
 This book is aimed to jQuery beginners, or for those with more experience who need an extra help on that difficult situations.
 
-You probably read <a href="https://www.placona.co.uk/75/javascript/learning-jquery-book-review/" mce_href="/blog/post.cfm/learning-jquery-book-review">my review</a> of Learning jQuery back in 2008 where I described every single feature on each of the chapters.
+You probably read <a href="https://www.placona.co.uk/learning-jquery-book-review/" mce_href="/blog/post.cfm/learning-jquery-book-review">my review</a> of Learning jQuery back in 2008 where I described every single feature on each of the chapters.
 
 This time, I'm not going to describe every single chapter, as I think it would be pretty much a repetition of the previous review, but adding a few things. I still think this book is a must if you want to learn jQuery, or even if you are familiar with the library.
 

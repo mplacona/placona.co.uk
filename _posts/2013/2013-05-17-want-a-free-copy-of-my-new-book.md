@@ -20,7 +20,7 @@ Is read the book, and then write a review of it on your blog.
 
 And I'm not asking you to write a good (or biased) review either. I'm just asking for some feedback. I've had a couple of people already writing reviews on their blogs, Google+ and Amazon, but more the merrier. And I want to know what **YOU** think!
 
-For those who haven't seen my [previous blog post](https://www.placona.co.uk/1235/javascript/i-am-a-published-author/) about having published this book, this is my first ever book, and while I have written hundreds of technical articles, none of them have actually made this far on the "publishing chain".
+For those who haven't seen my [previous blog post](https://www.placona.co.uk/i-am-a-published-author/) about having published this book, this is my first ever book, and while I have written hundreds of technical articles, none of them have actually made this far on the "publishing chain".
 
 And this is why I want to have all the feedback I can get. Again, **YOU** are the sort of person who buys the sort of books I write, and it's **YOU** I wanna hear from.
 

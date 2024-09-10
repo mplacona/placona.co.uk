@@ -9,7 +9,7 @@ tags:
   - coldfusion
   - Fusebox
 ---
-I asked **Niall O'Doherty** (a fellow CF Developer) to give me his initial feelings on the book [How to drive Fusebox 5.5](https://www.placona.co.uk/77/fusebox/how-to-drive-fusebox-5-5/), and he came up with an excellent review, that left me wanting the book even more. I asked him if he would mind me posting his review on my blog, as his website is still not ready; he kindly said **yes**.
+I asked **Niall O'Doherty** (a fellow CF Developer) to give me his initial feelings on the book [How to drive Fusebox 5.5](https://www.placona.co.uk/how-to-drive-fusebox-5-5/), and he came up with an excellent review, that left me wanting the book even more. I asked him if he would mind me posting his review on my blog, as his website is still not ready; he kindly said **yes**.
   
 I just changed some of the styles, but the text is still exactly the same thing.
   

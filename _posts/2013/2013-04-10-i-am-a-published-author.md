@@ -16,7 +16,7 @@ The challenge was to write a book about one single topic that would enable reade
 
 Anything with 200 pages would be too much, so I had to keep the book very lean while keeping the reader interested, and giving her enough ground to be able to build a final project just with the information contained on the book.
 
-I had a pre-set topic as well, and had to stick to about 35 pages of content. If you remember, a while ago I wrote an article about [how to do drag and drop with jQuery](https://www.placona.co.uk/166/javascript/a-more-elaborated-jquery-drag-drop-cloning/ "Jquery Drag and Drop").
+I had a pre-set topic as well, and had to stick to about 35 pages of content. If you remember, a while ago I wrote an article about [how to do drag and drop with jQuery](https://www.placona.co.uk/a-more-elaborated-jquery-drag-drop-cloning/ "Jquery Drag and Drop").
 
 While the article was only about dragging and dropping DOM elements, I was asked to write a book on how to drag entire layouts on the screen, and allow users to fully customize their experience.
 
