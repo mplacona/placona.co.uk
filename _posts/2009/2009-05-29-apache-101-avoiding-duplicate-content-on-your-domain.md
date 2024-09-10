@@ -5,7 +5,7 @@ date: 2009-05-29T00:00:00+00:00
 categories:
   - VPS
 ---
-Did you know that search engines consider things like _https://www.placona.co.uk/index.cfm_ and  _http://placona.co.uk/index.cfm_ as duplicate content? It might sound like a wise thing to do, as your site would be accessible by whichever URL related to your domain. I'll say here it's not, as search engines like Google consider this an offense and will penalize you should they think you're doing it on purpose.
+Did you know that search engines consider things like _https://www.placona.co.uk/index.cfm_ and  _https://placona.co.uk/index.cfm_ as duplicate content? It might sound like a wise thing to do, as your site would be accessible by whichever URL related to your domain. I'll say here it's not, as search engines like Google consider this an offense and will penalize you should they think you're doing it on purpose.
   
 Google normally are very strict and harsh with people trying to "play" with their search engine, or people who try to [black hat SEO](http://en.wikipedia.org/wiki/Black_hat_seo "Black Hat SEO"). And content duplication might be just what will put your domain on the bottom of their search.
 
