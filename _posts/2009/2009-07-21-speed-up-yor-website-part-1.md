@@ -23,13 +23,13 @@ This approach helps a lot, and if you, like me, enjoy monitoring this kind of th
 
 A downside to it is that you're still hitting your webserver, and now even harder, as you're making multiple connections at once to it. If you are loading images or small files, you shouldn't have a problem, but things will start to get uglier if you try to load videos or heavier files.
 
-<img src="http://files.placona.co.uk/cdn/mockup1.png" alt="Sub-domains approach" width="461" height="242" />
+<!-- <img src="http://files.placona.co.uk/cdn/mockup1.png" alt="Sub-domains approach" width="461" height="242" /> -->
 
 ### <span style="text-decoration: underline;">The second approach:</span>
 
 This consists in having a second webserver only to load assets while your main webserver deals with the other calls. A summary of this would be something like:
 
-<img src="http://files.placona.co.uk/cdn/mockup.png" alt="Two webservers" width="354" height="230" />
+<!-- <img src="http://files.placona.co.uk/cdn/mockup.png" alt="Two webservers" width="354" height="230" /> -->
 
 Basically what this horribly mocked-up image is trying to say is: You have two webservers using two different ports. The main webserver is the responsible for all the requests, but will redirect every asset call to your second webserver. What people normally do here is use two different kinds of webservers. Most commonly Apache (as the main webserver) and <a title="Lighttpd" href="http://www.lighttpd.net/" target="_blank">lighttpd</a> as the secondary webserver. The reason why people use lighttpd, is because it's incredibly light, and you won't even notice it's there.
 
@@ -45,6 +45,6 @@ There's a similarity with approach two when using this method, as it pretty much
 
 A representation of it would be as such:
 
-<img src="http://files.placona.co.uk/cdn/mockup2.png" alt="Cloud Server" width="555" height="253" />
+<!-- <img src="http://files.placona.co.uk/cdn/mockup2.png" alt="Cloud Server" width="555" height="253" /> -->
 
 On part two, I will be showing how to have a free "CDN" for your server, and how to maintain it. I put the word CDN surrounded by quotes, as the approach I'll be showing besides being a very common one, doesn't really have all the benefits a true CDN has. But hey, it's **free**!

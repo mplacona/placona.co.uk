@@ -7,7 +7,7 @@ categories:
 tags:
   - Website Optimization
 ---
-<img src="http://files.placona.co.uk/taffy_sticky_js/postit.jpg" alt="Sticky Javascript Persistence" width="480" height="418" />
+<!-- <img src="http://files.placona.co.uk/taffy_sticky_js/postit.jpg" alt="Sticky Javascript Persistence" width="480" height="418" /> -->
   
 On my [last blog post](https://www.placona.co.uk/a-more-elaborated-jquery-drag-drop-cloning/ "A more Elaborated jQuery Drag & Drop") I explained how to create a drag and drop using cloning, so you can can drag & drop multiple objects
   

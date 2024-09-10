@@ -11,9 +11,9 @@ tags:
   - Technology
   - Website Optimization
 ---
-<p style="text-align: center;">
+<!-- <p style="text-align: center;">
   <img src="http://files.placona.co.uk/update_java_centos/java_linux.jpg" alt="Java on Centos" /><br /> (Photo: <a title="Photo by tutchiio" href="http://www.flickr.com/photos/tippy/245562070/" target="_blank" rel="nofollow">tutchiio</a>)
-</p>
+</p> -->
 
 I'm only writing this blog post because I usually try to keep my VPS up to date, and usually one of the things I have to do to accomplish such thing is updating the <a title="Java" href="http://www.oracle.com/technetwork/java/index.html" target="_blank">Java</a> version.
   

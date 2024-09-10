@@ -11,7 +11,7 @@ tags:
   - Python
 ---
 <p align="center">
-  <img src="http://files.placona.co.uk/py_remover/recursion_flat.png" alt="Recursion" width="320" height="90" />
+  <!-- <img src="http://files.placona.co.uk/py_remover/recursion_flat.png" alt="Recursion" width="320" height="90" /> -->
 </p>
 
 At work we've been doing some deploy optimization, and the need of automatically deleting (recursively) specific folders came up.
@@ -28,7 +28,7 @@ one by one if the release is too big.
 
 We easily end up with something like:
 
-<img src="http://files.placona.co.uk/py_remover/folders.png" alt="Messy folders" width="200" height="356" />
+<!-- <img src="http://files.placona.co.uk/py_remover/folders.png" alt="Messy folders" width="200" height="356" /> -->
 
 We then thought of an automated way of removing all this folders. 
 
@@ -108,5 +108,3 @@ I first need to make sure I'm deleting all the files inside the folders prior to
 And that's all I had to do. I then thought I'd need to have a way to distribute it, as some people at work won't have python installed, so I didn't wanna have them going through the hassle of installing and running files from the command line.
 
 On my next post, I'll be showing how to generate self-contained .exe files with <a title="Py2exe" href="http://www.py2exe.org/" target="_blank">py2exe</a>.
-  
-In the meantime, you can download the [source here](http://files.placona.co.uk/py_remover/test_remover_source.rar "Recursive Folder Remover - Source") and the <a title="Recursive Folder Remover - Binaries" href="http://files.placona.co.uk/py_remover/test_remover.rar" target="_blank">binaries here</a>.

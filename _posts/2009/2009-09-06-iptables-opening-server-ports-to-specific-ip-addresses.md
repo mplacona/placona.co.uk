@@ -15,9 +15,9 @@ tags:
 
 
 
-<p style="text-align: center;">
+<!-- <p style="text-align: center;">
   <img src="http://files.placona.co.uk/iptables/iptables.jpg" alt="Iptables shell script" width="480" height="276" /><br /> (Photo: <a title="Photo by Jordan W" href="http://www.flickr.com/photos/welshboy/100250487/" target="_blank" rel="nofollow">Jordan W</a>)
-</p>
+</p> -->
 
 I have been doing some housekeeping on my VPS, and decided there's a few ports that should only be accessed by certain IP addresses for security purposes.
   

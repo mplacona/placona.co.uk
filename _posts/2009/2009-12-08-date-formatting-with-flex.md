@@ -10,9 +10,9 @@ tags:
   - Adobe AIR
   - Flex
 ---
-<p style="text-align: center;">
+<!-- <p style="text-align: center;">
   <img src="http://files.placona.co.uk/date_format_flex/flexdateformat.jpg" alt="Formatting dates with flex" width="480" height="276" /><br /> (Photo: <a title="Photo by adactio" rel="nofollow" href="http://www.flickr.com/photos/adactio/" target="_blank">adactio</a>)
-</p>
+</p> -->
 
 I've been working with some [Adobe Flex](http://www.adobe.com/products/flex.html "Adobe Flex") recently, and was having some trouble formatting dates. For those who don't know, here (in th UK) we use the format "dd/mm/yyyy" (Day/Month/Year) as opposed to people over in the States using "mm/dd/yyyy" (Month/Day/Year).
   

@@ -82,4 +82,4 @@ My final code ended up looking like this:
   </noscript>
 </div>
 
-### **<span style="color: #339966;"><a title="Finite Image Slider - Demo" href="https://s3-eu-west-1.amazonaws.com/files.placona.co.uk/finite-image-slider/index.html" target="_blank"><span style="color: #339966;">View Demo</span></a></span>**
+<!-- ### **<span style="color: #339966;"><a title="Finite Image Slider - Demo" href="https://s3-eu-west-1.amazonaws.com/files.placona.co.uk/finite-image-slider/index.html" target="_blank"><span style="color: #339966;">View Demo</span></a></span>** -->

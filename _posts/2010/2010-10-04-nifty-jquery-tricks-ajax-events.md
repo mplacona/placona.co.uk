@@ -17,13 +17,13 @@ Our QA soon noticed that if during the process of browsing the page and updating
 
 An example of this would be:
 
-<img class="alignnone" title="Ajax Driven Page" src="http://files.placona.co.uk/nifty_jquery_tricks_ajax_events/mockup_small.png" alt="Ajax Driven Page" width="300" height="202" />
+<!-- <img class="alignnone" title="Ajax Driven Page" src="http://files.placona.co.uk/nifty_jquery_tricks_ajax_events/mockup_small.png" alt="Ajax Driven Page" width="300" height="202" /> -->
 
 When clicking on each of the tabs, they would trigger an Ajax call to a dynamic page that would return some HTML. this HTML would fill up the internal div and display the contents without refreshing.
 
 Now, if while clients were viewing this page they decided to go for a cup of tea and clicked on a tab when they came back after 15 minutes, the following would occur:
 
-<img class="alignnone" title="Ajax Driven page screwing things up" src="http://files.placona.co.uk/nifty_jquery_tricks_ajax_events/mockup2_small.png" alt="Ajax Driven page screwing things up" width="300" height="185" />
+<!-- <img class="alignnone" title="Ajax Driven page screwing things up" src="http://files.placona.co.uk/nifty_jquery_tricks_ajax_events/mockup2_small.png" alt="Ajax Driven page screwing things up" width="300" height="185" /> -->
 
 That isn't the right behaviour, as the browser is supposed to redirect the user to a login page, and not display this page inside the tabs. in this situation, no matter what the client do, clicking the tabs will always take them to the same screen, which could confuse them.
 

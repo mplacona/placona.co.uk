@@ -24,7 +24,7 @@ However, after I started to play with my "new" box, I noticed that my external s
 
 I use serial ports for RS-232 protocol a lot with my <a title="Pic midrocontroller" href="http://en.wikipedia.org/wiki/PIC_microcontroller" target="_blank">pic programming</a>, and although I could simply use a Serial-to-USB cable, I find that it's just an extra layer, and you could easily blow your USB module should you do anything wrong.
 
-<img class="alignleft" title="PCI card to two serial ports" src="http://files.placona.co.uk/serial_ports_ubuntu/pci_rs232_serial_port_two_com_ports.jpg" alt="PCI card to two serial ports" width="200" height="131" />The device I'm using is a PCI card that gives me two serial ports. I got it off eBay for a couple of pounds, and so far it has been working flawlessly.
+<!-- <img class="alignleft" title="PCI card to two serial ports" src="http://files.placona.co.uk/serial_ports_ubuntu/pci_rs232_serial_port_two_com_ports.jpg" alt="PCI card to two serial ports" width="200" height="131" />The device I'm using is a PCI card that gives me two serial ports. I got it off eBay for a couple of pounds, and so far it has been working flawlessly. -->
 
 Its communication is a lot faster than via USB, as I'm connected directly to the motherboard, therefore, no "middle-man" is used during the process.
 

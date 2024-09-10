@@ -20,7 +20,7 @@ I have a stage where I have a bunch of components that should be dragged from on
   
 A sketch of it would be on the lines of:
   
-<img alt="jQuery drag & Drop Example" src="http://files.placona.co.uk/drag_drop/drag_drop.png" width="342" height="430" />
+<!-- <img alt="jQuery drag & Drop Example" src="http://files.placona.co.uk/drag_drop/drag_drop.png" width="342" height="430" /> -->
   
 As you can see, my icons need to stay on the left, but a clone of it can always be dragged to the right. This is not a finished version, but show pretty much all of the steps I had to follow in order to accomplish it. It's not a simple solution, and did involve loads of researching and asking around. The jQuery's documentation is not really vast, and does not cover (and should not really) every single example.
   

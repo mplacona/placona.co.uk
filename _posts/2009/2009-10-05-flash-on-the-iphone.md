@@ -5,7 +5,7 @@ date: 2009-10-05T00:00:00+00:00
 categories:
   - Technology
 ---
-<img src="http://files.placona.co.uk/flash_iphone/iphone.jpg" alt="Flash on iPhone" width="480" height="276" />
+<!-- <img src="http://files.placona.co.uk/flash_iphone/iphone.jpg" alt="Flash on iPhone" width="480" height="276" /> -->
   
 <span style="align: left;">(Photo: <a title="Photo by William Hook" href="http://www.flickr.com/photos/williamhook/" target="_blank">William Hook</a>)</span>
   
