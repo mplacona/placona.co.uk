@@ -10,7 +10,6 @@ categories:
   - Technology
 image: 
   path: /images/2010/05/serial_ports_ubuntu.jpg
-  caption: "Photo by: [http://www.flickr.com/photos/lilit/](lilit)"
 ---
 I've recently been "forced" to move my desktop from Windows to Linux again. Basically my current desktop "decided" it won't support Windows anymore, and any attempt to start it ends up in a <a title="Blue Screen of Death" href="http://en.wikipedia.org/wiki/Blue_Screen_of_Death" target="_blank">BSOD</a>, and I just got fed-up of trying to get it to work.
 

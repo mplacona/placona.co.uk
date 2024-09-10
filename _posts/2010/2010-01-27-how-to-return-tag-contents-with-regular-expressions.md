@@ -8,7 +8,6 @@ categories:
   - Regular Expressions
 image: 
   path: /images/2010/01/mastering_regular_expression.jpg
-  caption: "Photo by: [http://www.flickr.com/photos/kubina/](Jeff Kubina)"
 ---
 
 As most of you already know, I LOVE **regular expressions**, and think they are great to solve simple and complex tasks involving strings.

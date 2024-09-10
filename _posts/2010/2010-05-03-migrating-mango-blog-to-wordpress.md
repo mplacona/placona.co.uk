@@ -10,7 +10,6 @@ tags:
   - Railo
 image: 
   path: /images/2010/05/migrating_from_mango_to_wordpress.jpg
-  caption: "Photo by: [http://www.flickr.com/photos/gagilas/](gagilas)"
 ---
 
 As <a title="A change is always welcome" href="https://www.placona.co.uk/a-change-is-always-welcome/" target="_self">previously promised</a>, today I'll be publishing my migration scrips from <a title="Mango Blog" href="http://www.mangoblog.org/" target="_blank">Mango Blog</a> to <a title="Wordpress" href="http://wordpress.org/" target="_blank">WordPress</a>.

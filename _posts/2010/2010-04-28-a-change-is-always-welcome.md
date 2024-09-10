@@ -9,11 +9,10 @@ tags:
   - Misc
 image: 
   path: /images/2010/04/a_change_is_always_welcome.jpg
-  caption: "Photo by: [http://www.flickr.com/photos/huasonic/](Huasonic)"
 ---
 I've been procrastinating for too long, and somehow trying to avoid the inevitable. As must of you might have noticed, it's been a long time I don't blog about anything.
 
-It's mainly because I have been tto busy at work, and am not even having time to read blogs. If I can't read blogs, you can pretty much guess where all the writing goes.
+It's mainly because I have been too busy at work, and am not even having time to read blogs. If I can't read blogs, you can pretty much guess where all the writing goes.
 
 In fact, another reason why I kind of "lost interest" on blogging, is because I have a huge urge for perfection, and it would "hurt" me any time I wanted to write something, and had to deal with my set-up (trust me, there was a lot involved).
 

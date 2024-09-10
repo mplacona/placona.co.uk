@@ -6,7 +6,6 @@ categories:
   - Android
 image: 
   path: /images/2010/07/android_eats_apples_opt.jpg
-  caption: "Photo by: [http://www.flickr.com/photos/laihiu/](laihiu)"
 ---
 I jumped into the <a title="Android Operating System" href="http://en.wikipedia.org/wiki/Android_(operating_system)" target="_blank">Android</a> bandwagon about two months ago, and so far I can't cease to be impressed.
 

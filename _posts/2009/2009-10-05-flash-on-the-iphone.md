@@ -7,7 +7,7 @@ categories:
 ---
 <!-- <img src="http://files.placona.co.uk/flash_iphone/iphone.jpg" alt="Flash on iPhone" width="480" height="276" /> -->
   
-<span style="align: left;">(Photo: <a title="Photo by William Hook" href="http://www.flickr.com/photos/williamhook/" target="_blank">William Hook</a>)</span>
+<!-- <span style="align: left;">(Photo: <a title="Photo by William Hook" href="http://www.flickr.com/photos/williamhook/" target="_blank">William Hook</a>)</span> -->
   
 Not really **_Flash_** running from websites on the browser, but at the **MAX Conference 2009** that is happening this week, Adobe has just broken the news that **Flash developers** will now be able to create applications for the **Apple Iphone** using **Action Script 3**.
   
