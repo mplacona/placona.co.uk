@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-modified: 2024-08-31 17:50:44
+modified: 2025-07-23 17:50:44
 ---
 
 **Marcos Placona** is an accomplished Developer Relations (DevRel) leader with a wealth of experience in the tech industry. Having led DevRel teams at renowned companies like Circle and Twilio, Marcos has played a pivotal role in shaping developer experiences for millions around the world. With a passion for simplifying complex technologies, he has now transitioned into a successful solopreneur.
@@ -13,6 +13,8 @@ modified: 2024-08-31 17:50:44
 - **[JustDeploy](https://justdeploy.tech)**: Revolutionizing the deployment process, Marcos launched **JustDeploy**, a platform that enables developers to deploy to their servers in minutes. This tool is designed to streamline deployment, allowing developers to focus on what they do best—building great products.
 
 - **[MicroWidgets](https://microwidgets.dev)**: As the Founder of **MicroWidgets**, Marcos is empowering developers with website widgets that convert. These tools are perfect for developers who’d rather code than spend time on marketing and optimization.
+
+- **[LinkIntel](https://www.getlinkintel.com)**: The smarter way to track, optimize, and benchmark LinkedIn performance.
 
 ## Advisor and Mentor
 
