@@ -9,12 +9,10 @@ modified: 2025-07-23 17:50:44
 ## Founder of Innovative Tech Solutions
 
 - **[DevRel Bridge](https://devrelbridge.com)**: Marcos is the Founder of **DevRel Bridge**, a cutting-edge service focused on Developer-First DevRel Strategy for Market Leaders. DevRel Bridge is dedicated to helping companies create impactful developer relations strategies that resonate with their audience.
-
 - **[JustDeploy](https://justdeploy.tech)**: Revolutionizing the deployment process, Marcos launched **JustDeploy**, a platform that enables developers to deploy to their servers in minutes. This tool is designed to streamline deployment, allowing developers to focus on what they do best—building great products.
-
 - **[MicroWidgets](https://microwidgets.dev)**: As the Founder of **MicroWidgets**, Marcos is empowering developers with website widgets that convert. These tools are perfect for developers who’d rather code than spend time on marketing and optimization.
-
 - **[LinkIntel](https://www.getlinkintel.com)**: The smarter way to track, optimize, and benchmark LinkedIn performance.
+- **[MentionDrop](https://www.mentiondrop.com)**: Real-time web mention monitoring with AI relevance scoring. Google Alerts that actually works.
 
 ## Advisor and Mentor
 
