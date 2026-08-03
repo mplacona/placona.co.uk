@@ -36,4 +36,4 @@ Will I keep looking and building sexy applications with it? **Heck yeah!**
 
 Enough about me though.
 
-Have a look at the application I wrote <a title="Langithub" href="http://langithub.placona.co.uk/" target="_blank" class="broken_link">here</a>, and make sure to <a title="Langithub - Pull Requests" href="https://github.com/mplacona/LanGitHub" target="_blank">send me pull requests</a> if you would like to improve it.
+Have a look at the application I wrote here (no longer online), and make sure to <a title="Langithub - Pull Requests" href="https://github.com/mplacona/LanGitHub" target="_blank">send me pull requests</a> if you would like to improve it.

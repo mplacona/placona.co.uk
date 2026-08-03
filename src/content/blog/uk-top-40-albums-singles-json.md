@@ -15,6 +15,6 @@ I then thought this could be of use to somebody else, so turned it into a little
 
 On the root of it, it returns the chart date as the current date and time, and the retrieval date to indicate which date it's been last retrieved. I am caching the feed to play nice with Radio 1, so I'm only making one HTTP request a day to their website.
 
-Check it out [here](http://top40.placona.co.uk/)
+Check it out here (no longer online)
 
 Also feel free to fork it, and collaborate by adding your country's top 40
