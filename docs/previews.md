@@ -36,6 +36,13 @@ Pages at an empty branch takes the site down.
    Source: *Deploy from a branch* → Branch: `gh-pages` → Folder: `/ (root)`.
    The custom domain is preserved because `CNAME` ships in `public/` and lands at
    the branch root on every deploy.
+
+   Before switching, confirm the branch root contains **`.nojekyll`**. Serving
+   from a branch makes Pages run Jekyll, and Jekyll skips any path beginning with
+   an underscore — which is every stylesheet and script, in `_astro/`. The file
+   ships in `public/` and the deploy asserts it, but check it once by hand,
+   because a site that has lost its CSS still returns HTTP 200 and looks fine to
+   any uptime check.
 4. **Turn off the old path.** Settings → Secrets and variables → Actions →
    Variables → new repository variable `PAGES_SOURCE` = `branch`. This skips the
    `deploy-workflow-source` job, which would otherwise start failing now that the
