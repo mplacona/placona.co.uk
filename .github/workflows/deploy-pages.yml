@@ -2,13 +2,14 @@ name: Build and deploy Astro site to GitHub Pages
 
 on:
   pull_request:
-    branches: [main]
   push:
     branches: [main]
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
+  pages: write
+  id-token: write
 
 concurrency:
   group: pages
@@ -27,20 +28,49 @@ jobs:
       - run: npm run check
       - run: npm run build
       - if: github.event_name != 'pull_request'
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
+          name: site
           path: ./dist
 
-  deploy:
+  # Publishes the site to the gh-pages branch root. PR previews live in
+  # pr-* directories on the same branch, so they are excluded from the clean.
+  publish-branch:
     if: github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: site
+          path: ./dist
+      - uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: dist
+          clean: true
+          clean-exclude: |
+            pr-*
+
+  # The original GitHub Actions deployment path. Keep it running until the
+  # Pages source is switched to the gh-pages branch, then set the repository
+  # variable PAGES_SOURCE to "branch" to turn it off. See docs/previews.md.
+  deploy-workflow-source:
+    if: github.event_name != 'pull_request' && vars.PAGES_SOURCE != 'branch'
+    needs: build
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    needs: build
-    runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
     steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: site
+          path: ./dist
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
       - id: deployment
         uses: actions/deploy-pages@v4
