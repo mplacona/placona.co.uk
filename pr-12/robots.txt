@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://placona.co.uk/sitemap-index.xml
+Sitemap: https://placona.co.uk/sitemap.xml
