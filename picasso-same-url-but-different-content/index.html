@@ -45,7 +45,7 @@
 <span class="line"><span style="color:#E1E4E8">                    .</span><span style="color:#B392F0">error</span><span style="color:#E1E4E8">(R.mipmap.error)</span></span>
 <span class="line"><span style="color:#E1E4E8">                    .</span><span style="color:#B392F0">into</span><span style="color:#E1E4E8">(viewHolder.mIcon);</span></span></code></pre>
 <p>Doing pretty much the same thing as before, but notice I now have a number that gets appended to each URL. This should make my URLs look like this: <a href="https://unsplash.it/50/50?random&amp;%7Bnumber%7D">https://unsplash.it/50/50?random&amp;{number}</a>.</p>
-<img class="alignnone" src="http://media0.giphy.com/media/qdBHt01vnl972/giphy.gif" alt="I'm ugly and I'm proud" width="500" height="375" />
+<img class="alignnone" src="https://media0.giphy.com/media/qdBHt01vnl972/giphy.gif" alt="I'm ugly and I'm proud" width="500" height="375" />
 <p>Now let’s look at the logs:</p>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>6978-6978/uk.co.placona.realmnotes D/Picasso: Main        created      [R43] Request{https://unsplash.it/50/50?random&amp;0}</span></span>
 <span class="line"><span>6978-1213/uk.co.placona.realmnotes D/Picasso: Dispatcher  enqueued     [R43]+1ms </span></span>
