@@ -1,5 +1,6 @@
 ---
 title: "Building a video recording application in Android with CameraX"
+seoTitle: "Video recording in Android with CameraX"
 description: "In this post you will learn how to build a video recording application in Android using CameraX"
 pubDate: "2019-05-27T10:41:43.000Z"
 slug: "building-a-video-recording-application-in-android-with-camerax"

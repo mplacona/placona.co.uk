@@ -1,11 +1,11 @@
 ---
 title: "New TeamCity agents the right way"
-description: "At work, I'm gradually moving our CI server from Hudson to TeamCity."
+description: "How to install and register new TeamCity build agents the right way, avoiding the manual setup that breaks when you migrate CI servers."
 pubDate: "2014-03-03T21:45:35.000Z"
 slug: "new-teamcity-agents-the-right-way"
 categories: ["dotnet"]
 tags: ["Technology"]
-image: "/[object Object]"
+image: "/images/2014/03/teamcity-logo.png"
 draft: false
 ---
 

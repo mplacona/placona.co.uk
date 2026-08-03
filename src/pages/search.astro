@@ -4,30 +4,53 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const posts = (await getCollection('blog', ({ data }) => !data.draft))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-  .map((post) => ({ title: post.data.title, description: post.data.description, url: `/${post.data.slug}/` }));
+  .map((post) => ({
+    title: post.data.title,
+    description: post.data.description,
+    url: `/${post.data.slug}/`,
+    year: post.data.pubDate.getFullYear()
+  }));
 ---
 
-<BaseLayout title="Search writing | Marcos Placona" description="Search Marcos Placona's writing archive." canonicalPath="/search/">
+<BaseLayout
+  title="Search the writing"
+  description={`Browse and search all ${posts.length} articles by Marcos Placona on programming, technology and independent products.`}
+  canonicalPath="/search/"
+>
   <section class="article-shell">
     <p class="eyebrow">Archive</p>
     <h1>Search the writing.</h1>
+    <p class="lede">Every article, newest first. Filter by title or topic.</p>
     <label class="search-label" for="search">Title or topic</label>
-    <input id="search" class="search-input" type="search" placeholder="Try Cloudflare, Android or Dart" autofocus />
-    <p id="result-count" aria-live="polite"></p>
-    <ul id="results" class="search-results"></ul>
+    <input id="search" class="search-input" type="search" placeholder="Try Cloudflare, Android or Dart" />
+    <p id="result-count" aria-live="polite">{posts.length} articles</p>
+    {/* Rendered server-side so the full archive is crawlable and works without JavaScript. */}
+    <ul id="results" class="search-results">
+      {posts.map((post) => (
+        <li data-haystack={`${post.title} ${post.description}`.toLowerCase()}>
+          <a href={post.url}>{post.title}</a>
+          <p>{post.description}</p>
+        </li>
+      ))}
+    </ul>
   </section>
 </BaseLayout>
 
-<script is:inline define:vars={{ posts }}>
+<script is:inline>
   const input = document.querySelector('#search');
-  const results = document.querySelector('#results');
   const count = document.querySelector('#result-count');
-  function render(query = '') {
-    const needle = query.trim().toLowerCase();
-    const matches = posts.filter((post) => `${post.title} ${post.description}`.toLowerCase().includes(needle));
-    count.textContent = needle ? `${matches.length} result${matches.length === 1 ? '' : 's'}` : `${posts.length} articles`;
-    results.innerHTML = matches.map((post) => `<li><a href="${post.url}">${post.title}</a>${post.description ? `<p>${post.description}</p>` : ''}</li>`).join('');
-  }
-  input.addEventListener('input', (event) => render(event.target.value));
-  render();
+  const items = Array.from(document.querySelectorAll('#results > li'));
+
+  input.addEventListener('input', (event) => {
+    const needle = event.target.value.trim().toLowerCase();
+    let shown = 0;
+    for (const li of items) {
+      const match = !needle || li.dataset.haystack.includes(needle);
+      li.hidden = !match;
+      if (match) shown++;
+    }
+    count.textContent = needle
+      ? `${shown} result${shown === 1 ? '' : 's'}`
+      : `${items.length} articles`;
+  });
 </script>

@@ -5,7 +5,7 @@ pubDate: "2010-05-03T11:00:48.000Z"
 slug: "migrating-mango-blog-to-wordpress"
 categories: ["coldfusion"]
 tags: ["General Techie Stuff","Mango Blog","Railo"]
-image: "/[object Object]"
+image: "/images/2010/05/migrating_from_mango_to_wordpress.jpg"
 draft: false
 ---
 

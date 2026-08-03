@@ -1,6 +1,6 @@
 ---
 title: "Moving SVN Folders"
-description: "I recently had to move an entire folder on SVN from a place to another. When you think \"folders\", you simply imagine that would be an easy drag & drop task."
+description: "Moving a folder in Subversion is not a drag and drop job. Here is how to relocate an SVN folder properly with svn move so you keep its history."
 pubDate: "2010-06-22T11:32:42.000Z"
 slug: "moving-svn-folders"
 categories: ["Technology"]

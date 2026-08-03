@@ -1,6 +1,6 @@
 ---
 title: "Sync your iPhone with Outlook (or Google) Calendar"
-description: "We all know how painful it is to keep up to date with our meeting and"
+description: "How to sync your Outlook or Google Calendar with an iPhone so meetings and appointments stay up to date across both devices."
 pubDate: "2009-04-29T00:00:00.000Z"
 slug: "sync-your-outlook-or-google-calendar-with-the-iphone"
 categories: ["Technology"]

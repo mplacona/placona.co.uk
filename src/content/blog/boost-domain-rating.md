@@ -1,5 +1,6 @@
 ---
 title: "Boost Your Website Domain Rating with Redirects and Bot Control"
+seoTitle: "Boost Domain Rating with Redirects and Bot Control"
 description: "Learn how to boost your website's Domain Rating (DR) with Cloudflare Workers by setting up 301 redirects and controlling Googlebot for better SEO performance."
 pubDate: "2024-10-13T20:54:42.000Z"
 slug: "boost-domain-rating"

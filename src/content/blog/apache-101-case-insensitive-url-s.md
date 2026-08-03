@@ -1,6 +1,6 @@
 ---
 title: "Apache 101 & Case insensitive URL's"
-description: "This is only a quick Apache tip for when you are using modrewrite."
+description: "How to make Apache URLs case insensitive using mod_speling and mod_rewrite, so visitors reach your pages whatever case they type."
 pubDate: "2009-05-21T00:00:00.000Z"
 slug: "apache-101-case-insensitive-url-s"
 categories: ["Linux"]
