@@ -1,6 +1,22 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { Content } from '../../content/speaker-timeline.md';
+import { rawContent } from '../../content/speaker-timeline.md';
+
+// The markdown stays the source of truth. Parsing it here turns a flat run of
+// headings and bullets into an actual chronology, which is what the page is.
+const years: { year: string; events: string[] }[] = [];
+for (const line of rawContent().split('\n')) {
+  const heading = line.match(/^#{2,4}\s+(\d{4})\s*$/);
+  if (heading) {
+    years.push({ year: heading[1], events: [] });
+    continue;
+  }
+  const bullet = line.match(/^\s*[*-]\s+(.*\S)\s*$/);
+  if (bullet && years.length) years[years.length - 1].events.push(bullet[1]);
+}
+
+const totalTalks = years.reduce((sum, y) => sum + y.events.length, 0);
+const span = years.length ? `${years[0].year}–${years[years.length - 1].year}` : '';
 ---
 
 <BaseLayout
@@ -8,9 +24,20 @@ import { Content } from '../../content/speaker-timeline.md';
   description="Every conference Marcos Placona has spoken at since 2013, by year — Droidcon, Codemotion, APIDays, GOTO and more."
   canonicalPath="/speaker-timeline/"
 >
-  <article class="article-shell prose">
+  <article class="article-shell">
     <p class="eyebrow">Speaking</p>
     <h1>Speaker timeline</h1>
-    <Content />
+    <p class="timeline-count">{totalTalks} talks across {years.length} years, {span}.</p>
+
+    <div class="timeline">
+      {years.map(({ year, events }) => (
+        <section class="timeline-year">
+          <h2>{year}</h2>
+          <ul>
+            {events.map((event) => <li>{event}</li>)}
+          </ul>
+        </section>
+      ))}
+    </div>
   </article>
 </BaseLayout>
