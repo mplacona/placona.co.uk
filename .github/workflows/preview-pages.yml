@@ -1,0 +1,63 @@
+name: Deploy PR preview
+
+on:
+  pull_request:
+
+# contents: write publishes the preview to the gh-pages branch.
+# pull-requests: write posts the preview URL back onto the PR.
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: preview-pages-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+      - run: npm run check
+      - run: npm run build
+
+      # The preview is served from a subdirectory, but Astro emits root-absolute
+      # paths (/_astro/..., /images/..., /about/). Left alone, a preview would
+      # load production's stylesheet and navigate to production. Rewrite them to
+      # the preview prefix. Protocol-relative (//) and absolute (https://) URLs
+      # are untouched, so canonical and og:url keep pointing at the real site.
+      - name: Rebase asset and link paths onto the preview prefix
+        env:
+          PREFIX: /pr-${{ github.event.number }}
+        run: |
+          find dist -name '*.html' -print0 | xargs -0 sed -i \
+            -e "s|href=\"/\([^/]\)|href=\"${PREFIX}/\1|g" \
+            -e "s|src=\"/\([^/]\)|src=\"${PREFIX}/\1|g" \
+            -e "s|href=\"/\"|href=\"${PREFIX}/\"|g" \
+            -e "s|srcset=\"/\([^/]\)|srcset=\"${PREFIX}/\1|g"
+
+      # Previews are full copies of a site that lives on SEO. Keep them out of
+      # the index; a robots.txt at /pr-N/ would not be honoured, only the one at
+      # the domain root is.
+      - name: Mark every preview page noindex
+        run: |
+          find dist -name '*.html' -print0 | xargs -0 sed -i \
+            -e 's|<meta name="robots" content="[^"]*"|<meta name="robots" content="noindex, nofollow"|g'
+          # Pages that had no robots tag at all (there should be none, but be safe)
+          find dist -name '*.html' -print0 | xargs -0 grep -LZ 'name="robots"' \
+            | xargs -0 -r sed -i 's|</title>|</title><meta name="robots" content="noindex, nofollow">|'
+
+      - name: Preview Pages
+        uses: rajyan/preview-pages@v1
+        with:
+          source-dir: dist
+          configured-domain: placona.co.uk
+          pr-per-commit: false
+          pr-comment: sticky
