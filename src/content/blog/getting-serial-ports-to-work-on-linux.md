@@ -9,7 +9,7 @@ image: "/images/2010/05/serial_ports_ubuntu.jpg"
 draft: false
 ---
 
-I've recently been "forced" to move my desktop from Windows to Linux again. Basically my current desktop "decided" it won't support Windows anymore, and any attempt to start it ends up in a <a title="Blue Screen of Death" href="http://en.wikipedia.org/wiki/Blue_Screen_of_Death" target="_blank">BSOD</a>, and I just got fed-up of trying to get it to work.
+I've recently been "forced" to move my desktop from Windows to Linux again. Basically my current desktop "decided" it won't support Windows anymore, and any attempt to start it ends up in a <a title="Blue Screen of Death" href="https://en.wikipedia.org/wiki/Blue_Screen_of_Death" target="_blank">BSOD</a>, and I just got fed-up of trying to get it to work.
 
 In fact, all of my development at home is done on Linux anyway, and I was just using windows as my dummy operating system, and using virtualization with my development environment. move to Linux works just as well.
 
@@ -19,7 +19,7 @@ However, after I started to play with my "new" box, I noticed that my external s
 
 <!--more-->
 
-I use serial ports for RS-232 protocol a lot with my <a title="Pic midrocontroller" href="http://en.wikipedia.org/wiki/PIC_microcontroller" target="_blank">pic programming</a>, and although I could simply use a Serial-to-USB cable, I find that it's just an extra layer, and you could easily blow your USB module should you do anything wrong.
+I use serial ports for RS-232 protocol a lot with my <a title="Pic midrocontroller" href="https://en.wikipedia.org/wiki/PIC_microcontroller" target="_blank">pic programming</a>, and although I could simply use a Serial-to-USB cable, I find that it's just an extra layer, and you could easily blow your USB module should you do anything wrong.
 
 <!-- <img class="alignleft" title="PCI card to two serial ports" src="http://files.placona.co.uk/serial_ports_ubuntu/pci_rs232_serial_port_two_com_ports.jpg" alt="PCI card to two serial ports" width="200" height="131" />The device I'm using is a PCI card that gives me two serial ports. I got it off eBay for a couple of pounds, and so far it has been working flawlessly. -->
 

@@ -9,13 +9,13 @@ image: "/images/2016/09/sample-676x324.png"
 draft: false
 ---
 
-I love using Square's [Picasso](http://square.github.io/picasso/) library whenever I need to load images into my Android applications. It lets me load images from the internet into ImageViews with a single line of code.
+I love using Square's [Picasso](https://square.github.io/picasso/) library whenever I need to load images into my Android applications. It lets me load images from the internet into ImageViews with a single line of code.
 
 ```java
 Picasso.with(context).load("http://i.imgur.com/DvpvklR.png").into(imageView);
 ```
 
-Doing the same thing without the library is a whole different story, and Picasso even takes care of [caching and transformations](http://square.github.io/picasso/#features) for me.
+Doing the same thing without the library is a whole different story, and Picasso even takes care of [caching and transformations](https://square.github.io/picasso/#features) for me.
 
 ### Until I hit a snag
 

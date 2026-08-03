@@ -9,14 +9,14 @@ draft: false
 ---
 
 <!-- <p style="text-align: center;">
-  <img src="http://files.placona.co.uk/update_java_centos/java_linux.jpg" alt="Java on Centos" /><br /> (Photo: <a title="Photo by tutchiio" href="http://www.flickr.com/photos/tippy/245562070/" target="_blank" rel="nofollow">tutchiio</a>)
+  <img src="/images/legacy/update_java_centos_java_linux.jpg" alt="Java on Centos" /><br /> (Photo: <a title="Photo by tutchiio" href="https://www.flickr.com/photos/tippy/245562070/" target="_blank" rel="nofollow">tutchiio</a>)
 </p> -->
 
 I'm only writing this blog post because I usually try to keep my VPS up to date, and usually one of the things I have to do to accomplish such thing is updating the <a title="Java" href="http://www.oracle.com/technetwork/java/index.html" target="_blank">Java</a> version.
   
 I always need to do a little bit of "googling" in order to find my way around this, as there's a few steps that need to be taken, so you can make sure that your classpath is correct, and that the newly installed Java is running as your default installation.
   
-I start by going to the <a title="Java website" href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank">Java website</a> and downloading the most recent version.
+I start by going to the <a title="Java website" href="https://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank">Java website</a> and downloading the most recent version.
   
 It can be a bit tricky to download Java using <a title="GNU WGET" href="http://www.gnu.org/software/wget/" target="_blank">wget</a>, as Java's wesbite uses your session in order to download the file, so if you try something like:
 

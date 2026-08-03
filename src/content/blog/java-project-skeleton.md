@@ -18,7 +18,7 @@ Happens every so often, and  I always felt I was wasting time I'd never get bac
 
 The good news is I decided some people might take advantage of that too, so added it to <a title="Marcos Placona Github" href="https://github.com/mplacona" target="_blank">my Github account</a> to share the love. It takes care of everything for you, so all you need to do is clone it, and run the unit tests.
 
-It even comes with a simple <a title="Apache ANT" href="http://ant.apache.org/" target="_blank">ANT</a> script that will build, run your unit tests, and then clean after itself by removing the .class files.
+It even comes with a simple <a title="Apache ANT" href="https://ant.apache.org/" target="_blank">ANT</a> script that will build, run your unit tests, and then clean after itself by removing the .class files.
 
 Not for everyone, I know. But hopefully some people will be able to take advantage of it, and maybe even send me pull requests with modifications.
 

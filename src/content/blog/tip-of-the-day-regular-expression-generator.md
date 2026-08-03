@@ -10,7 +10,7 @@ draft: false
 
 
   
-I have just came across this very nice service which promises to write <a href="http://en.wikipedia.org/wiki/Regular_expression" target="_blank">Regular Expressions</a> for you.
+I have just came across this very nice service which promises to write <a href="https://en.wikipedia.org/wiki/Regular_expression" target="_blank">Regular Expressions</a> for you.
   
 We all know how painful writing a regular expression can be, and on this website, you can not only have the pattern created for you, but also have it translated into the most common languages on the web.
   

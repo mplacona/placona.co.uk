@@ -9,7 +9,7 @@ tags: ["Adobe AIR","Flex","Mobile Apps"]
 draft: false
 ---
 
-I'm building a new <a title="Blackberry Playbook" href="http://www.amazon.co.uk/gp/product/B004UL34EY/ref=as_li_tf_tl?ie=UTF8&tag=marplasblo-21&linkCode=as2&camp=1634&creative=6738&creativeASIN=B004UL34EY" target="_blank">Blackberry Playbook</a> app, and when starting to work with internationalization, I got stuck with a bug that wouldn't go away. I'm pretty sure this won't just affect just this kind of application, but anything that is built using Flash Builder and requires resource bundle files.
+I'm building a new <a title="Blackberry Playbook" href="https://www.amazon.co.uk/gp/product/B004UL34EY/ref=as_li_tf_tl?ie=UTF8&tag=marplasblo-21&linkCode=as2&camp=1634&creative=6738&creativeASIN=B004UL34EY" target="_blank">Blackberry Playbook</a> app, and when starting to work with internationalization, I got stuck with a bug that wouldn't go away. I'm pretty sure this won't just affect just this kind of application, but anything that is built using Flash Builder and requires resource bundle files.
 
 It's a pretty common standard to name resource bundle files as \*.properties, but it turns out Flash Builder ignores \*.properties files when packaging, and you end up with an error like:
 

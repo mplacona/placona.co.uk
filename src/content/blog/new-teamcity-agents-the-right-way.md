@@ -15,7 +15,7 @@ Nothing against Hudson really, but I feel that TeamCity is a much more robust CI
 
 But anyway, one thing that was slightly annoying me with TeamCity, is the fact that the build agents would often get disconnect, and all my builds would stay in a queue until I went and manually restarted the agents.
 
-The "Build Agent Disconnected" quickly became very annoying, and by quickly looking up on Google, I found lots of people had the same issue, and while there were lots of responses or people claiming they found a solution to it, I never actually found anything of much use other than the screenshot <a title="TeamCity build agent disconnected" href="http://stackoverflow.com/a/19382047/279395" target="_blank" class="broken_link">this guy posted</a>.
+The "Build Agent Disconnected" quickly became very annoying, and by quickly looking up on Google, I found lots of people had the same issue, and while there were lots of responses or people claiming they found a solution to it, I never actually found anything of much use other than the screenshot <a title="TeamCity build agent disconnected" href="https://stackoverflow.com/a/19382047/279395" target="_blank" class="broken_link">this guy posted</a>.
 
 When you add build agents on TeamCity, you get the option of adding them as a windows service, or simply as an agent that runs with TeamCity. I had tried to add multiple build agents as windows services before, but for a very strange reason, I would always end up with only one agent no matter what I did. TeamCity's documentation wasn't much help to be honest, and I ended up figuring this out after a couple of hours of trial and error. So here's how you do it properly.
 
@@ -65,8 +65,6 @@ In that file, scroll all the way down and find:
 <img class="size-full wp-image-1332 alignnone" alt="TeamCity wrapper.conf 1" src="/images/2014/03/img_4.png" width="840" height="381" srcset="/images/2014/03/img_4.png 840w, /images/2014/03/img_4-300x136.png 300w, /images/2014/03/img_4-676x306.png 676w" sizes="(max-width: 840px) 100vw, 840px" />
 
 These will need to be updated so when you install this as a service, so you aren't overwriting an existing service you may already have.
-
-<img alt="" src="http://confluence:8081/download/attachments/30507155/img_5.png?version=1&modificationDate=1393421013813&api=v2" data-image-src="/download/attachments/30507155/img_5.png?version=1&modificationDate=1393421013813&api=v2" />
 
 For consistency we have named it after our initial configuration by appending the number 5 to both values.
 

@@ -8,18 +8,18 @@ tags: ["General Techie Stuff"]
 draft: false
 ---
 
-So, I decided to take a punt at writing a <a title="NodeJS" href="http://nodejs.org/" target="_blank">NodeJS</a> application. Not a big application, or anything that would get me slashdoted, but an application that would help me understand the language, and give me a taste of what it is so many people are talking a bout. I have worked with JavaScript for quite a while now, and NodeJS seems like one of those "just right" languages, that you pick up in an afternoon and come to love it after writing a few lines of code. I read a few tutorials on the subject. And then decided to dive straight into building a small application that uses GitHub's API. There were three things I wanted to take out of it:
+So, I decided to take a punt at writing a <a title="NodeJS" href="https://nodejs.org/" target="_blank">NodeJS</a> application. Not a big application, or anything that would get me slashdoted, but an application that would help me understand the language, and give me a taste of what it is so many people are talking a bout. I have worked with JavaScript for quite a while now, and NodeJS seems like one of those "just right" languages, that you pick up in an afternoon and come to love it after writing a few lines of code. I read a few tutorials on the subject. And then decided to dive straight into building a small application that uses GitHub's API. There were three things I wanted to take out of it:
 
   * learn a bit about the ins and outs of NodeJS
   * use [GitHub's API](http://developer.github.com/v3/ "Github API")
   * use <a title="Jade Templating Engine" href="http://jade-lang.com/" target="_blank">Jade templating engine</a>
 
-Installing everything was painless, but I have to admit getting NodeJS to build on a <a title="Raspberry Pi" href="http://www.raspberrypi.org/" target="_blank">Raspberry PI</a> wasn't the most straight forward thing I've ever done. Not because it wouldn't work, but because building it from source took forever. Just to clarify, I didn't need to run it on a Raspberry PI, but just wanted to prove myself I could. This mini project had 5 elements to it:
+Installing everything was painless, but I have to admit getting NodeJS to build on a <a title="Raspberry Pi" href="https://www.raspberrypi.org/" target="_blank">Raspberry PI</a> wasn't the most straight forward thing I've ever done. Not because it wouldn't work, but because building it from source took forever. Just to clarify, I didn't need to run it on a Raspberry PI, but just wanted to prove myself I could. This mini project had 5 elements to it:
 
-  * <a title="NodeJS" href="http://nodejs.org/" target="_blank">NodeJS</a>
+  * <a title="NodeJS" href="https://nodejs.org/" target="_blank">NodeJS</a>
   * <a title="Twitter Bootstrap" href="http://twitter.github.io/bootstrap/" target="_blank">Twitter's Bootstrap</a>
   * <a title="JAde Templating Engine" href="http://jade-lang.com/" target="_blank">Jade</a>
-  * <a title="NodeJS Express" href="http://expressjs.com/" target="_blank">Express</a>
+  * <a title="NodeJS Express" href="https://expressjs.com/" target="_blank">Express</a>
   * GitHub API (<a title="GitHub's API for NodeJS" href="https://github.com/ajaxorg/node-github" target="_blank" class="broken_link">node-github</a>)
 
 Three from which you don't even need to install (as they are <a title="NPM JS" href="https://npmjs.org/" target="_blank">npm </a>modules). Just by adding them as dependencies on the package.js file, they get installed into your project, so deploying is made easier (in theory), as you don't actually need to install anything other than NodeJS.

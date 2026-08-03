@@ -15,12 +15,12 @@ draft: false
 
 
 <!-- <p style="text-align: center;">
-  <img src="http://files.placona.co.uk/iptables/iptables.jpg" alt="Iptables shell script" width="480" height="276" /><br /> (Photo: <a title="Photo by Jordan W" href="http://www.flickr.com/photos/welshboy/100250487/" target="_blank" rel="nofollow">Jordan W</a>)
+  <img src="/images/legacy/iptables_iptables.jpg" alt="Iptables shell script" width="480" height="276" /><br /> (Photo: <a title="Photo by Jordan W" href="https://www.flickr.com/photos/welshboy/100250487/" target="_blank" rel="nofollow">Jordan W</a>)
 </p> -->
 
 I have been doing some housekeeping on my VPS, and decided there's a few ports that should only be accessed by certain IP addresses for security purposes.
   
-My VPS uses Linux, so I had to find a way to somehow changing my [iptables](http://en.wikipedia.org/wiki/Iptables "iptables - Wikipedia") settings to block the specific ports to every IP address, except for the ones I specified.
+My VPS uses Linux, so I had to find a way to somehow changing my [iptables](https://en.wikipedia.org/wiki/Iptables "iptables - Wikipedia") settings to block the specific ports to every IP address, except for the ones I specified.
   
 It's pretty straight forward, and here  how you can block a specific port to everyone except for some IP addresses (the instructions are for Centos 5.5, but should work for other distros without problems):
   

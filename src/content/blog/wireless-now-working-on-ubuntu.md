@@ -8,7 +8,7 @@ tags: []
 draft: false
 ---
 
-As [previously](https://www.placona.co.uk/ubuntu-experience/) [said](https://www.placona.co.uk/coldfusion-on-ubuntu/) I was having some kind of troubles with my wireless connection on Ubuntu.
+As [previously](/ubuntu-experience/) said I was having some kind of troubles with my wireless connection on Ubuntu.
 
 Yesterday I found that the Ubuntu community really works. I was able to get some replies about how to install my wireless using WPA encryption in less than 5 minutes.
 

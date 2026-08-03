@@ -8,13 +8,13 @@ tags: []
 draft: false
 ---
 
-I'm going to start a server configuration series here, where I'll be talking about my goals and frustrations when configuring my own webserver. As most of you know, I've been using <a style="text-decoration:underline;" href="https://www.placona.co.uk/placona-co-uk-has-a-new-home-1/" target="_blank">my own VPS</a> for the last two weeks, and promised to post everything about it here.
+I'm going to start a server configuration series here, where I'll be talking about my goals and frustrations when configuring my own webserver. As most of you know, I've been using my own VPS for the last two weeks, and promised to post everything about it here.
 
 I won't be covering things like basic installation, or server set-up. There's tons of them all over the web, and I 'm sure most of them would beat anything I wrote here, as some of those guys are real *nix gurus, while I'm only a learner.
 
-On this post, I'll be talking a little bit more about <a style="text-decoration:underline;" href="http://www.apache.org/" target="_blank">Apache2</a>, and it's configurations; to start with, I'll talk about file compression.
+On this post, I'll be talking a little bit more about <a style="text-decoration:underline;" href="https://www.apache.org/" target="_blank">Apache2</a>, and it's configurations; to start with, I'll talk about file compression.
 
-The <a style="text-decoration:underline;" href="http://www.apache.org/" target="_blank">apache server</a> is a really amazing web-server, that let's you configure almost everything, as well as create security rules.
+The <a style="text-decoration:underline;" href="https://www.apache.org/" target="_blank">apache server</a> is a really amazing web-server, that let's you configure almost everything, as well as create security rules.
 
 Back to the topic, I'll describe here a few of the necessary steps to enable compression on your apache server. 
 
@@ -22,7 +22,7 @@ Compression saves you a lot of server traffic, and helps to make sure pages are 
   
 next topic).
 
-In earlier versions of apache, the compressing method used was <a style="text-decoration:underline;" href="http://www.gnu.org/software/gzip/" target="_blank">GZIP</a>. With the apache 2.x, the module has been replaced with <a style="text-decoration:underline;" href="http://httpd.apache.org/docs/2.0/mod/mod_deflate.html" target="_blank">mod_deflate</a>, which is much easier to install, don't need special configurations.
+In earlier versions of apache, the compressing method used was <a style="text-decoration:underline;" href="http://www.gnu.org/software/gzip/" target="_blank">GZIP</a>. With the apache 2.x, the module has been replaced with <a style="text-decoration:underline;" href="https://httpd.apache.org/docs/2.0/mod/mod_deflate.html" target="_blank">mod_deflate</a>, which is much easier to install, don't need special configurations.
 
 Before we get started, I need to make it clear that this is how you would proceed in a Debian based distro, and this might vary with other distros.
 
@@ -75,4 +75,4 @@ And that's all, simply restart your apache server again.
 /etc/init.d/apache2 restart
 ```
 
-Your files should now be served with 20 - 30% less volume than before. There's a nice way to check that; go to <a style="text-decoration:underline;" href="http://websiteoptimization.com/services/analyze/" target="_blank">this url</a>, and check your website performance. On the results, it should say if your files are compressed or not. After applying the changes described above, all the MIME common text mime types should be listed as compressed.
+Your files should now be served with 20 - 30% less volume than before. There's a nice way to check that; go to <a style="text-decoration:underline;" href="https://websiteoptimization.com/services/analyze/" target="_blank">this url</a>, and check your website performance. On the results, it should say if your files are compressed or not. After applying the changes described above, all the MIME common text mime types should be listed as compressed.

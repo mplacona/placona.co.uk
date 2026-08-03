@@ -14,7 +14,7 @@ I've been working on some rewriting lately, and noticed that when you use them, 
 
 Obviously you have a few options when writing your rewrite rules to make it case insensitive, but that means you will have to use it on every single rule.
 
-In my case, I simply want everything to come though as lower case, so even if you hit any of my pages with an upper case URL, it will automatically be rewritten to the same thing, but in lower case, and <a title="HTTP 301" href="http://en.wikipedia.org/wiki/HTTP_301" target="_blank">return 301</a>, so the search engines know the page was permanently moved.
+In my case, I simply want everything to come though as lower case, so even if you hit any of my pages with an upper case URL, it will automatically be rewritten to the same thing, but in lower case, and <a title="HTTP 301" href="https://en.wikipedia.org/wiki/HTTP_301" target="_blank">return 301</a>, so the search engines know the page was permanently moved.
 
 This is how I do it:
 

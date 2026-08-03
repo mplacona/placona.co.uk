@@ -10,9 +10,9 @@ draft: false
 
 Continuing with my Apache series, I'll be today talking about cache control.
 
-According to <a style="text-decoration:underline;" href="http://en.wikipedia.org/wiki/Cache" target="_blank">Wikipedia</a>, the definition for cache is:
+According to <a style="text-decoration:underline;" href="https://en.wikipedia.org/wiki/Cache" target="_blank">Wikipedia</a>, the definition for cache is:
 
-"_a collection of data duplicating original values stored elsewhere or computed earlier, where the original data is expensive to fetch (owing to longer [access time](http://en.wikipedia.org/wiki/Access_time "Access time")) or to compute, compared to the cost of reading the cache. In other words, a cache is a temporary storage area where frequently accessed data can be stored for rapid access. Once the data is stored in the cache, it can be used in the future by accessing the cached copy rather
+"_a collection of data duplicating original values stored elsewhere or computed earlier, where the original data is expensive to fetch (owing to longer [access time](https://en.wikipedia.org/wiki/Access_time "Access time")) or to compute, compared to the cost of reading the cache. In other words, a cache is a temporary storage area where frequently accessed data can be stored for rapid access. Once the data is stored in the cache, it can be used in the future by accessing the cached copy rather
   
 than re-fetching or recomputing the original data._"
 
@@ -25,7 +25,7 @@ sudo a2enmod expires
 sudo a2enmod headers
 ```
 
-We are also gonna be using **mod_deflate**, but since you probably read <a style="text-decoration:underline;" href="https://www.placona.co.uk/apache-101-compressing-files/" target="_self">my last post</a> where I tell how to install and configure it, I won't be covering its usagein this post.
+We are also gonna be using **mod_deflate**, but since you probably read <a style="text-decoration:underline;" href="/apache-101-compressing-files/" target="_self">my last post</a> where I tell how to install and configure it, I won't be covering its usagein this post.
 
 Now, on our vhost file, we will add a few directives. This is how I do when using this website as an example:
 

@@ -8,7 +8,7 @@ tags: []
 draft: false
 ---
 
-After my [last post on Dart](https://www.placona.co.uk/a-first-look-at-dart/ "A first look at Dart"), I decided that I wanted to write something a bit more complex using the language. I had a lot of good feedback on it, but still felt I should try to push the language as much as I could, and see if it was a really enjoyable language to write code in.
+After my [last post on Dart](/a-first-look-at-dart/ "A first look at Dart"), I decided that I wanted to write something a bit more complex using the language. I had a lot of good feedback on it, but still felt I should try to push the language as much as I could, and see if it was a really enjoyable language to write code in.
 
 So what better than a couple of hours on a Sunday evening to write some code and generate some animations?
 

@@ -9,7 +9,7 @@ image: "/images/2013/06/top-40-albuns-singles.png"
 draft: false
 ---
 
-So I had this idea for a little application and wanted to get the UK's Top40 singles to use in it. I started by writing something that would scrape <a title="Radio 1's Top 40 chart" href="http://www.bbc.co.uk/radio1/chart/singles" target="_blank">Radio 1's Top 40</a> chart and return me a list of songs since I couldn't find any feeds that would give me that.
+So I had this idea for a little application and wanted to get the UK's Top40 singles to use in it. I started by writing something that would scrape <a title="Radio 1's Top 40 chart" href="https://www.bbc.co.uk/radio1/chart/singles" target="_blank">Radio 1's Top 40</a> chart and return me a list of songs since I couldn't find any feeds that would give me that.
 
 I then thought this could be of use to somebody else, so turned it into a little service (built using Ruby and Sinatra) that returns a JSON object with all the singles and some useful information about the number of weeks it's been there, how much has it moved, and which direction (up or down) it's gone.
 

@@ -32,6 +32,6 @@ Some of the changes made by the jQuery team today were:
 
   * #### A new dedicated blog
 
-The full post can be found **<a href="http://blog.jqueryui.com/2009/03/jquery-ui-17/" target="_blank">here</a>** with all the details and news, and if you want to download the library, simply click <a href="http://jqueryui.com/download" target="_blank"><strong>here</strong></a>
+The full post can be found **<a href="http://blog.jqueryui.com/2009/03/jquery-ui-17/" target="_blank">here</a>** with all the details and news, and if you want to download the library, simply click <a href="https://jqueryui.com/download" target="_blank"><strong>here</strong></a>
   
 The update can also be found and used via <a href="https://developers.google.com/speed/libraries/devguide" target="_blank">Google Ajax Libraries</a>

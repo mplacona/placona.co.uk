@@ -19,7 +19,7 @@ I have recently switched from building and running apps directly on the termina
 
 I went ahead and run my application from terminal and it worked as expected.
 
-A bit of Googling and I landed on this StackOverflow [thread](http://stackoverflow.com/questions/35643759/c-sharp-environment-getenvironmentvariable-not-working-on-osx/35644532). But here's the gist of it:
+A bit of Googling and I landed on this StackOverflow [thread](https://stackoverflow.com/questions/35643759/c-sharp-environment-getenvironmentvariable-not-working-on-osx/35644532). But here's the gist of it:
 
 > OS-X GUI apps will not inherit your private/custom env vars that are defined via a shell (bash, zsh, etc...) if they are launched from Finder/Spotlight
 

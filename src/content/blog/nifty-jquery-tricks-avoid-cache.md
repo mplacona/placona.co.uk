@@ -30,7 +30,7 @@ $.ajax({
 
 The code above will do the job, but you have to remember to always use the timestamp, and pass it on.
   
-Another better way of doing it, is by using the <a title="jQuery - Ajax Setup" href="http://api.jquery.com/jQuery.ajaxSetup/" target="_blank">ajaxSetup</a> function.
+Another better way of doing it, is by using the <a title="jQuery - Ajax Setup" href="https://api.jquery.com/jQuery.ajaxSetup/" target="_blank">ajaxSetup</a> function.
 
 According to the documentation, ajaxSetup sets default values for future Ajax requests. So in other words, every Ajax request made after ajaxSetup will obey the directives defined by it.
 
@@ -47,6 +47,6 @@ Now all of your requests will look like this:
   
 http://my_server.com?123456789
   
-There are also other settings that can be added inside ajaxSetup. They can be found on the [jQuery.ajax()](http://api.jquery.com/jQuery.ajax/ "jquery.ajax() - Documentation") documentation, and all the settings listed in there will also work with ajaxSetup.
+There are also other settings that can be added inside ajaxSetup. They can be found on the [jQuery.ajax()](https://api.jquery.com/jQuery.ajax/ "jquery.ajax() - Documentation") documentation, and all the settings listed in there will also work with ajaxSetup.
   
 Hope this tip is useful to someone.
