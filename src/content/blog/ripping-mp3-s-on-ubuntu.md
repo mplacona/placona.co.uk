@@ -1,6 +1,6 @@
 ---
 title: "Ripping MP3's on Ubuntu"
-description: "I've never tested doing this, but will give it a try later"
+description: "Ripping CDs to MP3 on Ubuntu: the codecs and tools you need to get usable audio files out of a disc on a Linux desktop."
 pubDate: "2006-12-12T00:00:00.000Z"
 slug: "ripping-mp3-s-on-ubuntu"
 categories: ["Linux"]

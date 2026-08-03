@@ -8,7 +8,11 @@ export function getStaticPaths() {
 const { app } = Astro.props;
 ---
 
-<BaseLayout title={`${app.name} support`} description={`Support for ${app.name}.`} canonicalPath={`/apps/${app.slug}/support/`}>
+<BaseLayout
+  title={`${app.name} support`}
+  description={`Get help with ${app.name} — ${app.tagline} Contact Marcos Placona directly for support, launch questions or feedback.`}
+  canonicalPath={`/apps/${app.slug}/support/`}
+>
   <article class="article-shell prose">
     <p class="eyebrow">{app.name}</p>
     <h1>Support</h1>

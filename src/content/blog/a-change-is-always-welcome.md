@@ -5,7 +5,7 @@ pubDate: "2010-04-28T11:00:59.000Z"
 slug: "a-change-is-always-welcome"
 categories: ["Technology"]
 tags: ["Mango Blog","Misc"]
-image: "/[object Object]"
+image: "/images/2010/04/a_change_is_always_welcome.jpg"
 draft: false
 ---
 

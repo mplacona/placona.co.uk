@@ -6,54 +6,151 @@ interface Props {
   description?: string;
   image?: string;
   canonicalPath?: string;
+  type?: 'website' | 'article';
+  publishedTime?: Date;
+  categories?: string[];
+  noindex?: boolean;
+  /** Overrides the composed <title> entirely, for titles that must stay under 60 characters. */
+  seoTitle?: string;
 }
 
+const BRAND = 'Marcos Placona';
+const SITE_TITLE = 'Marcos Placona — Programming, technology, independent apps';
+const TWITTER = '@marcos_placona';
+
 const {
-  title = 'Marcos Placona — Programming, technology and independent apps',
+  title,
   description = 'Programming, technology and musings from Marcos Placona.',
-  image = '/images/placona-logo-small.png',
-  canonicalPath = Astro.url.pathname
+  image = '/images/og-default.png',
+  canonicalPath = Astro.url.pathname,
+  type = 'website',
+  publishedTime,
+  categories = [],
+  noindex = false,
+  seoTitle
 } = Astro.props;
+
+// Search engines truncate around 60 characters, so only append the brand when it fits.
+const branded = title ? `${title} | ${BRAND}` : SITE_TITLE;
+const pageTitle = seoTitle ?? (branded.length <= 60 ? branded : (title ?? SITE_TITLE));
+
 const canonical = new URL(canonicalPath, Astro.site);
 const socialImage = new URL(image, Astro.site);
+const here = Astro.url.pathname;
+
+const navItems = [
+  { href: '/', label: 'Writing' },
+  { href: '/apps/', label: 'Apps' },
+  { href: '/speaker-timeline/', label: 'Speaking' },
+  { href: '/about/', label: 'About' },
+  { href: '/search/', label: 'Search' }
+];
+const isCurrent = (href: string) => (href === '/' ? here === '/' : here.startsWith(href));
+
+const websiteId = new URL('/#website', Astro.site).href;
+const personId = new URL('/about/#person', Astro.site).href;
+
+const schema: Record<string, unknown>[] = [
+  {
+    '@type': 'WebSite',
+    '@id': websiteId,
+    url: new URL('/', Astro.site).href,
+    name: SITE_TITLE,
+    description: 'Programming, technology and musings from Marcos Placona.',
+    inLanguage: 'en-GB',
+    publisher: { '@id': personId }
+  },
+  {
+    '@type': 'Person',
+    '@id': personId,
+    name: BRAND,
+    url: new URL('/', Astro.site).href,
+    image: new URL('/images/marcos_bw_500_optim.jpg', Astro.site).href,
+    jobTitle: 'Developer relations leader and independent software builder',
+    sameAs: ['https://github.com/mplacona', 'https://x.com/marcos_placona']
+  }
+];
+
+if (type === 'article') {
+  schema.push({
+    '@type': 'BlogPosting',
+    '@id': `${canonical.href}#article`,
+    headline: title,
+    description,
+    url: canonical.href,
+    ...(publishedTime ? { datePublished: publishedTime.toISOString() } : {}),
+    ...(categories.length ? { keywords: categories.join(', ') } : {}),
+    image: socialImage.href,
+    inLanguage: 'en-GB',
+    author: { '@id': personId },
+    publisher: { '@id': personId },
+    isPartOf: { '@id': websiteId },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': canonical.href }
+  });
+}
+
+const jsonLd = JSON.stringify({ '@context': 'https://schema.org', '@graph': schema });
 ---
 
 <!doctype html>
 <html lang="en-GB">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>{title}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
+    {noindex ? (
+      <meta name="robots" content="noindex, follow" />
+    ) : (
+      <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+    )}
+    <meta name="author" content={BRAND} />
+    <meta name="theme-color" content="#fffdf9" />
     <link rel="alternate" type="application/rss+xml" title="Marcos Placona's Blog" href="/rss.xml" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content={title} />
+    <meta property="og:type" content={type} />
+    <meta property="og:site_name" content={BRAND} />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:title" content={title ?? SITE_TITLE} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={socialImage} />
+    <meta property="og:image:alt" content={title ?? SITE_TITLE} />
+    {type === 'article' && publishedTime && (
+      <meta property="article:published_time" content={publishedTime.toISOString()} />
+    )}
+    {type === 'article' && <meta property="article:author" content={BRAND} />}
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="icon" href="/images/favicon.ico" />
+    <meta name="twitter:site" content={TWITTER} />
+    <meta name="twitter:creator" content={TWITTER} />
+    <meta name="twitter:title" content={title ?? SITE_TITLE} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImage} />
+    <link rel="icon" href="/images/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="/images/site-logo.png" />
+    <script is:inline type="application/ld+json" set:html={jsonLd} />
   </head>
   <body>
     <a class="skip-link" href="#content">Skip to content</a>
     <header class="site-header">
       <a class="brand" href="/" aria-label="Marcos Placona home">
-        <img src="/images/placona-logo-small.png" alt="Marcos Placona" width="48" height="48" />
+        <img src="/images/placona-logo-small.png" alt="" width="48" height="48" />
         <span>Marcos Placona</span>
       </a>
       <nav aria-label="Primary navigation">
-        <a href="/">Writing</a>
-        <a href="/apps/">Apps</a>
-        <a href="/speaker-timeline/">Speaking</a>
-        <a href="/about/">About</a>
-        <a href="/search/">Search</a>
+        {navItems.map((item) => (
+          <a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>{item.label}</a>
+        ))}
       </nav>
     </header>
     <main id="content"><slot /></main>
     <footer class="site-footer">
       <p>© {new Date().getFullYear()} Marcos Placona. Programming, technology and independent apps.</p>
-      <p><a href="https://github.com/mplacona">GitHub</a> · <a href="https://x.com/marcos_placona">X</a> · <a href="/rss.xml">RSS</a></p>
+      <p>
+        <a href="https://github.com/mplacona" rel="me">GitHub</a> ·
+        <a href="https://x.com/marcos_placona" rel="me">X</a> ·
+        <a href="/rss.xml">RSS</a>
+      </p>
     </footer>
   </body>
 </html>

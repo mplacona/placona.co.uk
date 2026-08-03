@@ -5,7 +5,7 @@ pubDate: "2013-04-10T13:50:45.000Z"
 slug: "i-am-a-published-author"
 categories: ["Books"]
 tags: ["Javascript","JQuery"]
-image: "/wp-content/uploads/2013/04/5002OScov-1.png"
+image: "/images/2013/04/5002OScov-1.png"
 draft: false
 ---
 

@@ -5,7 +5,7 @@ pubDate: "2010-01-27T00:00:00.000Z"
 slug: "how-to-return-tag-contents-with-regular-expressions"
 categories: ["Regular Expressions"]
 tags: []
-image: "/[object Object]"
+image: "/images/2010/01/mastering_regular_expression.jpg"
 draft: false
 ---
 

@@ -5,7 +5,7 @@ pubDate: "2010-07-27T16:20:18.000Z"
 slug: "android-and-what-ive-been-up-to"
 categories: ["Android"]
 tags: []
-image: "/[object Object]"
+image: "/images/2010/07/android_eats_apples_opt.jpg"
 draft: false
 ---
 

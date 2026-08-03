@@ -1,6 +1,6 @@
 ---
 title: "Sending and Receiving SMS messages with Dart"
-description: "I wanted to be able to send SMS messages with Dart, and because it doesn't actually support it natively (not that I would expect it to anyway), I decided to write a library that allows me to do just that."
+description: "How to send and receive SMS messages in Dart using the Twilio API, with a small open-source library that wraps the REST calls for you."
 pubDate: "2014-07-04T11:12:32.000Z"
 slug: "sending-and-receiving-sms-messages-with-dart"
 categories: ["Dart"]

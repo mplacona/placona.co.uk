@@ -1,11 +1,12 @@
 ---
 title: "How to secure Apache with Let's Encrypt and CloudFlare on Centos"
+seoTitle: "Secure Apache with Let's Encrypt and CloudFlare"
 description: "I took it upon myself to converting a couple of my domains to use Let's Encrypt in order to offer a secure connection to them. If you haven't heard…"
 pubDate: "2016-03-28T17:16:36.000Z"
 slug: "how-to-secure-apache-with-lets-encrypt-and-cloudflare-on-centos"
 categories: ["Technology"]
 tags: ["centos","cloudflare","Failed authorization procedure","letsencrypt","security","ssl","tls","wordpress","VPS","Website Optimization","General Techie Stuff"]
-image: "/wp-content/uploads/2016/03/secure2.jpg"
+image: "/images/2016/03/secure2.jpg"
 draft: false
 ---
 

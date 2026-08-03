@@ -1,6 +1,6 @@
 ---
 title: "Flash player for Linux"
-description: "They finally made it! Adobe just released the Flash Player for Linux."
+description: "Adobe released the Flash Player for Linux, closing a long-standing gap for Linux desktop users. A short note on what it meant at the time."
 pubDate: "2007-01-17T00:00:00.000Z"
 slug: "flash-player-for-linux"
 categories: ["Linux"]

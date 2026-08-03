@@ -19,7 +19,7 @@ const { app } = Astro.props;
     <section class="content-section split-section">
       <div>
         <p class="eyebrow">What it does</p>
-        <h2>Clean dictation, without changing your point.</h2>
+        <h2>{app.boundaryHeading}</h2>
       </div>
       <p>{app.boundary}</p>
     </section>
