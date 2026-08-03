@@ -12,7 +12,7 @@ I feel kinda bad to be calling this dirty, but mind you, I'm only using dirty as
 
 In fact, I've been having a few ideas about using drag & drop for an open source application I've been thinking of, and decided to play with <a href="https://jqueryui.com/" target="_blank">jQuery UI</a> to do that.
 
-The fine guys at Packt have recently sent me a jQuery <a href="https://www.amazon.co.uk/dp/1847195121?tag=marplasblo-21&amp;camp=1406&amp;creative=6394&amp;linkCode=as1&amp;creativeASIN=1847195121&amp;adid=051DEKKGHNGMSRWHX7ZT&amp;" target="_blank">UI 1.6 book</a> and I've been able to come up with <a title="Quick and Dirty jQuery Drag and Drop" href="http://examples.placona.co.uk/quick_and_dirty_drag_drop" target="_self" class="broken_link">this</a>
+The fine guys at Packt have recently sent me a jQuery <a href="https://www.amazon.co.uk/dp/1847195121?tag=marplasblo-21&amp;camp=1406&amp;creative=6394&amp;linkCode=as1&amp;creativeASIN=1847195121&amp;adid=051DEKKGHNGMSRWHX7ZT&amp;" target="_blank">UI 1.6 book</a> and I've been able to come up with this (demo no longer online)
 
 It's a pretty simple example I know, but it took me only a few minutes to come up with it. if you come from the old-school javascript times, you know that it would take you hours, if not days to develop something similar, and you'd still have all the hassle of testing it in multiple browsers.
 

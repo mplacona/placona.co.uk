@@ -83,7 +83,7 @@ Picasso.with(getApplicationContext())
 
 Doing pretty much the same thing as before, but notice I now have a number that gets appended to each URL. This should make my URLs look like this: https://unsplash.it/50/50?random&{number}.
 
-<img class="alignnone" src="http://media0.giphy.com/media/qdBHt01vnl972/giphy.gif" alt="I'm ugly and I'm proud" width="500" height="375" />
+<img class="alignnone" src="https://media0.giphy.com/media/qdBHt01vnl972/giphy.gif" alt="I'm ugly and I'm proud" width="500" height="375" />
 
 Now let's look at the logs:
 

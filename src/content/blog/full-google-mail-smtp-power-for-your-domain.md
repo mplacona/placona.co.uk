@@ -34,10 +34,6 @@ You can now create your users, but be aware that you're domain is still not full
 
 Easiest way to do that, is by going to your DNS Manager and creating a few records. In my case I simply go to my Slice Manager on <a style="text-decoration: underline;" href="https://manage.slicehost.com/customers/new?referrer=364963b4bf874397d68118e4a711817a" target="_blank" class="broken_link">Slicehost</a> and click **DNS**, then select my domain, and click **records**. I then create 7 new MX records as follows:
 
-<img style="display: block; text-align: center; margin-left: 10px; margin-right: 10px;" src="http://img378.imageshack.us/img378/7128/slicehost1241617158522.png" alt="SliceHost MX Records - Google" width="451" height="131" />
-  
- 
-  
 After having created all this records, you're almost ready to go. It takes a few hours for everything to propagate, and Google to recognize all your newly created records; but once it's done, you can start sending and receiving emails.
 
 <span style="text-decoration: underline;"><span style="color: #ff0000;">Now for phase two:</span></span>
@@ -49,8 +45,6 @@ The way to go is create an account responsible for sending emails, and every sin
 In my case, I only need to send emails from forms and stuff like that, so I created an account specifically for this task.
 
 If you were configuring this on your server, you would do it like this for ColdFusion Server:
-
-<img style="display: block; text-align: center; margin-left: 10px; margin-right: 10px;" src="http://img5.imageshack.us/img5/2543/coldfusionadministrator.png" alt="SMTP - ColdFusion Server configuration" width="451" height="131" />
 
 Notice I'm using port 587, as it's the required port for Gmail. You would also need to have a few extra things on your <cfmail> tag, as it requires authentication.
 
@@ -73,8 +67,6 @@ On Railo though, it's a much easier configuration, as you only need to configure
 
 An example of configuration would be:
 
-<img style="display: block; text-align: center; margin-left: 10px; margin-right: 10px;" src="http://img11.imageshack.us/img11/3868/railowebadministrator12.png" alt="Railo - SMTP COnfiguration" width="451" height="131" />
-
 Notice I specify port 587, and tick TLS to be used. It took me a while to get this configuration right, and I'd like to thank <a style="text-decoration:underline;" href="https://www.andyjarrett.com/blog/" target="_blank">Andy Jarrett</a> for helping me with it.
 
 You should now be all set, and have your email configured. The free version only allows you to have up to 50 emails, but you can always buy the pro version
@@ -82,8 +74,6 @@ You should now be all set, and have your email configured. The free version only
 if you think it's not enough.
 
 You can now create a new record on your DNS Manager in order to have mail.yourdomain.com, so you don't need to use Gmail's big URL in order to access your webmail. This is how I did it:
-
-<img style="margin-left: 10px; margin-right: 10px;" src="http://img2.imageshack.us/img2/4603/slicehostcname124162434.png" alt="DNS - MAIL" width="442" height="17" />
 
 Notice I point it to ghs.google.com, and call it mail, so I can access mail.mydomain.com. 
 

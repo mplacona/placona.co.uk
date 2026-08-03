@@ -30,7 +30,7 @@ So without further ado, here's my book...
 <a title="Instant - jQuery Drag-and-Drop Grids How-to " href="https://www.packtpub.com/jquery-drag-and-drop-grids/book" target="_blank">Instant - jQuery Drag-and-Drop Grids How-to</a>
 
 <div style="width: 185px" class="wp-caption aligncenter">
-  <img alt="jQuery Drag-and-Drop Grids How-to" src="http://dgdsbygo8mp3h.cloudfront.net/sites/default/files/imagecache/productview_larger/5002OScov.jpg" width="175" height="213" />
+  <img alt="jQuery Drag-and-Drop Grids How-to" src="/images/2013/04/5002OScov.jpg" width="175" height="213" />
   
   <p class="wp-caption-text">
     jQuery Drag-and-Drop Grids How-to

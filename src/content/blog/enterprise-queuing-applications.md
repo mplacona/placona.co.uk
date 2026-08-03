@@ -40,7 +40,7 @@ A simple queue with multiple consumers could be represented the following way:
 What the last point it trying to say, is that an application doesn't necessarily need to have things that aren't related to its main purpose (selling products in this case).
 
 <figure style="width: 150px" class="align-left">
-  <img src="/images/2012/07/RabbitMQLogo.png" alt="">
+  <img src="/images/2012/07/RabbitMQLogo.png" alt="The RabbitMQ logo">
 </figure> 
 I will first start by pointing you towards where to start. I won't get into too many details about how to setup everything, since the guys over at <a title="RabbitMQ" href="https://www.rabbitmq.com/" target="_blank">RabbitMQ</a> have done a pretty good job when exemplifying every all possible installations that might suit your needs <a title="RabbitMQ download and installation" href="http://www.rabbitmq.com/download.html" target="_blank">here</a>.
 
@@ -83,7 +83,7 @@ A few things to keep in mind are:
 
   - There can be two kinds of delivery mode. Persistent and non-persistent. Where persistent messages will be kept even if Rabbit's service is restarted. This is because when you set a message to be persistent, it is stored in disk. Non-persistent messages will be lost if the service is restarted. When benchmarking persistent against non-persistent messages (with the message of the message `{"product":"1552,1559,1683","order":8445689,"email":"john@doe.com"}` to check what the overhead was, I observed the following: 
 
-  <img src="/images/2012/07/rabbitMQ_analizis-300x180.png" alt="">
+  <img src="/images/2012/07/rabbitMQ_analizis-300x180.png" alt="RabbitMQ management console showing queued messages">
 
   - Messages have to be passed in to RabbitMQ as byte arrays, so you can't simply bung any old string into the queue, and expect it will work.
 

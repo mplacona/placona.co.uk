@@ -52,7 +52,7 @@ Calendar.** this pretty much tells your MS Outlook Calendar to synch with
   
 Google Calendar every x minutes.
   
-<img style="vertical-align: middle; border: 0;" src="http://www.google.com/help/hc/images/calendar_89955a_en.gif" alt="Google Calendar Sync" width="357" height="380" />
+<img style="vertical-align: middle; border: 0;" src="https://www.google.com/help/hc/images/calendar_89955a_en.gif" alt="Google Calendar Sync" width="357" height="380" />
   
 I then checked my Google Calendar, and everything was there. Excellent, I
   
