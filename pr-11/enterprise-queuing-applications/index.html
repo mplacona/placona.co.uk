@@ -1,0 +1,184 @@
+<!DOCTYPE html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Enterprise queuing applications | Marcos Placona</title><meta name="description" content="At work, we've decided to start using enterprise queuing applications for ease of communication between our ColdFusion and .Net projects."><link rel="canonical" href="https://placona.co.uk/enterprise-queuing-applications/"><meta name="robots" content="noindex, nofollow"><meta name="author" content="Marcos Placona"><meta name="theme-color" content="#fffdf9"><link rel="alternate" type="application/rss+xml" title="Marcos Placona's Blog" href="/pr-11/rss.xml"><meta property="og:type" content="article"><meta property="og:site_name" content="Marcos Placona"><meta property="og:locale" content="en_GB"><meta property="og:title" content="Enterprise queuing applications"><meta property="og:description" content="At work, we've decided to start using enterprise queuing applications for ease of communication between our ColdFusion and .Net projects."><meta property="og:url" content="https://placona.co.uk/enterprise-queuing-applications/"><meta property="og:image" content="https://placona.co.uk/images/2012/07/RabbitMQLogo.png"><meta property="og:image:alt" content="Enterprise queuing applications"><meta property="article:published_time" content="2012-07-29T12:30:00.000Z"><meta property="article:author" content="Marcos Placona"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@marcos_placona"><meta name="twitter:creator" content="@marcos_placona"><meta name="twitter:title" content="Enterprise queuing applications"><meta name="twitter:description" content="At work, we've decided to start using enterprise queuing applications for ease of communication between our ColdFusion and .Net projects."><meta name="twitter:image" content="https://placona.co.uk/images/2012/07/RabbitMQLogo.png"><link rel="icon" href="/pr-11/images/favicon.ico" sizes="any"><link rel="apple-touch-icon" href="/pr-11/images/site-logo.png"><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://placona.co.uk/#website","url":"https://placona.co.uk/","name":"Marcos Placona — Programming, technology, independent apps","description":"Programming, technology and musings from Marcos Placona.","inLanguage":"en-GB","publisher":{"@id":"https://placona.co.uk/about/#person"}},{"@type":"Person","@id":"https://placona.co.uk/about/#person","name":"Marcos Placona","url":"https://placona.co.uk/","image":"https://placona.co.uk/images/marcos_bw_500_optim.jpg","jobTitle":"Developer relations leader and independent software builder","sameAs":["https://github.com/mplacona","https://x.com/marcos_placona"]},{"@type":"BlogPosting","@id":"https://placona.co.uk/enterprise-queuing-applications/#article","headline":"Enterprise queuing applications","description":"At work, we've decided to start using enterprise queuing applications for ease of communication between our ColdFusion and .Net projects.","url":"https://placona.co.uk/enterprise-queuing-applications/","datePublished":"2012-07-29T12:30:00.000Z","keywords":"dotnet","image":"https://placona.co.uk/images/2012/07/RabbitMQLogo.png","inLanguage":"en-GB","author":{"@id":"https://placona.co.uk/about/#person"},"publisher":{"@id":"https://placona.co.uk/about/#person"},"isPartOf":{"@id":"https://placona.co.uk/#website"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://placona.co.uk/enterprise-queuing-applications/"}}]}</script><link rel="stylesheet" href="/pr-11/_astro/BaseLayout.BcgdzgJy.css"></head><body><a class="skip-link" href="#content">Skip to content</a><header class="site-header"><a class="brand" href="/pr-11/" aria-label="Marcos Placona home"><img src="/pr-11/images/placona-logo-small.png" alt="" width="48" height="48"><span>Marcos Placona</span></a><nav aria-label="Primary navigation"><a href="/pr-11/">Writing</a><a href="/pr-11/apps/">Apps</a><a href="/pr-11/speaker-timeline/">Speaking</a><a href="/pr-11/about/">About</a><a href="/pr-11/search/">Search</a></nav></header><main id="content"><article class="post"><header class="post-header"><p class="eyebrow">29 JULY 2012</p><h1>Enterprise queuing applications</h1><p class="lede">At work, we&#39;ve decided to start using enterprise queuing applications for ease of communication between our ColdFusion and .Net projects.</p><p class="post-meta">dotnet</p></header><div class="prose"><p>At work, we’ve decided to start using enterprise queuing applications for ease of communication between our ColdFusion and .Net projects.</p>
+<p>For those who don’t know how queues work, if I had to summarize it I would say it’s like a database that stores all the messages sent from diverse systems (even in different clusters), and awaits until a consumer (queue subscriber)  picks them up.</p>
+<p>Queues accept pretty much any kind of string you throw at them, so you could for example give it JSON or XML if you wanted to store anything a bit more complex than an ID for example.</p>
+<p>You then write specific consumers that only listen to certain queues, and once they have received and acknowledged the message, they then move on to pick up the next item in the queue.</p>
+<p>The queues we will be seeing in this post are <a href="https://en.m.wikipedia.org/wiki/FIFO">FIFO</a> type queues, which means the first item you chuck into the queue, will be theoretically the first to come out. I say “theoretically” because you could tinker with this and prioritise the order your queue serves stuff.</p>
+<p>A simple queue with multiple consumers could be represented the following way:</p>
+<p style="text-align: center;">
+  <img class=" wp-image-771 aligncenter" title="Queue with two consumers" src="/pr-11/images/2012/07/python-two-300x100.png" alt="Queue with two consumers" srcset="/pr-11/images/2012/07/python-two-300x100.png 300w, /images/2012/07/python-two.png 332w" sizes="(max-width: 300px) 100vw, 300px" />
+</p>
+<p style="text-align: left;">
+  What is important to notice here, is that items will be picked up on a round-robin fashion, meaning no one item could be picked up by two consumers, and no one consumer would be "greedy" and pick up more items than the others.
+</p>
+<p style="text-align: left;">
+  To illustrate this, I will use an email queue as an example. So image the following scenario:
+</p>
+<ul>
+<li>You have an emailing system, and all it does is… well send emails.</li>
+<li>Your online store sends a confirmation email to every client after they have purchased an item. And this step is important, as it provides the customer with information about their purchase.</li>
+<li>Your application does not need to know it sends emails, therefore all it needs to do is say: “Hey, someone’s made an order and I’ve processed it”</li>
+</ul>
+<p>What the last point it trying to say, is that an application doesn’t necessarily need to have things that aren’t related to its main purpose (selling products in this case).</p>
+<figure style="width: 150px" class="align-left">
+  <img src="/pr-11/images/2012/07/RabbitMQLogo.png" alt="">
+</figure> 
+I will first start by pointing you towards where to start. I won't get into too many details about how to setup everything, since the guys over at <a title="RabbitMQ" href="https://www.rabbitmq.com/" target="_blank">RabbitMQ</a> have done a pretty good job when exemplifying every all possible installations that might suit your needs <a title="RabbitMQ download and installation" href="http://www.rabbitmq.com/download.html" target="_blank">here</a>.
+<p>RabbitMQ is the enterprise queue application we will be using for this blog post, but after analysing other products, I came to the conclusion that they all work pretty much the same way. Rabbit is only the one I chose as it ticks all the boxes for my current requirements and is also open source, which in my opinion makes all the difference when getting support and updates.</p>
+<p>We should start by making sure RabbitMQ service is started which in most cases can be done through the click of a button on windows, or by issuing a simple <code>rabbitmqctl start</code> on *nix servers.</p>
+<p>RabbitMQ’s service can run on multiple clusters, and is very scalable, so you could potentially have multiple consumers listening to a very busy queue without running into the risk of processing the same item more than once. It’s also worth mentioning that clustering is made very easy, and can be accomplished through only a <a title="RabbitMQ Clustering" href="http://www.rabbitmq.com/clustering.html" target="_blank">few single steps</a>.</p>
+<p>We will start by implementing a simple message producer that adds a message to a queue we define. Here is how it goes:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="csharp"><code><span class="line"><span style="color:#6A737D">//Declare queue name. This can be anything you like</span></span>
+<span class="line"><span style="color:#F97583">string</span><span style="color:#B392F0"> QueueName</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> "QTransactions"</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#6A737D">// Create a new connection factory for the queue</span></span>
+<span class="line"><span style="color:#F97583">var</span><span style="color:#B392F0"> factory</span><span style="color:#F97583"> =</span><span style="color:#F97583"> new</span><span style="color:#B392F0"> ConnectionFactory</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// Because Rabbit is installed locally, we can run it on localhost</span></span>
+<span class="line"><span style="color:#E1E4E8">factory.HostName </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> "127.0.0.1"</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">using</span><span style="color:#E1E4E8"> (</span><span style="color:#B392F0">IConnection</span><span style="color:#B392F0"> connection</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> factory.</span><span style="color:#B392F0">CreateConnection</span><span style="color:#E1E4E8">())</span></span>
+<span class="line"><span style="color:#F97583">using</span><span style="color:#E1E4E8"> (</span><span style="color:#B392F0">IModel</span><span style="color:#B392F0"> channel</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> connection.</span><span style="color:#B392F0">CreateModel</span><span style="color:#E1E4E8">())</span></span>
+<span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#6A737D">    // mark all messages as persistent</span></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#F97583"> bool</span><span style="color:#B392F0"> durable</span><span style="color:#F97583"> =</span><span style="color:#79B8FF"> true</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">    channel.</span><span style="color:#B392F0">QueueDeclare</span><span style="color:#E1E4E8">(QueueName, durable, </span><span style="color:#79B8FF">false</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">false</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">null</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">    // Set delivery mode (1 = non Persistent | 2 = Persistent)</span></span>
+<span class="line"><span style="color:#B392F0">    IBasicProperties</span><span style="color:#B392F0"> props</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> channel.</span><span style="color:#B392F0">CreateBasicProperties</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#E1E4E8">    props.DeliveryMode </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 2</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">    string</span><span style="color:#B392F0"> msg</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> args[</span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">];</span></span>
+<span class="line"><span style="color:#F97583">    byte</span><span style="color:#E1E4E8">[] </span><span style="color:#B392F0">body</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> System.Text.Encoding.UTF8.</span><span style="color:#B392F0">GetBytes</span><span style="color:#E1E4E8">(msg);</span></span>
+<span class="line"><span style="color:#E1E4E8">    channel.</span><span style="color:#B392F0">BasicPublish</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">""</span><span style="color:#E1E4E8">, QueueName, props, body);</span></span>
+<span class="line"><span style="color:#E1E4E8">    Console.</span><span style="color:#B392F0">WriteLine</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">" [x] Sent {0}"</span><span style="color:#E1E4E8">, msg);                </span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>Notice on the code above, I am simply declaring what queue I would like to use, creating a connection with it, setting some properties and publish my message into the queue.</p>
+<p>A few things to keep in mind are:</p>
+<ul>
+<li>There can be two kinds of delivery mode. Persistent and non-persistent. Where persistent messages will be kept even if Rabbit’s service is restarted. This is because when you set a message to be persistent, it is stored in disk. Non-persistent messages will be lost if the service is restarted. When benchmarking persistent against non-persistent messages (with the message of the message <code>{"product":"1552,1559,1683","order":8445689,"email":"john@doe.com"}</code> to check what the overhead was, I observed the following:</li>
+</ul>
+  <img src="/pr-11/images/2012/07/rabbitMQ_analizis-300x180.png" alt="">
+<ul>
+<li>Messages have to be passed in to RabbitMQ as byte arrays, so you can’t simply bung any old string into the queue, and expect it will work.</li>
+</ul>
+<p>And now, as I mentioned before, in my system, items will potentially be added via ColdFusion, so they can be processed via our .Net application. Here is the equivalent code to the one above:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#E1E4E8">&lt;</span><span style="color:#85E89D">cfscript</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">	QueueName = "QTransactions";</span></span>
+<span class="line"><span style="color:#E1E4E8">	durable = true;</span></span>
+<span class="line"><span style="color:#E1E4E8">	loadPaths = arrayNew(1);</span></span>
+<span class="line"><span style="color:#E1E4E8">	loadPaths[1] = expandPath("lib/rabbitmq-java-client-bin-2.8.4/rabbitmq-client.jar");</span></span>
+<span class="line"><span style="color:#E1E4E8">	// load jars</span></span>
+<span class="line"><span style="color:#E1E4E8">	javaLoader = createObject("component", "lib.javaloader.JavaLoader").init(loadPaths);</span></span>
+<span class="line"><span style="color:#E1E4E8">	// Create factory</span></span>
+<span class="line"><span style="color:#E1E4E8">	factory = javaloader.create("com.rabbitmq.client.ConnectionFactory").init();</span></span>
+<span class="line"><span style="color:#E1E4E8">	factory.setHost("127.0.0.1"); </span></span>
+<span class="line"><span style="color:#E1E4E8">	// Create properties</span></span>
+<span class="line"><span style="color:#E1E4E8">	messageProperties = javaloader.create("com.rabbitmq.client.MessageProperties").init();</span></span>
+<span class="line"><span style="color:#E1E4E8">	props = messageProperties.PERSISTENT_TEXT_PLAIN;</span></span>
+<span class="line"><span style="color:#E1E4E8">	// Connect</span></span>
+<span class="line"><span style="color:#E1E4E8">	connection = factory.newConnection();</span></span>
+<span class="line"><span style="color:#E1E4E8">	channel = connection.createChannel();</span></span>
+<span class="line"><span style="color:#E1E4E8">	// Declare queue</span></span>
+<span class="line"><span style="color:#E1E4E8">	channel.QueueDeclare(QueueName, durable, false, false, createJavaNull());</span></span>
+<span class="line"><span style="color:#E1E4E8">	// Create string</span></span>
+<span class="line"><span style="color:#E1E4E8">	objStringByteArray = createByteArray("this is my CF message 12345");</span></span>
+<span class="line"><span style="color:#E1E4E8">	// Publish</span></span>
+<span class="line"><span style="color:#E1E4E8">	try{</span></span>
+<span class="line"><span style="color:#E1E4E8">		channel.</span><span style="color:#B392F0">basicPublish</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">""</span><span style="color:#E1E4E8">, QueueName, props, objStringByteArray);</span></span>
+<span class="line"><span style="color:#E1E4E8">	}</span></span>
+<span class="line"><span style="color:#E1E4E8">	finally{</span></span>
+<span class="line"><span style="color:#6A737D">		// Close connection</span></span>
+<span class="line"><span style="color:#E1E4E8">		channel.</span><span style="color:#B392F0">close</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#E1E4E8">		connection.</span><span style="color:#B392F0">close</span><span style="color:#E1E4E8">();	</span></span>
+<span class="line"><span style="color:#E1E4E8">	}</span></span>
+<span class="line"><span style="color:#E1E4E8">&lt;/</span><span style="color:#85E89D">cfscript</span><span style="color:#E1E4E8">&gt;</span></span></code></pre>
+<p>And a few things to note here:</p>
+<ol>
+<li>I am loading the jar file via Mark Mandel’s <a href="http://javaloader.riaforge.org/" title="Java Loader">Java Loader</a>. I know ColdFusion 10 has this functionality out of the box, but I still haven’t upgraded my local development box. Besides, I think the Java Loader is a pretty sweet implementation that lets me do lots of cool things.</li>
+<li>I create my connection factory and set hosts the exact same way bas done above.</li>
+<li>ColdFusion does not have a true null that it can pass on, for that reason I had to implement my own. The way I did that, was to create an empty <a href="https://docs.oracle.com/javase/7/docs/api/java/util/Vector.html" title="Java Vector">Vector</a> and use it. That returns a true Java null. Bit of a hack I know, but it does the job quite nicely.</li>
+</ol>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="java"><code><span class="line"><span style="color:#6A737D">// Returns a Java null from ColdFusion</span></span>
+<span class="line"><span style="color:#E1E4E8">function </span><span style="color:#B392F0">createJavaNull</span><span style="color:#E1E4E8">(){</span></span>
+<span class="line"><span style="color:#F97583">  var</span><span style="color:#E1E4E8"> vector </span><span style="color:#F97583">=</span><span style="color:#B392F0"> CreateObject</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"java"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"java.util.Vector"</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">  vector.</span><span style="color:#B392F0">setSize</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#F97583">  return</span><span style="color:#E1E4E8"> vector.</span><span style="color:#B392F0">get</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p><em>UPDATE</em>
+As pointed out in the comments by Henry Ho, you could just replace this with the code below to get the same results as long as your version of ColdFusion is above 7:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="java"><code><span class="line"><span style="color:#6A737D">// Returns a Java null from ColdFusion</span></span>
+<span class="line"><span style="color:#E1E4E8">function </span><span style="color:#B392F0">createJavaNull</span><span style="color:#E1E4E8">(){</span></span>
+<span class="line"><span style="color:#F97583">  return</span><span style="color:#B392F0"> javacast</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"null"</span><span style="color:#E1E4E8">,</span><span style="color:#9ECBFF">""</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<ol start="4">
+<li>The other thing I had to do, was make sure I could actually pass a byte array to the queue. ColdFusion also does not do it natively. However, its closest buddy Java does it. So fear not, the following bit of code will do that exact thing by turning a string into a Java string, and then calling the method <a title="Java - String : getBytes" href="https://docs.oracle.com/javase/7/docs/api/java/lang/String.html#getBytes()" target="_blank">getBytes()</a>from it, which will return a byte array. Again, but of a hack, but quite graceful.</li>
+</ol>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="java"><code><span class="line"><span style="color:#6A737D">// Converts a ColdFusion string in a java byte array</span></span>
+<span class="line"><span style="color:#E1E4E8">function </span><span style="color:#B392F0">createByteArray</span><span style="color:#E1E4E8">(string){</span></span>
+<span class="line"><span style="color:#F97583">	var</span><span style="color:#E1E4E8"> objString </span><span style="color:#F97583">=</span><span style="color:#B392F0"> createObject</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"Java"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"java.lang.String"</span><span style="color:#E1E4E8">).</span><span style="color:#B392F0">init</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">JavaCast</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"string"</span><span style="color:#E1E4E8">, string));</span></span>
+<span class="line"><span style="color:#F97583">	return</span><span style="color:#E1E4E8"> objString.</span><span style="color:#B392F0">getBytes</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>With that, we then should end up with a queue called <code>QTransactions</code> that has one item on it.</p>
+<blockquote>
+<p>RabbitMQ provides you with a <a title="RabbitMQ Management Plugin" href="http://www.rabbitmq.com/management.html" target="_blank">very nice plugin</a> that lets you see what you currently have in your queues, as well as letting you add items manually.</p>
+</blockquote>
+<p>We will now write a new program that will only listen to our queue (QTransactions) and processes message contents.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="csharp"><code><span class="line"><span style="color:#6A737D">// Declare the queue name</span></span>
+<span class="line"><span style="color:#F97583">string</span><span style="color:#B392F0"> QueueName</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> "QTransactions"</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#6A737D">// Create a new connection factory for the queue</span></span>
+<span class="line"><span style="color:#F97583">var</span><span style="color:#B392F0"> factory</span><span style="color:#F97583"> =</span><span style="color:#F97583"> new</span><span style="color:#B392F0"> ConnectionFactory</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// Because Rabbit is installed locally, we can run it on localhost</span></span>
+<span class="line"><span style="color:#E1E4E8">factory.HostName </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> "127.0.0.1"</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">using</span><span style="color:#E1E4E8"> (</span><span style="color:#F97583">var</span><span style="color:#B392F0"> connection</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> factory.</span><span style="color:#B392F0">CreateConnection</span><span style="color:#E1E4E8">())</span></span>
+<span class="line"><span style="color:#F97583">using</span><span style="color:#E1E4E8"> (</span><span style="color:#F97583">var</span><span style="color:#B392F0"> channel</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> connection.</span><span style="color:#B392F0">CreateModel</span><span style="color:#E1E4E8">())</span></span>
+<span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">    // When reading from a persistent queue, you need to tell that to your consumer</span></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#F97583"> bool</span><span style="color:#B392F0"> durable</span><span style="color:#F97583"> =</span><span style="color:#79B8FF"> true</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">    channel.</span><span style="color:#B392F0">QueueDeclare</span><span style="color:#E1E4E8">(QueueName, durable, </span><span style="color:#79B8FF">false</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">false</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">null</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">    var</span><span style="color:#B392F0"> consumer</span><span style="color:#F97583"> =</span><span style="color:#F97583"> new</span><span style="color:#B392F0"> QueueingBasicConsumer</span><span style="color:#E1E4E8">(channel);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">    // turn auto acknowledge off so we can do it manually. This is so we don't remove items from the queue until we're perfectly happy</span></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#F97583"> bool</span><span style="color:#B392F0"> autoAck</span><span style="color:#F97583"> =</span><span style="color:#79B8FF"> false</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">    channel.</span><span style="color:#B392F0">BasicConsume</span><span style="color:#E1E4E8">(QueueName, autoAck, consumer);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">    System.Console.</span><span style="color:#B392F0">WriteLine</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">" [*] Waiting for messages."</span><span style="color:#F97583"> +</span></span>
+<span class="line"><span style="color:#9ECBFF">                                "To exit press CTRL+C"</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#F97583">    while</span><span style="color:#E1E4E8"> (</span><span style="color:#79B8FF">true</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">    {</span></span>
+<span class="line"><span style="color:#F97583">        var</span><span style="color:#B392F0"> ea</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> (</span><span style="color:#B392F0">BasicDeliverEventArgs</span><span style="color:#E1E4E8">)consumer.Queue.</span><span style="color:#B392F0">Dequeue</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">        byte</span><span style="color:#E1E4E8">[] </span><span style="color:#B392F0">body</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> ea.Body;</span></span>
+<span class="line"><span style="color:#F97583">        string</span><span style="color:#B392F0"> message</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> System.Text.Encoding.UTF8.</span><span style="color:#B392F0">GetString</span><span style="color:#E1E4E8">(body);</span></span>
+<span class="line"><span style="color:#E1E4E8">        System.Console.</span><span style="color:#B392F0">WriteLine</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">" [x] Processing {0}"</span><span style="color:#E1E4E8">, message);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">        // Acknowledge message received and processed</span></span>
+<span class="line"><span style="color:#E1E4E8">        System.Console.</span><span style="color:#B392F0">WriteLine</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">" Processed "</span><span style="color:#E1E4E8">, message);</span></span>
+<span class="line"><span style="color:#E1E4E8">        channel.</span><span style="color:#B392F0">BasicAck</span><span style="color:#E1E4E8">(ea.DeliveryTag, </span><span style="color:#79B8FF">false</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>As you can see, we’ve pretty much done the same thing here.</p>
+<ol>
+<li>We’ve declared our queue.</li>
+<li>Then opened a connection factory and created a connection with it.</li>
+<li>When we told Rabbit from which queue we wanted to read from, we also had to tell it that this queue is a persistent queue. Had we skipped this step, RabbitMQ would throw an exception as we’re trying to read from something we’re not completely certain.</li>
+<li>We then initiate an infinite loop. That is so our application is always trying to listen to messages
+<ol>
+<li>We read messages the exact same way we write them (i.e. they’re byte arrays)</li>
+</ol>
+</li>
+<li>Last but not least, we provide our queue with acknowledgement. This step is pretty important, as a queue will only let an item go if it receives an acknowledgement message.</li>
+</ol>
+<p>To extend a bit on acknowledges, I think it’s worth mentioning that had you set the <code>autoack</code> to be true when you created your consumer, there wouldn’t be a need to acknowledge messages manually. You will probably be asking yourself why I have turned it off.</p>
+<p>Going back to my use case, remember when I said sending emails was pretty important as it provides customers with information about their purchase? Well the word <strong>important</strong> makes all the difference here, since we need to guarantee that customers will at least be sent an email (we will ignore undelivered emails here). SO imagine the following scenario:</p>
+<p style="text-align: center;">
+  <img class=" wp-image-792 aligncenter" title="Queue Flow" src="/pr-11/images/2012/07/queue_flow.png" alt="Queue Flow" srcset="/pr-11/images/2012/07/queue_flow.png 400w, /images/2012/07/queue_flow-300x145.png 300w" sizes="(max-width: 400px) 100vw, 400px" />
+</p>
+<p>As you will have noticed, multiple consumers can take one item at a time from the queue. When it comes to processing it, you could for example be querying the database in order to get more details about the purchase so you can build the email. But what happens if your database returns a _connection reset _ at this exact time? Well, if you used <code>autoack</code>, your message has long gone from the queue, and your only option would be to wrap it on a try-catch block and re-queue it.</p>
+<p>Or, you could simply turn <code>autoack</code> off, and acknowledge the message yourself. That way, you would only “tell” the queue to let go of the item once you were happy that it can. Your flow without <code>autoack</code> would the look like this:</p>
+<p style="text-align: center;">
+  <img class=" wp-image-793 aligncenter" title="Queue Flow with manual acknowledgement" src="/pr-11/images/2012/07/queue_flow_ack.png" alt="Queue Flow with manual acknowledgement" srcset="/pr-11/images/2012/07/queue_flow_ack.png 400w, /images/2012/07/queue_flow_ack-300x121.png 300w" sizes="(max-width: 400px) 100vw, 400px" />
+</p>
+<p>And with that we have managed to add items into a queue, and read them back by making sure nothing is lost should we have an exception or a service failure.</p>
+<p>I have uploaded the full C# source code for this article into GitHub. It is also a full working example that will run by adding and retrieving messages into and from a queue. All you need to do is get RabbitMQ installed.</p>
+<p><a title="RabbitMQ C# Integration" href="https://github.com/mplacona/RabbitMQ-Integration" target="_blank">GitHub Project</a></p>
+</div><nav class="article-nav" aria-label="Article navigation"><a class="nav-prev" href="/pr-11/finite-image-slider/" rel="prev">← Newer: Finite image slider</a><a class="nav-next" href="/pr-11/upgrading-castle-from-2-1-to-2-5/" rel="next">Older: Upgrading Castle from 2.1 to 2.5 →</a></nav></article></main><footer class="site-footer"><p>© 2026 Marcos Placona. Programming, technology and independent apps.</p><p><a href="https://github.com/mplacona" rel="me">GitHub</a> ·<a href="https://x.com/marcos_placona" rel="me">X</a> ·<a href="/pr-11/rss.xml">RSS</a></p></footer></body></html>
