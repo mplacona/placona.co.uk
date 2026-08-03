@@ -1,6 +1,6 @@
 ---
 title: "Quick and dirty jQuery drag & drop"
-description: ""
+description: "I feel kinda bad to be calling this dirty, but mind you, I'm only using dirty as an expression, as it's freaking sweet."
 pubDate: "2009-03-01T00:00:00.000Z"
 slug: "quick-and-dirty-jquery-drag-drop"
 categories: ["Javascript"]

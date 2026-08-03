@@ -1,6 +1,6 @@
 ---
 title: "Sticky JavaScript Persistence"
-description: ""
+description: "On my last blog post I explained how to create a drag and drop using cloning, so you can can drag & drop multiple objects"
 pubDate: "2009-08-10T00:00:00.000Z"
 slug: "sticky-javascript-persistence"
 categories: ["Javascript"]

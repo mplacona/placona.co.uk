@@ -1,6 +1,6 @@
 ---
 title: "Ubuntu Experience"
-description: ""
+description: "Following the last post about network problems and dodgy Firewalls. This time I decided to install Ubuntu on my laptop. I have to be honest saying that…"
 pubDate: "2006-12-07T00:00:00.000Z"
 slug: "ubuntu-experience"
 categories: ["Linux"]

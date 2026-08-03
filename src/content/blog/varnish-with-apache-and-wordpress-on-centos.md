@@ -1,6 +1,6 @@
 ---
 title: "Varnish with Apache and WordPress on Centos"
-description: ""
+description: "Varnish is wicked! It works on your webserver as a reverse proxy to cache HTTP requests. According to their website:"
 pubDate: "2014-04-23T21:45:29.000Z"
 slug: "varnish-with-apache-and-wordpress-on-centos"
 categories: ["technology"]

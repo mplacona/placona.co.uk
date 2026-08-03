@@ -1,6 +1,6 @@
 ---
 title: "Things you may not know about jQuery"
-description: ""
+description: "I just came across this very interesting list of things you can do with jQuery ."
 pubDate: "2009-02-19T00:00:00.000Z"
 slug: "things-you-may-not-know-about-jquery"
 categories: ["javascript"]

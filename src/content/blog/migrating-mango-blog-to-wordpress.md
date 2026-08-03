@@ -1,6 +1,6 @@
 ---
 title: "Migrating Mango Blog to WordPress"
-description: ""
+description: "As previously promised , today I'll be publishing my migration scrips from Mango Blog to WordPress ."
 pubDate: "2010-05-03T11:00:48.000Z"
 slug: "migrating-mango-blog-to-wordpress"
 categories: ["coldfusion"]

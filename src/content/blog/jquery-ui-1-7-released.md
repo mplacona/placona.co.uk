@@ -1,6 +1,6 @@
 ---
 title: "jQuery UI 1.7 Released"
-description: ""
+description: "The jQuery UI team has marked a major milestone for the UI. Today they released version 1.7 with some nice updates, and also put their own dedicated…"
 pubDate: "2009-03-06T00:00:00.000Z"
 slug: "jquery-ui-1-7-released"
 categories: ["Javascript"]

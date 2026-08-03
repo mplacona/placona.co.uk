@@ -1,6 +1,6 @@
 ---
 title: "Javascript  saves the day again."
-description: ""
+description: "As some of you know, one of my hobbies is electronics with micro controller usage, and I happen to use an electronics forum a lot when I'm losing hair…"
 pubDate: "2008-06-30T00:00:00.000Z"
 slug: "javascript-saves-the-day-again"
 categories: ["Javascript"]

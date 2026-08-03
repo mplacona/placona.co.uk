@@ -70,7 +70,7 @@ if (props.kind === 'post') {
     </nav>
   </BaseLayout>
 ) : (
-  <BaseLayout title={`${post!.data.title} | Marcos Placona`} description={post!.data.description} image={post!.data.image} canonicalPath={`/${post!.data.slug}/`}>
+  <BaseLayout title={`${post!.data.title} | Marcos Placona`} description={post!.data.description || `Read Marcos Placona’s article: ${post!.data.title}.`} image={post!.data.image} canonicalPath={`/${post!.data.slug}/`}>
     <article class="post">
       <header class="post-header">
         <p class="eyebrow">{post!.data.pubDate.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }).toUpperCase()}</p>

@@ -1,6 +1,6 @@
 ---
 title: "Finite image slider"
-description: ""
+description: "I've been asked to come up with an image slider prototype for something new we were doing at work."
 pubDate: "2012-08-26T00:08:25.000Z"
 slug: "finite-image-slider"
 categories: ["Javascript"]

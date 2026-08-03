@@ -1,6 +1,6 @@
 ---
 title: "Moving SVN Folders"
-description: ""
+description: "I recently had to move an entire folder on SVN from a place to another. When you think \"folders\", you simply imagine that would be an easy drag & drop task."
 pubDate: "2010-06-22T11:32:42.000Z"
 slug: "moving-svn-folders"
 categories: ["Technology"]

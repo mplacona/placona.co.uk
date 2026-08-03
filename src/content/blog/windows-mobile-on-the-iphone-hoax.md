@@ -1,6 +1,6 @@
 ---
 title: "Windows Mobile on the iPhone? Hoax?"
-description: ""
+description: "I've just seen this video and thought I'd share it with my few readers. It appears that a Norwegian lad found a way to boot Windows Mobile OS on the…"
 pubDate: "2009-03-09T00:00:00.000Z"
 slug: "windows-mobile-on-the-iphone-hoax"
 categories: ["Technology"]

@@ -1,6 +1,6 @@
 ---
 title: "Google Chrome OS and e few more changes"
-description: ""
+description: "Yesterday the Google team posted an entry on all their blogs about a new operating system that is to come. They are going to call it Google Chrome OS."
 pubDate: "2009-07-09T00:00:00.000Z"
 slug: "google-chrome-os-and-e-few-more-changes"
 categories: ["Linux"]

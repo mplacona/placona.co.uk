@@ -1,6 +1,6 @@
 ---
 title: "Managing your dotfiles the right way"
-description: ""
+description: "It's no secret that on the UNIX world, dotfiles play a very important part when it comes to making your terminal look good. Be it on Linux, be it on a…"
 pubDate: "2013-04-01T21:12:09.000Z"
 slug: "managing-your-dotfiles-the-right-way"
 categories: ["Technology"]

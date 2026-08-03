@@ -1,6 +1,6 @@
 ---
 title: "Apache 101 - Cache Control"
-description: ""
+description: "Continuing with my Apache series, I'll be today talking about cache control."
 pubDate: "2009-04-30T00:00:00.000Z"
 slug: "apache-101-cache-control"
 categories: ["Technology"]

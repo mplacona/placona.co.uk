@@ -1,6 +1,6 @@
 ---
 title: "Want a free copy of my new book?"
-description: ""
+description: "No catches here, all you need to do to get a free e-copy of my new book"
 pubDate: "2013-05-17T08:24:09.000Z"
 slug: "want-a-free-copy-of-my-new-book"
 categories: ["Books"]

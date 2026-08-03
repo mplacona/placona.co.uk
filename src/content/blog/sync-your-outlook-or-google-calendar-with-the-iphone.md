@@ -1,6 +1,6 @@
 ---
 title: "Sync your iPhone with Outlook (or Google) Calendar"
-description: ""
+description: "We all know how painful it is to keep up to date with our meeting and"
 pubDate: "2009-04-29T00:00:00.000Z"
 slug: "sync-your-outlook-or-google-calendar-with-the-iphone"
 categories: ["Technology"]

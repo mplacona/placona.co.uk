@@ -1,6 +1,6 @@
 ---
 title: "Speed up yor website - Part 1"
-description: ""
+description: "Assets such as stylesheets, images and videos are often the major hit taken by a webserver when a webpage is loaded. I'm often trying to improve my page…"
 pubDate: "2009-07-21T00:00:00.000Z"
 slug: "speed-up-yor-website-part-1"
 categories: ["Technology"]

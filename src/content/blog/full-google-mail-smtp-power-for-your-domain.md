@@ -1,6 +1,6 @@
 ---
 title: "Full Google Mail / SMTP power for your domain"
-description: ""
+description: "I've recently been playing with Google apps for domains, where it lets you create Gmail based emails for your domain. Basically you can configure Google…"
 pubDate: "2009-05-07T00:00:00.000Z"
 slug: "full-google-mail-smtp-power-for-your-domain"
 categories: ["Technology"]

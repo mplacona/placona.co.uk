@@ -1,6 +1,6 @@
 ---
 title: "Matrix effect with Dart"
-description: ""
+description: "After my last post on Dart, I decided that I wanted to write something a bit more complex using the language. I had a lot of good feedback on it, but…"
 pubDate: "2014-03-24T13:53:51.000Z"
 slug: "matrix-effect-with-dart"
 categories: ["Dart"]

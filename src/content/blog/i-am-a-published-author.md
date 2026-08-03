@@ -1,6 +1,6 @@
 ---
 title: "I am a published author"
-description: ""
+description: "A few months ago I was contacted by Packt Publishing about a new project they had in mind and thought I'd be a good fit for."
 pubDate: "2013-04-10T13:50:45.000Z"
 slug: "i-am-a-published-author"
 categories: ["Books"]

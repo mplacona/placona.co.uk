@@ -1,6 +1,6 @@
 ---
 title: "Flash player for Linux"
-description: ""
+description: "They finally made it! Adobe just released the Flash Player for Linux."
 pubDate: "2007-01-17T00:00:00.000Z"
 slug: "flash-player-for-linux"
 categories: ["Linux"]

@@ -1,6 +1,6 @@
 ---
 title: "What breaks WP Super Cache"
-description: ""
+description: "Disclaimer: This blog post is not meant to be timeless, meaning it will lose its relevancy as soon as the stuff I'll mention below gets updated. I will…"
 pubDate: "2012-08-29T08:09:52.000Z"
 slug: "what-breaks-wp-super-cache"
 categories: ["Technology"]

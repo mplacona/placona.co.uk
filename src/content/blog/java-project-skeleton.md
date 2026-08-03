@@ -1,6 +1,6 @@
 ---
 title: "Java + Junit + Ant Template Project"
-description: ""
+description: "I could end this post here, and people would have been satisfied to read it. However, I thought I'd add some more context, and maybe throw a little…"
 pubDate: "2013-08-04T01:16:44.000Z"
 slug: "java-project-skeleton"
 categories: ["Java"]

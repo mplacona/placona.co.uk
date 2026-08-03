@@ -1,6 +1,6 @@
 ---
 title: "Nifty jQuery tricks - Avoid Cache"
-description: ""
+description: "I found this two function yesterday while working on one of our applications."
 pubDate: "2010-10-02T23:19:19.000Z"
 slug: "nifty-jquery-tricks-avoid-cache"
 categories: ["JavaScript"]

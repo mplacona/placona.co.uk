@@ -1,6 +1,6 @@
 ---
 title: "I'm joining Twilio"
-description: ""
+description: "So the time has come for me to move on and accept a new challenge. As of the October 20th, I'll be joining Twilio as a Developer Evangelist."
 pubDate: "2014-10-16T14:11:59.000Z"
 slug: "im-joining-twilio"
 categories: ["Technology"]

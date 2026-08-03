@@ -1,6 +1,6 @@
 ---
 title: "Simple HTTP server with Dart - Setup"
-description: ""
+description: "In this article, I will demonstrate how easy it is to create a simple TCP HTTP server with Dart."
 pubDate: "2014-04-01T22:15:22.000Z"
 slug: "simple-tcp-server-with-dart-setup"
 categories: ["Dart"]

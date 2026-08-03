@@ -1,6 +1,6 @@
 ---
 title: "Flash on the iPhone"
-description: ""
+description: "Not really Flash running from websites on the browser, but at the MAX Conference 2009 that is happening this week, Adobe has just broken the news that…"
 pubDate: "2009-10-05T00:00:00.000Z"
 slug: "flash-on-the-iphone"
 categories: ["Technology"]

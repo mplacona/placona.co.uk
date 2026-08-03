@@ -1,6 +1,6 @@
 ---
 title: "Breaking the network?"
-description: ""
+description: "I recently bought a brand new Compaq Presario desktop to my new flat. For the first week living there I was just using my laptop (also a Compaq…"
 pubDate: "2006-12-05T00:00:00.000Z"
 slug: "breaking-the-network"
 categories: ["Misc"]

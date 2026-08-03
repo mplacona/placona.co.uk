@@ -1,6 +1,6 @@
 ---
 title: "mySQL killed my hamster"
-description: ""
+description: "I've run some updates on my server today, and got prompted to upgrade mySQL."
 pubDate: "2010-09-21T21:56:51.000Z"
 slug: "mysql-killed-my-hamster"
 categories: ["Technology"]

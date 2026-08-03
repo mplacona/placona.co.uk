@@ -1,6 +1,6 @@
 ---
 title: "E4X and XML with namespaces"
-description: ""
+description: "Here's is something that got me scratching my head for a little while today while working on my new mobile application."
 pubDate: "2011-09-04T22:05:36.000Z"
 slug: "e4x-and-xml-with-namespaces"
 categories: ["Android"]

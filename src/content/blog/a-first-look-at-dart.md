@@ -1,6 +1,6 @@
 ---
 title: "A first look at Dart"
-description: ""
+description: "A few weeks ago, I went to a Google sponsored event called Dart Flight School. The aim is to promote the language by doing a road trip and presenting…"
 pubDate: "2014-03-12T08:28:10.000Z"
 slug: "a-first-look-at-dart"
 categories: ["Dart"]

@@ -1,6 +1,6 @@
 ---
 title: "Android and what I've been up to"
-description: ""
+description: "I jumped into the Android bandwagon about two months ago, and so far I can't cease to be impressed."
 pubDate: "2010-07-27T16:20:18.000Z"
 slug: "android-and-what-ive-been-up-to"
 categories: ["Android"]

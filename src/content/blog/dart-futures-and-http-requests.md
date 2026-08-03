@@ -1,6 +1,6 @@
 ---
 title: "Dart - Futures and HTTP requests"
-description: ""
+description: "I wrote a little article about how to retrieve gists from GitHub, and +Seth Ladd quite rightly pointed something out."
 pubDate: "2014-04-29T20:14:51.000Z"
 slug: "dart-futures-and-http-requests"
 categories: ["Dart"]

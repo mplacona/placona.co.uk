@@ -1,6 +1,6 @@
 ---
 title: "UK Top 40 albums & singles JSON"
-description: ""
+description: "So I had this idea for a little application and wanted to get the UK's Top40 singles to use in it. I started by writing something that would scrape…"
 pubDate: "2013-06-23T22:46:10.000Z"
 slug: "uk-top-40-albums-singles-json"
 categories: ["Technology"]

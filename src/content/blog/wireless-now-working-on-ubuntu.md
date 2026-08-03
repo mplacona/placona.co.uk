@@ -1,6 +1,6 @@
 ---
 title: "Wireless now working on Ubuntu"
-description: ""
+description: "As previously said I was having some kind of troubles with my wireless connection on Ubuntu."
 pubDate: "2006-12-08T00:00:00.000Z"
 slug: "wireless-now-working-on-ubuntu"
 categories: ["Linux"]

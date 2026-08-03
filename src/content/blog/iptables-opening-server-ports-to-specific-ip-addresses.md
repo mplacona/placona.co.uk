@@ -1,6 +1,6 @@
 ---
 title: "IPTABLES - Opening server ports to specific IP addresses"
-description: ""
+description: "I have been doing some housekeeping on my VPS, and decided there's a few ports that should only be accessed by certain IP addresses for security purposes."
 pubDate: "2009-09-06T00:00:00.000Z"
 slug: "iptables-opening-server-ports-to-specific-ip-addresses"
 categories: ["Linux"]

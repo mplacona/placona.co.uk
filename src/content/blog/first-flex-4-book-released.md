@@ -1,6 +1,6 @@
 ---
 title: "First Flex 4 book released"
-description: ""
+description: "The first Flex 4 book (Hello! Flex 4) has just been released this month in the UK. I haven't read it yet, so no way I could give any reviews on it, but…"
 pubDate: "2009-12-24T00:00:00.000Z"
 slug: "first-flex-4-book-released"
 categories: ["Flex"]

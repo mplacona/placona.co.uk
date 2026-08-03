@@ -1,6 +1,6 @@
 ---
 title: "SQLite databases and mobile applications - A caveat"
-description: ""
+description: "As some of you might have noticed, I have been building some mobile applications lately on my spare time specifically for the Blackberry Playbook . They…"
 pubDate: "2011-06-06T14:18:41.000Z"
 slug: "sqlite-databases-and-mobile-applications-a-caveat"
 categories: ["Adobe"]

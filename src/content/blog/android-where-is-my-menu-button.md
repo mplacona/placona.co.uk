@@ -1,6 +1,6 @@
 ---
 title: "Android - Where is my menu button?"
-description: ""
+description: "So you’ve created your super polished android application and added a navigation menu to it, so your users can go from a place to another in your…"
 pubDate: "2013-02-09T22:16:54.000Z"
 slug: "android-where-is-my-menu-button"
 categories: ["Android"]

@@ -1,6 +1,6 @@
 ---
 title: "Getting serial ports to work on Linux"
-description: ""
+description: "I've recently been \"forced\" to move my desktop from Windows to Linux again. Basically my current desktop \"decided\" it won't support Windows anymore, and…"
 pubDate: "2010-05-09T20:09:11.000Z"
 slug: "getting-serial-ports-to-work-on-linux"
 categories: ["General Techie Stuff","Linux","Technology"]

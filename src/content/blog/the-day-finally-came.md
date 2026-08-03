@@ -1,6 +1,6 @@
 ---
 title: "The day finally came!"
-description: ""
+description: "And of course I was out of the country and then too busy to even read anything about it."
 pubDate: "2009-04-16T00:00:00.000Z"
 slug: "the-day-finally-came"
 categories: ["coldfusion"]

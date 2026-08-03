@@ -1,6 +1,6 @@
 ---
 title: "Making it snow with Dart"
-description: ""
+description: "After my last example showing you how to create a matrix effect with Dart, I thought it would be cool, to follow up with another example that used the…"
 pubDate: "2014-03-30T20:57:06.000Z"
 slug: "making-it-snow-with-dart"
 categories: ["Dart"]

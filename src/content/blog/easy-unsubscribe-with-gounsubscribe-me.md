@@ -1,6 +1,6 @@
 ---
 title: "Easy unsubscribe with GoUnsubscribe.me"
-description: ""
+description: "I've created a new website over the last weekend and would like to share it here with you."
 pubDate: "2013-08-28T09:06:42.000Z"
 slug: "easy-unsubscribe-with-gounsubscribe-me"
 categories: ["Technology"]

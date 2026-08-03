@@ -1,6 +1,6 @@
 ---
 title: "How to return tag contents with regular expressions"
-description: ""
+description: "As most of you already know, I LOVE regular expressions, and think they are great to solve simple and complex tasks involving strings."
 pubDate: "2010-01-27T00:00:00.000Z"
 slug: "how-to-return-tag-contents-with-regular-expressions"
 categories: ["Regular Expressions"]
