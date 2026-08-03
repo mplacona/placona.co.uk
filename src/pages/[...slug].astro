@@ -1,0 +1,88 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PostCard from '../components/PostCard.astro';
+
+type PostProps = { kind: 'post'; post: CollectionEntry<'blog'> };
+type ArchiveProps = {
+  kind: 'archive';
+  page: number;
+  posts: CollectionEntry<'blog'>[];
+  pageCount: number;
+};
+
+export async function getStaticPaths() {
+  const posts = (await getCollection('blog', ({ data }) => !data.draft))
+    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+  const perPage = 10;
+  const pageCount = Math.ceil(posts.length / perPage);
+
+  return [
+    ...posts.map((post) => ({
+      params: { slug: post.data.slug },
+      props: { kind: 'post', post } satisfies PostProps
+    })),
+    ...Array.from({ length: Math.max(0, pageCount - 1) }, (_, index) => {
+      const page = index + 2;
+      return {
+        params: { slug: `page${page}` },
+        props: {
+          kind: 'archive',
+          page,
+          pageCount,
+          posts: posts.slice((page - 1) * perPage, page * perPage)
+        } satisfies ArchiveProps
+      };
+    })
+  ];
+}
+
+const props = Astro.props as PostProps | ArchiveProps;
+let post: CollectionEntry<'blog'> | undefined;
+let Content: any;
+let newer: CollectionEntry<'blog'> | undefined;
+let older: CollectionEntry<'blog'> | undefined;
+
+if (props.kind === 'post') {
+  post = props.post;
+  ({ Content } = await render(post));
+  const allPosts = (await getCollection('blog', ({ data }) => !data.draft))
+    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+  const index = allPosts.findIndex((item) => item.id === post!.id);
+  newer = allPosts[index - 1];
+  older = allPosts[index + 1];
+}
+---
+
+{props.kind === 'archive' ? (
+  <BaseLayout title={`Writing — page ${props.page} | Marcos Placona`} description="Programming, technology and independent-product writing by Marcos Placona.">
+    <section class="page-intro">
+      <p class="eyebrow">WRITING ARCHIVE</p>
+      <h1>Older writing.</h1>
+      <p class="lede">Page {props.page} of {props.pageCount}.</p>
+    </section>
+    <section class="post-list" aria-label={`Writing archive page ${props.page}`}>
+      {props.posts.map((post) => <PostCard post={post} />)}
+    </section>
+    <nav class="pagination" aria-label="Writing archive pages">
+      {props.page > 2 && <a href={props.page === 3 ? '/page2/' : `/page${props.page - 1}/`}>← Newer</a>}
+      {props.page < props.pageCount && <a href={`/page${props.page + 1}/`}>Older →</a>}
+    </nav>
+  </BaseLayout>
+) : (
+  <BaseLayout title={`${post!.data.title} | Marcos Placona`} description={post!.data.description} image={post!.data.image} canonicalPath={`/${post!.data.slug}/`}>
+    <article class="post">
+      <header class="post-header">
+        <p class="eyebrow">{post!.data.pubDate.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }).toUpperCase()}</p>
+        <h1>{post!.data.title}</h1>
+        {post!.data.description && <p class="lede">{post!.data.description}</p>}
+        {post!.data.categories?.length > 0 && <p class="post-meta">{post!.data.categories.join(' · ')}</p>}
+      </header>
+      <div class="prose"><Content /></div>
+      <nav class="article-nav" aria-label="Article navigation">
+        {newer && <a href={`/${newer.data.slug}/`}>← Newer: {newer.data.title}</a>}
+        {older && <a href={`/${older.data.slug}/`}>Older: {older.data.title} →</a>}
+      </nav>
+    </article>
+  </BaseLayout>
+)}

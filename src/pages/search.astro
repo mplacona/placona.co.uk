@@ -1,0 +1,33 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .map((post) => ({ title: post.data.title, description: post.data.description, url: `/${post.data.slug}/` }));
+---
+
+<BaseLayout title="Search writing | Marcos Placona" description="Search Marcos Placona's writing archive." canonicalPath="/search/">
+  <section class="article-shell">
+    <p class="eyebrow">Archive</p>
+    <h1>Search the writing.</h1>
+    <label class="search-label" for="search">Title or topic</label>
+    <input id="search" class="search-input" type="search" placeholder="Try Cloudflare, Android or Dart" autofocus />
+    <p id="result-count" aria-live="polite"></p>
+    <ul id="results" class="search-results"></ul>
+  </section>
+</BaseLayout>
+
+<script is:inline define:vars={{ posts }}>
+  const input = document.querySelector('#search');
+  const results = document.querySelector('#results');
+  const count = document.querySelector('#result-count');
+  function render(query = '') {
+    const needle = query.trim().toLowerCase();
+    const matches = posts.filter((post) => `${post.title} ${post.description}`.toLowerCase().includes(needle));
+    count.textContent = needle ? `${matches.length} result${matches.length === 1 ? '' : 's'}` : `${posts.length} articles`;
+    results.innerHTML = matches.map((post) => `<li><a href="${post.url}">${post.title}</a>${post.description ? `<p>${post.description}</p>` : ''}</li>`).join('');
+  }
+  input.addEventListener('input', (event) => render(event.target.value));
+  render();
+</script>
