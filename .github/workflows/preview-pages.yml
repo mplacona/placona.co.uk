@@ -28,6 +28,14 @@ jobs:
       - run: npm run check
       - run: npm run build
 
+      # Feeds and sitemaps are dropped from the preview below, so send these
+      # links at the real ones. Absolute URLs survive the prefix rewrite that
+      # follows, which only touches root-relative paths.
+      - name: Point feed and sitemap links at production
+        run: |
+          find dist -name '*.html' -print0 | xargs -0 sed -E -i \
+            -e 's#href="/(rss\.xml|atom\.xml|feed\.xml|sitemap[^"]*\.xml|robots\.txt)"#href="https://placona.co.uk/\1"#g'
+
       # The preview is served from a subdirectory, but Astro emits root-absolute
       # paths (/_astro/..., /images/..., /about/). Left alone, a preview would
       # load production's stylesheet and navigate to production. Rewrite them to
@@ -53,6 +61,12 @@ jobs:
           # Pages that had no robots tag at all (there should be none, but be safe)
           find dist -name '*.html' -print0 | xargs -0 grep -LZ 'name="robots"' \
             | xargs -0 -r sed -i 's|</title>|</title><meta name="robots" content="noindex, nofollow">|'
+
+      # A meta tag cannot reach non-HTML, and GitHub Pages gives no way to set an
+      # X-Robots-Tag header. Feeds and sitemaps serve no purpose in a preview, so
+      # drop them rather than publish files that carry no noindex.
+      - name: Drop feeds and sitemaps from the preview
+        run: rm -f dist/rss.xml dist/atom.xml dist/feed.xml dist/sitemap*.xml dist/robots.txt
 
       - name: Preview Pages
         uses: rajyan/preview-pages@v1
