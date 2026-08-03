@@ -2,7 +2,7 @@
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="csharp"><code><span class="line"><span style="color:#E1E4E8">accountSid </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> Environment.</span><span style="color:#B392F0">GetEnvironmentVariable</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"TWILIO_ACCOUNT_SID"</span><span style="color:#E1E4E8">);</span></span></code></pre>
 <p>I have recently switched from building and running apps directly on the terminal and Visual Studio Code to using <a href="https://www.visualstudio.com/vs/visual-studio-mac/">Visual Studio for Mac</a>. I opened up an application I had already built and knew worked and tried it out. I started to get some weird errors where it would claim to not find my environment variables.</p>
 <p>I went ahead and run my application from terminal and it worked as expected.</p>
-<p>A bit of Googling and I landed on this StackOverflow <a href="http://stackoverflow.com/questions/35643759/c-sharp-environment-getenvironmentvariable-not-working-on-osx/35644532">thread</a>. But here’s the gist of it:</p>
+<p>A bit of Googling and I landed on this StackOverflow <a href="https://stackoverflow.com/questions/35643759/c-sharp-environment-getenvironmentvariable-not-working-on-osx/35644532">thread</a>. But here’s the gist of it:</p>
 <blockquote>
 <p>OS-X GUI apps will not inherit your private/custom env vars that are defined via a shell (bash, zsh, etc…) if they are launched from Finder/Spotlight</p>
 </blockquote>

@@ -32,12 +32,12 @@
 <span class="line"><span>	username = &amp;amp;quot;username@yourdomain.com&amp;amp;quot;</span></span>
 <span class="line"><span>	password = &amp;amp;quot;string&amp;amp;quot;</span></span>
 <span class="line"><span>	useTLS = &amp;amp;quot;yes&amp;amp;quot;&amp;amp;gt;</span></span></code></pre>
-<p>Notice the last three lines on the code. They are the responsible for the authentication. Sadly Google requires <a style="text-decoration:underline;" href="http://en.wikipedia.org/wiki/Secure_Sockets_Layer" target="_blank">TLS Authentication</a> and only ColdFusion 8 (or upwards) and Railo (not sure about BlueDragon)</p>
+<p>Notice the last three lines on the code. They are the responsible for the authentication. Sadly Google requires <a style="text-decoration:underline;" href="https://en.wikipedia.org/wiki/Secure_Sockets_Layer" target="_blank">TLS Authentication</a> and only ColdFusion 8 (or upwards) and Railo (not sure about BlueDragon)</p>
 <p>can handle that.</p>
 <p>On Railo though, it’s a much easier configuration, as you only need to configure your webserver’s context with your details, and use CFMAIL as you would normally, straight out of the box.</p>
 <p>An example of configuration would be:</p>
 <img style="display: block; text-align: center; margin-left: 10px; margin-right: 10px;" src="http://img11.imageshack.us/img11/3868/railowebadministrator12.png" alt="Railo - SMTP COnfiguration" width="451" height="131" />
-<p>Notice I specify port 587, and tick TLS to be used. It took me a while to get this configuration right, and I’d like to thank <a style="text-decoration:underline;" href="http://www.andyjarrett.com/blog/" target="_blank">Andy Jarrett</a> for helping me with it.</p>
+<p>Notice I specify port 587, and tick TLS to be used. It took me a while to get this configuration right, and I’d like to thank <a style="text-decoration:underline;" href="https://www.andyjarrett.com/blog/" target="_blank">Andy Jarrett</a> for helping me with it.</p>
 <p>You should now be all set, and have your email configured. The free version only allows you to have up to 50 emails, but you can always buy the pro version</p>
 <p>if you think it’s not enough.</p>
 <p>You can now create a new record on your DNS Manager in order to have mail.yourdomain.com, so you don’t need to use Gmail’s big URL in order to access your webmail. This is how I did it:</p>
