@@ -44,7 +44,7 @@ trace(basket..fruit.name[0])
 
 At a first glance, I have to admit I was expecting apples as well, but to my surprise, I got... nothing...
 
-It took me a while to to go look on the XML again, and then it hit me. This provider would give me XML with a <a title="XML Namespace" href="http://en.wikipedia.org/wiki/Namespace_(computer_science)#XML_namespace" target="_blank">namespace</a>, and in order to read that with E4X, I would need to declare that namespace. There is absolutely nothing wrong with the code above, but it simply won't find anything since you're not declaring what the namespace is, and the compiler gets completely lost.
+It took me a while to to go look on the XML again, and then it hit me. This provider would give me XML with a <a title="XML Namespace" href="https://en.wikipedia.org/wiki/Namespace_(computer_science)#XML_namespace" target="_blank">namespace</a>, and in order to read that with E4X, I would need to declare that namespace. There is absolutely nothing wrong with the code above, but it simply won't find anything since you're not declaring what the namespace is, and the compiler gets completely lost.
 
 What you need to do is declare the namespace on the top of my code like so:
 

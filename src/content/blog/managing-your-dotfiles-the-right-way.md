@@ -10,7 +10,7 @@ draft: false
 
 It's no secret that on the UNIX world, <a title="dotfiles on wikipedia" href="https://en.wikipedia.org/wiki/Dot-file" target="_blank">dotfiles</a> play a very important part when it comes to making your terminal look good. Be it on Linux, be it on a Mac. Dotfiles are there so you can configure your favourite software to look just the way you like it.
 
-I especially use dotfiles to customize the look on my terminal, and to manage bundles I use with <a title="Vim on wikiledia" href="http://en.wikipedia.org/wiki/Vim_(text_editor)" target="_blank">Vim</a>. One thing that normally annoys me, is the fact that whenever I rebuild my machine (or build a new one) I need to copy over my dotfiles, and obviously make sure they are kept up-to-date on all my devices when I change something.
+I especially use dotfiles to customize the look on my terminal, and to manage bundles I use with <a title="Vim on wikiledia" href="https://en.wikipedia.org/wiki/Vim_(text_editor)" target="_blank">Vim</a>. One thing that normally annoys me, is the fact that whenever I rebuild my machine (or build a new one) I need to copy over my dotfiles, and obviously make sure they are kept up-to-date on all my devices when I change something.
 
 I've heard about people adding their dotfiles to GitHub, and even noticed GitHub themselves <a title="Dotfiles on GitHub" href="http://dotfiles.github.com/" target="_blank">encourage you to do the same</a>. I decided to give it a go, and will describe here what you need to do in order to have your dotfiles stored there, and most importantly, how to quickly load them up on any other computers boxes you may have.
 

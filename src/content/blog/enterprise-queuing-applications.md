@@ -146,7 +146,7 @@ function createJavaNull(){
 }
 ```
 
-  4. The other thing I had to do, was make sure I could actually pass a byte array to the queue. ColdFusion also does not do it natively. However, its closest buddy Java does it. So fear not, the following bit of code will do that exact thing by turning a string into a Java string, and then calling the method <a title="Java - String : getBytes" href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html#getBytes()" target="_blank">getBytes()</a>from it, which will return a byte array. Again, but of a hack, but quite graceful.
+  4. The other thing I had to do, was make sure I could actually pass a byte array to the queue. ColdFusion also does not do it natively. However, its closest buddy Java does it. So fear not, the following bit of code will do that exact thing by turning a string into a Java string, and then calling the method <a title="Java - String : getBytes" href="https://docs.oracle.com/javase/7/docs/api/java/lang/String.html#getBytes()" target="_blank">getBytes()</a>from it, which will return a byte array. Again, but of a hack, but quite graceful.
   
 ```java
 // Converts a ColdFusion string in a java byte array

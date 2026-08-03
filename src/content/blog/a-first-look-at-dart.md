@@ -36,7 +36,7 @@ From a language point of view, dart seemed to be very readable, and compliant wi
 
 ### Data Structures
 
-Its core library also provides you with [Lists](http://en.wikipedia.org/wiki/List_(abstract_data_type) "Lists - Wikipedia"), [Sets](http://en.wikipedia.org/wiki/Set_(abstract_data_type) "Sets - Wikipedia") and [Maps](https://en.wikipedia.org/wiki/Hash_table "Maps - Wikipedia"), which basically means no imports, as you get that straight out-of-the-box. So for example if you wanted to create a Map and iterate through it, you could simply do:
+Its core library also provides you with [Lists](https://en.wikipedia.org/wiki/List_(abstract_data_type) "Lists - Wikipedia"), [Sets](https://en.wikipedia.org/wiki/Set_(abstract_data_type) "Sets - Wikipedia") and [Maps](https://en.wikipedia.org/wiki/Hash_table "Maps - Wikipedia"), which basically means no imports, as you get that straight out-of-the-box. So for example if you wanted to create a Map and iterate through it, you could simply do:
 
 <div class="oembed-gist">
   <noscript>

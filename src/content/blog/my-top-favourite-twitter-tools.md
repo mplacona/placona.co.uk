@@ -20,11 +20,11 @@ So I decided to compile a list and post here. I'll update the list as I find new
     TweetConvo is a new way to view twitter conversations. Long gone are the days of going through all of a tweet's @replies to get a grasp of the conversation. All you have to do now is enter a tweet's URL below!
   * <a href="http://friendorfollow.com/" target="_blank">http://friendorfollow.com/</a>  
     Who are you following that's not following you back? Who's following you that you're not following back? Find out!
-  * <a href="http://twitterfeed.com/" target="_blank">http://twitterfeed.com/</a>  
+  * <a href="https://twitterfeed.com/" target="_blank">https://twitterfeed.com/</a>  
     Feed your blog to twitter, identi.ca, HelloTxt or Ping.fm
-  * <a href="https://twitterfall.com/" target="_blank">http://twitterfall.com/</a>  
+  * <a href="https://twitterfall.com/" target="_blank">https://twitterfall.com/</a>  
     Twitterfall is a way of viewing the latest 'tweets' of upcoming trends and custom searches on the micro-blogging site Twitter.
-  * <a href="https://useqwitter.com/" target="_blank">http://useqwitter.com/</a>  
+  * <a href="https://useqwitter.com/" target="_blank">https://useqwitter.com/</a>  
     Qwitter e-mails you when someone stops following you on Twitter.
   * <a href="http://www.twitthis.com/" target="_blank">http://www.twitthis.com/</a>  
     TwitThis is an easy way for people to send Twitter messages about your blog post or website. 

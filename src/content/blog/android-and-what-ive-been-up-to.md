@@ -9,7 +9,7 @@ image: "/images/2010/07/android_eats_apples_opt.jpg"
 draft: false
 ---
 
-I jumped into the <a title="Android Operating System" href="http://en.wikipedia.org/wiki/Android_(operating_system)" target="_blank">Android</a> bandwagon about two months ago, and so far I can't cease to be impressed.
+I jumped into the <a title="Android Operating System" href="https://en.wikipedia.org/wiki/Android_(operating_system)" target="_blank">Android</a> bandwagon about two months ago, and so far I can't cease to be impressed.
 
 One of my favorite features is how easy it is to **install new apps**, as well as how <a title="Android Source" href="https://source.android.com/" target="_blank">open</a> (source) the whole thing is. You can install and do whatever you like, without having to rely on closed platforms, or having to "_sync as soon as I get home_". Do it anywhere, and whenever you please. It's **your** phone, and you should be allowed **freedom**.
 

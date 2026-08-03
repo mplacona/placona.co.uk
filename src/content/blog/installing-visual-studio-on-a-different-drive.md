@@ -38,7 +38,7 @@ So in order to do that, all you will need to do is the following:
 
   1. <span style="line-height: 13px;">Open command line as an administrator (you can type "<strong>cmd</strong>" and right click on it to run as admin)</span>
   2. Enter `mklink /J "C:\Program Files (x86)\Microsoft Visual Studio 11.0" "E:\Program Files (x86)\Microsoft Visual Studio 11.0"` 
-      1. Where the `J` flag indicates you're creating a directory junction (see more <a title="MS create symlink" href="http://technet.microsoft.com/en-us/library/cc753194(v=ws.10).aspx" target="_blank">here</a>)
+      1. Where the `J` flag indicates you're creating a directory junction (see more <a title="MS create symlink" href="https://technet.microsoft.com/en-us/library/cc753194(v=ws.10).aspx" target="_blank">here</a>)
       2. The first path is where VS is trying to install itself
       3. The second path is where you want it to be installed
   3. Carry on and let it install
