@@ -1,6 +1,6 @@
 ---
 title: "Enterprise queuing applications"
-description: ""
+description: "At work, we've decided to start using enterprise queuing applications for ease of communication between our ColdFusion and .Net projects."
 pubDate: "2012-07-29T12:30:00.000Z"
 slug: "enterprise-queuing-applications"
 categories: ["dotnet"]

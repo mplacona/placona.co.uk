@@ -1,6 +1,6 @@
 ---
 title: "Apache 101 - Avoiding duplicate content on your domain."
-description: ""
+description: "Did you know that search engines consider things like https://www.placona.co.uk/index.cfm and https://placona.co.uk/index.cfm as duplicate content? It…"
 pubDate: "2009-05-29T00:00:00.000Z"
 slug: "apache-101-avoiding-duplicate-content-on-your-domain"
 categories: ["VPS"]

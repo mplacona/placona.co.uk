@@ -13,7 +13,7 @@ Handling [configuration changes](https://developer.android.com/guide/topics/reso
 
 Historically it's been common practice to use [`onSaveInstanceState`](https://developer.android.com/guide/components/activities/activity-lifecycle#save-simple,-lightweight-ui-state-using-onsaveinstancestate) so your data survived configuration changes. The drawback to this is that using this doesn't allow for storing [much data about the view](https://stackoverflow.com/questions/9805441/onsaveinstancestate-limit). 
 
-# The problem
+## The problem
 Let's look at an example app that we've built that generates a random number between 1 and 42 when the application starts.
 
 Running that application should give us a result like this:
@@ -34,7 +34,7 @@ Turning the device sideways should also give us that same result... right? Not r
 
 While this is just a simple application and the data here could very easily be stored inside `onSaveInstanceState`, if we have a lot of data showing on the screen, this solution would be less than robust and limited to the amount of data we can save.
 
-# The solution
+## The solution
 When an activity is created or recreated, it handles a few different tasks such as 
 
 - displaying the UI

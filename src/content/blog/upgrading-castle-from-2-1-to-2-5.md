@@ -1,6 +1,6 @@
 ---
 title: "Upgrading Castle from 2.1 to 2.5"
-description: ""
+description: "I was recently working on a .Net project that uses Castle as it's IoC Container. At some point I realized it would be beneficial to have Castle running…"
 pubDate: "2012-07-23T11:16:46.000Z"
 slug: "upgrading-castle-from-2-1-to-2-5"
 categories: ["dotnet"]

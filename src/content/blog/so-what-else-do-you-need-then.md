@@ -1,6 +1,6 @@
 ---
 title: "So what else do you need then?"
-description: ""
+description: "Last week it came to my attention that ColdFusion is being used by 75 of the Fortune 100 companies . Then, I was also informed that ColdFusion was…"
 pubDate: "2009-03-23T00:00:00.000Z"
 slug: "so-what-else-do-you-need-then"
 categories: ["coldfusion"]

@@ -1,6 +1,6 @@
 ---
 title: "jQuery UI 1.6 - Book Review"
-description: ""
+description: "Book reviewer Marcos Placona | Publisher: Packt. Author(s): Dan Wellman"
 pubDate: "2009-03-11T00:00:00.000Z"
 slug: "jquery-ui-1-6-book-review"
 categories: ["books"]

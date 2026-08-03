@@ -1,6 +1,6 @@
 ---
 title: "AS3 my own implementation of capFirst()"
-description: ""
+description: "I'm just studying a little bit of Flex and Action Script 3. Basically to be able to build some tiny gadgets using Apollo."
 pubDate: "2007-03-21T00:00:00.000Z"
 slug: "as3-my-own-implementation-of-capfirst"
 categories: ["Adobe"]

@@ -1,6 +1,6 @@
 ---
 title: "Apache 101 - Compressing Files"
-description: ""
+description: "I'm going to start a server configuration series here, where I'll be talking about my goals and frustrations when configuring my own webserver. As most…"
 pubDate: "2009-04-28T00:00:00.000Z"
 slug: "apache-101-compressing-files"
 categories: ["Technology"]

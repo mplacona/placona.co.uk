@@ -1,6 +1,6 @@
 ---
 title: "How to secure Apache with Let's Encrypt and CloudFlare on Centos"
-description: ""
+description: "I took it upon myself to converting a couple of my domains to use Let's Encrypt in order to offer a secure connection to them. If you haven't heard…"
 pubDate: "2016-03-28T17:16:36.000Z"
 slug: "how-to-secure-apache-with-lets-encrypt-and-cloudflare-on-centos"
 categories: ["Technology"]

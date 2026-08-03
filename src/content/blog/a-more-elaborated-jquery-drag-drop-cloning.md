@@ -1,6 +1,6 @@
 ---
 title: "A more elaborated jQuery Drag & Drop (with cloning)"
-description: ""
+description: "I've decided to get back at jQuery draggable and droppable to a personal project I've been working on. In the past, I've demonstrated how to do basic…"
 pubDate: "2009-08-21T00:00:00.000Z"
 slug: "a-more-elaborated-jquery-drag-drop-cloning"
 categories: ["Javascript"]

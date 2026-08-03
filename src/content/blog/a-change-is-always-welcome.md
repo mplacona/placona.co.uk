@@ -1,6 +1,6 @@
 ---
 title: "A change is always welcome"
-description: ""
+description: "I've been procrastinating for too long, and somehow trying to avoid the inevitable. As must of you might have noticed, it's been a long time I don't…"
 pubDate: "2010-04-28T11:00:59.000Z"
 slug: "a-change-is-always-welcome"
 categories: ["Technology"]

@@ -1,6 +1,6 @@
 ---
 title: "Creating files with Dart"
-description: ""
+description: "This is a very simple example of how to create files with Dart. I am working on another example that involves file manipulation, but thought I'd quickly…"
 pubDate: "2014-05-03T23:23:43.000Z"
 slug: "creating-files-with-dart"
 categories: ["Dart"]

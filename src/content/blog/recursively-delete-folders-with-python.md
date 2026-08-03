@@ -1,6 +1,6 @@
 ---
 title: "Recursively delete folders with Python"
-description: ""
+description: "At work we've been doing some deploy optimization, and the need of automatically deleting (recursively) specific folders came up."
 pubDate: "2009-08-07T00:00:00.000Z"
 slug: "recursively-delete-folders-with-python"
 categories: ["Technology"]

@@ -1,6 +1,6 @@
 ---
 title: "Tip of the day: Regular Expression Generator"
-description: ""
+description: "I have just came across this very nice service which promises to write Regular Expressions for you."
 pubDate: "2009-03-05T00:00:00.000Z"
 slug: "tip-of-the-day-regular-expression-generator"
 categories: ["technology"]

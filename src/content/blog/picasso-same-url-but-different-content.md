@@ -1,6 +1,6 @@
 ---
 title: "Picasso - Same URL but different content"
-description: ""
+description: "I love using Square's Picasso library whenever I need to load images into my Android applications. It lets me load images from the internet into…"
 pubDate: "2016-09-17T23:26:34.000Z"
 slug: "picasso-same-url-but-different-content"
 categories: ["Android"]

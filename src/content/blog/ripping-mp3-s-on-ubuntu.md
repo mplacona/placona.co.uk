@@ -1,6 +1,6 @@
 ---
 title: "Ripping MP3's on Ubuntu"
-description: ""
+description: "I've never tested doing this, but will give it a try later"
 pubDate: "2006-12-12T00:00:00.000Z"
 slug: "ripping-mp3-s-on-ubuntu"
 categories: ["Linux"]

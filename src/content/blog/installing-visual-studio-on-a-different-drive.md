@@ -1,6 +1,6 @@
 ---
 title: "Installing Visual Studio on a different drive"
-description: ""
+description: "I've got a pro license of Visual Studio 2012, and decided to install it instead of my existing VS 2010 Express install."
 pubDate: "2013-02-13T14:16:53.000Z"
 slug: "installing-visual-studio-on-a-different-drive"
 categories: ["dotnet"]

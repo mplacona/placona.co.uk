@@ -1,6 +1,6 @@
 ---
 title: "Mobile and Tablet development - My Saga I"
-description: ""
+description: "So I believe by my last posts here you may have guessed I've been doing lots of mobile development in the last few months."
 pubDate: "2011-10-27T08:27:00.000Z"
 slug: "mobile-tablet-development-my-saga-1"
 categories: ["Mobile Development"]

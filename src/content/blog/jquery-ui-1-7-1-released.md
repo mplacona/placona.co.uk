@@ -1,6 +1,6 @@
 ---
 title: "jQuery UI 1.7.1 Released"
-description: ""
+description: "The jQuery UI team have done it again. This Friday is only a point release to the jQuery UI 1.7 released last week but with some great improvements."
 pubDate: "2009-03-20T00:00:00.000Z"
 slug: "jquery-ui-1-7-1-released"
 categories: ["Javascript"]
@@ -22,7 +22,7 @@ The jQuery UI team have done it again. This Friday is only a point release to th
 
   * Fixed: Selectable: option appendTo is ignored, helper always appends to body (<a title="http://dev.jqueryui.com/ticket/4341" href="http://bugs.jqueryui.com/ticket/4341" target="_blank">4341</a>) 
 
-# Widgets 
+## Widgets
 
 ### Accordion 
 

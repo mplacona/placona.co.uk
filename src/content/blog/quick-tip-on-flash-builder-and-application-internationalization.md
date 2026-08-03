@@ -1,6 +1,6 @@
 ---
 title: "Quick tip on Flash Builder and application internationalization"
-description: ""
+description: "I'm building a new Blackberry Playbook app, and when starting to work with internationalization, I got stuck with a bug that wouldn't go away. I'm…"
 pubDate: "2011-06-01T22:58:10.000Z"
 slug: "quick-tip-on-flash-builder-and-application-internationalization"
 categories: ["Adobe"]

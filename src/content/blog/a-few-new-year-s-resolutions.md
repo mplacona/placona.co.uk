@@ -1,6 +1,6 @@
 ---
 title: "A few new year's resolutions"
-description: ""
+description: "Well, I've never publicly done this before, as I though it was a little too personal, but this year I decided to try it."
 pubDate: "2008-12-31T00:00:00.000Z"
 slug: "a-few-new-year-s-resolutions"
 categories: ["Misc"]

@@ -1,6 +1,6 @@
 ---
 title: "Tokenizing a string with Java."
-description: ""
+description: "As everybody knows, this Blog should show my studies integrating CFML with other technologies. Today I was playing with the Java class arrayList() and…"
 pubDate: "2005-09-21T00:00:00.000Z"
 slug: "tokenizing-a-string-with-java"
 categories: ["coldfusion","blog"]

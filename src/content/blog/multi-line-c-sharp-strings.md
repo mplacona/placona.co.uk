@@ -1,6 +1,6 @@
 ---
 title: "Multi-Line C# Strings"
-description: ""
+description: "I’ve seen this question being asked on StackOverflow so many times I event thought about writing a bot to automatically reply to it."
 pubDate: "2016-02-22T11:28:01.000Z"
 slug: "multi-line-c-sharp-strings"
 categories: ["dotnet"]

@@ -1,6 +1,6 @@
 ---
 title: "Apache 101 & Case insensitive URL's"
-description: ""
+description: "This is only a quick Apache tip for when you are using modrewrite."
 pubDate: "2009-05-21T00:00:00.000Z"
 slug: "apache-101-case-insensitive-url-s"
 categories: ["Linux"]

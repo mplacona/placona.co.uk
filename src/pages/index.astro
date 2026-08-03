@@ -11,13 +11,13 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
 <BaseLayout>
   <section class="hero">
     <p class="eyebrow">Developer relations · software · independent products</p>
-    <h1>Programming, technology and musings.</h1>
-    <p>I’m Marcos Placona. I write about building things for developers and the occasional useful side quest.</p>
+    <h1>Developer relations, software and useful side quests.</h1>
+    <p>I’m Marcos Placona. I write about building things for developers, independent products and the occasional useful side quest.</p>
   </section>
   <section class="content-section" aria-labelledby="latest-writing">
     <div class="section-heading">
       <p class="eyebrow">Latest writing</p>
-      <h2 id="latest-writing">The archive, without the Ruby tax.</h2>
+      <h2 id="latest-writing">Latest writing.</h2>
     </div>
     <div class="post-list">
       {posts.map((post) => <PostCard post={post} />)}

@@ -1,6 +1,6 @@
 ---
 title: "Updating Java on Centos"
-description: ""
+description: "I'm only writing this blog post because I usually try to keep my VPS up to date, and usually one of the things I have to do to accomplish such thing is…"
 pubDate: "2009-09-02T00:00:00.000Z"
 slug: "updating-java-on-centos"
 categories: ["Linux"]

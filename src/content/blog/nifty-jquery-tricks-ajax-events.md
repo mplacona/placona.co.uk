@@ -1,6 +1,6 @@
 ---
 title: "Nifty jQuery tricks - Ajax Events"
-description: ""
+description: "As previously mentioned on my other post, I'm working on improving usability and user experience within one of our applications."
 pubDate: "2010-10-04T11:00:37.000Z"
 slug: "nifty-jquery-tricks-ajax-events"
 categories: ["JavaScript"]

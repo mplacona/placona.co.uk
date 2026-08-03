@@ -1,6 +1,6 @@
 ---
 title: "Date Formatting with Flex"
-description: ""
+description: "I've been working with some Adobe Flex recently, and was having some trouble formatting dates. For those who don't know, here (in th UK) we use the…"
 pubDate: "2009-12-08T00:00:00.000Z"
 slug: "date-formatting-with-flex"
 categories: ["Adobe"]

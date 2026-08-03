@@ -1,6 +1,6 @@
 ---
 title: "My top favourite twitter tools"
-description: ""
+description: "UPDATEI'm constantly finding new tools that help me to use my twitter account in a better way. Some of the tools are really great, but I can't be…"
 pubDate: "2009-03-10T00:00:00.000Z"
 slug: "my-top-favourite-twitter-tools"
 categories: ["Technology"]

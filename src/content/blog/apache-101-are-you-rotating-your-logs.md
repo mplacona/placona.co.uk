@@ -1,6 +1,6 @@
 ---
 title: "Apache 101 - Are you rotating your logs?"
-description: ""
+description: "It came to my attention today that my website was serving blank pages, and I got really intrigued with it. I checked the memory, and everything was…"
 pubDate: "2009-06-04T00:00:00.000Z"
 slug: "apache-101-are-you-rotating-your-logs"
 categories: ["VPS"]

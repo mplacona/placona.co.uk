@@ -1,6 +1,6 @@
 ---
 title: "Installing YUM on CentOS 5"
-description: ""
+description: "This is really for my future reference, but I thought someone would bump into that any time. I'm configuring a new CentOS 5 server and for my surprise…"
 pubDate: "2009-05-15T00:00:00.000Z"
 slug: "installing-yum-on-centos-5"
 categories: ["Linux"]

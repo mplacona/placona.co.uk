@@ -1,6 +1,6 @@
 ---
 title: "Making your JMeter tests timeless."
-description: ""
+description: "At work, we use Apache JMeter for load testing applications or API's we build."
 pubDate: "2012-08-31T15:45:16.000Z"
 slug: "making-your-jmeter-tests-timeless"
 categories: ["Technology"]

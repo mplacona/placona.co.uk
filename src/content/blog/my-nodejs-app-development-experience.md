@@ -1,6 +1,6 @@
 ---
 title: "My NodeJS app development experience"
-description: ""
+description: "So, I decided to take a punt at writing a NodeJS application. Not a big application, or anything that would get me slashdoted, but an application that…"
 pubDate: "2013-04-18T18:27:57.000Z"
 slug: "my-nodejs-app-development-experience"
 categories: ["Javascript"]

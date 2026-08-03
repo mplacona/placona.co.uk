@@ -1,6 +1,6 @@
 ---
 title: "Changing authentication settings on TortoiseSVN"
-description: ""
+description: "I've had my virtual machine (the one I use for development) rebuilt today, and to minimize overhead, we simply cloned a VM that had the desired settings."
 pubDate: "2010-06-17T12:51:48.000Z"
 slug: "changing-authentication-settings-tortoisesvn"
 categories: ["Technology"]

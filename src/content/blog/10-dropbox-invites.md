@@ -1,6 +1,6 @@
 ---
 title: "10 Dropbox Invites"
-description: ""
+description: "Just a quick post to say that I have 10 7 dropbox invites I'm willing to give to anyone able to tell me why I should give it away."
 pubDate: "2008-09-10T00:00:00.000Z"
 slug: "10-dropbox-invites"
 categories: ["Technology"]

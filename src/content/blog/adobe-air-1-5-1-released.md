@@ -1,6 +1,6 @@
 ---
 title: "Adobe AIR 1.5.1 released"
-description: ""
+description: "I know I'm a bit late on this one, but yesterday Adobe released AIR 1.5.1 with a few bug fixes and one \"minor-albeit useful-new feature.\" as they say."
 pubDate: "2009-02-25T00:00:00.000Z"
 slug: "adobe-air-1-5-1-released"
 categories: ["Adobe"]

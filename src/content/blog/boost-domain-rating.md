@@ -10,8 +10,6 @@ draft: false
 ---
 
 
-## How to Boost Your Website's Domain Rating with Redirects and Bot Control
-
 When you’re managing multiple domains, especially if you’re working on SEO for projects like I am, it’s important to take full advantage of the traffic your domains generate. After seeing [Oliver Fish's post](https://x.com/_Oliver_Fish/status/1844947412697190459) on how to make links from your directory/website look more valuable? I decided to give this a go and see how I could increase the DR for [MicroWidgets](https://MicroWidgets.dev) like that.
 
 <img class="alignnone size-full" src="/images/2024/10/oliver-fish-post.png" alt="Oliver Fish talking about how to increase website DR" />

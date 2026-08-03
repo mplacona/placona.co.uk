@@ -1,6 +1,6 @@
 ---
 title: "Dart Pub packages stats"
-description: ""
+description: "Modulecounts came to my attention, and I thought the idea was pretty neat."
 pubDate: "2014-07-21T15:56:38.000Z"
 slug: "dart-pub-packages-stats"
 categories: ["Dart"]

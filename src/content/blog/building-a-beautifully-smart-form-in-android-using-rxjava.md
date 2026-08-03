@@ -1,6 +1,6 @@
 ---
 title: "Building a beautifully smart form in Android using RxJava"
-description: ""
+description: "I don't think I know a single Android developer who's not stoked about Reactive Programming with RxAndroid right now. I totally dig the idea of…"
 pubDate: "2016-11-13T10:05:59.000Z"
 slug: "building-a-beautifully-smart-form-in-android-using-rxjava"
 categories: ["Android"]

@@ -13,7 +13,7 @@ Recording videos in Android used to be a very involved task where it was necessa
 
 With the introduction of [CameraX](https://developer.android.com/jetpack/androidx/releases/camerax) to [Android Jetpack](https://developer.android.com/jetpack), it only takes a few lines of code to get that going. Let's build a video recording application.
 
-# Setup
+## Setup
 > You can download the code for this project in [this repository](https://github.com/mplacona/Droidagram) if you just want to see it running and not follow along.
 
 In Android Studio create a new project with an empty activity.
@@ -71,7 +71,7 @@ If you run this application now you will see something similar to this:
 
 <img class="alignnone size-full" src="/images/2019/05/camerax-03.png" alt="First run of the video recording app" />
 
-# Adding the camera preview
+## Adding the camera preview
 To be able to preview the camera, we need to request the permissions first. We do that going to `MainActivity.kt` and adding a couple of constants just before our `class`.
 
 ```java
@@ -160,7 +160,7 @@ CameraX.bindToLifecycle(this, preview)
 ```
 The code above is all you need to preview the camera. If you run the application now, it turns the camera on for your device or emulator. Now is a good time to try this out and see if everything is configured correctly.
 
-# Programming the button
+## Programming the button
 I wanted this button to only record when I held it pressed, and for it to stop recording when released. Let's add this logic inside the `onCreate` just before the end of the method.
 
 ```java
@@ -176,7 +176,7 @@ captureButton.setOnTouchListener { _, event ->
 ```
 Holding the button changes the background colour of it, and releasing brings it back to its original colour.
 
-# Recording videos
+## Recording videos
 Now we're ready to record our videos. Just before the logic for the button, add the following variable, so we get a location and a file name to save our recording.
 
 ```java

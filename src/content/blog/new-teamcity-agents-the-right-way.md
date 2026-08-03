@@ -1,6 +1,6 @@
 ---
 title: "New TeamCity agents the right way"
-description: ""
+description: "At work, I'm gradually moving our CI server from Hudson to TeamCity."
 pubDate: "2014-03-03T21:45:35.000Z"
 slug: "new-teamcity-agents-the-right-way"
 categories: ["dotnet"]

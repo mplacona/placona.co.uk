@@ -1,6 +1,6 @@
 ---
 title: "Speed up yor website - Part 2 - The Free CDN"
-description: ""
+description: "To continue with our series of website optimization tricks, I'll talk a little bit more about Content Delivery Network (CDN) , and will talk you though…"
 pubDate: "2009-07-23T00:00:00.000Z"
 slug: "speed-up-yor-website-part-2-the-free-cdn"
 categories: ["Technology"]

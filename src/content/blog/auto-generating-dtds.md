@@ -1,6 +1,6 @@
 ---
 title: "Auto-Generating DTDs"
-description: ""
+description: "I've used this DTD generator tool a long time ago, but today I had to use it again, so I thought I should put an entry on my blog about it and keep it…"
 pubDate: "2009-08-05T00:00:00.000Z"
 slug: "auto-generating-dtds"
 categories: ["Technology"]
