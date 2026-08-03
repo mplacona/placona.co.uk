@@ -1,8 +1,7 @@
-_site
-.sass-cache
-.jekyll-metadata
-images/.DS_Store
-.jekyll-cache
-Gemfile.lock
+node_modules/
+dist/
+.astro/
 .DS_Store
-.vscode/settings.json
+.env
+.env.*
+!.env.example

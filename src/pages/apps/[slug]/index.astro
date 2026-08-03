@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { apps } from '../../../data/apps';
+
+export function getStaticPaths() {
+  return apps.map((app) => ({ params: { slug: app.slug }, props: { app } }));
+}
+const { app } = Astro.props;
+---
+
+<BaseLayout title={`${app.name} — ${app.tagline}`} description={app.description} canonicalPath={`/apps/${app.slug}/`}>
+  <article class="app-page">
+    <section class="hero">
+      <p class="eyebrow">{app.status}</p>
+      <h1>{app.tagline}</h1>
+      <p class="lede">{app.description}</p>
+      <a class="button-secondary" href={`/apps/${app.slug}/support/`}>Get support</a>
+    </section>
+    <section class="content-section split-section">
+      <div>
+        <p class="eyebrow">What it does</p>
+        <h2>Clean dictation, without changing your point.</h2>
+      </div>
+      <p>{app.boundary}</p>
+    </section>
+    <section class="content-section callout">
+      <p class="eyebrow">Privacy</p>
+      <h2>Private by design.</h2>
+      <p>{app.privacy}</p>
+      <a class="text-link" href={`/apps/${app.slug}/privacy/`}>Read the privacy page <span aria-hidden="true">→</span></a>
+    </section>
+  </article>
+</BaseLayout>

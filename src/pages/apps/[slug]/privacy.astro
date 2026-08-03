@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { apps } from '../../../data/apps';
+
+export function getStaticPaths() {
+  return apps.map((app) => ({ params: { slug: app.slug }, props: { app } }));
+}
+const { app } = Astro.props;
+---
+
+<BaseLayout title={`${app.name} privacy`} description={`${app.name} privacy information.`} canonicalPath={`/apps/${app.slug}/privacy/`}>
+  <article class="article-shell prose">
+    <p class="eyebrow">{app.name}</p>
+    <h1>Privacy</h1>
+    <p>{app.privacy}</p>
+    <p>This page will be updated with the final App Store privacy declaration before public release. It will state only what the shipping build actually does.</p>
+    <p>Questions: <a href={`mailto:${app.supportEmail}`}>{app.supportEmail}</a>.</p>
+  </article>
+</BaseLayout>

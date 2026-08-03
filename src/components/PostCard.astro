@@ -1,0 +1,12 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+const { post } = Astro.props as { post: CollectionEntry<'blog'> };
+---
+
+<article class="post-card">
+  <p class="eyebrow">{post.data.pubDate.toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+  <h2><a href={`/${post.data.slug}/`}>{post.data.title}</a></h2>
+  {post.data.description && <p>{post.data.description}</p>}
+  <a class="text-link" href={`/${post.data.slug}/`}>Read article <span aria-hidden="true">→</span></a>
+</article>

@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { apps } from '../../../data/apps';
+
+export function getStaticPaths() {
+  return apps.map((app) => ({ params: { slug: app.slug }, props: { app } }));
+}
+const { app } = Astro.props;
+---
+
+<BaseLayout title={`${app.name} support`} description={`Support for ${app.name}.`} canonicalPath={`/apps/${app.slug}/support/`}>
+  <article class="article-shell prose">
+    <p class="eyebrow">{app.name}</p>
+    <h1>Support</h1>
+    <p>For support, launch questions or feedback, email <a href={`mailto:${app.supportEmail}`}>{app.supportEmail}</a>.</p>
+    <p>Include your iPhone model, iOS version and a short description of what happened. Please do not send personal dictation content unless it is essential to reproducing the problem.</p>
+  </article>
+</BaseLayout>

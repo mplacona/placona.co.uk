@@ -1,0 +1,59 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  canonicalPath?: string;
+}
+
+const {
+  title = 'Marcos Placona — Programming, technology and independent apps',
+  description = 'Programming, technology and musings from Marcos Placona.',
+  image = '/images/placona-logo-small.png',
+  canonicalPath = Astro.url.pathname
+} = Astro.props;
+const canonical = new URL(canonicalPath, Astro.site);
+const socialImage = new URL(image, Astro.site);
+---
+
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" type="application/rss+xml" title="Marcos Placona's Blog" href="/rss.xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={socialImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="/images/favicon.ico" />
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Marcos Placona home">
+        <img src="/images/placona-logo-small.png" alt="Marcos Placona" width="48" height="48" />
+        <span>Marcos Placona</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="/">Writing</a>
+        <a href="/apps/">Apps</a>
+        <a href="/speaker-timeline/">Speaking</a>
+        <a href="/about/">About</a>
+        <a href="/search/">Search</a>
+      </nav>
+    </header>
+    <main id="content"><slot /></main>
+    <footer class="site-footer">
+      <p>© {new Date().getFullYear()} Marcos Placona. Programming, technology and independent apps.</p>
+      <p><a href="https://github.com/mplacona">GitHub</a> · <a href="https://x.com/marcos_placona">X</a> · <a href="/rss.xml">RSS</a></p>
+    </footer>
+  </body>
+</html>
