@@ -32,6 +32,10 @@ jobs:
         with:
           name: site
           path: ./dist
+          # Without this the artifact silently drops dist/.nojekyll, and Pages
+          # then runs Jekyll over the branch, which skips _astro/ because it
+          # starts with an underscore. Every stylesheet and script would 404.
+          include-hidden-files: true
 
   # Publishes the site to the gh-pages branch root. PR previews live in
   # pr-* directories on the same branch, so they are excluded from the clean.
@@ -45,6 +49,16 @@ jobs:
         with:
           name: site
           path: ./dist
+
+      # Serving from a branch means Pages runs Jekyll unless this file exists,
+      # and Jekyll skips _astro/ because of the leading underscore. It ships in
+      # public/, but assert it here so an artifact or tooling change can never
+      # quietly take the whole stylesheet down.
+      - name: Assert .nojekyll survived the build
+        run: |
+          test -f dist/.nojekyll || { echo "::warning::dist/.nojekyll was missing; recreating"; touch dist/.nojekyll; }
+          test -d dist/_astro || { echo "::error::dist/_astro is missing, refusing to publish"; exit 1; }
+
       - uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
