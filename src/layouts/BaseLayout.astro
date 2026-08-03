@@ -99,7 +99,8 @@ const jsonLd = JSON.stringify({ '@context': 'https://schema.org', '@graph': sche
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
-    <link rel="canonical" href={canonical} />
+    {/* A noindex page has no canonical worth declaring; /404/ is not a real URL. */}
+    {!noindex && <link rel="canonical" href={canonical} />}
     {noindex ? (
       <meta name="robots" content="noindex, follow" />
     ) : (

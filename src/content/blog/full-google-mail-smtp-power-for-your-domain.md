@@ -65,7 +65,7 @@ An example would be:
 	useTLS = &amp;quot;yes&amp;quot;&amp;gt;
 ```
 
-Notice the last three lines on the code. They are the responsible for the authentication. Sadly Google requires <a style="text-decoration:underline;" href="http://en.wikipedia.org/wiki/Secure_Sockets_Layer" target="_blank">TLS Authentication</a> and only ColdFusion 8 (or upwards) and Railo (not sure about BlueDragon)
+Notice the last three lines on the code. They are the responsible for the authentication. Sadly Google requires <a style="text-decoration:underline;" href="https://en.wikipedia.org/wiki/Secure_Sockets_Layer" target="_blank">TLS Authentication</a> and only ColdFusion 8 (or upwards) and Railo (not sure about BlueDragon)
   
 can handle that.
 
@@ -75,7 +75,7 @@ An example of configuration would be:
 
 <img style="display: block; text-align: center; margin-left: 10px; margin-right: 10px;" src="http://img11.imageshack.us/img11/3868/railowebadministrator12.png" alt="Railo - SMTP COnfiguration" width="451" height="131" />
 
-Notice I specify port 587, and tick TLS to be used. It took me a while to get this configuration right, and I'd like to thank <a style="text-decoration:underline;" href="http://www.andyjarrett.com/blog/" target="_blank">Andy Jarrett</a> for helping me with it.
+Notice I specify port 587, and tick TLS to be used. It took me a while to get this configuration right, and I'd like to thank <a style="text-decoration:underline;" href="https://www.andyjarrett.com/blog/" target="_blank">Andy Jarrett</a> for helping me with it.
 
 You should now be all set, and have your email configured. The free version only allows you to have up to 50 emails, but you can always buy the pro version
   

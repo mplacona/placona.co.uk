@@ -12,4 +12,4 @@ I've just seen this video and thought I'd share it with my few readers. It appea
 
 The video is pretty convincing and does really look real, but I'll keep this post updated in case I find something else about it.
 
-Link to the video: <a href="http://www.mobilitysite.com/2008/10/iphone-with-windows-mobile/" target="_blank">http://mobilitysite.com/2008/10/iphone-with-windows-mobile/</a>
+Link to the video: <a href="https://www.mobilitysite.com/2008/10/iphone-with-windows-mobile/" target="_blank">http://mobilitysite.com/2008/10/iphone-with-windows-mobile/</a>

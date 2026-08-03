@@ -10,7 +10,7 @@ draft: false
 
 Assets such as stylesheets, images and videos are often the major hit taken by a webserver when a webpage is loaded. I'm often trying to improve my page loads by using published pages (flat html) and rewrites, so I don't need to run a dynamic page when it's not necessary.
 
-Publishing usually brings a great deal of improvement, and <a title="Apache 101 - Cache Control" href="https://www.placona.co.uk/apache-101-cache-control/" target="_self">browser cache</a> and [compression](https://www.placona.co.uk/apache-101-compressing-files/ "Apache 101 - Compressing Files") often help a lot too, but sometimes you just need to load assets on every single page load, and if you have lots of new users every day, browser cache will usually do very little, as this new users will need to hit the webserver and get the images for the first time in order to have it cached.
+Publishing usually brings a great deal of improvement, and <a title="Apache 101 - Cache Control" href="/apache-101-cache-control/" target="_self">browser cache</a> and [compression](/apache-101-compressing-files/ "Apache 101 - Compressing Files") often help a lot too, but sometimes you just need to load assets on every single page load, and if you have lots of new users every day, browser cache will usually do very little, as this new users will need to hit the webserver and get the images for the first time in order to have it cached.
 
 It's been proved that loading assets from different domains helps "trick" the browser into multi-tasking, so it doesn't have to wait until **asset1** on the domain **domain.com** is loaded to start downloading **asset2** on the same domain.
 
@@ -22,7 +22,7 @@ This approach helps a lot, and if you, like me, enjoy monitoring this kind of th
 
 A downside to it is that you're still hitting your webserver, and now even harder, as you're making multiple connections at once to it. If you are loading images or small files, you shouldn't have a problem, but things will start to get uglier if you try to load videos or heavier files.
 
-<!-- <img src="http://files.placona.co.uk/cdn/mockup1.png" alt="Sub-domains approach" width="461" height="242" /> -->
+<img src="/images/legacy/cdn_mockup1.png" alt="Sub-domains approach" width="461" height="242" />
 
 ### <span style="text-decoration: underline;">The second approach:</span>
 
@@ -36,7 +36,7 @@ The concept is really pretty, but it also means you'll now have to maintain two 
 
 ### <span style="text-decoration: underline;">The third approach:</span>
 
-This is by far my favourite one. Basically it consists in hosting your assets somewhere else, where you wont have to maintain or keep an eye on performance, as this server's primary task is to serve this kind of content. A "Buzz Word" really springs to mind here, as we are talking about the so called "**<a title="Cloud Computing" href="http://en.wikipedia.org/wiki/Cloud_computing" target="_blank">Cloud Computing</a>**". Basically it consists of a network of servers in strategic places. We call it strategic places, as the servers are located near you. Well, not near you, but from your IP, it redirects you to the closest server, from where you're gonna be picking up the assets as they are needed.
+This is by far my favourite one. Basically it consists in hosting your assets somewhere else, where you wont have to maintain or keep an eye on performance, as this server's primary task is to serve this kind of content. A "Buzz Word" really springs to mind here, as we are talking about the so called "**<a title="Cloud Computing" href="https://en.wikipedia.org/wiki/Cloud_computing" target="_blank">Cloud Computing</a>**". Basically it consists of a network of servers in strategic places. We call it strategic places, as the servers are located near you. Well, not near you, but from your IP, it redirects you to the closest server, from where you're gonna be picking up the assets as they are needed.
 
 It works pretty much as a load balancer, but based on location, instead of number of connections. It makes sure that the bits travel the shortest way in order to get to you. Works pretty much like terrestrial TV, where residences located closest to the tower will eventually get a better reception (signal) than the ones far away from it.
   
@@ -44,6 +44,6 @@ There's a similarity with approach two when using this method, as it pretty much
 
 A representation of it would be as such:
 
-<!-- <img src="http://files.placona.co.uk/cdn/mockup2.png" alt="Cloud Server" width="555" height="253" /> -->
+<img src="/images/legacy/cdn_mockup2.png" alt="Cloud Server" width="555" height="253" />
 
 On part two, I will be showing how to have a free "CDN" for your server, and how to maintain it. I put the word CDN surrounded by quotes, as the approach I'll be showing besides being a very common one, doesn't really have all the benefits a true CDN has. But hey, it's **free**!

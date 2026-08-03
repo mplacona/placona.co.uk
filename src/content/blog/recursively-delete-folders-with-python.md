@@ -9,12 +9,12 @@ draft: false
 ---
 
 <p align="center">
-  <!-- <img src="http://files.placona.co.uk/py_remover/recursion_flat.png" alt="Recursion" width="320" height="90" /> -->
+  <img src="/images/legacy/py_remover_recursion_flat.png" alt="Recursion" width="320" height="90" />
 </p>
 
 At work we've been doing some deploy optimization, and the need of automatically deleting (recursively) specific folders came up.
   
-We use <a title="MXUnit" href="http://mxunit.org/" target="_blank">MXUnit</a> to **<a title="Unit Testing" href="http://en.wikipedia.org/wiki/Unit_testing" target="_blank">Unit Test</a>** our applications, and store all of our tests based on what they're related (inside _test folders). So basically we end up having lots of folders in our file structure that are not supposed to go into production for security reasons.
+We use <a title="MXUnit" href="http://mxunit.org/" target="_blank">MXUnit</a> to **<a title="Unit Testing" href="https://en.wikipedia.org/wiki/Unit_testing" target="_blank">Unit Test</a>** our applications, and store all of our tests based on what they're related (inside _test folders). So basically we end up having lots of folders in our file structure that are not supposed to go into production for security reasons.
 
 We use SVN for development, but don't use it on production for security reasons as well, so we always end up with a deploy package (SVN export) containing all of the files necessary for a specific release.
 
@@ -26,13 +26,13 @@ one by one if the release is too big.
 
 We easily end up with something like:
 
-<!-- <img src="http://files.placona.co.uk/py_remover/folders.png" alt="Messy folders" width="200" height="356" /> -->
+<img src="/images/legacy/py_remover_folders.png" alt="Messy folders" width="200" height="356" />
 
 We then thought of an automated way of removing all this folders. 
 
 I first looked at a simple batch file that would "spider" the folder and delete all occurrences of an specific folder name. Not too long after I realized this is a rather complex task for someone who doesn't really know his way around batch files.
 
-I've been a <a title="Python Programming Language" href="http://www.python.org/" target="_blank">Python</a> enthusiast for a few months, so I thought I should give it a try and write something using it. The script turned out to be ridiculously simple.
+I've been a <a title="Python Programming Language" href="https://www.python.org/" target="_blank">Python</a> enthusiast for a few months, so I thought I should give it a try and write something using it. The script turned out to be ridiculously simple.
 
 I first do my necessary imports and read information from a configuration xml file:
 

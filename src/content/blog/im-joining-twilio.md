@@ -10,11 +10,11 @@ draft: false
 
 So the time has come for me to move on and accept a new challenge. As of the October 20th, I'll be joining <a title="Twilio" href="https://www.twilio.com/" target="_blank">Twilio</a> as a Developer Evangelist.
 
-Twilio has been [no stranger](http://github.com/mplacona/twilio-dart "Twilio-Dart") [to me](https://www.placona.co.uk-source/sending-and-receiving-sms-messages-with-dart/ "Sending and Receiving SMS messages with Dart") for quite a while now,  and when I saw an open position in their [devangelism team](http://ahoy.twilio.com/heroes),  I wasted no time and applied for it.
+Twilio has been [no stranger](https://github.com/mplacona/twilio-dart "Twilio-Dart") [to me](/sending-and-receiving-sms-messages-with-dart/ "Sending and Receiving SMS messages with Dart") for quite a while now,  and when I saw an open position in their [devangelism team](https://ahoy.twilio.com/heroes),  I wasted no time and applied for it.
 
 The whole process took a bit of time, but both Twilio and I were quite keen to make sure we would be a good fit for each other.
 
-I had a number of telephone interviews,  and then flew over to [Twilio HQ 3.0](http://www.twilio.com/blog/2013/05/introducing-twilio-hq-3-0-our-brand-new-office.html "Twilio HQ 3.0") for the final round of interviews. The process was quite thrilling,  and I got so excited about it, this was the only company I actually applied for. Halfway the interview process, and after having met and spoken to some of the most clever people I have ever spoken with, I knew I wanted nothing but to work  with them.
+I had a number of telephone interviews,  and then flew over to [Twilio HQ 3.0](https://www.twilio.com/blog/2013/05/introducing-twilio-hq-3-0-our-brand-new-office.html "Twilio HQ 3.0") for the final round of interviews. The process was quite thrilling,  and I got so excited about it, this was the only company I actually applied for. Halfway the interview process, and after having met and spoken to some of the most clever people I have ever spoken with, I knew I wanted nothing but to work  with them.
 
 I am supper excited with the prospect of not only writing  lot of code and working with some amazingly clever people, but also helping other developers writing some kick a$$ code in conferences, meetups, hackatons, stackoverflow... or the pub.
 

@@ -8,7 +8,7 @@ tags: []
 draft: false
 ---
 
-I was recently working on a .Net project that uses [Castle](http://www.castleproject.org/) as it's [IoC Container](http://en.wikipedia.org/wiki/Inversion_of_control). At some point I realized it would be beneficial to have Castle running on its latest version, so I could benefit of the new functionalities. More specifically I was hoping to be able to use [Startable Facility](http://docs.castleproject.org/(X(1)S(jbxi1n45ybiymnmoillaea55))/Default.aspx?Page=Startable-Facility&NS=Windsor&AspxAutoDetectCookieSupport=1) in order to get the objects to be started as soon as they are loaded.
+I was recently working on a .Net project that uses [Castle](http://www.castleproject.org/) as it's [IoC Container](https://en.wikipedia.org/wiki/Inversion_of_control). At some point I realized it would be beneficial to have Castle running on its latest version, so I could benefit of the new functionalities. More specifically I was hoping to be able to use [Startable Facility](http://docs.castleproject.org/(X(1)S(jbxi1n45ybiymnmoillaea55))/Default.aspx?Page=Startable-Facility&NS=Windsor&AspxAutoDetectCookieSupport=1) in order to get the objects to be started as soon as they are loaded.
 
 The post linked above does describe how you can accomplish the same on older versions, but I thought it would be a nice touch to actually get the library updated, since we could potentially benefit of bug fixes and improvements.
 

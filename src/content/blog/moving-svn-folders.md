@@ -12,17 +12,17 @@ I recently had to move an entire folder on SVN from a place to another. When you
 
 In fact, if you try to drag a folder into another, you will end up in a "missing" folder nightmare as such:
 
-<!-- <img class="alignnone" title="Missing Folders on SVN" src="http://files.placona.co.uk/moving_svn_folders/missing_folders.jpg" alt="Missing Folders on SVN" width="602" height="130" /> -->
+<img class="alignnone" title="Missing Folders on SVN" src="/images/legacy/moving_svn_folders_missing_folders.jpg" alt="Missing Folders on SVN" width="602" height="130" />
 
 This is not very good, as when you try to commit, it will most likely not let you. However,  if it lets you, it (SVN) will try to delete the folders first, and then re-create them again.
 
-<a title="TortoiseSVN" href="http://tortoisesvn.tigris.org/" target="_blank">TortoiseSVN </a>makes it easier to do though, as with a very nifty trick, you can get it to use <a title="VSN Move" href="http://svnbook.red-bean.com/en/1.0/re18.html" target="_blank">svn move</a> properly.
+<a title="TortoiseSVN" href="http://tortoisesvn.tigris.org/" target="_blank">TortoiseSVN </a>makes it easier to do though, as with a very nifty trick, you can get it to use <a title="VSN Move" href="https://svnbook.red-bean.com/en/1.0/re18.html" target="_blank">svn move</a> properly.
 
 To do so, simply right click (holding it) on the folders you want to move, and drag them to wherever you want them to be moved to.
 
 Once you release the right click button, you should be presented with a screen like this:
 
-<!-- <img class="alignnone" title="Moving SVN folders with tortoise SVN" src="http://files.placona.co.uk/moving_svn_folders/svn_move.png" alt="Moving SVN folders with tortoise SVN" width="355" height="312" /> -->
+<img class="alignnone" title="Moving SVN folders with tortoise SVN" src="/images/legacy/moving_svn_folders_svn_move.png" alt="Moving SVN folders with tortoise SVN" width="355" height="312" />
 
 This gives you various options of actions that can be performed with the selected folder, such as:
 

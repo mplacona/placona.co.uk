@@ -8,7 +8,7 @@ tags: ["JQuery"]
 draft: false
 ---
 
-I just came across this very interesting list of things you can do with <a href="http://jquery.com/" target="_blank">jQuery</a>.
+I just came across this very interesting list of things you can do with <a href="https://jquery.com/" target="_blank">jQuery</a>.
   
 I specially loved the last one, which is not really related to jQuery, but can be really helpful. I'll leave the link here for future reference.
   

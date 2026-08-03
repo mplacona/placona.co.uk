@@ -8,9 +8,9 @@ tags: []
 draft: false
 ---
 
-I don't think I know a single Android developer who's not stoked about [Reactive Programming](http://reactivex.io/) with [RxAndroid](https://github.com/ReactiveX/RxAndroid) right now. I totally dig the idea of subscribing to events emitted by my applications and be able to react accordingly.
+I don't think I know a single Android developer who's not stoked about [Reactive Programming](https://reactivex.io/) with [RxAndroid](https://github.com/ReactiveX/RxAndroid) right now. I totally dig the idea of subscribing to events emitted by my applications and be able to react accordingly.
 
-With Rx you have [Observables](http://reactivex.io/documentation/observable.html) and [Observers](http://reactivex.io/RxJava/javadoc/rx/Observer.html). `Observables` are expected to `emit` values. While `Observers` watch `Observables` by `subscribing` to them.
+With Rx you have [Observables](https://reactivex.io/documentation/observable.html) and [Observers](http://reactivex.io/RxJava/javadoc/rx/Observer.html). `Observables` are expected to `emit` values. While `Observers` watch `Observables` by `subscribing` to them.
 
 Observing a button for example would look like this:
 
@@ -145,7 +145,7 @@ We will add this functionality now by adding three new `Observables` to our clas
 
 ### Validation
 
-I want to validate that the username is in fact an email address. The easiest way we can do this is by using a regular expression. The [EmailRegex](http://emailregex.com/) website has a good one we can use here. So we will just copy that and create a new method called `isValidLogin` that returns a boolean to indicate whether the email is valid or not.
+I want to validate that the username is in fact an email address. The easiest way we can do this is by using a regular expression. The [EmailRegex](https://emailregex.com/) website has a good one we can use here. So we will just copy that and create a new method called `isValidLogin` that returns a boolean to indicate whether the email is valid or not.
 
 ```java
 private boolean isValidLogin(CharSequence value) {
@@ -179,7 +179,7 @@ Observable<CharSequence> passwordObservable = RxTextView.textChanges(mPassword);
 Observable<Boolean> combinedObservables = Observable.combineLatest(loginObservable, passwordObservable, (o1, o2) -> isValidLogin(o1) && isValidPassword(o2));
 ```
 
-The first and the second one are really simple and use the RxBinding library to check for text changes on the form field. The third one is the most interesting in my option, as it [combines the latest vales](http://reactivex.io/documentation/operators/combinelatest.html) emitted by each one of the previous `Observables` and then checks to see whether their values are considered to be valid according to our validation rules.
+The first and the second one are really simple and use the RxBinding library to check for text changes on the form field. The third one is the most interesting in my option, as it [combines the latest vales](https://reactivex.io/documentation/operators/combinelatest.html) emitted by each one of the previous `Observables` and then checks to see whether their values are considered to be valid according to our validation rules.
 
 But we're just emitting values here, and don't really have anything watching for these value changes and reacting to it.
 
@@ -210,6 +210,6 @@ The third `Observer`  will change the button to visible once the values are cor
 
 Reactive programming is a lot of fun, and once you get started with it you will want to find an excuse to subscribe to every one of your data streams. Bet you think our little form works way better now than before.
 
-Donn Felker wrote a really good Rx tutorial [here](https://realm.io/news/donn-felker-reactive-android-ui-programming-with-rxbinding/) that goes through a lot of the basics when getting started with RxAndroid. The [Operators page](http://reactivex.io/documentation/operators.html) in the Reactive.io website is also a great resource to help you understanding what all the operators do.
+Donn Felker wrote a really good Rx tutorial [here](https://realm.io/news/donn-felker-reactive-android-ui-programming-with-rxbinding/) that goes through a lot of the basics when getting started with RxAndroid. The [Operators page](https://reactivex.io/documentation/operators.html) in the Reactive.io website is also a great resource to help you understanding what all the operators do.
 
 Have fun!

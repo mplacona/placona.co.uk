@@ -10,7 +10,7 @@ draft: false
 
 _Book reviewer Marcos Placona | Publisher: Packt. Author(s): Jonathan Chaffer and Karl Swedberg_
   
-<a title="Jquery.com" href="http://jquery.com/" target="_blank">JQuery</a> is one of the coolest JavaScript libraries ever released, and has been growing massively on the Web Development scene since it's release in early 2006. As a big fan of JavaScript libraries, I decided to write this book review.
+<a title="Jquery.com" href="https://jquery.com/" target="_blank">JQuery</a> is one of the coolest JavaScript libraries ever released, and has been growing massively on the Web Development scene since it's release in early 2006. As a big fan of JavaScript libraries, I decided to write this book review.
   
 "_Learning jQuery_" is a great complement to jQuery's [official documentation](http://docs.jquery.com/Main_Page), having a nice and clean structure all the times within the book
   

@@ -8,9 +8,9 @@ tags: ["General Techie Stuff","Javascript"]
 draft: false
 ---
 
-At work, we use [Apache JMeter](http://jmeter.apache.org) for load testing applications or API's we build.
+At work, we use [Apache JMeter](https://jmeter.apache.org) for load testing applications or API's we build.
 
-JMeter is an amazing open source tool with an even more [amazing community](www.apache.org/foundation/getinvolved.html) behind it, so if you've never used it, you surely are missing on a great piece of software.
+JMeter is an amazing open source tool with an even more [amazing community](https://www.apache.org/foundation/getinvolved.html) behind it, so if you've never used it, you surely are missing on a great piece of software.
 
 Anyway, one thing that used to annoy me a bit, was the fact that when creating tests for API's, I'd sometimes need to pass in dates.
 

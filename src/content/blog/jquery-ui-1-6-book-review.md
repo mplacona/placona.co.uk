@@ -18,13 +18,13 @@ and more excited at every new release, and the more I read about it,
   
 the more I think this is really a great library.
 
-As you <a href="https://www.placona.co.uk/how-i-treat-the-links-on-my-blog-with-jquery/" mce_href="/blog/post.cfm/how-i-treat-the-links-on-my-blog-with-jquery">might</a> <a href="https://www.placona.co.uk/things-you-may-not-know-about-jquery/" mce_href="/blog/post.cfm/things-you-may-not-know-about-jquery">have</a> <a href="https://www.placona.co.uk/quick-and-dirty-jquery-drag-drop/" mce_href="/blog/post.cfm/quick-and-dirty-jquery-drag-drop">noticed</a>,
+As you <a href="/how-i-treat-the-links-on-my-blog-with-jquery/">might</a> <a href="/things-you-may-not-know-about-jquery/">have</a> <a href="/quick-and-dirty-jquery-drag-drop/">noticed</a>,
   
 on the past few months I've been actively using jQuery on all of my
   
-projects, and recently at work, we even replaced most of our <a href="http://labs.adobe.com/technologies/spry/" mce\_href="http://labs.adobe.com/technologies/spry/" class="broken\_link">Spry</a> stuff with <a href="http://jquery.com/" mce_href="http://jquery.com/">jQuery</a>. I think Spry is a great library, but jQuery is simply easier to use, and a lot lighter.
+projects, and recently at work, we even replaced most of our <a href="https://labs.adobe.com/technologies/spry/" mce\_href="https://labs.adobe.com/technologies/spry/" class="broken\_link">Spry</a> stuff with <a href="https://jquery.com/">jQuery</a>. I think Spry is a great library, but jQuery is simply easier to use, and a lot lighter.
 
-I aim here to give a brief, but well elaborated review of the book <a href="http://www.amazon.co.uk/dp/1847195121?tag=marplasblo-21&camp=1406&creative=6394&linkCode=as1&creativeASIN=1847195121&adid=0S2PG49J7XJRK6CC0KFH&" mce_href="http://www.amazon.co.uk/dp/1847195121?tag=marplasblo-21&camp=1406&creative=6394&linkCode=as1&creativeASIN=1847195121&adid=0S2PG49J7XJRK6CC0KFH&">jQuery UI 1.6</a>. I know the new version of the jQuery UI <a href="https://www.placona.co.uk/jquery-ui-1-7-released/" mce_href="/blog/post.cfm/jquery-ui-1-7-released">was released</a>
+I aim here to give a brief, but well elaborated review of the book <a href="https://www.amazon.co.uk/dp/1847195121?tag=marplasblo-21&camp=1406&creative=6394&linkCode=as1&creativeASIN=1847195121&adid=0S2PG49J7XJRK6CC0KFH&">jQuery UI 1.6</a>. I know the new version of the jQuery UI <a href="/jquery-ui-1-7-released/">was released</a>
   
 just a few days ago (second week of March 2009), but there weren't any
   
@@ -36,7 +36,7 @@ I \*\*believe\*\* a new version of the book should be released in
   
 the next few months, but if you (like me) can't wait to get your hands
   
-"dirty" with all jQuery UI goodness, go on and <a href="http://www.amazon.co.uk/dp/1847195121?tag=marplasblo-21&camp=1406&creative=6394&linkCode=as1&creativeASIN=1847195121&adid=0S2PG49J7XJRK6CC0KFH&" mce_href="http://www.amazon.co.uk/dp/1847195121?tag=marplasblo-21&camp=1406&creative=6394&linkCode=as1&creativeASIN=1847195121&adid=0S2PG49J7XJRK6CC0KFH&">get the book</a>. I promise you will not regret.
+"dirty" with all jQuery UI goodness, go on and <a href="https://www.amazon.co.uk/dp/1847195121?tag=marplasblo-21&camp=1406&creative=6394&linkCode=as1&creativeASIN=1847195121&adid=0S2PG49J7XJRK6CC0KFH&">get the book</a>. I promise you will not regret.
 
 The book splits up in 12 chapters packed with visual examples and code.
   
@@ -56,7 +56,7 @@ example. Everything is well commented and explained. The chapters are:
 
   * Introducing jQuery UI
   * Tabs
-  * The Accordion Widget (click <a href="http://www.packtpub.com/sites/default/files/jquery-ui-1-6-the-user-interface-library-for-jquery-sample-chapter-3-the-accordion-widget.pdf" mce\_href="http://www.packtpub.com/files/jquery-ui-1-6-the-user-interface-library-for-jquery-sample-chapter-3-the-accordion-widget.pdf" target="\_blank">here</a> to preview)
+  * The Accordion Widget (click <a href="https://www.packtpub.com/sites/default/files/jquery-ui-1-6-the-user-interface-library-for-jquery-sample-chapter-3-the-accordion-widget.pdf" mce\_href="https://www.packtpub.com/files/jquery-ui-1-6-the-user-interface-library-for-jquery-sample-chapter-3-the-accordion-widget.pdf" target="\_blank">here</a> to preview)
   * The Dialog
   * Slider
   * Date Picker
@@ -101,7 +101,7 @@ and the Flickr API.
   
 as well as styling, configurations and custom events. I won't talk too
   
-much about this chapter, as you can simply click <a href="http://www.packtpub.com/sites/default/files/jquery-ui-1-6-the-user-interface-library-for-jquery-sample-chapter-3-the-accordion-widget.pdf" mce\_href="http://www.packtpub.com/files/jquery-ui-1-6-the-user-interface-library-for-jquery-sample-chapter-3-the-accordion-widget.pdf" target="\_blank">here</a> and read the whole chapter located on the <a href="http://www.packtpub.com/" mce_href="http://www.packtpub.com/">publisher's website</a>
+much about this chapter, as you can simply click <a href="https://www.packtpub.com/sites/default/files/jquery-ui-1-6-the-user-interface-library-for-jquery-sample-chapter-3-the-accordion-widget.pdf" mce\_href="https://www.packtpub.com/files/jquery-ui-1-6-the-user-interface-library-for-jquery-sample-chapter-3-the-accordion-widget.pdf" target="\_blank">here</a> and read the whole chapter located on the <a href="http://www.packtpub.com/">publisher's website</a>
 
 **Chapter Four and Five** are the least interesting chapters in my
   
@@ -223,7 +223,7 @@ that can be used, and which occasions to use them. There's a cool
   
 example at the end of the chapter that shows you how to create a
   
-customizable home page. Pretty much, like <a href="http://www.google.com/ig" mce_href="http://www.google.com/ig">iGoogle</a>, where you can really customize how the website presentation will be to your computer.
+customizable home page. Pretty much, like <a href="http://www.google.com/ig">iGoogle</a>, where you can really customize how the website presentation will be to your computer.
 
 Going to the last chapter, **Chapter Twelve** shows an
   

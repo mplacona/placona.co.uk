@@ -8,9 +8,9 @@ tags: ["Adobe AIR","Flex"]
 draft: false
 ---
 
-As some of you might have noticed, I have been building <a title="Magic Ball for Blackberry Playbook" href="http://appworld.blackberry.com/webstore/content/34957/?lang=en" target="_blank">some</a> <a title="Time Traveller for Blackberry playbook" href="http://appworld.blackberry.com/webstore/content/36687/?lang=en" target="_blank">mobile applications</a> lately on my spare time specifically for the <a title="Blackberry Playbook" href="http://www.amazon.co.uk/gp/product/B004UL34EY/ref=as_li_tf_tl?ie=UTF8&tag=marplasblo-21&linkCode=as2&camp=1634&creative=6738&creativeASIN=B004UL34EY" target="_blank">Blackberry Playbook</a>. They are mainly built in Adobe Air using Actionscript 3 and Blackberry's <a title="Blackberry Tablet SDK" href="https://developer.blackberry.com/air/" target="_blank">Tablet SDK</a>.
+As some of you might have noticed, I have been building <a title="Magic Ball for Blackberry Playbook" href="http://appworld.blackberry.com/webstore/content/34957/?lang=en" target="_blank">some</a> <a title="Time Traveller for Blackberry playbook" href="http://appworld.blackberry.com/webstore/content/36687/?lang=en" target="_blank">mobile applications</a> lately on my spare time specifically for the <a title="Blackberry Playbook" href="https://www.amazon.co.uk/gp/product/B004UL34EY/ref=as_li_tf_tl?ie=UTF8&tag=marplasblo-21&linkCode=as2&camp=1634&creative=6738&creativeASIN=B004UL34EY" target="_blank">Blackberry Playbook</a>. They are mainly built in Adobe Air using Actionscript 3 and Blackberry's <a title="Blackberry Tablet SDK" href="https://developer.blackberry.com/air/" target="_blank">Tablet SDK</a>.
 
-On my latest application, I have found the need for a database, as it needs to store lots of user input data. The first option that comes to mind is <a title="SQLite" href="http://www.sqlite.org/" target="_blank">SQLite</a>, as it's very simple to integrate, and has native support.
+On my latest application, I have found the need for a database, as it needs to store lots of user input data. The first option that comes to mind is <a title="SQLite" href="https://www.sqlite.org/" target="_blank">SQLite</a>, as it's very simple to integrate, and has native support.
 
 I will show here an integration example, and focus on a caveat I found while trying to use it on a real device.
 

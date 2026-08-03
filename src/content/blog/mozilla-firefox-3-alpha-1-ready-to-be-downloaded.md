@@ -14,4 +14,4 @@ I'm writing this post using it.
 
 It's still on alpha 1 version, but seems to be very stable until now.
 
-So, so go to [Gran Paradiso's](http://www.mozilla.org/projects/devpreview/releasenotes/) home page and download your copy.
+So, so go to [Gran Paradiso's](https://www.mozilla.org/projects/devpreview/releasenotes/) home page and download your copy.

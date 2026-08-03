@@ -10,9 +10,9 @@ draft: false
 ---
 
 
-Following the [last post](/25/misc/breaking-the-network/) about network problems and dodgy **Firewalls**. This time I decided to install **Ubuntu** on my laptop. I have to be honest saying that it was my first time installing something *nix.
+Following the [last post](/breaking-the-network/) about network problems and dodgy **Firewalls**. This time I decided to install **Ubuntu** on my laptop. I have to be honest saying that it was my first time installing something *nix.
 
-This time I received some cd's from <a href="http://www.ubuntu.com" target="_blank">Ubuntu.com</a>.
+This time I received some cd's from <a href="https://www.ubuntu.com" target="_blank">Ubuntu.com</a>.
 
 From this CD you can either run Ubuntu as a Live CD (not having to install anything on your machine) or from the Live CD go for an installation. I backed up my whole laptop and decided to give it a try.
 

@@ -8,9 +8,9 @@ tags: []
 draft: false
 ---
 
-Did you know that search engines consider things like _https://www.placona.co.uk/index.cfm_ and  _https://placona.co.uk/index.cfm_ as duplicate content? It might sound like a wise thing to do, as your site would be accessible by whichever URL related to your domain. I'll say here it's not, as search engines like Google consider this an offense and will penalize you should they think you're doing it on purpose.
+Did you know that search engines consider things like `https://www.placona.co.uk/index.cfm` and  `https://placona.co.uk/index.cfm` as duplicate content? It might sound like a wise thing to do, as your site would be accessible by whichever URL related to your domain. I'll say here it's not, as search engines like Google consider this an offense and will penalize you should they think you're doing it on purpose.
   
-Google normally are very strict and harsh with people trying to "play" with their search engine, or people who try to [black hat SEO](http://en.wikipedia.org/wiki/Black_hat_seo "Black Hat SEO"). And content duplication might be just what will put your domain on the bottom of their search.
+Google normally are very strict and harsh with people trying to "play" with their search engine, or people who try to [black hat SEO](https://en.wikipedia.org/wiki/Black_hat_seo "Black Hat SEO"). And content duplication might be just what will put your domain on the bottom of their search.
 
 I then thought about a very slick way of getting rid of content duplication. You can simply create a rule on your **.htaccess** (or **httpd.conf** as that's what I use), and will will take care of redirecting any request to non-www to a www version of your website.
 

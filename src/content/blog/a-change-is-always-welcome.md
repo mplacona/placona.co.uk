@@ -29,7 +29,7 @@ Most people who know me, also know that I'm a real CFML advocate, and would try 
 
 ### Come **<span style="text-decoration: underline;">WordPress</span>**:
 
-<a title="Wordpress Homepage" href="http://wordpress.org/" target="_blank">WordPress</a> is an excellent content management system written in PHP, which I've been keeping my eyes on for a long time. It makes changing templates and mange plugins as easy as 1-2-3.
+<a title="Wordpress Homepage" href="https://wordpress.org/" target="_blank">WordPress</a> is an excellent content management system written in PHP, which I've been keeping my eyes on for a long time. It makes changing templates and mange plugins as easy as 1-2-3.
 
 I've only been playing with WordPress for about a week now, and can easily say it's gotten my attention at the first minute I saw its admin interface. It's really intuitive, and managing your content is a doddle.
 
@@ -61,7 +61,7 @@ There's a few ways to contribute, and I'm sure most are aware of the <span style
   </div>
 </div>
 
-Well, this is one way to help. Hosting a website costs cash, and no matter how much I say the fine guys from <a href="http://www.kickassvps.com/" target="_blank">KickAss VPS</a> are great (they really are), they still keep charging me (well deserved) every month. So any form of cash contributions, is always welcome.
+Well, this is one way to help. Hosting a website costs cash, and no matter how much I say the fine guys from <a href="https://www.kickassvps.com/" target="_blank">KickAss VPS</a> are great (they really are), they still keep charging me (well deserved) every month. So any form of cash contributions, is always welcome.
 
 It doesn't stop there though, you can contribute by suggesting articles or topics you would like me to talk about, submitting articles (or book reviews) you wrote yourself, and I'll give the respective credit, along with a pat on the shoulder if we ever meet in person.
 

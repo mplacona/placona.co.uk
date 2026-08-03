@@ -8,7 +8,7 @@ tags: ["VPS"]
 draft: false
 ---
 
-This is really for my future reference, but I thought someone would bump into that any time. I'm configuring a new CentOS 5 server and for my surprise it didn't come with [yum](http://en.wikipedia.org/wiki/Yellow_Dog_Updater_Modified) installed.
+This is really for my future reference, but I thought someone would bump into that any time. I'm configuring a new CentOS 5 server and for my surprise it didn't come with [yum](https://en.wikipedia.org/wiki/Yellow_Dog_Updater_Modified) installed.
 
 ```
 rpm -Uvh http://mirror.centos.org/centos-5/5.2/os/i386/CentOS/elfutils-libs-0.125-3.el5.i386.rpm 

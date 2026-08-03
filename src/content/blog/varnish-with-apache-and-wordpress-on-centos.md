@@ -16,7 +16,7 @@ Varnish is wicked! It works on your webserver as a reverse proxy to cache HTTP r
 
 I have only just installed it on this very website, and have already seen an improvement of about 500 times without actually having to do much. I spent about 2 hours to configure it all, but could probably attribute 1 hour to this to dumbness on my side while trying to get it all configured.
 
-I have now come up with a configuration that works perfectly (so far) on this website, and have used a mix and match of resources such as <a title="Simple HTTP server with Dart – Setup" href="http://namhuy.net/2372/how-to-install-and-configure-varnish-with-apache-on-centos-6.html" target="_blank" class="broken_link">this</a> and <a title="How to install Varnish Cache on AWS Centos to speed up WordPress Apache " href="http://blog.david-jensen.com/install-varnish-cache-centos-speed-up-wordpress-apache/" target="_blank">this</a>. They are both great, but I found that they didn't particularly cater for what I was looking for as I have very particular needs.
+I have now come up with a configuration that works perfectly (so far) on this website, and have used a mix and match of resources such as <a title="Simple HTTP server with Dart – Setup" href="https://namhuy.net/2372/how-to-install-and-configure-varnish-with-apache-on-centos-6.html" target="_blank" class="broken_link">this</a> and <a title="How to install Varnish Cache on AWS Centos to speed up WordPress Apache " href="https://blog.david-jensen.com/install-varnish-cache-centos-speed-up-wordpress-apache/" target="_blank">this</a>. They are both great, but I found that they didn't particularly cater for what I was looking for as I have very particular needs.
 
 In my VPS, I have a few domains running, but only really wanted to have this website cached, since the other domains either get their content updated too often, or get too few hits to actually justify caching.
 
@@ -56,7 +56,7 @@ You are probably running your website through port 80 (which is the most often u
 
 <img class="alignnone size-full wp-image-1414" src="/images/2014/04/Varnish-+-Apache1.gif" alt="Varnish + Apache" width="683" height="336" />
 
-To be able to use this port, we need to make sure our firewall actually allows that port to receive HTTP connections. luckily I have already written an article about this, so [give it a read](https://www.placona.co.uk/iptables-opening-server-ports-to-specific-ip-addresses/ "IPTABLES – Opening server ports to specific IP addresses") to understand a little better why we're doing this. a <abbr title='Too long; Didn't read' rel='tooltip'>tl;dr</abbr> version of it would be as such:
+To be able to use this port, we need to make sure our firewall actually allows that port to receive HTTP connections. luckily I have already written an article about this, so [give it a read](/iptables-opening-server-ports-to-specific-ip-addresses/ "IPTABLES – Opening server ports to specific IP addresses") to understand a little better why we're doing this. a <abbr title='Too long; Didn't read' rel='tooltip'>tl;dr</abbr> version of it would be as such:
 
 ```bash
 sudo vim /etc/sysconfig/iptables
@@ -378,18 +378,18 @@ If you refresh the page, you should see two things here:
   1. Your page load is now much faster
   2. X-Cache now says HIT
 
-Because you're now caching your request, your page loads will be much faster in general. Obviously this won't account for page loads on external resources, but you can use other methods to cache those resources (see my <abbr title='Content Delivery Network' rel='tooltip'>CDN</abbr> post [here](https://www.placona.co.uk-techie-stuff/speed-up-yor-website-part-2-the-free-cdn/ "Speed up your website – Part 2 – The Free CDN")).
+Because you're now caching your request, your page loads will be much faster in general. Obviously this won't account for page loads on external resources, but you can use other methods to cache those resources (see my <abbr title='Content Delivery Network' rel='tooltip'>CDN</abbr> post [here](/speed-up-yor-website-part-2-the-free-cdn/ "Speed up your website – Part 2 – The Free CDN")).
 
 Every subsequent request you make to that page will also come from cache. The more hits you get in different pages, the best results your users will get. <abbr title='Web Crawlers' rel='tooltip'>Spiders</abbr> also work in your favour here as by hitting pages, they are also warming up your cache for you.
 
 ### <span style="color: #000000;">But... IP's...</span>
 
-That's right, you have now noticed every new comment you get on your blog is coming from 127.0.0.1. Remember when we changed Apache to only listen to Varnish? We have also made every single request internal, which means everything now comes from localhost. There is a very simple plugin to correct this, which will resolve this by using the variable X-Forwarded-For to get the correct user's IP. You can check it out [here](http://wordpress.org/plugins/real-ip/ "Wordpress - Real IP").
+That's right, you have now noticed every new comment you get on your blog is coming from 127.0.0.1. Remember when we changed Apache to only listen to Varnish? We have also made every single request internal, which means everything now comes from localhost. There is a very simple plugin to correct this, which will resolve this by using the variable X-Forwarded-For to get the correct user's IP. You can check it out [here](https://wordpress.org/plugins/real-ip/ "Wordpress - Real IP").
 
 ### Final thoughts
 
 I am super happy with Varnish installed on my server, I have already seen a real benefit on my server's performance, and the CPU is pretty much always running at about 25%, which is really good considering my traffic. Memory is always running slightly above it would have been before, but that is mainly because I'm now effectively using it, instead of just throwing stuff at it and leaving it to be disposed.
 
-I have also installed a plugin called Varnish HTTP Purge, which manages my cache, and clears it every time I post a new entry. it also allows me to purge my cache manually, or control some other things such as which kind of requests to cache. you can find it [here.](http://wordpress.org/plugins/varnish-http-purge/ "Wordpress - Varnish HTTP Purge")
+I have also installed a plugin called Varnish HTTP Purge, which manages my cache, and clears it every time I post a new entry. it also allows me to purge my cache manually, or control some other things such as which kind of requests to cache. you can find it [here.](https://wordpress.org/plugins/varnish-http-purge/ "Wordpress - Varnish HTTP Purge")
 
 Make sure you benchmark your requests and report back on how much of improvement Varnish has made into your webserver.

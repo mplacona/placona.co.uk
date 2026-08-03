@@ -17,7 +17,7 @@ Queues accept pretty much any kind of string you throw at them, so you could for
 
 You then write specific consumers that only listen to certain queues, and once they have received and acknowledged the message, they then move on to pick up the next item in the queue.
 
-The queues we will be seeing in this post are [FIFO](http://en.m.wikipedia.org/wiki/FIFO) type queues, which means the first item you chuck into the queue, will be theoretically the first to come out. I say "theoretically" because you could tinker with this and prioritise the order your queue serves stuff.
+The queues we will be seeing in this post are [FIFO](https://en.m.wikipedia.org/wiki/FIFO) type queues, which means the first item you chuck into the queue, will be theoretically the first to come out. I say "theoretically" because you could tinker with this and prioritise the order your queue serves stuff.
 
 A simple queue with multiple consumers could be represented the following way:
 
@@ -42,7 +42,7 @@ What the last point it trying to say, is that an application doesn't necessarily
 <figure style="width: 150px" class="align-left">
   <img src="/images/2012/07/RabbitMQLogo.png" alt="">
 </figure> 
-I will first start by pointing you towards where to start. I won't get into too many details about how to setup everything, since the guys over at <a title="RabbitMQ" href="http://www.rabbitmq.com/" target="_blank">RabbitMQ</a> have done a pretty good job when exemplifying every all possible installations that might suit your needs <a title="RabbitMQ download and installation" href="http://www.rabbitmq.com/download.html" target="_blank">here</a>.
+I will first start by pointing you towards where to start. I won't get into too many details about how to setup everything, since the guys over at <a title="RabbitMQ" href="https://www.rabbitmq.com/" target="_blank">RabbitMQ</a> have done a pretty good job when exemplifying every all possible installations that might suit your needs <a title="RabbitMQ download and installation" href="http://www.rabbitmq.com/download.html" target="_blank">here</a>.
 
 RabbitMQ is the enterprise queue application we will be using for this blog post, but after analysing other products, I came to the conclusion that they all work pretty much the same way. Rabbit is only the one I chose as it ticks all the boxes for my current requirements and is also open source, which in my opinion makes all the difference when getting support and updates.
 
@@ -126,7 +126,7 @@ And a few things to note here:
 
   1. I am loading the jar file via Mark Mandel's [Java Loader](http://javaloader.riaforge.org/ "Java Loader"). I know ColdFusion 10 has this functionality out of the box, but I still haven't upgraded my local development box. Besides, I think the Java Loader is a pretty sweet implementation that lets me do lots of cool things.
   2. I create my connection factory and set hosts the exact same way bas done above.
-  3. ColdFusion does not have a true null that it can pass on, for that reason I had to implement my own. The way I did that, was to create an empty [Vector](http://docs.oracle.com/javase/7/docs/api/java/util/Vector.html "Java Vector") and use it. That returns a true Java null. Bit of a hack I know, but it does the job quite nicely.
+  3. ColdFusion does not have a true null that it can pass on, for that reason I had to implement my own. The way I did that, was to create an empty [Vector](https://docs.oracle.com/javase/7/docs/api/java/util/Vector.html "Java Vector") and use it. That returns a true Java null. Bit of a hack I know, but it does the job quite nicely.
   
 ```java
 // Returns a Java null from ColdFusion

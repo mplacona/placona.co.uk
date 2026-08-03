@@ -8,7 +8,7 @@ tags: ["General Techie Stuff","Misc","Technology"]
 draft: false
 ---
 
-Yesterday the Google team <a title="Google Chrome OS" href="http://googleblog.blogspot.com/2009/07/introducing-google-chrome-os.html" target="_blank">posted an entry</a> on all their blogs about a new operating system that is to come. They are going to call it Google Chrome OS.
+Yesterday the Google team <a title="Google Chrome OS" href="https://googleblog.blogspot.com/2009/07/introducing-google-chrome-os.html" target="_blank">posted an entry</a> on all their blogs about a new operating system that is to come. They are going to call it Google Chrome OS.
 
 The blog entry doesn't really give away a great deal of details, but it states that this new OS will be open source, and be as lightweight as Google Chrome (the browser) is.
   

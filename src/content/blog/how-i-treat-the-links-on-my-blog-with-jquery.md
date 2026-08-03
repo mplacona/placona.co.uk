@@ -8,13 +8,13 @@ tags: ["Adobe","Javascript","JQuery"]
 draft: false
 ---
 
-This is a very quick and dirty example of how to treat links on your blog / website using [JQuery](http://jquery.com/ "JQuery.com").
+This is a very quick and dirty example of how to treat links on your blog / website using [JQuery](https://jquery.com/ "JQuery.com").
 
-I've been using [JQuery](http://jquery.com/ "JQuery.com") for a while now to ease my life with some personal applications and at work.
+I've been using [JQuery](https://jquery.com/ "JQuery.com") for a while now to ease my life with some personal applications and at work.
   
-One of the greatest things about JQuery in my opinion is it's great interaction with the [DOM](http://en.wikipedia.org/wiki/Document_Object_Model), and ability to make global changes with very little effort.
+One of the greatest things about JQuery in my opinion is it's great interaction with the [DOM](https://en.wikipedia.org/wiki/Document_Object_Model), and ability to make global changes with very little effort.
 
-Some time ago I've implemented a simple [WYSIWYG](http://en.wikipedia.org/wiki/WYSIWYG) editor on my blog to facilitate tasks like text format and link creation. Link creation will be the subject today.
+Some time ago I've implemented a simple [WYSIWYG](https://en.wikipedia.org/wiki/WYSIWYG) editor on my blog to facilitate tasks like text format and link creation. Link creation will be the subject today.
 
 All the links will basically have the same structure:
 
@@ -28,11 +28,11 @@ when clicking on external links, but wanted them to have a new tab
   
 opened each time they clicked them.
   
-I could easily change my [WYSIWYG](http://en.wikipedia.org/wiki/WYSIWYG) editor to add a **target="_blank"** on all the links, but then, every time someone clicked on an internal link (or even on a JS link), a new tab would be opened.
+I could easily change my [WYSIWYG](https://en.wikipedia.org/wiki/WYSIWYG) editor to add a **target="_blank"** on all the links, but then, every time someone clicked on an internal link (or even on a JS link), a new tab would be opened.
 
 **Ok, bad idea! (period)**
 
-I then thought about the [selectors](http://api.jquery.com/category/selectors/) from JQuery. How nice it would be if my script was clever enough to detect what's an internal or external link.
+I then thought about the [selectors](https://api.jquery.com/category/selectors/) from JQuery. How nice it would be if my script was clever enough to detect what's an internal or external link.
   
 Well there you go, there's a very easy way of doing that:
 
@@ -61,7 +61,7 @@ On the top of my main page (<span style="text-decoration: line-through;">layout.
 </script>
 ```
 
-Now, the code is pretty much self-explanatory. Basically what is does is "look" for any **a** tag and check it's **href** attribute reading the tag with [XPATH Selectors](http://api.jquery.com/category/selectors/).
+Now, the code is pretty much self-explanatory. Basically what is does is "look" for any **a** tag and check it's **href** attribute reading the tag with [XPATH Selectors](https://api.jquery.com/category/selectors/).
 
 Everything returning **true** to this condition will have two new attributes added; **target** and **title**.
 

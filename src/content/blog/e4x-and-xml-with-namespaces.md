@@ -12,7 +12,7 @@ Here's is something that got me scratching my head for a little while today whil
 
 In my new application, I'll be reading XML off various different providers, so I have an interface that gets implemented in various classes to make sure they all obey a certain contract, and I don't need worry about what type they are (more on that later...)
 
-With that in mind, I ended up implementing different logic on different classes since the XML returned will vary from provider to provider. I am using <a title="ECMA Script for XML" href="http://en.wikipedia.org/wiki/ECMAScript_for_XML" target="_blank">E4X</a> to get the various information I need from the XML returned, and one of them would not work at all when selected.
+With that in mind, I ended up implementing different logic on different classes since the XML returned will vary from provider to provider. I am using <a title="ECMA Script for XML" href="https://en.wikipedia.org/wiki/ECMAScript_for_XML" target="_blank">E4X</a> to get the various information I need from the XML returned, and one of them would not work at all when selected.
 
 I will put two XML examples here, and let you spot the difference:
 

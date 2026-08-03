@@ -8,7 +8,7 @@ tags: ["Open Source","Technology"]
 draft: false
 ---
 
-A few weeks ago, I went to a Google sponsored event called Dart Flight School. The aim is to promote the language by doing a road trip and presenting use-cases and samples. The presentations were brief, and mainly focused on discussing the language's functionalities, and its seamless integration with <a title="AngularJS website" href="http://angularjs.org/" target="_blank">AngularJS</a> (also maintained by Google)
+A few weeks ago, I went to a Google sponsored event called Dart Flight School. The aim is to promote the language by doing a road trip and presenting use-cases and samples. The presentations were brief, and mainly focused on discussing the language's functionalities, and its seamless integration with <a title="AngularJS website" href="https://angularjs.org/" target="_blank">AngularJS</a> (also maintained by Google)
 
 I had a chance to look at Dart before, and was interested in finding out more things about it. Turns out the language (and platform) are pretty slick, and the development tool-set is pretty complete. The IDE is pretty good (and free), and their package management system is pretty similar to NPM's in NodeJS.
 
@@ -36,7 +36,7 @@ From a language point of view, dart seemed to be very readable, and compliant wi
 
 ### Data Structures
 
-Its core library also provides you with [Lists](http://en.wikipedia.org/wiki/List_(abstract_data_type) "Lists - Wikipedia"), [Sets](http://en.wikipedia.org/wiki/Set_(abstract_data_type) "Sets - Wikipedia") and [Maps](http://en.wikipedia.org/wiki/Hash_table "Maps - Wikipedia"), which basically means no imports, as you get that straight out-of-the-box. So for example if you wanted to create a Map and iterate through it, you could simply do:
+Its core library also provides you with [Lists](http://en.wikipedia.org/wiki/List_(abstract_data_type) "Lists - Wikipedia"), [Sets](http://en.wikipedia.org/wiki/Set_(abstract_data_type) "Sets - Wikipedia") and [Maps](https://en.wikipedia.org/wiki/Hash_table "Maps - Wikipedia"), which basically means no imports, as you get that straight out-of-the-box. So for example if you wanted to create a Map and iterate through it, you could simply do:
 
 <div class="oembed-gist">
   <noscript>
@@ -129,14 +129,14 @@ Dart is a cool language and very simple to pick up, but as with all the things i
 
 ## Final Verdict
 
-It's very exciting to see such fresh language being supported and built by Google. In my opinion, the language offers everything the "<a title="NodeJS" href="http://nodejs.org/" target="_blank">cool</a> <a title="Go Lang" href="http://golang.org/" target="_blank">kids</a> <a title="Haskell" href="http://www.haskell.org/haskellwiki/Haskell" target="_blank">platforms</a>" offer and more. It also has capabilities that allow you to run Dart on the server side, client side and even <a title="Dartium" href="https://www.dartlang.org/tools/dartium/" target="_blank">natively on the browser</a>. According to their documentation, the engineers behind Dart have an Android and Google App Engine integration on the back of their heads, and even though they say it's not completely down to them, they mention on their FAQ's you'd need to ask the team. But I'd say the fact they have thought of it is already half the battle won.
+It's very exciting to see such fresh language being supported and built by Google. In my opinion, the language offers everything the "<a title="NodeJS" href="https://nodejs.org/" target="_blank">cool</a> <a title="Go Lang" href="https://golang.org/" target="_blank">kids</a> <a title="Haskell" href="https://www.haskell.org/haskellwiki/Haskell" target="_blank">platforms</a>" offer and more. It also has capabilities that allow you to run Dart on the server side, client side and even <a title="Dartium" href="https://www.dartlang.org/tools/dartium/" target="_blank">natively on the browser</a>. According to their documentation, the engineers behind Dart have an Android and Google App Engine integration on the back of their heads, and even though they say it's not completely down to them, they mention on their FAQ's you'd need to ask the team. But I'd say the fact they have thought of it is already half the battle won.
 
 From a language perspective, I found nothing that would put me off writing code on it (and I'm pretty fussy about semantics). Instead I have found I genuinely enjoyed writing code in Dart, and was left with a nice after-taste after attending Dart Flight School. Even though I understand we had a much cut-down version of the even here in the UK.
 
 ## From Here
 
   * Make sure you check out <a title="Dart Language Website" href="https://www.dartlang.org/" target="_blank">Dart's website</a> and <a title="Dart Editor" href="https://www.dartlang.org/tools/editor/" target="_blank">Download its IDE</a>
-  * Check-out <a title="Dart Codelab" href="https://www.dartlang.org/codelabs/darrrt/" target="_blank">Dart's codelab</a>. It will give you a taste of how Dart runs, and you get to <a title="Colt McAnlis talking like a pirate" href="http://www.youtube.com/watch?v=RWmzxyMf2cE" target="_blank">talk like a pirate</a>
+  * Check-out <a title="Dart Codelab" href="https://www.dartlang.org/codelabs/darrrt/" target="_blank">Dart's codelab</a>. It will give you a taste of how Dart runs, and you get to <a title="Colt McAnlis talking like a pirate" href="https://www.youtube.com/watch?v=RWmzxyMf2cE" target="_blank">talk like a pirate</a>
   * Go read <a title="Dart Articles" href="https://www.dartlang.org/articles/" target="_blank">some articles</a>. There are some gems in there, and even if you decide to totally ignore Dart, reading the articles is bound to make you a better developer anyway.
   * Run <a title="Execute Dart online" href="http://www.compileonline.com/execute_dart_online.php" target="_blank">Dart code online</a> for quick snippets
   * Check out <a title="+Dartlang on Google+" href="https://plus.google.com/+dartlang/" target="_blank">+Dartlang</a> on Google+

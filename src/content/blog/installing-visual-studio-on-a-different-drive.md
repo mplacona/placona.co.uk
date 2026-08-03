@@ -26,11 +26,11 @@ To my surprise, this is what I saw in the next screen:
 
 "No good!", it still wants to use over 2Gb of my `C:\` drive, even though I told it to only use my `E:\` drive.
 
-After a bit of Googling, it it turns out more people have had this same problem, and there's even been a <a title="Why Visual Studio 11 Requires Space on the System Drive" href="http://blogs.msdn.com/b/heaths/archive/2012/03/07/why-visual-studio-11-requires-space-on-the-system-drive.aspx" target="_blank">blog post</a> on MSDN about it. While there's been some conversation on the comments in the blog post aforementioned, none one really seems to have come up with a decent (or at least temporarily decent) solution to the problem.
+After a bit of Googling, it it turns out more people have had this same problem, and there's even been a <a title="Why Visual Studio 11 Requires Space on the System Drive" href="https://blogs.msdn.com/b/heaths/archive/2012/03/07/why-visual-studio-11-requires-space-on-the-system-drive.aspx" target="_blank">blog post</a> on MSDN about it. While there's been some conversation on the comments in the blog post aforementioned, none one really seems to have come up with a decent (or at least temporarily decent) solution to the problem.
 
 So here's a "temporarily decent" solution to this problem:
 
-Simply create a <a title="Symbolic Link" href="http://en.wikipedia.org/wiki/Symbolic_link" target="_blank">SymLink</a> from the folder where `VS` "wants" to be installed, to the folder where "you" want to install it. This way, you "trick" the installer to think it's being installed on the system drive, but is is in reality installing it to the drive you defined on your symlink.
+Simply create a <a title="Symbolic Link" href="https://en.wikipedia.org/wiki/Symbolic_link" target="_blank">SymLink</a> from the folder where `VS` "wants" to be installed, to the folder where "you" want to install it. This way, you "trick" the installer to think it's being installed on the system drive, but is is in reality installing it to the drive you defined on your symlink.
 
 Think of it as a shortcut to a folder deeply nested within your file system. You can have it sitting on your desktop, but when you actually open it, you will find that the path to it is something like _`<letter>\my\deeply\nested\directory`._
 
@@ -54,7 +54,7 @@ You will now notice the whole of it (except for things it adds to the registry) 
 
 > Q: And you only say that now? What do I do then?
 
-> A: A comment added to <a title="Stack Overflow - How to change VS11 install directory?" href="http://stackoverflow.com/a/10455300/279395" target="_blank" class="broken_link">this answer</a> on StackOverflow seem to imply that you can do the update, and then merge your files manually by copying them into your other drive. You will need to re-create the symlink after that, but considering you don't get udpates every day, it's probably worth.
+> A: A comment added to <a title="Stack Overflow - How to change VS11 install directory?" href="https://stackoverflow.com/a/10455300/279395" target="_blank" class="broken_link">this answer</a> on StackOverflow seem to imply that you can do the update, and then merge your files manually by copying them into your other drive. You will need to re-create the symlink after that, but considering you don't get udpates every day, it's probably worth.
 
 
 > Q: Will this be a problem for ever? 
