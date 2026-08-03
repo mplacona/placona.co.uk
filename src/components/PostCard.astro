@@ -2,11 +2,23 @@
 import type { CollectionEntry } from 'astro:content';
 
 const { post } = Astro.props as { post: CollectionEntry<'blog'> };
+const { title, description, slug, pubDate, categories } = post.data;
+
+const href = `/${slug}/`;
+const iso = pubDate.toISOString().slice(0, 10);
+const shown = pubDate.toLocaleDateString('en-GB', { year: 'numeric', month: 'short' });
+const topic = categories?.[0];
 ---
 
+{/* The title is the link. A separate "Read article" repeated on every row was
+    noise, not navigation. */}
 <article class="post-card">
-  <p class="eyebrow">{post.data.pubDate.toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
-  <h2><a href={`/${post.data.slug}/`}>{post.data.title}</a></h2>
-  {post.data.description && <p>{post.data.description}</p>}
-  <a class="text-link" href={`/${post.data.slug}/`}>Read article <span aria-hidden="true">→</span></a>
+  <div class="post-rail">
+    <p class="post-date"><time datetime={iso}>{shown}</time></p>
+    {topic && <span class="chip">{topic}</span>}
+  </div>
+  <div>
+    <h2><a href={href}>{title}</a></h2>
+    {description && <p>{description}</p>}
+  </div>
 </article>

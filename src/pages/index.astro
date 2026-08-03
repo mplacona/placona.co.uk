@@ -3,9 +3,10 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PostCard from '../components/PostCard.astro';
 
-const posts = (await getCollection('blog', ({ data }) => !data.draft))
-  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-  .slice(0, 10);
+const all = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const posts = all.slice(0, 10);
+const total = all.length;
 ---
 
 <BaseLayout
@@ -15,16 +16,23 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
   <section class="hero">
     <p class="eyebrow">Developer relations · software · independent products</p>
     <h1>Developer relations, software and useful side quests.</h1>
-    <p>I’m Marcos Placona. I write about building things for developers, independent products and the occasional useful side quest.</p>
+    <p>I write about building things for developers, independent products and the occasional useful side quest.</p>
+    <div class="byline">
+      <img src="/images/marcos_bw_200_optim.jpg" alt="" width="44" height="44" loading="lazy" />
+      <p>
+        <strong>Marcos Placona</strong> — developer relations leader and consultant,
+        building small local-first apps. <a href="/about/">More about me</a>.
+      </p>
+    </div>
   </section>
   <section class="content-section" aria-labelledby="latest-writing">
     <div class="section-heading">
-      <p class="eyebrow">Latest writing</p>
-      <h2 id="latest-writing">Latest writing.</h2>
+      <h2 id="latest-writing">Latest writing</h2>
+      <p class="eyebrow">{total} articles</p>
     </div>
     <div class="post-list">
       {posts.map((post) => <PostCard post={post} />)}
     </div>
-    <p><a class="button-secondary" href="/search/">Search all writing</a></p>
+    <p><a class="button-secondary" href="/search/">Browse all writing</a></p>
   </section>
 </BaseLayout>

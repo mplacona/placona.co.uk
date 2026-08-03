@@ -42,6 +42,7 @@ let post: CollectionEntry<'blog'> | undefined;
 let Content: any;
 let newer: CollectionEntry<'blog'> | undefined;
 let older: CollectionEntry<'blog'> | undefined;
+let readingMinutes = 0;
 
 if (props.kind === 'post') {
   post = props.post;
@@ -51,6 +52,11 @@ if (props.kind === 'post') {
   const index = allPosts.findIndex((item) => item.id === post!.id);
   newer = allPosts[index - 1];
   older = allPosts[index + 1];
+
+  // Prose only: fenced code is skimmed, not read at prose speed, so counting it
+  // inflates the estimate on the more technical posts.
+  const prose = (post.body ?? '').replace(/```[\s\S]*?```/g, ' ');
+  readingMinutes = Math.max(1, Math.round(prose.split(/\s+/).filter(Boolean).length / 200));
 }
 ---
 
@@ -86,15 +92,29 @@ if (props.kind === 'post') {
   >
     <article class="post">
       <header class="post-header">
-        <p class="eyebrow">{post!.data.pubDate.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }).toUpperCase()}</p>
         <h1>{post!.data.title}</h1>
         {post!.data.description && <p class="lede">{post!.data.description}</p>}
-        {post!.data.categories?.length > 0 && <p class="post-meta">{post!.data.categories.join(' · ')}</p>}
+        <p class="post-meta">
+          <time datetime={post!.data.pubDate.toISOString().slice(0, 10)}>
+            {post!.data.pubDate.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
+          </time>
+          {post!.data.categories?.map((category) => <span class="chip">{category}</span>)}
+          <span class="sep" aria-hidden="true">·</span>
+          <span>{readingMinutes} min read</span>
+        </p>
       </header>
       <div class="prose"><Content /></div>
       <nav class="article-nav" aria-label="Article navigation">
-        {newer && <a class="nav-prev" href={`/${newer.data.slug}/`} rel="prev">← Newer: {newer.data.title}</a>}
-        {older && <a class="nav-next" href={`/${older.data.slug}/`} rel="next">Older: {older.data.title} →</a>}
+        {newer && (
+          <a class="nav-prev" href={`/${newer.data.slug}/`} rel="prev">
+            <span class="nav-label">← Newer</span>{newer.data.title}
+          </a>
+        )}
+        {older && (
+          <a class="nav-next" href={`/${older.data.slug}/`} rel="next">
+            <span class="nav-label">Older →</span>{older.data.title}
+          </a>
+        )}
       </nav>
     </article>
   </BaseLayout>
