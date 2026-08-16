@@ -17,7 +17,9 @@ const { app } = Astro.props;
     <p class="eyebrow">{app.name}</p>
     <h1>Privacy</h1>
     <p>{app.privacy}</p>
-    <p>This page will be updated with the final App Store privacy declaration before public release. It will state only what the shipping build actually does.</p>
+    <h2>What stays private</h2>
+    {app.privacyDetails.map((detail) => <p>{detail}</p>)}
+    <p>This policy reflects the shipping app. If the app's data handling changes, this page and its App Store privacy declaration will change before that release.</p>
     <p>Questions: <a href={`mailto:${app.supportEmail}`}>{app.supportEmail}</a>.</p>
   </article>
 </BaseLayout>

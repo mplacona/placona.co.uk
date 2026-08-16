@@ -17,6 +17,6 @@ const { app } = Astro.props;
     <p class="eyebrow">{app.name}</p>
     <h1>Support</h1>
     <p>For support, launch questions or feedback, email <a href={`mailto:${app.supportEmail}`}>{app.supportEmail}</a>.</p>
-    <p>Include your iPhone model, iOS version and a short description of what happened. Please do not send personal dictation content unless it is essential to reproducing the problem.</p>
+    <p>{app.supportGuidance}</p>
   </article>
 </BaseLayout>
