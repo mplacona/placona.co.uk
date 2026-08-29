@@ -1,0 +1,191 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const title = 'What speakers need from you';
+const description =
+  'A conference organiser checklist for the details speakers need before they walk on stage: room and AV facts, arrival logistics, running order and a named contact. Copy it into your accepted-speaker email.';
+
+type Section = {
+  when: string;
+  heading: string;
+  intro: string;
+  items: { ask: string; why: string }[];
+};
+
+const sections: Section[] = [
+  {
+    when: 'In the acceptance email',
+    heading: 'The five facts that stop a dozen questions',
+    intro:
+      'Most speaker anxiety is unanswered logistics. Putting these in the acceptance email removes an entire thread of back-and-forth, and gives the speaker something to plan against on the day they say yes.',
+    items: [
+      {
+        ask: 'The exact date, start time and time zone of the session',
+        why: 'A speaker booking flights against a provisional slot is a speaker who books the wrong flights. If the slot is not final, say so in those words.'
+      },
+      {
+        ask: 'The venue name, room and the entrance speakers should use',
+        why: 'Venue and room are different problems. Large venues have speaker entrances, badge desks and loading bays that are nowhere near the public door.'
+      },
+      {
+        ask: 'Session length, and whether Q&A is inside or outside it',
+        why: 'A 30-minute slot with Q&A inside it is a 22-minute talk. Speakers cut the wrong material when they find this out on stage.'
+      },
+      {
+        ask: 'A named contact with a phone number, not just an inbox',
+        why: 'On the morning of the event nobody reads a shared inbox. One name and one number is the single most valuable line in the email.'
+      },
+      {
+        ask: 'Whether the talk is recorded, streamed or photographed',
+        why: 'It changes what a speaker puts on their slides, what they say about their employer, and whether they need to clear anything first.'
+      }
+    ]
+  },
+  {
+    when: 'Two weeks out',
+    heading: 'The AV facts that decide whether the demo works',
+    intro:
+      'Almost every stage failure is an AV assumption that nobody wrote down. These are cheap to send and expensive to discover at the lectern.',
+    items: [
+      {
+        ask: 'The connector the stage actually provides, and who owns the adapters',
+        why: 'HDMI, USB-C and a house dongle are three different answers. "We have adapters" is not one of them unless someone is holding them.'
+      },
+      {
+        ask: 'The projector resolution and aspect ratio',
+        why: 'A 16:9 deck on a 4:3 projector loses the bottom of every slide, and the speaker finds out when their code samples get cropped.'
+      },
+      {
+        ask: 'Whether presenter notes and a confidence monitor are available',
+        why: 'A speaker who rehearsed with notes and arrives to a mirrored display is rehearsing again, live, in front of an audience.'
+      },
+      {
+        ask: 'What the audio setup is: handheld, lapel, headset, or lectern only',
+        why: 'A lectern microphone means the speaker cannot walk to the screen. That changes how the talk is written, not just how it is delivered.'
+      },
+      {
+        ask: 'Whether wired network is available for demos, or Wi-Fi only',
+        why: 'Conference Wi-Fi under load is the classic demo killer. Tell speakers early so they can build an offline fallback instead of hoping.'
+      }
+    ]
+  },
+  {
+    when: '48 hours out',
+    heading: 'The logistics that go wrong quietly',
+    intro:
+      'By now the speaker has a deck. What they do not have is certainty about the morning of the event, which is when things actually break.',
+    items: [
+      {
+        ask: 'Confirm the final running order and any change to the slot',
+        why: 'Slots move. A speaker who learns at the badge desk that they are on an hour earlier has lost their rehearsal and their lunch.'
+      },
+      {
+        ask: 'Say when and where the tech check happens',
+        why: 'A tech check that exists but is never mentioned is a tech check nobody attends. Give a time and a place, not an invitation to ask.'
+      },
+      {
+        ask: 'Give the arrival time you actually want, and what happens on arrival',
+        why: '"Arrive early" means five different things. "Be at the speaker desk in the east foyer by 08:15, ask for Priya" means one.'
+      },
+      {
+        ask: 'Confirm travel and accommodation details are booked and correct',
+        why: 'Silence reads as confirmation. It is often an unbooked room and an expenses conversation nobody wanted to have.'
+      }
+    ]
+  },
+  {
+    when: 'On the day',
+    heading: 'What a speaker needs in the last hour',
+    intro:
+      'This is the window where a speaker cannot solve their own problems. Everything here is something only you can hand them.',
+    items: [
+      {
+        ask: 'Somewhere to sit that is not the hallway',
+        why: 'A speaker rehearsing in a corridor is a speaker being interrupted. A room with a door is a real production input.'
+      },
+      {
+        ask: 'Water at the lectern, and a clock or timer the speaker can see',
+        why: 'Speakers overrun because they cannot see the time. A visible countdown protects your schedule more than a warning card does.'
+      },
+      {
+        ask: 'Tell them who will introduce them, and how their name is pronounced',
+        why: 'Ask, do not guess. The first ten seconds of a talk set how the room treats the speaker for the next thirty minutes.'
+      },
+      {
+        ask: 'Confirm who handles the room if something fails mid-talk',
+        why: 'When the projector dies, the speaker should be looking at one person, not scanning the room for anyone with a lanyard.'
+      }
+    ]
+  },
+  {
+    when: 'After the talk',
+    heading: 'The part almost every event skips',
+    intro:
+      'The follow-up costs you two emails and is the difference between a speaker who comes back and one who politely declines next year.',
+    items: [
+      {
+        ask: 'Send the recording link and the feedback scores when you have them',
+        why: 'Speakers use both to get their next talk accepted. Sitting on them for three months is the most common organiser failure.'
+      },
+      {
+        ask: 'Ask what went wrong that you could fix for the next speaker',
+        why: 'The person who just used your AV, your green room and your running order knows more about it than your retro will.'
+      }
+    ]
+  }
+];
+---
+
+<BaseLayout title={title} description={description} canonicalPath="/apps/green-room/speaker-prep-checklist/">
+  <section class="hero compact-hero">
+    <p class="eyebrow">For conference organisers</p>
+    <h1>What speakers need from you.</h1>
+    <p class="lede">
+      Talks fail for boring reasons: an adapter nobody owns, a slot that moved, a contact who does not answer on the
+      morning. Almost all of it is information an organiser already has and has not sent yet. This is the list, in the
+      order a speaker needs it.
+    </p>
+    <p>
+      Copy any part of it into your accepted-speaker email. No attribution needed, and there is nothing to sign up for.
+    </p>
+  </section>
+
+  {
+    sections.map((section) => (
+      <section class="content-section">
+        <p class="eyebrow">{section.when}</p>
+        <h2>{section.heading}</h2>
+        <p class="lede">{section.intro}</p>
+        <ul class="prep-list">
+          {section.items.map((item) => (
+            <li>
+              <p class="prep-ask">{item.ask}</p>
+              <p class="prep-why">{item.why}</p>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))
+  }
+
+  <section class="content-section callout">
+    <p class="eyebrow">The speaker's side of this list</p>
+    <h2>Green Room.</h2>
+    <p>
+      This checklist is what you send. Green Room is the iPhone app your speakers can use to track it: paste the
+      acceptance email, and it turns the details into a dated plan and tells them what is still missing. It is local to
+      their phone, has no account, and the first event is free.
+    </p>
+    <p>
+      <a class="button" href="https://apps.apple.com/gb/app/green-room-talk-day-prep/id6802224870">Green Room on the App Store</a>
+    </p>
+    <p><a class="text-link" href="/apps/green-room/">More about Green Room <span aria-hidden="true">→</span></a></p>
+  </section>
+</BaseLayout>
+
+<style>
+  .prep-list { margin: 1.5rem 0 0; padding: 0; list-style: none; display: grid; gap: 1rem; }
+  .prep-list li { padding: 1.25rem 1.5rem; background: var(--sand); }
+  .prep-ask { margin: 0 0 0.4rem; font-weight: 700; }
+  .prep-why { margin: 0; color: var(--ink-2); }
+</style>
