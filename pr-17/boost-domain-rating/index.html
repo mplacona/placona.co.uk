@@ -1,0 +1,113 @@
+<!DOCTYPE html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Boost Domain Rating with Redirects and Bot Control</title><meta name="description" content="Learn how to boost your website's Domain Rating (DR) with Cloudflare Workers by setting up 301 redirects and controlling Googlebot for better SEO performance."><link rel="canonical" href="https://placona.co.uk/boost-domain-rating/"><meta name="robots" content="noindex, nofollow"><meta name="author" content="Marcos Placona"><meta name="theme-color" content="#fffdf9"><link rel="alternate" type="application/rss+xml" title="Marcos Placona's Blog" href="https://placona.co.uk/rss.xml"><meta property="og:type" content="article"><meta property="og:site_name" content="Marcos Placona"><meta property="og:locale" content="en_GB"><meta property="og:title" content="Boost Your Website Domain Rating with Redirects and Bot Control"><meta property="og:description" content="Learn how to boost your website's Domain Rating (DR) with Cloudflare Workers by setting up 301 redirects and controlling Googlebot for better SEO performance."><meta property="og:url" content="https://placona.co.uk/boost-domain-rating/"><meta property="og:image" content="https://placona.co.uk/images/2024/10/boost-website-domain-rating.jpeg"><meta property="og:image:alt" content="Boost Your Website Domain Rating with Redirects and Bot Control"><meta property="article:published_time" content="2024-10-13T20:54:42.000Z"><meta property="article:author" content="Marcos Placona"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@marcos_placona"><meta name="twitter:creator" content="@marcos_placona"><meta name="twitter:title" content="Boost Your Website Domain Rating with Redirects and Bot Control"><meta name="twitter:description" content="Learn how to boost your website's Domain Rating (DR) with Cloudflare Workers by setting up 301 redirects and controlling Googlebot for better SEO performance."><meta name="twitter:image" content="https://placona.co.uk/images/2024/10/boost-website-domain-rating.jpeg"><link rel="icon" href="/pr-17/images/favicon.ico" sizes="any"><link rel="apple-touch-icon" href="/pr-17/images/site-logo.png"><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://placona.co.uk/#website","url":"https://placona.co.uk/","name":"Marcos Placona — Programming, technology, independent apps","description":"Programming, technology and musings from Marcos Placona.","inLanguage":"en-GB","publisher":{"@id":"https://placona.co.uk/about/#person"}},{"@type":"Person","@id":"https://placona.co.uk/about/#person","name":"Marcos Placona","url":"https://placona.co.uk/","image":"https://placona.co.uk/images/marcos_bw_500_optim.jpg","jobTitle":"Developer relations leader and independent software builder","sameAs":["https://github.com/mplacona","https://x.com/marcos_placona"]},{"@type":"BlogPosting","@id":"https://placona.co.uk/boost-domain-rating/#article","headline":"Boost Your Website Domain Rating with Redirects and Bot Control","description":"Learn how to boost your website's Domain Rating (DR) with Cloudflare Workers by setting up 301 redirects and controlling Googlebot for better SEO performance.","url":"https://placona.co.uk/boost-domain-rating/","datePublished":"2024-10-13T20:54:42.000Z","keywords":"Technology","image":"https://placona.co.uk/images/2024/10/boost-website-domain-rating.jpeg","inLanguage":"en-GB","author":{"@id":"https://placona.co.uk/about/#person"},"publisher":{"@id":"https://placona.co.uk/about/#person"},"isPartOf":{"@id":"https://placona.co.uk/#website"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://placona.co.uk/boost-domain-rating/"}}]}</script><link rel="stylesheet" href="/pr-17/_astro/BaseLayout.JLuzdtbP.css"></head><body><a class="skip-link" href="#content">Skip to content</a><header class="site-header"><a class="brand" href="/pr-17/" aria-label="Marcos Placona home"><img src="/pr-17/images/placona-logo-small.png" alt="" width="48" height="48"><span>Marcos Placona</span></a><nav aria-label="Primary navigation"><a href="/pr-17/">Writing</a><a href="/pr-17/apps/">Apps</a><a href="/pr-17/speaker-timeline/">Speaking</a><a href="/pr-17/about/">About</a><a href="/pr-17/search/">Search</a></nav></header><main id="content"><article class="post"><header class="post-header"><h1>Boost Your Website Domain Rating with Redirects and Bot Control</h1><p class="lede">Learn how to boost your website&#39;s Domain Rating (DR) with Cloudflare Workers by setting up 301 redirects and controlling Googlebot for better SEO performance.</p><p class="post-meta"><time datetime="2024-10-13">13 October 2024</time><span class="chip">Technology</span><span class="sep" aria-hidden="true">·</span><span>6 min read</span></p></header><div class="prose"><p>When you’re managing multiple domains, especially if you’re working on SEO for projects like I am, it’s important to take full advantage of the traffic your domains generate. After seeing <a href="https://x.com/_Oliver_Fish/status/1844947412697190459">Oliver Fish’s post</a> on how to make links from your directory/website look more valuable? I decided to give this a go and see how I could increase the DR for <a href="https://MicroWidgets.dev">MicroWidgets</a> like that.</p>
+<img class="alignnone size-full" src="/pr-17/images/2024/10/oliver-fish-post.png" alt="Oliver Fish talking about how to increase website DR" />
+<p>I love using <strong>Cloudflare Workers</strong> for everythign I can, and this seemed like the perfect opportunity. Let’s break down why this approach works, and how it  benefits my SEO strategy.</p>
+<h3 id="whats-the-goal">What’s the Goal?</h3>
+<p>In my case, I have a domain, <code>postbits.net</code>, that I want to redirect to my another project, <code>microwidgets.dev</code>. Instead of just setting up a simple redirect, I’ve chosen to add a little intelligence into the mix by using a Cloudflare Worker. Specifically, I’m blocking Googlebots from crawling <code>postbits.net</code> and ensuring that all other traffic is cleanly redirected to <code>microwidgets.dev</code> with a 301 status code.</p>
+<h3 id="why-block-googlebot">Why Block Googlebot?</h3>
+<p>You might be wondering: why would you block Googlebot in the first place? After all, isn’t SEO all about getting Google to crawl your site?</p>
+<p>True—but it’s also about <strong>controlling</strong> what Google indexes. I want Google to focus on my main project, <code>microwidgets.dev</code>, not the legacy, less important or in this case slightly polluted domain. By blocking Googlebot from the redirecting domain, I’m essentially telling Google to concentrate its efforts on my primary website and not on the other domain.</p>
+<h3 id="the-power-of-301-redirects">The Power of 301 Redirects</h3>
+<p>A 301 redirect tells search engines that the domain or page has permanently moved. It’s one of the most effective ways to pass SEO value from one domain to another. By using a 301 redirect from <code>postbits.net</code> to <code>microwidgets.dev</code>, I’m transferring any link equity or authority that <code>postbits.net</code> has accumulated over time directly to <code>microwidgets.dev</code>.</p>
+<p>The key here is <strong>link consolidation</strong>. Even if <code>postbits.net</code> has a few backlinks, I don’t want those to go to waste. With a well-placed 301 redirect, those backlinks now contribute to the SEO strength of <code>microwidgets.dev</code>, improving its Domain Rating.</p>
+<h3 id="how-cloudflare-workers-make-it-easy">How Cloudflare Workers Make It Easy</h3>
+<p>Cloudflare Workers allow you to run lightweight JavaScript code directly on Cloudflare’s edge network. This is perfect for handling requests before they hit your server, meaning you can create efficient rules for bots and redirects without messing with your backend infrastructure.</p>
+<p>Here’s a quick rundown of what I did:</p>
+<ol>
+<li>
+<p><strong>Block Googlebot</strong> – Any request from Googlebot to <code>postbits.net</code> gets a 403 (Forbidden) response. This prevents Google from crawling and potentially indexing the redirecting domain.</p>
+</li>
+<li>
+<p><strong>Redirect All Other Traffic</strong> – Any other traffic is redirected to <code>https://microwidgets.dev</code> with a 301 status. This includes both users and non-Google bots.</p>
+</li>
+</ol>
+<p>With this setup, I’m ensuring that any SEO value associated with <code>postbits.net</code> is passed directly to my main site, while keeping Google’s focus sharp on <code>microwidgets.dev</code>.</p>
+<h3 id="the-benefits-for-your-seo">The Benefits for Your SEO</h3>
+<p>By redirecting one domain to another while controlling Googlebot, you get a few benefits that can directly contribute to boosting your Domain Rating (DR):</p>
+<ol>
+<li>
+<p><strong>Link Equity Transfer</strong>: Any backlinks to <code>postbits.net</code> will now benefit <code>microwidgets.dev</code>, consolidating your SEO power.</p>
+</li>
+<li>
+<p><strong>Improved Crawl Efficiency</strong>: Blocking Googlebot from irrelevant domains helps optimize your crawl budget. Google will spend more time on your important pages, improving indexing and potentially your rankings.</p>
+</li>
+<li>
+<p><strong>Focus on One Domain</strong>: By directing all traffic to a single site, you reduce fragmentation. This means all SEO signals (backlinks, traffic, etc.) are focused on <code>microwidgets.dev</code>, which in turn can improve your DR over time.</p>
+</li>
+</ol>
+<h3 id="how-i-did-it">How I did it</h3>
+<p>Here’s exactly how I set up my Cloudflare Worker and configured the DNS for the <code>postbits.net</code> domain to redirect traffic to <code>microwidgets.dev</code> while blocking Googlebot. You can follow these steps to implement it on your own domains.</p>
+<h4 id="1-add-your-domain-to-cloudflare">1. Add Your Domain to Cloudflare</h4>
+<p>First, if you haven’t already, add the domain you want to redirect, in my case <code>postbits.net</code>, replace that with whatever domain you bought:</p>
+<ul>
+<li>Log in to your Cloudflare account.</li>
+<li>Navigate to <strong>Add a Site</strong> in the dashboard.</li>
+<li>Enter <code>postbits.net</code> and choose a plan (the free plan works fine for this setup).</li>
+<li>Cloudflare will provide two nameservers. Go to your domain registrar (where you purchased <code>postbits.net</code>), and update the DNS settings by replacing the current nameservers with the ones provided by Cloudflare.</li>
+</ul>
+<p>Once this is done, Cloudflare will manage your DNS, and you can proceed with the rest of the setup.</p>
+<h4 id="2-configure-dns-for-the-domain">2. Configure DNS for the Domain</h4>
+<p>Next, set up DNS records for <code>postbits.net</code> within Cloudflare. This is essential to ensure all traffic is routed through Cloudflare so that the Worker can intercept and process requests.</p>
+<ul>
+<li>In the Cloudflare dashboard, go to the <strong>DNS</strong> section.</li>
+<li>Add two <strong>A records</strong>:
+<ol>
+<li><strong>A Record (root)</strong>:
+<ul>
+<li>Name: <code>@</code></li>
+<li>Content: Use the IP <code>192.0.2.1</code> (this is a placeholder; Cloudflare handles the actual routing).</li>
+<li>Proxy Status: Enabled (orange cloud).</li>
+</ul>
+</li>
+<li><strong>A Record (www)</strong>:
+<ul>
+<li>Name: <code>www</code></li>
+<li>Content: Same placeholder IP <code>192.0.2.1</code>.</li>
+<li>Proxy Status: Enabled (orange cloud).</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<p>These settings ensure that both <code>postbits.net</code> and <code>www.postbits.net</code> are properly routed through Cloudflare’s network.</p>
+<h4 id="3-create-and-deploy-the-cloudflare-worker">3. Create and Deploy the Cloudflare Worker</h4>
+<p>Now, let’s set up the Worker that will handle the redirect and block Googlebot. Follow these steps:</p>
+<ul>
+<li>In your Cloudflare dashboard, go to <strong>Workers</strong> &gt; <strong>Create a Service</strong>.</li>
+<li>Name your Worker (e.g., <code>postbits-redirect</code>).</li>
+<li>Replace the default code with the following:</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#B392F0">addEventListener</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">'fetch'</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">event</span><span style="color:#F97583"> =&gt;</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">  event.</span><span style="color:#B392F0">respondWith</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">handleRequest</span><span style="color:#E1E4E8">(event.request));</span></span>
+<span class="line"><span style="color:#E1E4E8">});</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">async</span><span style="color:#F97583"> function</span><span style="color:#B392F0"> handleRequest</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">request</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#F97583">  const</span><span style="color:#79B8FF"> userAgent</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> request.headers.</span><span style="color:#B392F0">get</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">'User-Agent'</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">||</span><span style="color:#9ECBFF"> ''</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">  // Block Googlebot traffic with a 403 response</span></span>
+<span class="line"><span style="color:#F97583">  if</span><span style="color:#E1E4E8"> (userAgent.</span><span style="color:#B392F0">toLowerCase</span><span style="color:#E1E4E8">().</span><span style="color:#B392F0">includes</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">'googlebot'</span><span style="color:#E1E4E8">)) {</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#F97583"> new</span><span style="color:#B392F0"> Response</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">'Forbidden'</span><span style="color:#E1E4E8">, { status: </span><span style="color:#79B8FF">403</span><span style="color:#E1E4E8"> });</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">  // Redirect all other traffic to https://microwidgets.dev with a 301 status</span></span>
+<span class="line"><span style="color:#F97583">  return</span><span style="color:#E1E4E8"> Response.</span><span style="color:#B392F0">redirect</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">'https://microwidgets.dev'</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">301</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<ul>
+<li><strong>Deploy</strong> the Worker by clicking the “Deploy” button.</li>
+</ul>
+<h4 id="4-set-up-routes-for-the-worker">4. Set Up Routes for the Worker</h4>
+<p>Now, you need to set up a route so that the Worker runs for all traffic to <code>postbits.net</code>.</p>
+<ol>
+<li>In the Cloudflare dashboard, go to <strong>Workers</strong> &gt; <strong>Routes</strong>.</li>
+<li>Add a route for the domain <code>postbits.net/*</code> and <code>www.postbits.net/*</code>.</li>
+<li>Select the Worker you just created (<code>postbits-redirect</code>).</li>
+</ol>
+<p>This ensures that any requests to <code>postbits.net</code> or <code>www.postbits.net</code> will trigger the Worker, allowing it to perform the redirect and block Googlebot.</p>
+<h4 id="5-check-ssl-settings">5. Check SSL Settings</h4>
+<p>For the redirect to work smoothly over HTTPS, ensure that <strong>SSL/TLS</strong> is properly configured in Cloudflare.</p>
+<ul>
+<li>Go to the <strong>SSL/TLS</strong> tab in Cloudflare and set the mode to <strong>Full</strong> or <strong>Full (Strict)</strong>. This ensures secure traffic handling between Cloudflare and your origin server, even if you’re just redirecting.</li>
+</ul>
+<h3 id="final-thoughts">Final Thoughts</h3>
+<p>Setting up smart redirects with Cloudflare Workers might seem like a small tweak, but it can have a significant impact on your SEO strategy. By blocking bots and redirecting traffic correctly, you ensure that your primary site gets all the SEO value, while avoiding potential penalties or wasted crawl budget on irrelevant domains.</p>
+<p>It’s all about maximizing the resources you already have and making sure your efforts are targeted. So if you’re looking to boost your Domain Rating, it’s worth taking the time to set up a similar approach.</p>
+</div><nav class="article-nav" aria-label="Article navigation"><a class="nav-next" href="/pr-17/modern-android-android-os-networkonmainthreadexception/" rel="next"><span class="nav-label">Older →</span>Modern Android Development: android.os.NetworkOnMainThreadException</a></nav></article></main><footer class="site-footer"><div class="footer-grid"><div class="footer-about"><strong>Marcos Placona</strong><p>Developer relations, software and independent products. Fifteen years of writing, still going.</p></div><nav class="footer-links" aria-label="Footer"><a href="/pr-17/">Writing</a><a href="/pr-17/apps/">Apps</a><a href="/pr-17/speaker-timeline/">Speaking</a><a href="/pr-17/about/">About</a><a href="/pr-17/search/">Search</a><a href="https://github.com/mplacona" rel="me">GitHub</a><a href="https://x.com/marcos_placona" rel="me">X</a><a href="https://placona.co.uk/rss.xml">RSS</a></nav><p class="footer-legal">© 2026 Marcos Placona</p></div></footer></body></html>
