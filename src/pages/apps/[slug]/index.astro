@@ -14,7 +14,11 @@ const { app } = Astro.props;
       <p class="eyebrow">{app.status}</p>
       <h1>{app.tagline}</h1>
       <p class="lede">{app.description}</p>
-      <a class="button-secondary" href={`/apps/${app.slug}/support/`}>Get support</a>
+      {app.appStoreUrl ? (
+        <a class="button-secondary" href={app.appStoreUrl}>Download on the App Store</a>
+      ) : (
+        <a class="button-secondary" href={`/apps/${app.slug}/support/`}>Get support</a>
+      )}
     </section>
     <section class="content-section split-section">
       <div>

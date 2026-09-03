@@ -11,6 +11,7 @@ export type App = {
   privacyDetails: string[];
   supportEmail: string;
   supportGuidance: string;
+  appStoreUrl?: string;
 };
 
 export const apps: App[] = [
@@ -34,7 +35,8 @@ export const apps: App[] = [
     slug: 'green-room',
     name: 'Green Room: Talk Day Prep',
     tagline: 'Walk on prepared.',
-    status: 'Coming soon to the App Store',
+    status: 'Available now on the App Store',
+    appStoreUrl: 'https://apps.apple.com/gb/app/green-room-talk-day-prep/id6802224870',
     description: 'Green Room turns a conference speaking engagement into a dated flight plan, so the right preparation happens at the right time.',
     boundaryHeading: 'A timeline for the things that derail a talk.',
     boundary: 'Build a flight plan around an event date, surface blockers before they become stage-day surprises, then turn debrief lessons into checks for the next event. The first event is free; a one-time lifetime unlock adds unlimited events, specialist protocols, your personal runbook and export.',
