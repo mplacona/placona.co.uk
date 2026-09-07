@@ -116,4 +116,6 @@ Five models in the picker. One large model resident. One router in the path for 
 
 I did not add RAM or defeat the guard. I made model switching explicit, put it behind one small boundary, and tested what happens when a request is still running or a client takes the wrong route.
 
-The router is public now, with the code, launchd plist and deployment/configuration notes. It is enough to show the boundary I am using and to give a compatible oMLX machine a grounded starting point.
+## Get the router
+
+The code, launchd plist and setup notes are in [the public `omlx-router` gist](https://gist.github.com/mplacona/ca785647c4b94404ab4078a58bbf4b47). It is a usable starting point for a compatible oMLX machine, but check its model IDs, authentication and network boundaries before putting it in front of your own server.
