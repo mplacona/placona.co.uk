@@ -8,40 +8,40 @@
 <p>macOS does not let Metal wire all 48GB. On this machine, the Metal cap is 37.44GB. oMLX refuses to start a prompt above 90% of that ceiling, leaving a working budget of about 33GB.</p>
 <p>The default, Qwen3.6-35B-A3B at 4-bit, is 19.08GB and stays pinned. That leaves roughly 14GB for another model.</p>
 <p>For months I had seven models in the picker. Four of them could not serve a prompt:</p>
-<table>
-<thead>
-<tr>
-<th>Model</th>
-<th>Size</th>
-<th>What happened</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>gemma-4-26b 8-bit</td>
-<td>27.34GB</td>
-<td>507, projected 46.42GB</td>
-</tr>
-<tr>
-<td>gemma-4-31B</td>
-<td>21.87GB</td>
-<td>507, projected 40.95GB</td>
-</tr>
-<tr>
-<td>Qwen3.6-35B-A3B 6-bit</td>
-<td>27.55GB</td>
-<td>507, zero successful requests ever</td>
-</tr>
-<tr>
-<td>Qwen3-Coder-30B-A3B</td>
-<td>16.80GB</td>
-<td>Loaded, then rejected every prompt</td>
-</tr>
-</tbody>
-</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Model</th><th>Size</th><th>What happened</th></tr></thead><tbody><tr><td>gemma-4-26b 8-bit</td><td>27.34GB</td><td>507, projected 46.42GB</td></tr><tr><td>gemma-4-31B</td><td>21.87GB</td><td>507, projected 40.95GB</td></tr><tr><td>Qwen3.6-35B-A3B 6-bit</td><td>27.55GB</td><td>507, zero successful requests ever</td></tr><tr><td>Qwen3-Coder-30B-A3B</td><td>16.80GB</td><td>Loaded, then rejected every prompt</td></tr></tbody></table>
 <p>The Coder failure was the worst one. It loaded, held 16GB of wired memory, then the prefill guard rejected the first prompt. A failed request left the machine carrying a model until something evicted it.</p>
 <p>The default model had served 85% of 9,398 lifetime requests. That was less a preference and more of “the only model that reliably answered” 😂.</p>
-<p>I considered raising <a href="https://osxdaily.com/2025/05/07/how-to-increase-vram-allocation-on-apple-silicon-mac/"><code>iogpu.wired_limit_mb</code></a>. Published guidance for a 48GB Mac suggests 40GB, leaving 8GB for the OS. The measurement on this machine made that a bad idea:</p>
+<p>I considered raising <a href="https://osxdaily.com/2025/05/07/how-to-increase-vram-allocation-on-apple-silicon-mac/" target="_blank" rel="noopener noreferrer"><code>iogpu.wired_limit_mb</code></a>. Published guidance for a 48GB Mac suggests 40GB, leaving 8GB for the OS. The measurement on this machine made that a bad idea:</p>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>free 0.1GB</span></span>
 <span class="line"><span>compressed 28.4GB</span></span>
 <span class="line"><span>swap 12.3GB used of 13.3GB</span></span></code></pre>
@@ -62,12 +62,12 @@
 <p>The router now counts in-flight requests by model. A swap waits for the outgoing model to drain, checking again as requests finish. It waits for up to 15 minutes, logs a warning, then proceeds rather than waiting forever. The timeout is a known failure mode, not a claim that concurrent requests are solved.</p>
 <p>I tested this with a 600-token generation and a competing switch six seconds later. The running generation completed all 600 tokens. The swap ran afterwards. Both requests succeeded.</p>
 <p>That drain rule is the important part of the build. Unload and load are easy. Deciding when it is safe to unload is the actual work.</p>
-<p>The <a href="https://gist.github.com/mplacona/ca785647c4b94404ab4078a58bbf4b47">router, launchd plist and deployment notes are public</a>. They are useful handoff material for a person, or an AI agent, configuring a compatible oMLX machine. It is not a one-shot setup. The target machine still needs inspecting; its exact model IDs need checking through <code>/v1/models</code>; and <code>OMLX_BIG_MODELS</code> should contain only the large models that cannot coexist. Every client needs to use the router. Authentication and network boundaries still belong to the machine’s owner and need preserving or configuring locally.</p>
+<p>The <a href="https://gist.github.com/mplacona/ca785647c4b94404ab4078a58bbf4b47" target="_blank" rel="noopener noreferrer">router, launchd plist and deployment notes are public</a>. They are useful handoff material for a person, or an AI agent, configuring a compatible oMLX machine. It is not a one-shot setup. The target machine still needs inspecting; its exact model IDs need checking through <code>/v1/models</code>; and <code>OMLX_BIG_MODELS</code> should contain only the large models that cannot coexist. Every client needs to use the router. Authentication and network boundaries still belong to the machine’s owner and need preserving or configuring locally.</p>
 <h2 id="every-route-has-to-use-it">Every route has to use it</h2>
 <p>The router only helps requests that reach port 8010. I found the other failure modes by leaving routes around it.</p>
 <p>First, the proxy worked on localhost but timed out over Tailscale. The macOS firewall allow-list named a Homebrew Python 3.14.6 path. Homebrew updated to 3.14.7 and that path changed. The router now runs under <code>/usr/bin/python3</code>, which is already allow-listed and does not move. Keeping it stdlib-only made that change simple.</p>
 <p>Then an HTTPS forwarding rule for my phone still pointed straight at oMLX. The client URL did not change, but the upstream target did. A request for a non-resident large model could finally take the same route as every other client.</p>
-<p>I also repointed <a href="https://hermes-agent.nousresearch.com/">Hermes</a>, <a href="https://hindsight.vectorize.io/">Hindsight</a> and the scripts that call the local server. The router needs to sit in front of all the traffic that expects model switching.</p>
+<p>I also repointed <a href="https://hermes-agent.nousresearch.com/" target="_blank" rel="noopener noreferrer">Hermes</a>, <a href="https://hindsight.vectorize.io/" target="_blank" rel="noopener noreferrer">Hindsight</a> and the scripts that call the local server. The router needs to sit in front of all the traffic that expects model switching.</p>
 <p>The server still listens directly on port 8000, so bypassing the router remains possible. Nothing I use is currently doing it. Moving the server behind a localhost-only listener would be a stricter version of the boundary, but changing the oMLX port through its live admin API caused an outage. I am not treating that as a casual cleanup.</p>
 <h2 id="why-keep-the-other-large-models">Why keep the other large models?</h2>
 <p>The default is still Qwen3.6-35B-A3B at 4-bit. In a warm, single-model test with the same 250-token prompt, it sustained about 48 tok/s. Qwen3.8-27B with MTP sustained about 22 tok/s. The 35B is faster here because it is MoE and activates about 3B parameters per token.</p>
@@ -80,5 +80,4 @@
 <p>Five models in the picker. One large model resident. One router in the path for every client I use.</p>
 <p>I did not add RAM or defeat the guard. I made model switching explicit, put it behind one small boundary, and tested what happens when a request is still running or a client takes the wrong route.</p>
 <h2 id="get-the-router">Get the router</h2>
-<p>The code, launchd plist and setup notes are in <a href="https://gist.github.com/mplacona/ca785647c4b94404ab4078a58bbf4b47">the public <code>omlx-router</code> gist</a>. It is a usable starting point for a compatible oMLX machine, but check its model IDs, authentication and network boundaries before putting it in front of your own server.</p>
-</div><nav class="article-nav" aria-label="Article navigation"><a class="nav-next" href="/pr-19/boost-domain-rating/" rel="next"><span class="nav-label">Older →</span>Boost Your Website Domain Rating with Redirects and Bot Control</a></nav></article></main><footer class="site-footer"><div class="footer-grid"><div class="footer-about"><strong>Marcos Placona</strong><p>Developer relations, software and independent products. Fifteen years of writing, still going.</p></div><nav class="footer-links" aria-label="Footer"><a href="/pr-19/">Writing</a><a href="/pr-19/apps/">Apps</a><a href="/pr-19/speaker-timeline/">Speaking</a><a href="/pr-19/about/">About</a><a href="/pr-19/search/">Search</a><a href="https://github.com/mplacona" rel="me">GitHub</a><a href="https://x.com/marcos_placona" rel="me">X</a><a href="https://placona.co.uk/rss.xml">RSS</a></nav><p class="footer-legal">© 2026 Marcos Placona</p></div></footer></body></html>
+<p>The code, launchd plist and setup notes are in <a href="https://gist.github.com/mplacona/ca785647c4b94404ab4078a58bbf4b47" target="_blank" rel="noopener noreferrer">the public <code>omlx-router</code> gist</a>. It is a usable starting point for a compatible oMLX machine, but check its model IDs, authentication and network boundaries before putting it in front of your own server.</p></div><nav class="article-nav" aria-label="Article navigation"><a class="nav-next" href="/pr-19/boost-domain-rating/" rel="next"><span class="nav-label">Older →</span>Boost Your Website Domain Rating with Redirects and Bot Control</a></nav></article></main><footer class="site-footer"><div class="footer-grid"><div class="footer-about"><strong>Marcos Placona</strong><p>Developer relations, software and independent products. Fifteen years of writing, still going.</p></div><nav class="footer-links" aria-label="Footer"><a href="/pr-19/">Writing</a><a href="/pr-19/apps/">Apps</a><a href="/pr-19/speaker-timeline/">Speaking</a><a href="/pr-19/about/">About</a><a href="/pr-19/search/">Search</a><a href="https://github.com/mplacona" rel="me">GitHub</a><a href="https://x.com/marcos_placona" rel="me">X</a><a href="https://placona.co.uk/rss.xml">RSS</a></nav><p class="footer-legal">© 2026 Marcos Placona</p></div></footer></body></html>

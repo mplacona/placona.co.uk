@@ -3,50 +3,49 @@
 <h2 id="assigning-multi-line-strings-to-a-variable">Assigning multi-line strings to a variable</h2>
 <p>Say you’re trying to assign an XML string to a variable and want your code to still look presentable. The correct way to do that would be as follows:</p>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="csharp"><code><span class="line"><span style="color:#F97583">string</span><span style="color:#B392F0"> twiml</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> @"</span></span>
-<span class="line"><span style="color:#9ECBFF">&lt;Response&gt;</span></span>
-<span class="line"><span style="color:#9ECBFF">    &lt;Dial&gt;</span></span>
-<span class="line"><span style="color:#9ECBFF">        &lt;Number&gt;+441234567890&lt;/Number&gt;</span></span>
-<span class="line"><span style="color:#9ECBFF">    &lt;/Dial&gt;</span></span>
-<span class="line"><span style="color:#9ECBFF">&lt;/Response&gt;</span></span>
+<span class="line"><span style="color:#9ECBFF">&#x3C;Response></span></span>
+<span class="line"><span style="color:#9ECBFF">    &#x3C;Dial></span></span>
+<span class="line"><span style="color:#9ECBFF">        &#x3C;Number>+441234567890&#x3C;/Number></span></span>
+<span class="line"><span style="color:#9ECBFF">    &#x3C;/Dial></span></span>
+<span class="line"><span style="color:#9ECBFF">&#x3C;/Response></span></span>
 <span class="line"><span style="color:#9ECBFF">"</span><span style="color:#E1E4E8">;</span></span></code></pre>
 <p>Notice all I had to do was add an <code>_@_</code> before the speechmarks, and this gives multi-line capabilities to my string.</p>
 <p>But what if I wanted to have dynamic values inside my string? Say values coming from variables for example.</p>
 <h2 id="assigning-dynamic-multi-line-strings-to-a-variable">Assigning dynamic multi-line strings to a variable</h2>
 <p>What most people will do here is make the assumption you can use concatenation to inject variables in by doing something like this.</p>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="csharp"><code><span class="line"><span style="color:#F97583">string</span><span style="color:#B392F0"> twiml</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> @"</span></span>
-<span class="line"><span style="color:#9ECBFF">&lt;Response&gt;</span></span>
-<span class="line"><span style="color:#9ECBFF">    &lt;Dial&gt;</span></span>
-<span class="line"><span style="color:#9ECBFF">        &lt;Number&gt;"</span><span style="color:#F97583"> +</span><span style="color:#E1E4E8"> To </span><span style="color:#F97583">+</span><span style="color:#9ECBFF"> @"&lt;/Number&gt;</span></span>
-<span class="line"><span style="color:#9ECBFF">    &lt;/Dial&gt;</span></span>
-<span class="line"><span style="color:#9ECBFF">&lt;/Response&gt;</span></span></code></pre>
+<span class="line"><span style="color:#9ECBFF">&#x3C;Response></span></span>
+<span class="line"><span style="color:#9ECBFF">    &#x3C;Dial></span></span>
+<span class="line"><span style="color:#9ECBFF">        &#x3C;Number>"</span><span style="color:#F97583"> +</span><span style="color:#E1E4E8"> To </span><span style="color:#F97583">+</span><span style="color:#9ECBFF"> @"&#x3C;/Number></span></span>
+<span class="line"><span style="color:#9ECBFF">    &#x3C;/Dial></span></span>
+<span class="line"><span style="color:#9ECBFF">&#x3C;/Response></span></span></code></pre>
 <p>That is a horrible way of doing this though. Every time you add a new variable, you need to use an <code>@</code> again to tell the compiler you’re starting a new multi-line string.</p>
 <p>To assign dynamic values to a multi-line string you can use interpolation by adding the variables with curly braces within the string and then using <em>string.Format()</em> to tell it to replace those with the values I provide.</p>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="csharp"><code><span class="line"><span style="color:#F97583">string</span><span style="color:#B392F0"> twiml</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> @"</span></span>
-<span class="line"><span style="color:#9ECBFF">&lt;Response&gt;</span></span>
-<span class="line"><span style="color:#9ECBFF">    &lt;Dial&gt;</span></span>
-<span class="line"><span style="color:#9ECBFF">        &lt;Number&gt;{0}&lt;/Number&gt;</span></span>
-<span class="line"><span style="color:#9ECBFF">    &lt;/Dial&gt;</span></span>
-<span class="line"><span style="color:#9ECBFF">&lt;/Response&gt;</span></span>
+<span class="line"><span style="color:#9ECBFF">&#x3C;Response></span></span>
+<span class="line"><span style="color:#9ECBFF">    &#x3C;Dial></span></span>
+<span class="line"><span style="color:#9ECBFF">        &#x3C;Number>{0}&#x3C;/Number></span></span>
+<span class="line"><span style="color:#9ECBFF">    &#x3C;/Dial></span></span>
+<span class="line"><span style="color:#9ECBFF">&#x3C;/Response></span></span>
 <span class="line"><span style="color:#9ECBFF">"</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#F97583">return</span><span style="color:#F97583"> string</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">Format</span><span style="color:#E1E4E8">(twiml, To));</span></span></code></pre>
 <p>So much more elegant right? My string remains the same but I can now replace values in it in compile time and just keep increasing the number within the curly braces.</p>
 <p>Let’s kick it up a notch and say your string has attributes. We’d now be looking at adding speechmarks in each of them as such:</p>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="csharp"><code><span class="line"><span style="color:#F97583">string</span><span style="color:#B392F0"> twiml</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> @"</span></span>
-<span class="line"><span style="color:#9ECBFF">&lt;Response&gt;</span></span>
-<span class="line"><span style="color:#9ECBFF">    &lt;Dial callerId="</span><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">}</span><span style="color:#9ECBFF">"</span><span style="color:#FDAEB7;font-style:italic">&gt;</span></span>
-<span class="line"><span style="color:#F97583">        &lt;</span><span style="color:#E1E4E8">Number</span><span style="color:#F97583">&gt;</span><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">}</span><span style="color:#F97583">&lt;/</span><span style="color:#E1E4E8">Number</span><span style="color:#F97583">&gt;</span></span>
-<span class="line"><span style="color:#F97583">    &lt;/</span><span style="color:#E1E4E8">Dial</span><span style="color:#F97583">&gt;</span></span>
-<span class="line"><span style="color:#F97583">&lt;/</span><span style="color:#E1E4E8">Response</span><span style="color:#F97583">&gt;</span></span>
+<span class="line"><span style="color:#9ECBFF">&#x3C;Response></span></span>
+<span class="line"><span style="color:#9ECBFF">    &#x3C;Dial callerId="</span><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">}</span><span style="color:#9ECBFF">"</span><span style="color:#FDAEB7;font-style:italic">></span></span>
+<span class="line"><span style="color:#F97583">        &#x3C;</span><span style="color:#E1E4E8">Number</span><span style="color:#F97583">></span><span style="color:#E1E4E8">{</span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">}</span><span style="color:#F97583">&#x3C;/</span><span style="color:#E1E4E8">Number</span><span style="color:#F97583">></span></span>
+<span class="line"><span style="color:#F97583">    &#x3C;/</span><span style="color:#E1E4E8">Dial</span><span style="color:#F97583">></span></span>
+<span class="line"><span style="color:#F97583">&#x3C;/</span><span style="color:#E1E4E8">Response</span><span style="color:#F97583">></span></span>
 <span class="line"><span style="color:#9ECBFF">"</span><span style="color:#FDAEB7;font-style:italic">;</span></span>
 <span class="line"><span style="color:#E1E4E8">return </span><span style="color:#F97583">string</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">Format</span><span style="color:#E1E4E8">(twiml, CallerId, To);</span></span></code></pre>
 <p>Unfortunately it would also mean your code is now broken and you will start getting something like <code>_CS1002: ; expected_</code>. To go around that just make sure you double the speechmarks wherever you need them within your string.</p>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="csharp"><code><span class="line"><span style="color:#F97583">string</span><span style="color:#B392F0"> twiml</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> @"</span></span>
-<span class="line"><span style="color:#9ECBFF">&lt;Response&gt;</span></span>
-<span class="line"><span style="color:#9ECBFF">    &lt;Dial callerId=</span><span style="color:#79B8FF">""</span><span style="color:#9ECBFF">{0}</span><span style="color:#79B8FF">""</span><span style="color:#9ECBFF">&gt;</span></span>
-<span class="line"><span style="color:#9ECBFF">        &lt;Number&gt;{1}&lt;/Number&gt;</span></span>
-<span class="line"><span style="color:#9ECBFF">    &lt;/Dial&gt;</span></span>
-<span class="line"><span style="color:#9ECBFF">&lt;/Response&gt;</span></span>
+<span class="line"><span style="color:#9ECBFF">&#x3C;Response></span></span>
+<span class="line"><span style="color:#9ECBFF">    &#x3C;Dial callerId=</span><span style="color:#79B8FF">""</span><span style="color:#9ECBFF">{0}</span><span style="color:#79B8FF">""</span><span style="color:#9ECBFF">></span></span>
+<span class="line"><span style="color:#9ECBFF">        &#x3C;Number>{1}&#x3C;/Number></span></span>
+<span class="line"><span style="color:#9ECBFF">    &#x3C;/Dial></span></span>
+<span class="line"><span style="color:#9ECBFF">&#x3C;/Response></span></span>
 <span class="line"><span style="color:#9ECBFF">"</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#F97583">return</span><span style="color:#F97583"> string</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">Format</span><span style="color:#E1E4E8">(twiml, CallerId, To);</span></span></code></pre>
-<p>And that will make your code work again and best of all – look really neat!</p>
-</div><nav class="article-nav" aria-label="Article navigation"><a class="nav-prev" href="/pr-19/how-to-secure-apache-with-lets-encrypt-and-cloudflare-on-centos/" rel="prev"><span class="nav-label">← Newer</span>How to secure Apache with Let&#39;s Encrypt and CloudFlare on Centos</a><a class="nav-next" href="/pr-19/im-joining-twilio/" rel="next"><span class="nav-label">Older →</span>I&#39;m joining Twilio</a></nav></article></main><footer class="site-footer"><div class="footer-grid"><div class="footer-about"><strong>Marcos Placona</strong><p>Developer relations, software and independent products. Fifteen years of writing, still going.</p></div><nav class="footer-links" aria-label="Footer"><a href="/pr-19/">Writing</a><a href="/pr-19/apps/">Apps</a><a href="/pr-19/speaker-timeline/">Speaking</a><a href="/pr-19/about/">About</a><a href="/pr-19/search/">Search</a><a href="https://github.com/mplacona" rel="me">GitHub</a><a href="https://x.com/marcos_placona" rel="me">X</a><a href="https://placona.co.uk/rss.xml">RSS</a></nav><p class="footer-legal">© 2026 Marcos Placona</p></div></footer></body></html>
+<p>And that will make your code work again and best of all – look really neat!</p></div><nav class="article-nav" aria-label="Article navigation"><a class="nav-prev" href="/pr-19/how-to-secure-apache-with-lets-encrypt-and-cloudflare-on-centos/" rel="prev"><span class="nav-label">← Newer</span>How to secure Apache with Let&#39;s Encrypt and CloudFlare on Centos</a><a class="nav-next" href="/pr-19/im-joining-twilio/" rel="next"><span class="nav-label">Older →</span>I&#39;m joining Twilio</a></nav></article></main><footer class="site-footer"><div class="footer-grid"><div class="footer-about"><strong>Marcos Placona</strong><p>Developer relations, software and independent products. Fifteen years of writing, still going.</p></div><nav class="footer-links" aria-label="Footer"><a href="/pr-19/">Writing</a><a href="/pr-19/apps/">Apps</a><a href="/pr-19/speaker-timeline/">Speaking</a><a href="/pr-19/about/">About</a><a href="/pr-19/search/">Search</a><a href="https://github.com/mplacona" rel="me">GitHub</a><a href="https://x.com/marcos_placona" rel="me">X</a><a href="https://placona.co.uk/rss.xml">RSS</a></nav><p class="footer-legal">© 2026 Marcos Placona</p></div></footer></body></html>
