@@ -21,14 +21,14 @@
 <p>The way to go is create an account responsible for sending emails, and every single email will be sent from this account. Obviously you can skip this step if you would like to have proper clients using this service.</p>
 <p>In my case, I only need to send emails from forms and stuff like that, so I created an account specifically for this task.</p>
 <p>If you were configuring this on your server, you would do it like this for ColdFusion Server:</p>
-<p>Notice I’m using port 587, as it’s the required port for Gmail. You would also need to have a few extra things on your <cfmail> tag, as it requires authentication.</p>
+<p>Notice I’m using port 587, as it’s the required port for Gmail. You would also need to have a few extra things on your <cfmail> tag, as it requires authentication.</cfmail></p>
 <p>An example would be:</p>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>	from = &amp;amp;quot;e-mail address&amp;amp;quot;</span></span>
-<span class="line"><span>	to = &amp;amp;quot;comma-delimited list&amp;amp;quot;</span></span>
-<span class="line"><span>	subject = &amp;amp;quot;string&amp;amp;quot;</span></span>
-<span class="line"><span>	username = &amp;amp;quot;username@yourdomain.com&amp;amp;quot;</span></span>
-<span class="line"><span>	password = &amp;amp;quot;string&amp;amp;quot;</span></span>
-<span class="line"><span>	useTLS = &amp;amp;quot;yes&amp;amp;quot;&amp;amp;gt;</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>	from = &#x26;amp;quot;e-mail address&#x26;amp;quot;</span></span>
+<span class="line"><span>	to = &#x26;amp;quot;comma-delimited list&#x26;amp;quot;</span></span>
+<span class="line"><span>	subject = &#x26;amp;quot;string&#x26;amp;quot;</span></span>
+<span class="line"><span>	username = &#x26;amp;quot;username@yourdomain.com&#x26;amp;quot;</span></span>
+<span class="line"><span>	password = &#x26;amp;quot;string&#x26;amp;quot;</span></span>
+<span class="line"><span>	useTLS = &#x26;amp;quot;yes&#x26;amp;quot;&#x26;amp;gt;</span></span></code></pre>
 <p>Notice the last three lines on the code. They are the responsible for the authentication. Sadly Google requires <a style="text-decoration:underline;" href="https://en.wikipedia.org/wiki/Secure_Sockets_Layer" target="_blank">TLS Authentication</a> and only ColdFusion 8 (or upwards) and Railo (not sure about BlueDragon)</p>
 <p>can handle that.</p>
 <p>On Railo though, it’s a much easier configuration, as you only need to configure your webserver’s context with your details, and use CFMAIL as you would normally, straight out of the box.</p>
@@ -39,5 +39,4 @@
 <p>You can now create a new record on your DNS Manager in order to have mail.yourdomain.com, so you don’t need to use Gmail’s big URL in order to access your webmail. This is how I did it:</p>
 <p>Notice I point it to ghs.google.com, and call it mail, so I can access mail.mydomain.com.</p>
 <p>And that should be all you need to have a fully functional email for your domain.</p>
-<p>I hope you enjoyed it, and let me know if you have any problems with it.</p>
-</div><nav class="article-nav" aria-label="Article navigation"><a class="nav-prev" href="/pr-17/installing-yum-on-centos-5/" rel="prev"><span class="nav-label">← Newer</span>Installing YUM on CentOS 5</a><a class="nav-next" href="/pr-17/apache-101-cache-control/" rel="next"><span class="nav-label">Older →</span>Apache 101 - Cache Control</a></nav></article></main><footer class="site-footer"><div class="footer-grid"><div class="footer-about"><strong>Marcos Placona</strong><p>Developer relations, software and independent products. Fifteen years of writing, still going.</p></div><nav class="footer-links" aria-label="Footer"><a href="/pr-17/">Writing</a><a href="/pr-17/apps/">Apps</a><a href="/pr-17/speaker-timeline/">Speaking</a><a href="/pr-17/about/">About</a><a href="/pr-17/search/">Search</a><a href="https://github.com/mplacona" rel="me">GitHub</a><a href="https://x.com/marcos_placona" rel="me">X</a><a href="https://placona.co.uk/rss.xml">RSS</a></nav><p class="footer-legal">© 2026 Marcos Placona</p></div></footer></body></html>
+<p>I hope you enjoyed it, and let me know if you have any problems with it.</p></div><nav class="article-nav" aria-label="Article navigation"><a class="nav-prev" href="/pr-17/installing-yum-on-centos-5/" rel="prev"><span class="nav-label">← Newer</span>Installing YUM on CentOS 5</a><a class="nav-next" href="/pr-17/apache-101-cache-control/" rel="next"><span class="nav-label">Older →</span>Apache 101 - Cache Control</a></nav></article></main><footer class="site-footer"><div class="footer-grid"><div class="footer-about"><strong>Marcos Placona</strong><p>Developer relations, software and independent products. Fifteen years of writing, still going.</p></div><nav class="footer-links" aria-label="Footer"><a href="/pr-17/">Writing</a><a href="/pr-17/apps/">Apps</a><a href="/pr-17/speaker-timeline/">Speaking</a><a href="/pr-17/about/">About</a><a href="/pr-17/search/">Search</a><a href="https://github.com/mplacona" rel="me">GitHub</a><a href="https://x.com/marcos_placona" rel="me">X</a><a href="https://placona.co.uk/rss.xml">RSS</a></nav><p class="footer-legal">© 2026 Marcos Placona</p></div></footer></body></html>

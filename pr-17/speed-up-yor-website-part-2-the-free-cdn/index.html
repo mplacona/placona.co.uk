@@ -15,7 +15,7 @@
   <span style="text-decoration: underline;">Step two - Create an Application:</span>
 </h3>
 <p>Simply login to your newly created App Engine Account and click the button Create an Application</p>
-<img src="/pr-17/images/legacy/cdn_create_application_small.JPG" alt="App Engine - Create Application" width="447" height="242" />
+<img src="/pr-17/images/legacy/cdn_create_application_small.JPG" alt="App Engine - Create Application" width="447" height="242">
 <p>Give it a name and title, and then save it. Use a short name, as it will be you application’s handler, and you’ll access it by going to [app_name].appspot.com</p>
 <h3 style="font-size: 1.17em;">
   <span style="text-decoration: underline;">Step three - Create your Application Folder:</span>
@@ -23,7 +23,7 @@
 <p>If you are on a windows environment, normally the App Engine will be installed on “C:\Program Files\Google\google_appengine”. If not, it will be installed wherever you chose during installation.</p>
 <p>Go to this folder, and create a new folder with the same name as the application you have just created on step 2.</p>
 <p>You will now copy your assets folder into this folder. I like to keep the same structure, so by only changing one variable on my website, I can change the the domain it uses to look for images.</p>
-<p>So if for example my website was looking for images at <a href="http://images.domain.com/images">http://images.domain.com/images</a>, I’d just change this variable to point to [app_name].appspot.com/images</p>
+<p>So if for example my website was looking for images at <a href="http://images.domain.com/images" target="_blank" rel="noopener noreferrer">http://images.domain.com/images</a>, I’d just change this variable to point to [app_name].appspot.com/images</p>
 <p>So, on my folder I’ll have exactly the same structure as I had on my website plus a few files I’ll describe now:</p>
 <p><strong>app.yaml:</strong> this is our application configuration including URL’s and versions. More info <a title="App.yaml" href="https://developers.google.com/appengine/docs/python/config/appconfig" target="_blank">here</a>.</p>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">application:</span><span style="color:#9ECBFF"> my-application</span></span>
@@ -45,9 +45,8 @@
   <span style="text-decoration: underline;">Step four - Deploying your Application:</span>
 </h3>
 <p>Now it’s the big time. Simply double click the file called deploy.bat and you should see a screen like this:</p>
-<img src="/pr-17/images/legacy/cdn_deploy_application_small.JPG" alt="Deploying to CDN" width="447" height="226" />
+<img src="/pr-17/images/legacy/cdn_deploy_application_small.JPG" alt="Deploying to CDN" width="447" height="226">
 <p>If it doesn’t give you any warning or error message, you should be ready to access your file.</p>
 <p>If you decide to delete this file, simply delete it from the folder, and deploy again, and the file will be deleted. You don’t need to worry about minor versions, as the App Engine will deal with it for you.</p>
 <p>To be honest, I never worry too much about the version numbers, as I’m constantly uploading stuff to my server. But if for some reason you do, you can simply change the “version” flag on you app.yaml file.</p>
-<p>I hope this article is helpful. please don’t hesitate asking me questions or sending suggesting on how to improve this article.</p>
-</div><nav class="article-nav" aria-label="Article navigation"><a class="nav-prev" href="/pr-17/auto-generating-dtds/" rel="prev"><span class="nav-label">← Newer</span>Auto-Generating DTDs</a><a class="nav-next" href="/pr-17/speed-up-yor-website-part-1/" rel="next"><span class="nav-label">Older →</span>Speed up yor website - Part 1</a></nav></article></main><footer class="site-footer"><div class="footer-grid"><div class="footer-about"><strong>Marcos Placona</strong><p>Developer relations, software and independent products. Fifteen years of writing, still going.</p></div><nav class="footer-links" aria-label="Footer"><a href="/pr-17/">Writing</a><a href="/pr-17/apps/">Apps</a><a href="/pr-17/speaker-timeline/">Speaking</a><a href="/pr-17/about/">About</a><a href="/pr-17/search/">Search</a><a href="https://github.com/mplacona" rel="me">GitHub</a><a href="https://x.com/marcos_placona" rel="me">X</a><a href="https://placona.co.uk/rss.xml">RSS</a></nav><p class="footer-legal">© 2026 Marcos Placona</p></div></footer></body></html>
+<p>I hope this article is helpful. please don’t hesitate asking me questions or sending suggesting on how to improve this article.</p></div><nav class="article-nav" aria-label="Article navigation"><a class="nav-prev" href="/pr-17/auto-generating-dtds/" rel="prev"><span class="nav-label">← Newer</span>Auto-Generating DTDs</a><a class="nav-next" href="/pr-17/speed-up-yor-website-part-1/" rel="next"><span class="nav-label">Older →</span>Speed up yor website - Part 1</a></nav></article></main><footer class="site-footer"><div class="footer-grid"><div class="footer-about"><strong>Marcos Placona</strong><p>Developer relations, software and independent products. Fifteen years of writing, still going.</p></div><nav class="footer-links" aria-label="Footer"><a href="/pr-17/">Writing</a><a href="/pr-17/apps/">Apps</a><a href="/pr-17/speaker-timeline/">Speaking</a><a href="/pr-17/about/">About</a><a href="/pr-17/search/">Search</a><a href="https://github.com/mplacona" rel="me">GitHub</a><a href="https://x.com/marcos_placona" rel="me">X</a><a href="https://placona.co.uk/rss.xml">RSS</a></nav><p class="footer-legal">© 2026 Marcos Placona</p></div></footer></body></html>

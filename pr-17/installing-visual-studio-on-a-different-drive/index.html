@@ -3,7 +3,7 @@
 <p>I then set off about installing VS2012, and the first screen I was presented with was where you actually define where your install is going to go. So I just change the drive letter to be <code>E:\</code> instead of <code>C:\</code>.</p>
 <p>To my surprise, this is what I saw in the next screen:</p>
 <div id="attachment_1198" style="width: 460px" class="wp-caption aligncenter">
-  <img class="size-full wp-image-1198" alt="VS2012 Install screen" src="/pr-17/images/2013/02/batVv.jpg" width="450" height="512" srcset="/pr-17/images/2013/02/batVv.jpg 450w, /images/2013/02/batVv-263x300.jpg 263w" sizes="(max-width: 450px) 100vw, 450px" />
+  <img class="size-full wp-image-1198" alt="VS2012 Install screen" src="/pr-17/images/2013/02/batVv.jpg" width="450" height="512" srcset="/pr-17/images/2013/02/batVv.jpg 450w, /images/2013/02/batVv-263x300.jpg 263w" sizes="(max-width: 450px) 100vw, 450px">
   <p class="wp-caption-text">
     VS2012 Installation screen
   </p>
@@ -12,7 +12,7 @@
 <p>After a bit of Googling, it it turns out more people have had this same problem, and there’s even been a <a title="Why Visual Studio 11 Requires Space on the System Drive" href="https://blogs.msdn.com/b/heaths/archive/2012/03/07/why-visual-studio-11-requires-space-on-the-system-drive.aspx" target="_blank">blog post</a> on MSDN about it. While there’s been some conversation on the comments in the blog post aforementioned, none one really seems to have come up with a decent (or at least temporarily decent) solution to the problem.</p>
 <p>So here’s a “temporarily decent” solution to this problem:</p>
 <p>Simply create a <a title="Symbolic Link" href="https://en.wikipedia.org/wiki/Symbolic_link" target="_blank">SymLink</a> from the folder where <code>VS</code> “wants” to be installed, to the folder where “you” want to install it. This way, you “trick” the installer to think it’s being installed on the system drive, but is is in reality installing it to the drive you defined on your symlink.</p>
-<p>Think of it as a shortcut to a folder deeply nested within your file system. You can have it sitting on your desktop, but when you actually open it, you will find that the path to it is something like <em><code>&lt;letter&gt;\my\deeply\nested\directory</code>.</em></p>
+<p>Think of it as a shortcut to a folder deeply nested within your file system. You can have it sitting on your desktop, but when you actually open it, you will find that the path to it is something like <em><code>&#x3C;letter>\my\deeply\nested\directory</code>.</em></p>
 <p>So in order to do that, all you will need to do is the following:</p>
 <ol>
 <li><span style="line-height: 13px;">Open command line as an administrator (you can type “<strong>cmd</strong>” and right click on it to run as admin)</span></li>
@@ -26,7 +26,7 @@
 <li>Carry on and let it install</li>
 </ol>
 <p>You will now notice the whole of it (except for things it adds to the registry) will have been installed on your preferred drive.</p>
-<h3 id="q--a">Q &amp; A</h3>
+<h3 id="q--a">Q &#x26; A</h3>
 <blockquote>
 <p>Q: Why are you calling your solution “temporarily decent”? It seems perfect.</p>
 </blockquote>
@@ -44,5 +44,4 @@
 </blockquote>
 <blockquote>
 <p>A: By the looks of it, yes! If you read the blog post I linked above, MS seems to think that’s the way to go now, and you should have bigger drives if you wanted to have to avoid this whole workaround.</p>
-</blockquote>
-</div><nav class="article-nav" aria-label="Article navigation"><a class="nav-prev" href="/pr-17/managing-your-dotfiles-the-right-way/" rel="prev"><span class="nav-label">← Newer</span>Managing your dotfiles the right way</a><a class="nav-next" href="/pr-17/android-where-is-my-menu-button/" rel="next"><span class="nav-label">Older →</span>Android - Where is my menu button?</a></nav></article></main><footer class="site-footer"><div class="footer-grid"><div class="footer-about"><strong>Marcos Placona</strong><p>Developer relations, software and independent products. Fifteen years of writing, still going.</p></div><nav class="footer-links" aria-label="Footer"><a href="/pr-17/">Writing</a><a href="/pr-17/apps/">Apps</a><a href="/pr-17/speaker-timeline/">Speaking</a><a href="/pr-17/about/">About</a><a href="/pr-17/search/">Search</a><a href="https://github.com/mplacona" rel="me">GitHub</a><a href="https://x.com/marcos_placona" rel="me">X</a><a href="https://placona.co.uk/rss.xml">RSS</a></nav><p class="footer-legal">© 2026 Marcos Placona</p></div></footer></body></html>
+</blockquote></div><nav class="article-nav" aria-label="Article navigation"><a class="nav-prev" href="/pr-17/managing-your-dotfiles-the-right-way/" rel="prev"><span class="nav-label">← Newer</span>Managing your dotfiles the right way</a><a class="nav-next" href="/pr-17/android-where-is-my-menu-button/" rel="next"><span class="nav-label">Older →</span>Android - Where is my menu button?</a></nav></article></main><footer class="site-footer"><div class="footer-grid"><div class="footer-about"><strong>Marcos Placona</strong><p>Developer relations, software and independent products. Fifteen years of writing, still going.</p></div><nav class="footer-links" aria-label="Footer"><a href="/pr-17/">Writing</a><a href="/pr-17/apps/">Apps</a><a href="/pr-17/speaker-timeline/">Speaking</a><a href="/pr-17/about/">About</a><a href="/pr-17/search/">Search</a><a href="https://github.com/mplacona" rel="me">GitHub</a><a href="https://x.com/marcos_placona" rel="me">X</a><a href="https://placona.co.uk/rss.xml">RSS</a></nav><p class="footer-legal">© 2026 Marcos Placona</p></div></footer></body></html>
