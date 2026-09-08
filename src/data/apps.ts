@@ -11,6 +11,7 @@ export type App = {
   privacyDetails: string[];
   supportEmail: string;
   supportGuidance: string;
+  appStoreUrl?: string;
 };
 
 export const apps: App[] = [
@@ -34,15 +35,18 @@ export const apps: App[] = [
     slug: 'green-room',
     name: 'Green Room: Talk Day Prep',
     tagline: 'Walk on prepared.',
-    status: 'Coming soon to the App Store',
+    status: 'Available now on the App Store',
+    appStoreUrl: 'https://apps.apple.com/gb/app/green-room-talk-day-prep/id6802224870',
     description: 'Green Room turns a conference speaking engagement into a dated flight plan, so the right preparation happens at the right time.',
     boundaryHeading: 'A timeline for the things that derail a talk.',
     boundary: 'Build a flight plan around an event date, surface blockers before they become stage-day surprises, then turn debrief lessons into checks for the next event. The first event is free; a one-time lifetime unlock adds unlimited events, specialist protocols, your personal runbook and export.',
     privacy: 'Green Room is local-first. Events, notes, checklists and runbooks stay on your iPhone.',
     privacyDetails: [
-      'Green Room has no account, developer backend, analytics SDK, advertising SDK or cloud sync. Events, checklists, protocols, debriefs and your personal runbook are stored on your device.',
+      'Green Room has no account, developer backend, analytics SDK, advertising SDK, crash reporter or cloud sync. Events, checklists, protocols, debriefs and your personal runbook are stored on your device and are never transmitted anywhere.',
       'If you choose to import conference details from a URL you paste into the app, your iPhone requests that public page directly from its publisher over HTTPS. No event data is sent to Marcos Placona and no request is routed through a Green Room server.',
-      'Purchases are processed by Apple through the App Store. Green Room does not receive your payment details.'
+      'Purchases are processed by Apple through the App Store. Green Room does not receive your payment details.',
+      'From version 1.0.3, the lifetime unlock is managed through RevenueCat, a purchase-management service. RevenueCat is told purchase history: which product was bought, when, and the App Store receipt needed to verify it. It identifies this installation with an anonymous ID it generates itself, and is never given your name, email address or Apple Account.',
+      'No event name, checklist, protocol, debrief, runbook entry or imported text ever reaches RevenueCat. That data is used only to decide whether to unlock the app; it is not used for advertising or tracking, and it is not linked to your identity. RevenueCat is the only third party Green Room uses.'
     ],
     supportEmail: 'marcos@placona.co.uk',
     supportGuidance: 'Include your iPhone model, iOS version, the app version and a short description of what happened. Please do not send event notes or organiser contact details unless they are essential to reproducing the problem.'
