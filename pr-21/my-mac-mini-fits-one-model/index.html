@@ -1,0 +1,83 @@
+<!DOCTYPE html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>My Mac mini fits one model. I run five.</title><meta name="description" content="How a small OpenAI-compatible router lets one 48GB M4 Pro Mac mini safely serve several otherwise mutually exclusive local models."><link rel="canonical" href="https://placona.co.uk/my-mac-mini-fits-one-model/"><meta name="robots" content="noindex, nofollow"><meta name="author" content="Marcos Placona"><meta name="theme-color" content="#fffdf9"><link rel="alternate" type="application/rss+xml" title="Marcos Placona's Blog" href="https://placona.co.uk/rss.xml"><meta property="og:type" content="article"><meta property="og:site_name" content="Marcos Placona"><meta property="og:locale" content="en_GB"><meta property="og:title" content="My Mac mini fits one model. I run five."><meta property="og:description" content="How a small OpenAI-compatible router lets one 48GB M4 Pro Mac mini safely serve several otherwise mutually exclusive local models."><meta property="og:url" content="https://placona.co.uk/my-mac-mini-fits-one-model/"><meta property="og:image" content="https://placona.co.uk/images/og-default.png"><meta property="og:image:alt" content="My Mac mini fits one model. I run five."><meta property="article:published_time" content="2026-09-07T16:00:00.000Z"><meta property="article:author" content="Marcos Placona"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@marcos_placona"><meta name="twitter:creator" content="@marcos_placona"><meta name="twitter:title" content="My Mac mini fits one model. I run five."><meta name="twitter:description" content="How a small OpenAI-compatible router lets one 48GB M4 Pro Mac mini safely serve several otherwise mutually exclusive local models."><meta name="twitter:image" content="https://placona.co.uk/images/og-default.png"><link rel="icon" href="/pr-21/images/favicon.ico" sizes="any"><link rel="apple-touch-icon" href="/pr-21/images/site-logo.png"><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://placona.co.uk/#website","url":"https://placona.co.uk/","name":"Marcos Placona — Programming, technology, independent apps","description":"Programming, technology and musings from Marcos Placona.","inLanguage":"en-GB","publisher":{"@id":"https://placona.co.uk/about/#person"}},{"@type":"Person","@id":"https://placona.co.uk/about/#person","name":"Marcos Placona","url":"https://placona.co.uk/","image":"https://placona.co.uk/images/marcos_bw_500_optim.jpg","jobTitle":"Developer relations leader and independent software builder","sameAs":["https://github.com/mplacona","https://x.com/marcos_placona"]},{"@type":"BlogPosting","@id":"https://placona.co.uk/my-mac-mini-fits-one-model/#article","headline":"My Mac mini fits one model. I run five.","description":"How a small OpenAI-compatible router lets one 48GB M4 Pro Mac mini safely serve several otherwise mutually exclusive local models.","url":"https://placona.co.uk/my-mac-mini-fits-one-model/","datePublished":"2026-09-07T16:00:00.000Z","keywords":"AI, Infrastructure","image":"https://placona.co.uk/images/og-default.png","inLanguage":"en-GB","author":{"@id":"https://placona.co.uk/about/#person"},"publisher":{"@id":"https://placona.co.uk/about/#person"},"isPartOf":{"@id":"https://placona.co.uk/#website"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://placona.co.uk/my-mac-mini-fits-one-model/"}}]}</script><link rel="stylesheet" href="/pr-21/_astro/BaseLayout.JLuzdtbP.css"></head><body><a class="skip-link" href="#content">Skip to content</a><header class="site-header"><a class="brand" href="/pr-21/" aria-label="Marcos Placona home"><img src="/pr-21/images/placona-logo-small.png" alt="" width="48" height="48"><span>Marcos Placona</span></a><nav aria-label="Primary navigation"><a href="/pr-21/">Writing</a><a href="/pr-21/apps/">Apps</a><a href="/pr-21/speaker-timeline/">Speaking</a><a href="/pr-21/about/">About</a><a href="/pr-21/search/">Search</a></nav></header><main id="content"><article class="post"><header class="post-header"><h1>My Mac mini fits one model. I run five.</h1><p class="lede">How a small OpenAI-compatible router lets one 48GB M4 Pro Mac mini safely serve several otherwise mutually exclusive local models.</p><p class="post-meta"><time datetime="2026-09-07">7 September 2026</time><span class="chip">AI</span><span class="chip">Infrastructure</span><span class="sep" aria-hidden="true">·</span><span>7 min read</span></p></header><div class="prose"><h1 id="my-mac-mini-fits-one-model-i-run-five">My Mac mini fits one model. I run five.</h1>
+<p>My local LLM server has five useful models. The Mac mini can only hold one of the large ones at a time.</p>
+<p>That is why there is a router in front of it.</p>
+<p>The machine is an M4 Pro Mac mini with 48GB of RAM. oMLX runs on port 8000. Model files sit on a Thunderbolt SSD. The prefix cache stays on the internal disk, where the smaller latency-sensitive reads belong. Once a model is loaded, its weights are in RAM either way.</p>
+<p>The router is a second service on port 8010. My laptop, phone and scheduled jobs use that address. It is about 200 lines of stdlib Python. A client asks for a model. The router makes sure the requested large model is the one oMLX can serve, then passes the request through.</p>
+<p>Without it, a picker can advertise models that this machine cannot actually use.</p>
+<h2 id="48gb-is-not-48gb">48GB is not 48GB</h2>
+<p>macOS does not let Metal wire all 48GB. On this machine, the Metal cap is 37.44GB. oMLX refuses to start a prompt above 90% of that ceiling, leaving a working budget of about 33GB.</p>
+<p>The default, Qwen3.6-35B-A3B at 4-bit, is 19.08GB and stays pinned. That leaves roughly 14GB for another model.</p>
+<p>For months I had seven models in the picker. Four of them could not serve a prompt:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Model</th><th>Size</th><th>What happened</th></tr></thead><tbody><tr><td>gemma-4-26b 8-bit</td><td>27.34GB</td><td>507, projected 46.42GB</td></tr><tr><td>gemma-4-31B</td><td>21.87GB</td><td>507, projected 40.95GB</td></tr><tr><td>Qwen3.6-35B-A3B 6-bit</td><td>27.55GB</td><td>507, zero successful requests ever</td></tr><tr><td>Qwen3-Coder-30B-A3B</td><td>16.80GB</td><td>Loaded, then rejected every prompt</td></tr></tbody></table>
+<p>The Coder failure was the worst one. It loaded, held 16GB of wired memory, then the prefill guard rejected the first prompt. A failed request left the machine carrying a model until something evicted it.</p>
+<p>The default model had served 85% of 9,398 lifetime requests. That was less a preference and more of “the only model that reliably answered” 😂.</p>
+<p>I considered raising <a href="https://osxdaily.com/2025/05/07/how-to-increase-vram-allocation-on-apple-silicon-mac/" target="_blank" rel="noopener noreferrer"><code>iogpu.wired_limit_mb</code></a>. Published guidance for a 48GB Mac suggests 40GB, leaving 8GB for the OS. The measurement on this machine made that a bad idea:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>free 0.1GB</span></span>
+<span class="line"><span>compressed 28.4GB</span></span>
+<span class="line"><span>swap 12.3GB used of 13.3GB</span></span></code></pre>
+<p>Two large models had 35.67GB of weights resident, technically below the cap, and the machine was already under memory pressure. Raising the wired limit does not add RAM. It allows more memory to become wired, which cannot be paged out. I left <code>iogpu.wired_limit_mb</code> at 0.</p>
+<p>The limit is real. The router i mentioned exists because of it.</p>
+<h2 id="the-router-has-one-job">The router has one job</h2>
+<p>oMLX does not evict a large model to make room for another. I tested the obvious workaround too. Unpinning the default did not help: oMLX loaded both models, memory reached 35.02GB, and the prefill guard rejected the prompt.</p>
+<p>The router puts switching in the request path, where every client can use it.</p>
+<p>It is an OpenAI-compatible pass-through. It relays every method and path. For model-bearing inference requests, it reads <code>model</code>. Prompts, tool calls, response formats, headers and streaming go upstream as received.</p>
+<p>It does not choose a model, balance traffic, cache completions, retry requests or enforce policy. Clients still choose. The router only handles the part oMLX will not: making the selected large model resident before forwarding the original request.</p>
+<p>The list of switchable models is deliberately small. The large models are mutually exclusive. The fast Qwen3-4B and the Gemma 4 12B vision model stay outside that logic.</p>
+<p>When a request names the already-active large model, it goes straight through. When it names another one, the router takes a swap lock, waits for the outgoing model to be safe to remove, unpins and unloads it, pins the requested model, and forwards the untouched request. oMLX loads the newly pinned model while serving it.</p>
+<p>Switching costs a model load, about 6 to 8 seconds. A request for the active model adds nothing measurable.</p>
+<h2 id="the-lifecycle-mattered-more-than-the-swap">The lifecycle mattered more than the swap</h2>
+<p>The first version unloaded the outgoing model immediately. A second client switching models during a long generation made oMLX abort the first request:</p>
+<p><code>Aborted 2 requests: model is being unloaded</code></p>
+<p>That is unacceptable on a machine used from more than one place.</p>
+<p>The router now counts in-flight requests by model. A swap waits for the outgoing model to drain, checking again as requests finish. It waits for up to 15 minutes, logs a warning, then proceeds rather than waiting forever. The timeout is a known failure mode, not a claim that concurrent requests are solved.</p>
+<p>I tested this with a 600-token generation and a competing switch six seconds later. The running generation completed all 600 tokens. The swap ran afterwards. Both requests succeeded.</p>
+<p>That drain rule is the important part of the build. Unload and load are easy. Deciding when it is safe to unload is the actual work.</p>
+<p>The <a href="https://gist.github.com/mplacona/ca785647c4b94404ab4078a58bbf4b47" target="_blank" rel="noopener noreferrer">router, launchd plist and deployment notes are public</a>. They are useful handoff material for a person, or an AI agent, configuring a compatible oMLX machine. It is not a one-shot setup. The target machine still needs inspecting; its exact model IDs need checking through <code>/v1/models</code>; and <code>OMLX_BIG_MODELS</code> should contain only the large models that cannot coexist. Every client needs to use the router. Authentication and network boundaries still belong to the machine’s owner and need preserving or configuring locally.</p>
+<h2 id="every-route-has-to-use-it">Every route has to use it</h2>
+<p>The router only helps requests that reach port 8010. I found the other failure modes by leaving routes around it.</p>
+<p>First, the proxy worked on localhost but timed out over Tailscale. The macOS firewall allow-list named a Homebrew Python 3.14.6 path. Homebrew updated to 3.14.7 and that path changed. The router now runs under <code>/usr/bin/python3</code>, which is already allow-listed and does not move. Keeping it stdlib-only made that change simple.</p>
+<p>Then an HTTPS forwarding rule for my phone still pointed straight at oMLX. The client URL did not change, but the upstream target did. A request for a non-resident large model could finally take the same route as every other client.</p>
+<p>I also repointed <a href="https://hermes-agent.nousresearch.com/" target="_blank" rel="noopener noreferrer">Hermes</a>, <a href="https://hindsight.vectorize.io/" target="_blank" rel="noopener noreferrer">Hindsight</a> and the scripts that call the local server. The router needs to sit in front of all the traffic that expects model switching.</p>
+<p>The server still listens directly on port 8000, so bypassing the router remains possible. Nothing I use is currently doing it. Moving the server behind a localhost-only listener would be a stricter version of the boundary, but changing the oMLX port through its live admin API caused an outage. I am not treating that as a casual cleanup.</p>
+<h2 id="why-keep-the-other-large-models">Why keep the other large models?</h2>
+<p>The default is still Qwen3.6-35B-A3B at 4-bit. In a warm, single-model test with the same 250-token prompt, it sustained about 48 tok/s. Qwen3.8-27B with MTP sustained about 22 tok/s. The 35B is faster here because it is MoE and activates about 3B parameters per token.</p>
+<p>That makes it a good default. Qwen3.8 and Qwen3-Coder still need a clean way to become resident when I explicitly ask for them. The router gives them that without leaving two large models fighting for memory.</p>
+<p>Benchmarks were useful mostly for removing bad options. Short generations flattered multi-token prediction: Qwen3.8 reported 63.7 tok/s on a 128-token reply and about 22 tok/s on a 220-token reply. A cold-load run once calculated to 646 tok/s. Neither number describes normal use.</p>
+<h2 id="the-other-number-i-watch">The other number I watch</h2>
+<p>Prefill is 47% of compute time on this server: 26.6 hours reading prompts, against 30.3 hours generating replies.</p>
+<p>The prefix cache has a 66% hit rate. A repeated long prompt has returned 87 times faster. That has had more effect on the setup than a model swap. I have not tested ANE prefill yet.</p>
+<h2 id="where-it-landed">Where it landed</h2>
+<p>Five models in the picker. One large model resident. One router in the path for every client I use.</p>
+<p>I did not add RAM or defeat the guard. I made model switching explicit, put it behind one small boundary, and tested what happens when a request is still running or a client takes the wrong route.</p>
+<h2 id="get-the-router">Get the router</h2>
+<p>The code, launchd plist and setup notes are in <a href="https://gist.github.com/mplacona/ca785647c4b94404ab4078a58bbf4b47" target="_blank" rel="noopener noreferrer">the public <code>omlx-router</code> gist</a>. It is a usable starting point for a compatible oMLX machine, but check its model IDs, authentication and network boundaries before putting it in front of your own server.</p></div><nav class="article-nav" aria-label="Article navigation"><a class="nav-next" href="/pr-21/boost-domain-rating/" rel="next"><span class="nav-label">Older →</span>Boost Your Website Domain Rating with Redirects and Bot Control</a></nav></article></main><footer class="site-footer"><div class="footer-grid"><div class="footer-about"><strong>Marcos Placona</strong><p>Developer relations, software and independent products. Fifteen years of writing, still going.</p></div><nav class="footer-links" aria-label="Footer"><a href="/pr-21/">Writing</a><a href="/pr-21/apps/">Apps</a><a href="/pr-21/speaker-timeline/">Speaking</a><a href="/pr-21/about/">About</a><a href="/pr-21/search/">Search</a><a href="https://github.com/mplacona" rel="me">GitHub</a><a href="https://x.com/marcos_placona" rel="me">X</a><a href="https://placona.co.uk/rss.xml">RSS</a></nav><p class="footer-legal">© 2026 Marcos Placona</p></div></footer></body></html>
