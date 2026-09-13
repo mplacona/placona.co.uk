@@ -1,7 +1,7 @@
 ---
 title: "Modern Android Development: android.os.NetworkOnMainThreadException"
 seoTitle: "Android NetworkOnMainThreadException explained"
-description: "How to deal with android.os.NetworkOnMainThreadException in modern Android applications"
+description: "Part of my Modern Android Development series: what causes android.os.NetworkOnMainThreadException and the right way to fix it today."
 pubDate: "2020-03-15T16:38:42.000Z"
 slug: "modern-android-android-os-networkonmainthreadexception"
 categories: ["Android"]

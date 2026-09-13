@@ -1,6 +1,6 @@
 ---
 title: "Retrieving GitHub's gists with Dart"
-description: "In this post I will show you how to retrieve GitHub gists with Dart Language"
+description: "A simple Dart example that retrieves your GitHub gists, showing how to make HTTP requests and handle Futures along the way."
 pubDate: "2014-04-26T23:21:15.000Z"
 slug: "retrieving-githubs-gists-with-dart"
 categories: ["Dart"]

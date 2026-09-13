@@ -1,6 +1,6 @@
 ---
 title: "mySQL killed my hamster"
-description: "I've run some updates on my server today, and got prompted to upgrade mySQL."
+description: "A routine MySQL upgrade broke my WordPress site with an 'Error establishing a database connection' error, and here's what fixed it."
 pubDate: "2010-09-21T21:56:51.000Z"
 slug: "mysql-killed-my-hamster"
 categories: ["Technology"]
@@ -14,7 +14,7 @@ I've run some updates on my server today, and got prompted to upgrade mySQL.
 
 All went well during the upgrade, but when trying to browse, I'd get the following message:
 
-### **"Error establishing a database connection"**
+## **"Error establishing a database connection"**
 
 Initially I thought it would be mySQL daemon trying to "kick in", and it would come back in just a sec. Two minutes passed, and I started to get worried.
 
