@@ -1,15 +1,19 @@
 :root {
-  --ink: #181717;
-  --muted: #68635d;
+  --ink: #1b1815;
+  --muted: #6b635a;
   --paper: #fffdf9;
-  --sand: #f4efe7;
-  --accent: #b83935;
-  --line: #ded7cd;
+  --sand: #f6f1e7;
+  --accent: #b5542f;
+  --line: #e8e1d4;
   /* Derived from the five above. Secondary text is warm rather than grey so it
      sits with the paper instead of on top of it. */
-  --ink-2: #3f3a35;
-  --accent-wash: #f7ece8;
-  --line-soft: #ebe4da;
+  --ink-2: #3d372f;
+  --accent-wash: #f2ece0;
+  --line-soft: #ece5d8;
+
+  --font-serif: "Newsreader", Georgia, "Times New Roman", serif;
+  --font-display: "Instrument Serif", Georgia, serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 
   /* One scale, used everywhere. */
   --step-0: 1rem;
@@ -19,9 +23,7 @@
   --step-4: clamp(2.1rem, 4vw, 3.2rem);
   --step-5: clamp(2.5rem, 5vw, 4rem);
 
-  --rail: 8.5rem;
-
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: var(--font-serif);
   color: var(--ink);
   background: var(--paper);
 }
@@ -41,78 +43,166 @@ img { display: block; max-width: 100%; height: auto; }
 }
 
 /* Clipped rather than pushed off-canvas, so it never contributes to page width. */
-.skip-link { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; background: var(--ink); color: white; padding: .7rem 1rem; z-index: 10; }
+.skip-link { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; background: var(--ink); color: white; padding: .7rem 1rem; z-index: 10; font-family: var(--font-mono); }
 .skip-link:focus { width: auto; height: auto; overflow: visible; clip-path: none; left: 1rem; top: 1rem; }
+
+/* A hairline that fills with the scroll fraction of the article. Zero height
+   (and therefore invisible) on every page that isn't a post, since the script
+   only ever grows the fill on article pages. */
+.reading-progress { position: sticky; top: 0; z-index: 30; height: 2px; background: var(--line-soft); }
+.reading-progress > span { display: block; height: 100%; width: 0%; background: var(--accent); }
+
 .site-header, .site-footer { width: min(100% - 3rem, 1140px); margin: auto; }
 .site-header { display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; min-height: 72px; border-bottom: 1px solid var(--line); }
-.brand { display: inline-flex; align-items: center; gap: .6rem; text-decoration: none; font-weight: 800; letter-spacing: -.03em; }
+.brand { display: inline-flex; align-items: center; gap: .6rem; text-decoration: none; letter-spacing: -.01em; font-family: var(--font-display); font-size: 1.15rem; }
 .brand img { width: 32px; height: 32px; object-fit: contain; }
-nav { display: flex; flex-wrap: wrap; gap: 1.1rem; font-size: .95rem; }
-nav a { text-decoration: none; }
-nav a[aria-current="page"] { color: var(--accent); text-decoration: underline; text-underline-offset: .35em; }
-.site-footer { margin-top: 5rem; padding: 2rem 0 3rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
+nav { display: flex; flex-wrap: wrap; gap: 1.35rem; font-family: var(--font-mono); font-size: .8rem; letter-spacing: .02em; }
+nav a { text-decoration: none; color: var(--muted); }
+nav a[aria-current="page"] { color: var(--ink); border-bottom: 1px solid var(--ink); padding-bottom: 2px; }
+.site-footer { margin-top: 5rem; padding: 1.75rem 0 3rem; border-top: 1px solid var(--line); color: var(--muted); font-family: var(--font-mono); font-size: .8rem; }
 .site-footer p { margin: .2rem 0; }
 .footer-grid { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1.75rem 3rem; }
-.footer-about { max-width: 26rem; }
-.footer-about strong { display: block; margin-bottom: .35rem; color: var(--ink); font-size: .95rem; }
+.footer-about { max-width: 26rem; font-family: var(--font-serif); }
+.footer-about strong { display: block; margin-bottom: .35rem; color: var(--ink); font-family: var(--font-display); font-size: 1.1rem; }
 .footer-links { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; }
-.footer-links a { text-decoration: none; }
-.footer-links a:hover { text-decoration: underline; }
-.footer-legal { width: 100%; margin-top: .5rem; padding-top: 1.25rem; border-top: 1px solid var(--line-soft); font-size: .82rem; }
+.footer-links a { text-decoration: none; color: var(--muted); }
+.footer-links a:hover { color: var(--accent); }
+.footer-legal { width: 100%; margin-top: .5rem; padding-top: 1.25rem; border-top: 1px solid var(--line-soft); font-size: .78rem; }
 
 .hero, .content-section, .app-page, .page-intro, .post-list, .pagination { width: min(100% - 3rem, 1040px); margin-left: auto; margin-right: auto; }
-.hero { padding: clamp(2.75rem, 5vw, 4.5rem) 0 clamp(1.75rem, 3vw, 2.75rem); }
+.hero { padding: clamp(2.5rem, 4.5vw, 4rem) 0 clamp(1.5rem, 3vw, 2.25rem); }
 .compact-hero { padding-bottom: 1rem; }
-.eyebrow { margin: 0 0 .75rem; color: var(--accent); font-size: .75rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.75rem; }
+/* The terminal is a decorative flourish for the extra width a wide viewport
+   has to spare; below this it would only push real content further down. */
+.hero-terminal { display: none; }
+
+@media (min-width: 960px) {
+  .hero-grid {
+    grid-template-columns: minmax(0, 1fr) 24rem;
+    grid-template-areas: "copy terminal" "copy search";
+    align-items: start;
+    column-gap: 2.5rem;
+    row-gap: 1.1rem;
+  }
+  .hero-copy { grid-area: copy; }
+  .hero-terminal { display: block; grid-area: terminal; }
+  .finder { grid-area: search; margin-top: 0; }
+  /* Narrower than the single-column hero, so the headline wraps to more lines;
+     trimming its ceiling here keeps it from towering over the terminal card. */
+  .hero-grid h1 { font-size: clamp(2.1rem, 3.6vw, 3.4rem); }
+}
+
+.terminal {
+  background: #16130f; border-radius: 10px; overflow: hidden;
+  box-shadow: 0 20px 45px rgba(27, 24, 21, .18);
+  font-family: var(--font-mono); font-size: .82rem; line-height: 1.85;
+}
+.terminal-bar { display: flex; align-items: center; gap: .4rem; padding: .7rem .9rem; background: #221d17; }
+.terminal-dot { width: .6rem; height: .6rem; border-radius: 50%; }
+.terminal-dot-red { background: #e5675f; }
+.terminal-dot-yellow { background: #e8c14f; }
+.terminal-dot-green { background: #5fbf6f; }
+.terminal-title { margin: 0 auto 0 .5rem; color: #8a8175; font-size: .72rem; letter-spacing: .02em; }
+.terminal-body { padding: 1.35rem 1.2rem 1.6rem; color: #b7ae9f; overflow-wrap: break-word; }
+.terminal-line + .terminal-line { margin-top: .3rem; }
+.terminal-prompt { color: #7fb2a8; }
+.terminal-cmd { color: #e8e1d4; margin-left: .5ch; }
+.terminal-output { color: #8f8778; }
+.terminal-cursor { display: inline-block; width: .5em; height: 1em; margin-left: .4rem; background: #e8e1d4; vertical-align: text-bottom; animation: terminal-blink 1s steps(1) infinite; }
+
+@keyframes terminal-blink { 50% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .terminal-cursor { animation: none; } }
+.eyebrow { margin: 0 0 .75rem; color: var(--muted); font-family: var(--font-mono); font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; }
 /* Some post titles are single unbreakable tokens, e.g. NetworkOnMainThreadException. */
-h1, h2, h3 { line-height: 1.08; letter-spacing: -.04em; overflow-wrap: break-word; text-wrap: balance; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 400; line-height: 1.1; letter-spacing: -.01em; overflow-wrap: break-word; text-wrap: balance; }
 h1 { max-width: 20ch; margin: 0 0 1rem; font-size: var(--step-5); }
 h2 { font-size: var(--step-3); }
-.hero > p:not(.eyebrow), .lede { max-width: 38rem; margin: 0; font-size: var(--step-1); line-height: 1.55; color: var(--ink-2); text-wrap: pretty; }
+.hero-copy > p:not(.eyebrow), .lede { max-width: 38rem; margin: 0; font-size: var(--step-1); line-height: 1.55; color: var(--ink-2); text-wrap: pretty; }
 .content-section { padding: 1.5rem 0 3.5rem; }
-.section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin-bottom: .5rem; padding-bottom: .9rem; border-bottom: 2px solid var(--ink); }
+.section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin-bottom: .5rem; padding-bottom: .9rem; border-bottom: 1px solid var(--line); }
 .section-heading h2 { margin: 0; font-size: var(--step-2); }
 .section-heading .eyebrow { margin: 0; }
 
+/* Homepage search box. On mobile it's a grid sibling of .hero-copy, spaced by
+   .hero-grid's own gap; from 960px up it moves into the terminal's column. */
+.finder-form { position: relative; }
+.finder-input {
+  width: 100%; padding: .55rem .1rem; font: inherit; font-size: 1.05rem;
+  background: transparent; border: 0; border-bottom: 1.5px solid var(--ink); outline: none;
+}
+
+/* Instant suggestions under the homepage search box, same title+description
+   match as /search/ but shown as a dropdown rather than a filtered list. */
+.finder-results {
+  position: absolute; top: calc(100% + .4rem); left: 0; right: 0; z-index: 20;
+  margin: 0; padding: .4rem; list-style: none;
+  background: var(--paper); border: 1px solid var(--line); border-radius: 4px;
+  box-shadow: 0 14px 32px rgba(27, 24, 21, .14);
+  max-height: 22rem; overflow-y: auto;
+}
+.finder-results li { margin: 0; border-radius: 3px; cursor: pointer; }
+.finder-results a { display: block; padding: .55rem .65rem; text-decoration: none; pointer-events: none; }
+.finder-results li:hover, .finder-results li.active { background: var(--sand); }
+.finder-results .result-title { display: block; font-family: var(--font-display); font-size: 1.08rem; line-height: 1.25; color: var(--ink); }
+.finder-results .result-desc { display: block; margin-top: .15rem; font-size: .85rem; line-height: 1.4; color: var(--muted); }
+
 /* A short author row under the hero. A personal blog with no author present on
    the page is the main reason the homepage read as empty. */
-.byline { display: flex; align-items: center; gap: .85rem; margin-top: 1.75rem; padding-top: 1.5rem; border-top: 1px solid var(--line); }
+.byline { display: flex; align-items: center; gap: .85rem; margin-top: 1.25rem; padding-top: 1.1rem; border-top: 1px solid var(--line); }
 .byline img { width: 44px; height: 44px; flex: none; border-radius: 50%; object-fit: cover; }
 .byline p { margin: 0; font-size: .95rem; line-height: 1.45; color: var(--ink-2); }
 .byline strong { color: var(--ink); }
 .byline a { color: var(--accent); }
 
-/* Post rows carry a rail: date above, category below. Both are real metadata,
-   and they give the wide viewport something to hold. */
+/* Year-grouped writing list: a mono year label above each group's rows. */
 .post-list { display: flex; flex-direction: column; }
 /* On the homepage the list sits inside .content-section, and both carry the
    same width clamp, so the 3rem gutter was being subtracted twice and the rows
    sat inset from their own section heading. Archive pages use it standalone. */
 .content-section .post-list { width: 100%; }
+.year-group { margin-bottom: 1.75rem; }
+.year-group:last-child { margin-bottom: 0; }
+.year-label { margin: 0 0 .2rem; font-family: var(--font-mono); font-size: .78rem; letter-spacing: .1em; color: var(--muted); }
 .post-card {
   display: grid;
-  grid-template-columns: var(--rail) minmax(0, 1fr);
-  gap: 0 2.25rem;
-  padding: 1.5rem 0;
-  border-bottom: 1px solid var(--line-soft);
-  transition: border-color .15s ease;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: .2rem 1.25rem;
+  align-items: baseline;
+  padding: 1.1rem 0;
+  border-top: 1px solid var(--line-soft);
+  transition: background-color .15s ease;
 }
-.post-card:hover { border-bottom-color: var(--line); }
-.post-rail { display: flex; flex-direction: column; gap: .5rem; align-items: flex-start; }
+.post-card:hover { background: var(--sand); }
+.post-meta-col { font-family: var(--font-mono); font-size: .75rem; letter-spacing: .05em; color: var(--muted); text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
 .post-date { margin: 0; font-size: .78rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); font-variant-numeric: tabular-nums; }
 .chip {
   display: inline-block; padding: .18em .55em;
   background: var(--accent-wash); color: var(--accent);
-  font-size: .7rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase;
-  text-decoration: none; white-space: nowrap;
+  font-family: var(--font-mono); font-size: .68rem; letter-spacing: .05em; text-transform: uppercase;
+  text-decoration: none; white-space: nowrap; border-radius: 2px;
 }
 a.chip:hover { background: var(--accent); color: #fff; }
-.post-card h2 { max-width: 30ch; margin: 0 0 .3rem; font-size: var(--step-2); letter-spacing: -.03em; }
+/* Topic pills (home) and "filed under" tags (article): sand by default,
+   inverted to solid ink on hover, distinct from the accent-toned .chip. */
+.tag {
+  display: inline-block; padding: .35em .7em;
+  background: var(--sand); color: var(--ink-2);
+  font-family: var(--font-mono); font-size: .72rem; letter-spacing: .03em;
+  text-decoration: none; white-space: nowrap; border-radius: 2px;
+  transition: background-color .15s ease, color .15s ease;
+}
+a.tag:hover { background: var(--ink); color: var(--paper); }
+.post-card h2 { max-width: 30ch; margin: 0 0 .25rem; font-size: 1.4rem; letter-spacing: -.005em; }
 .post-card h2 a { text-decoration: none; background-image: linear-gradient(var(--accent), var(--accent)); background-size: 0 2px; background-repeat: no-repeat; background-position: 0 100%; transition: background-size .2s ease; }
 .post-card:hover h2 a { background-size: 100% 2px; }
 .post-card p { max-width: 46rem; margin: 0; color: var(--muted); font-size: .98rem; line-height: 1.55; text-wrap: pretty; }
 .text-link { font-weight: 700; }
-.button, .button-secondary { display: inline-block; padding: .75rem 1rem; border: 1px solid var(--ink); font-weight: 700; text-decoration: none; }
+.button, .button-secondary {
+  display: inline-block; padding: .7rem 1.1rem; border: 1px solid var(--ink);
+  font-family: var(--font-mono); font-size: .82rem; letter-spacing: .04em; text-decoration: none;
+}
 .button { background: var(--ink); color: white; }
 .button-secondary { border-color: var(--accent); color: var(--accent); }
 .button:hover, .button-secondary:hover { background: var(--accent); border-color: var(--accent); color: white; }
@@ -120,6 +210,10 @@ a.chip:hover { background: var(--accent); color: #fff; }
 .post, .article-shell { width: min(100% - 3rem, 720px); margin: 0 auto; padding: clamp(2.5rem, 5vw, 4rem) 0 1rem; }
 .article-shell h1 { max-width: 20ch; margin-bottom: 1.1rem; font-size: var(--step-4); }
 .article-shell .lede { margin-bottom: 1.45rem; }
+.breadcrumb { margin: 0 0 1.4rem; font-family: var(--font-mono); font-size: .72rem; letter-spacing: .06em; color: var(--muted); }
+.breadcrumb a { color: var(--muted); text-decoration: none; }
+.breadcrumb a:hover { color: var(--accent); }
+.breadcrumb .sep { color: var(--line); margin: 0 .3em; }
 .post-header { margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--line); }
 .post-header h1 { max-width: 22ch; margin-bottom: 1rem; font-size: var(--step-4); }
 .post-header .lede { margin-bottom: 1.35rem; }
@@ -128,41 +222,42 @@ a.chip:hover { background: var(--accent); color: #fff; }
    rather than with a wall of display type. */
 .post-meta {
   display: flex; flex-wrap: wrap; align-items: center; gap: .55rem .85rem;
-  margin: 0; color: var(--muted);
-  font-size: .78rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+  margin: 0; color: var(--muted); font-family: var(--font-mono);
+  font-size: .74rem; letter-spacing: .06em; text-transform: uppercase;
   font-variant-numeric: tabular-nums;
 }
 .post-meta time { color: var(--ink-2); }
 .post-meta .sep { color: var(--line); }
-.prose { max-width: 700px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.05rem, 1.5vw, 1.18rem); line-height: 1.78; }
+
+.prose { max-width: 700px; font-family: var(--font-serif); font-size: clamp(1.05rem, 1.5vw, 1.18rem); line-height: 1.78; }
 .prose > :first-child { margin-top: 0; }
-.prose h2, .prose h3, .prose h4 { font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
 .prose h2 { margin: 3.25rem 0 1rem; font-size: clamp(1.7rem, 3vw, 2.3rem); }
 .prose h3 { margin: 2.5rem 0 .75rem; font-size: clamp(1.3rem, 2.3vw, 1.7rem); }
-.prose h4 { margin: 2rem 0 .65rem; font-size: 1.15rem; }
+.prose h4 { margin: 2rem 0 .65rem; font-family: var(--font-mono); font-size: 1rem; }
 .prose p, .prose ul, .prose ol { margin: 0 0 1.45rem; }
 .prose li + li { margin-top: .45rem; }
 .prose li::marker { color: var(--accent); }
-/* Links in running text stay readable at Georgia's x-height. */
 .prose a { text-decoration-color: var(--line); text-decoration-thickness: 2px; text-underline-offset: .18em; }
 .prose a:hover { text-decoration-color: var(--accent); }
+/* A pull quote, not a citation: big display serif carrying the one line worth
+   pulling out, rather than a boxed indent around arbitrary quoted text. */
 .prose blockquote {
-  margin: 2rem 0; padding: .2rem 0 .2rem 1.5rem;
-  border-left: 2px solid var(--accent);
-  color: var(--ink-2); font-style: italic;
+  margin: 2.5rem 0; padding: 0; border: 0;
+  font-family: var(--font-display); font-size: clamp(1.4rem, 2.6vw, 1.85rem);
+  line-height: 1.3; letter-spacing: -.005em; color: var(--ink);
 }
 .prose blockquote p:last-child { margin-bottom: 0; }
-.prose pre { overflow: auto; margin: 1.75rem 0; padding: 1.1rem 1.25rem; background: #1d1b19; color: #f9f7f3; font-size: .85rem; line-height: 1.6; tab-size: 2; }
-.prose :not(pre) > code { padding: .12em .35em; background: var(--sand); font-size: .86em; }
+.prose pre { overflow: auto; margin: 1.75rem 0; padding: 1.1rem 1.25rem; background: #16130f; color: #e8e1d4; font-family: var(--font-mono); font-size: .85rem; line-height: 1.65; tab-size: 2; border-radius: 4px; }
+.prose :not(pre) > code { padding: .12em .35em; background: var(--sand); font-family: var(--font-mono); font-size: .86em; border-radius: 2px; }
 .prose img, .prose iframe { max-width: 100%; border: 0; }
 .prose img { margin: 2rem 0; }
 .prose iframe { aspect-ratio: 16 / 9; width: 100%; }
 .prose figure { margin: 2rem 0; }
 .prose figure img { margin: 0; }
-.prose figcaption { margin-top: .6rem; color: var(--muted); font-size: .88em; font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
+.prose figcaption { margin-top: .6rem; color: var(--muted); font-family: var(--font-mono); font-size: .78em; }
 .prose abbr[title] { text-decoration: underline dotted; text-underline-offset: .2em; cursor: help; }
 .prose hr { height: 0; margin: 2.75rem 0; border: 0; border-top: 1px solid var(--line); }
-.prose table { display: block; overflow-x: auto; width: 100%; margin: 2rem 0; border-collapse: collapse; font-family: Inter, ui-sans-serif, system-ui, sans-serif; font-size: .92rem; }
+.prose table { display: block; overflow-x: auto; width: 100%; margin: 2rem 0; border-collapse: collapse; font-family: var(--font-mono); font-size: .85rem; }
 .prose th, .prose td { padding: .55rem .8rem; border: 1px solid var(--line); text-align: left; }
 .prose th { background: var(--sand); font-weight: 700; }
 /* Fifteen years of archived posts contain unbroken URLs and console output. */
@@ -173,16 +268,31 @@ a.chip:hover { background: var(--accent); color: #fff; }
 /* WordPress-era captions carry a hardcoded pixel width that overflows small screens. */
 .prose .wp-caption { width: auto !important; max-width: 100%; margin: 2rem 0; }
 .prose .wp-caption img { margin: 0; }
-.prose .wp-caption-text { margin: .6rem 0 0; color: var(--muted); font-size: .88em; font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
+.prose .wp-caption-text { margin: .6rem 0 0; color: var(--muted); font-family: var(--font-mono); font-size: .78em; }
 .prose .alignleft { float: none; }
 .prose .alignright { float: none; }
 .prose .aligncenter { margin-left: auto; margin-right: auto; }
 
-.article-nav { display: flex; justify-content: space-between; gap: 1.5rem; margin-top: 3.5rem; padding-top: 1.5rem; border-top: 1px solid var(--line); font-size: .95rem; font-weight: 700; }
+.tag-row { margin: 3rem 0 0; padding: 1.4rem 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; justify-content: space-between; }
+.tag-row .eyebrow { margin: 0; }
+.tag-list { display: flex; flex-wrap: wrap; gap: .5rem; }
+
+.related { margin-top: 2.75rem; }
+.related-list { display: flex; flex-direction: column; }
+.related-list a {
+  display: grid; grid-template-columns: 6rem minmax(0, 1fr); gap: 0 1.25rem; align-items: baseline;
+  padding: .95rem 0; border-top: 1px solid var(--line-soft); text-decoration: none;
+}
+.related-list a:first-child { border-top: 0; }
+.related-list a:hover { color: var(--accent); }
+.related-list time { font-family: var(--font-mono); font-size: .72rem; letter-spacing: .04em; color: var(--muted); }
+.related-list .related-title { font-family: var(--font-display); font-size: 1.3rem; line-height: 1.2; color: var(--ink); }
+
+.article-nav { display: flex; justify-content: space-between; gap: 1.5rem; margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--line); font-family: var(--font-display); font-size: 1.2rem; }
 .article-nav a { max-width: 48%; text-decoration: none; }
 .article-nav a:hover { color: var(--accent); }
 .article-nav .nav-next { margin-left: auto; text-align: right; }
-.article-nav .nav-label { display: block; margin-bottom: .3rem; color: var(--muted); font-size: .7rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.article-nav .nav-label { display: block; margin-bottom: .3rem; color: var(--muted); font-family: var(--font-mono); font-size: .68rem; font-weight: 400; letter-spacing: .1em; text-transform: uppercase; }
 
 /* The speaker timeline is a genuine chronology, so the year markers carry
    information rather than decorate. The rule is the spine of the sequence. */
@@ -211,30 +321,32 @@ a.chip:hover { background: var(--accent); color: #fff; }
 .split-section { display: grid; grid-template-columns: 1fr 1.3fr; gap: 4rem; border-top: 1px solid var(--line); }
 .callout { width: min(100% - 3rem, 920px); margin: 0 auto 4.5rem; }
 .empty-state { width: min(100% - 3rem, 620px); margin: auto; padding: 8rem 0; text-align: center; }
-.search-label { display: block; font-weight: 700; margin-bottom: .5rem; }
+.search-label { display: block; font-family: var(--font-mono); font-size: .78rem; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); margin-bottom: .5rem; }
 .search-input { width: 100%; padding: .85rem 1rem; border: 1px solid var(--line); background: #fff; font: inherit; transition: border-color .15s ease; }
 .search-input:focus { border-color: var(--ink); }
 .search-results { margin: 1.5rem 0 0; padding: 0; list-style: none; }
 .search-results li { padding: 1.1rem 0; border-bottom: 1px solid var(--line-soft); }
-.search-results a { display: inline-block; max-width: 100%; font-weight: 700; font-size: 1.1rem; overflow-wrap: break-word; text-decoration: none; }
+.search-results a { display: inline-block; max-width: 100%; font-family: var(--font-display); font-size: 1.3rem; overflow-wrap: break-word; text-decoration: none; }
 .search-results a:hover { text-decoration: underline; text-decoration-color: var(--accent); }
 .search-results p { margin: .25rem 0 0; color: var(--muted); font-size: .95rem; }
-.pagination { display: flex; justify-content: space-between; gap: 1rem; padding-top: 2rem; font-weight: 700; }
+.pagination { display: flex; justify-content: space-between; gap: 1rem; padding-top: 2rem; font-family: var(--font-mono); font-size: .85rem; letter-spacing: .03em; }
 .pagination a { text-decoration: none; }
 .pagination a:hover { color: var(--accent); }
 
 @media (max-width: 680px) {
   .site-header { align-items: flex-start; flex-direction: column; justify-content: center; padding: 1rem 0; }
-  nav { gap: .8rem 1rem; font-size: .9rem; }
+  nav { gap: .8rem 1rem; font-size: .82rem; }
   .hero { padding-top: 2.5rem; }
   .post { padding-top: 2.25rem; }
   .post-header { margin-bottom: 2rem; }
   .split-section { grid-template-columns: 1fr; gap: 1rem; }
-  /* The rail becomes a single meta line above the title. minmax(0, 1fr) rather
-     than 1fr: an auto-min track refuses to shrink below min-content, and titles
-     like android.os.NetworkOnMainThreadException are one unbreakable token. */
-  .post-card { grid-template-columns: minmax(0, 1fr); gap: .55rem; padding: 1.35rem 0; }
-  .post-rail { flex-direction: row; align-items: center; gap: .7rem; }
+  /* Meta drops below the title rather than sharing a cramped row.
+     minmax(0, 1fr) rather than 1fr: an auto-min track refuses to shrink below
+     min-content, and titles like android.os.NetworkOnMainThreadException are
+     one unbreakable token. */
+  .post-card { grid-template-columns: minmax(0, 1fr); gap: .35rem; padding: 1.1rem 0; }
+  .post-meta-col { text-align: left; }
+  .related-list a { grid-template-columns: minmax(0, 1fr); gap: .3rem; }
   .article-nav { flex-direction: column; }
   .article-nav a, .article-nav .nav-next { max-width: none; margin-left: 0; text-align: left; }
 }

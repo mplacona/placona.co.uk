@@ -1,6 +1,6 @@
 ---
 title: "Nifty jQuery tricks - Avoid Cache"
-description: "I found this two function yesterday while working on one of our applications."
+description: "Two small jQuery functions I found for stopping the browser from caching Ajax requests, useful when turning a static page into a dynamic one."
 pubDate: "2010-10-02T23:19:19.000Z"
 slug: "nifty-jquery-tricks-avoid-cache"
 categories: ["JavaScript"]

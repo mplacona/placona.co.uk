@@ -1,6 +1,6 @@
 ---
 title: "Background colour in a label control in AS3"
-description: "This is just a quick example of how to add a background colour to a label control in AS3."
+description: "A quick ActionScript 3 example showing how to add a background colour to Flex's Label component using its underlying TextField."
 pubDate: "2011-06-27T22:33:52.000Z"
 slug: "background-colour-in-a-label-control-in-as3"
 categories: ["Adobe"]

@@ -1,6 +1,6 @@
 ---
 title: "Dart Pub packages stats"
-description: "Modulecounts came to my attention, and I thought the idea was pretty neat."
+description: "Modulecounts tracks package counts across languages but skipped Dart, so I wrote a scraper to pull the numbers from pub.dartlang.org myself."
 pubDate: "2014-07-21T15:56:38.000Z"
 slug: "dart-pub-packages-stats"
 categories: ["Dart"]

@@ -45,7 +45,7 @@ So in order to do that, all you will need to do is the following:
 
 You will now notice the whole of it (except for things it adds to the registry) will have been installed on your preferred drive.
 
-### Q & A
+## Q & A
 
 > Q: Why are you calling your solution "temporarily decent"? It seems perfect.
 

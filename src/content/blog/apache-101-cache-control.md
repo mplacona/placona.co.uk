@@ -1,6 +1,6 @@
 ---
 title: "Apache 101 - Cache Control"
-description: "Continuing with my Apache series, I'll be today talking about cache control."
+description: "Part of my Apache 101 series: what cache control headers do, why they matter for performance, and how to set them correctly in Apache."
 pubDate: "2009-04-30T00:00:00.000Z"
 slug: "apache-101-cache-control"
 categories: ["Technology"]
