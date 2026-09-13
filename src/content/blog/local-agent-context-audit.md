@@ -9,8 +9,6 @@ tags: ["local-llm", "coding-agents", "context-window", "homelab"]
 draft: false
 ---
 
-# My local agent spent a quarter of its context before I said anything
-
 I opened a fresh session against my local model and looked at the context meter. Eighteen thousand tokens used. I had not typed a word.
 
 Add the buffer the agent reserves for its own reply and a quarter of the window was gone at rest.
