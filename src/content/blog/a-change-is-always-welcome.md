@@ -27,7 +27,7 @@ As an example, I'm probably the only Mango blogger who had a publishing system i
 
 Most people who know me, also know that I'm a real CFML advocate, and would try to use it instead of anything else for as long as possible. This time though, I decided it should be about <span style="text-decoration: underline;">using the right tool for the job</span>.
 
-### Come **<span style="text-decoration: underline;">WordPress</span>**:
+## Come **<span style="text-decoration: underline;">WordPress</span>**:
 
 <a title="Wordpress Homepage" href="https://wordpress.org/" target="_blank">WordPress</a> is an excellent content management system written in PHP, which I've been keeping my eyes on for a long time. It makes changing templates and mange plugins as easy as 1-2-3.
 
@@ -41,7 +41,7 @@ To be brutally honest, what really caught my eyes with wordpress, was the facili
 
 It **MUST** be all about fun, as there is hundreds of other people out there doing the same thing, and you really need to enjoy writing stuff, and letting the world "judge" your thoughts.
 
-### It's <span style="text-decoration: underline;">all about me</span>:
+## It's <span style="text-decoration: underline;">all about me</span>:
 
 Well not really, most of the times I write new entries on my blog, I write them thinking about what will attract other people's interests, and what will be useful. I could go on and on "re-publishing" stuff I found on the web (as I do sometimes), but a blog in my opinion, must focus on creativity, and I expect people to enjoy reading my entries. If you are also a blogger, and keeps saying you write entries only for your own pleasure, and that you don't expect people to read your blog, you should really be writing a diary, and not publishing it on the web. Every single bit we publish, will build (and sometimes make) history, so lets not fool ourselves.
 
@@ -51,7 +51,7 @@ Well, I want readers to feel home here, and want to have as much input as possib
 
 The comments are also open (once I'm convinced that you're reliable, and will not be posting spam), so if you feel like your input is valid anywhere in this blog, be my guest to join the discussion.
 
-### Hey, I like it, <span style="text-decoration: underline;">how can I help</span>?
+## Hey, I like it, <span style="text-decoration: underline;">how can I help</span>?
 
 There's a few ways to contribute, and I'm sure most are aware of the <span style="text-decoration: line-through;">notorious</span> famous
 

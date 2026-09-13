@@ -24,7 +24,7 @@ Before I start with this tutorial, I have to make it clear that the form of CDN 
   
 For some (like myself), it won't make such a huge difference, as this method still is better than nothing, and is immensely faster than much servers around. I host my applications on my own VPS and don't have bandwidth limitations. But for most people who use Hosting Companies and have limited bandwidth, this will be a huge improvement.
 
-### <span style="text-decoration: underline;">Step one - The Idea:</span>
+## <span style="text-decoration: underline;">Step one - The Idea:</span>
 
 Google provides us with it's wonderful <a title="Google App Engine" href="https://developers.google.com/appengine/" target="_blank">Google App Engine</a>. It's free for anyone, you can store up to 500mb (enough for static content), and have about 5 million page views a month. Anything beyond it is charged (very tiny fee). Everybody knows Google, so you know they have servers almost everywhere. Put this all together, and you'll get started.
   
@@ -34,9 +34,9 @@ Now, you will need to download and install Python (it's only required for the Ap
   
 It's time to install the <a title="App Engine Install" href="https://developers.google.com/appengine/downloads" target="_blank">App Engine Client</a> on your computer. Once it's installed, you should be ready to go.
 
-<h3 style="font-size: 1.17em;">
+<h2 style="font-size: 1.17em;">
   <span style="text-decoration: underline;">Step two - Create an Application:</span>
-</h3>
+</h2>
 
 Simply login to your newly created App Engine Account and click the button Create an Application
 
@@ -44,9 +44,9 @@ Simply login to your newly created App Engine Account and click the button Creat
   
 Give it a name and title, and then save it. Use a short name, as it will be you application's handler, and you'll access it by going to [app_name].appspot.com
 
-<h3 style="font-size: 1.17em;">
+<h2 style="font-size: 1.17em;">
   <span style="text-decoration: underline;">Step three - Create your Application Folder:</span>
-</h3>
+</h2>
 
 If you are on a windows environment, normally the App Engine will be installed on "C:\Program Files\Google\google_appengine". If not, it will be installed wherever you chose during installation.
 
@@ -88,9 +88,9 @@ So manually it would be something like:
 python "C:Program Files\Google\google_appengine\appcfg.py" update "C:Program Files\Google\google_appengine\[app_name]"
 ```
 
-<h3 style="font-size: 1.17em;">
+<h2 style="font-size: 1.17em;">
   <span style="text-decoration: underline;">Step four - Deploying your Application:</span>
-</h3>
+</h2>
 
 Now it's the big time. Simply double click the file called deploy.bat and you should see a screen like this:
   

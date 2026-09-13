@@ -9,8 +9,6 @@ tags: ["local llm", "Apple Silicon", "oMLX", "Python", "homelab"]
 draft: false
 ---
 
-# My Mac mini fits one model. I run five.
-
 My local LLM server has five useful models. The Mac mini can only hold one of the large ones at a time.
 
 That is why there is a router in front of it.

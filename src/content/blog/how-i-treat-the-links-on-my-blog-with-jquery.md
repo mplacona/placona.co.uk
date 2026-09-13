@@ -1,6 +1,6 @@
 ---
 title: "How I treat the links on my blog with JQuery."
-description: "This is a very quick and dirty example of how to treat links on your blog / website using JQuery."
+description: "A quick and dirty jQuery snippet I use on this blog to treat links differently, based on a simple example for your own blog or website."
 pubDate: "2008-09-04T00:00:00.000Z"
 slug: "how-i-treat-the-links-on-my-blog-with-jquery"
 categories: ["coldfusion"]

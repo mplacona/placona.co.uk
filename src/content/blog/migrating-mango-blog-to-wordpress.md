@@ -1,6 +1,6 @@
 ---
 title: "Migrating Mango Blog to WordPress"
-description: "As previously promised , today I'll be publishing my migration scrips from Mango Blog to WordPress ."
+description: "My migration scripts for moving a Mango Blog installation over to WordPress, tested on MySQL and shared here in case they save you time."
 pubDate: "2010-05-03T11:00:48.000Z"
 slug: "migrating-mango-blog-to-wordpress"
 categories: ["coldfusion"]
@@ -22,13 +22,13 @@ I'll briefly explain the script's functionality here, but the comments on the co
 
 There is only one file responsible for the actions, and as long as the right method is called (batchPostWordpress), everything should happen automatically, and your posts, along with comments and everything else will be migrated. The only thing this script does not deal with, are the images, but as you should already be using only image paths (i.e. you are not storing anything on the database), your images should still work as long as they are stored on the right path. In my case, as I normally store images on a separate server, I wouldn't have to worry about that.
 
-#### <span style="text-decoration: underline;">Step ONE:</span>
+## <span style="text-decoration: underline;">Step ONE:</span>
 
 You must have two ColdFusion DSN's on your server. One is for the current Mango Blog, and another for the new WordPress install. Obviously your WordPress won't be using this DSN after you have migrated, but as this is a ColdFusion script, and you will be using ColdFusion to migrate your content, you will need a DSN created on your ColdFusion server.
 
 In my case, I was "creative", and called one **mango** (pointing to the mangoblog datrabase) ****and another one **wordpress** (pointing to the wordpress database). No rocket science up to here as you can see.
 
-#### <span style="text-decoration: underline;">Step TWO:</span>
+## <span style="text-decoration: underline;">Step TWO:</span>
 
 <a title="Mango2Wordpress download" href="https://github.com/mplacona/Mango2Wordpress" target="_blank">Download the files</a>, and extract them to your ColdFusion root, or anywhere where you can execute CFML files. For this example, I'm executing everything from ColdFusion's root (127.0.0.1 OR localhost).
 
@@ -52,7 +52,7 @@ On the next lines, you will find the following:
 
 This pretty much says everything. It's calling the method batchPostWordpress and processing posts in batches of 100 posts. I ran this with batches of 200 posts without any problems, and it only took about 30 seconds running on Railo. The numbers may vary according to the number of posts you have, as well as the number of comments and categories. Remember that if you have too many comments, your posts will take longer to be migrated, as everything is created in one go.
 
-#### <span style="text-decoration: underline;">Step Three:</span>
+## <span style="text-decoration: underline;">Step Three:</span>
 
 Run the file  runner.cfm (in my case http://127.0.0.1/runner.cfm), and wait till the page stops loading. Once everything is done, you should see a message saying "Done!" on the screen.
 
