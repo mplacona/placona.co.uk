@@ -20,7 +20,7 @@ Their [getting started page](https://letsencrypt.org/getting-started/) describe
 
 Hopefully this article will show you how to get that nice green padlock showing on your website. Props to the [article on Cloudflare's support page](https://support.cloudflare.com/hc/en-us/articles/214820528-How-to-Validate-a-Let-s-Encrypt-Certificate-on-a-Site-Already-Active-on-CloudFlare) that took me halfway the process.
 
-### Install the dependencies
+## Install the dependencies
 
 I usually SSH to my server to get these things done, but this step may vary if you access your server differently.
 
@@ -36,7 +36,7 @@ Then install GIT. We will use it to get the latest version of the Let's Encrypt 
 sudo yum install git
 ```
 
-### Download and install Let's Encrypt Client
+## Download and install Let's Encrypt Client
 
 Start off by cloning the repository and then saving it to _/opt/letsencrypt_. Feel free to save it elsewhere but _/opt_ is a good location for third party packages.
 
@@ -44,7 +44,7 @@ Start off by cloning the repository and then saving it to _/opt/letsencrypt_. Fe
 sudo git clone https://github.com/letsencrypt/letsencrypt /opt/letsencrypt
 ```
 
-### Generate a new SSL certificate
+## Generate a new SSL certificate
 
 ```bash
 cd /opt/letsencrypt
@@ -75,7 +75,7 @@ After you run that you should get a message saying your certificate chain has be
   </p>
 </div>
 
-### Setting up the SSL certificate with Apache
+## Setting up the SSL certificate with Apache
 
 With your certificate created it's time to tell Apache that you want it to use that. On terminal run:
 
@@ -97,7 +97,7 @@ Go ahead and hit those URL's and you should see that they both get a grade A pas
 
 <img class="aligncenter size-full wp-image-1540" src="/images/2016/03/letsencrypt4.png" alt="letsencrypt4" width="1097" height="514" srcset="/images/2016/03/letsencrypt4.png 1097w, images/2016/03/letsencrypt4-300x141.png 300w, images/2016/03/letsencrypt4-768x360.png 768w, images/2016/03/letsencrypt4-1024x480.png 1024w, images/2016/03/letsencrypt4-676x317.png 676w" sizes="(max-width: 1097px) 100vw, 1097px" />
 
-### Updating Cloudflare
+## Updating Cloudflare
 
 We need to tell CloudFlare that we now have an SSL certificate and want the communication to our website to use it. On CloudFlare's dashboard for your chosen website choose _Crypto_ and under _SSL_ choose _Full (Strict)_. You will probably want to use _Flexible_ here if during the previous step you chose HTTPS to be optional.
 
@@ -105,7 +105,7 @@ We need to tell CloudFlare that we now have an SSL certificate and want the comm
 
 At this point you should be done and your website should be showing a nice green padlock on the URL bar.
 
-### Unless...
+## Unless...
 
 You're using WordPress. In this case you will also want to update it so the URL is always HTTPS. You can do that by going into WordPress Admin, and then navigating to Settings > General.
 

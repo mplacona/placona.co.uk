@@ -1,6 +1,6 @@
 ---
 title: "Learning jQuery 1.3 - Book Review"
-description: "Book reviewer Marcos Placona | Publisher: Packt. Author(s): Jonathan Chaffer, Karl Swedberg"
+description: "A review of Learning jQuery 1.3 by Jonathan Chaffer and Karl Swedberg, and how this beginner-friendly edition compares to earlier ones."
 pubDate: "2009-04-25T00:00:00.000Z"
 slug: "learning-jquery-1-3-book-review"
 categories: ["Books"]

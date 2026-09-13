@@ -20,7 +20,7 @@ export const apps: App[] = [
     name: 'VoiceCrisp',
     tagline: 'Speak. Get clean text.',
     status: 'Coming soon to the App Store',
-    description: 'VoiceCrisp turns rough dictation into clean, usable text on your iPhone.',
+    description: 'VoiceCrisp turns rough dictation into clean, usable text on your iPhone, fixing punctuation, casing and spacing on-device without changing what you said.',
     boundaryHeading: 'Clean dictation, without changing your point.',
     boundary: 'It corrects recognition mistakes, punctuation, casing and word spacing while keeping what you said intact. It does not summarise your dictation or turn it into something else.',
     privacy: 'VoiceCrisp is designed to work on-device. Its product privacy details will be published here before public App Store release.',

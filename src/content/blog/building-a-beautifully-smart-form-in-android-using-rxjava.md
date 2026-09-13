@@ -22,7 +22,7 @@ Subscription buttonSub = RxView.clicks(mLoginButton).subscribe(aVoid -> {
 
 But let's look at a more real-life example.
 
-### Requirements
+## Requirements
 
 I would like to have a reactive login form that updates itself according to the values entered. Such that:
 
@@ -31,12 +31,12 @@ I would like to have a reactive login form that updates itself according to the 
   * It only shows a login button once the username and password have been validated
   * It lets me know that values I entered for each field are correct so I can start working on the next field.
 
-### Our tools
+## Our tools
 
   * I'll be using [Android Studio](https://developer.android.com/studio/index.html) here, but you should feel free to use whatever floats your boat.
   * The libraries [ButterKnife](http://jakewharton.github.io/butterknife/) ,  [RxBinding](https://github.com/JakeWharton/RxBinding) & [RetroLambda](https://github.com/evant/gradle-retrolambda). You can see the versions I used [here](https://github.com/mplacona/RXLogin/blob/master/app/build.gradle).
 
-### The form
+## The form
 
 You can download the entire project from [my GitHub repo](https://github.com/mplacona/RXLogin), or follow this tutorial.
 
@@ -143,7 +143,7 @@ Also, the login button is displaying, and one of our initial requirements was th
 
 We will add this functionality now by adding three new `Observables` to our class and subscribing to them to check for when values change and become valid.
 
-### Validation
+## Validation
 
 I want to validate that the username is in fact an email address. The easiest way we can do this is by using a regular expression. The [EmailRegex](https://emailregex.com/) website has a good one we can use here. So we will just copy that and create a new method called `isValidLogin` that returns a boolean to indicate whether the email is valid or not.
 
@@ -165,7 +165,7 @@ private boolean isValidPassword(CharSequence value) {
 
 Again, feel free to modify this to do whatever you want it to do. There are regular expression recipes all over the internet so just search for something that works for you.
 
-### Putting it all together
+## Putting it all together
 
 We need to start using these validation methods with our code, so go ahead and create three new `Observables` in the `onCreate` method.
 
@@ -206,7 +206,7 @@ The first and second `Observers` are similar and will change the drawable in th
 
 The third `Observer`  will change the button to visible once the values are correct, and hide it if the values become incorrect again.
 
-### React to all the things
+## React to all the things
 
 Reactive programming is a lot of fun, and once you get started with it you will want to find an excuse to subscribe to every one of your data streams. Bet you think our little form works way better now than before.
 
