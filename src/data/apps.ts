@@ -36,7 +36,7 @@ export const apps: App[] = [
     slug: 'green-room',
     name: 'Green Room: Talk Day Prep',
     tagline: 'Walk on prepared.',
-    status: 'Available now on the App Store',
+    status: 'For conference speakers',
     appStoreUrl: 'https://apps.apple.com/gb/app/green-room-talk-day-prep/id6802224870',
     relatedLinks: [
       {
