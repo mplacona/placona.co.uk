@@ -41,7 +41,7 @@ export const apps: App[] = [
     relatedLinks: [
       {
         href: '/apps/green-room/speaker-prep-checklist/',
-        label: 'What speakers need from you',
+        label: 'The speaker-prep checklist',
         description:
           'A checklist for conference organisers, covering the room, AV, running order and contact details speakers need before they go on stage. Free to copy, no app required.'
       }
