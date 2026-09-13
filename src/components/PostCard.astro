@@ -13,12 +13,12 @@ const topic = categories?.[0];
 {/* The title is the link. A separate "Read article" repeated on every row was
     noise, not navigation. */}
 <article class="post-card">
-  <div class="post-rail">
-    <p class="post-date"><time datetime={iso}>{shown}</time></p>
-    {topic && <span class="chip">{topic}</span>}
-  </div>
   <div>
     <h2><a href={href}>{title}</a></h2>
     {description && <p>{description}</p>}
   </div>
+  <p class="post-meta-col">
+    <time datetime={iso}>{shown}</time>
+    {topic && <><br />{topic}</>}
+  </p>
 </article>

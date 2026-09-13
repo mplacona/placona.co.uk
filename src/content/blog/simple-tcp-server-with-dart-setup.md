@@ -1,6 +1,6 @@
 ---
 title: "Simple HTTP server with Dart - Setup"
-description: "In this article, I will demonstrate how easy it is to create a simple TCP HTTP server with Dart."
+description: "The first step in building a simple HTTP server with Dart: setting up a bare-bones server that just responds with an HTTP 200 status code."
 pubDate: "2014-04-01T22:15:22.000Z"
 slug: "simple-tcp-server-with-dart-setup"
 categories: ["Dart"]
@@ -83,7 +83,7 @@ We could have also used that to check if there were any cookies in the request, 
 
 In the next article, I will cover how we can turn this into an echo server, which will move us further towards the final project. Stay tuned.
 
-### UPDATE
+## UPDATE
 
 <a title="Seth Ladd on Google+" href="http://google.com/+sethladd" target="_blank">Seth Ladd</a> also quite rightly pointed out (in his comment bellow) that what I'm really talking about here is an HTTP Server as opposed to to a TCP Server (i.e. I'm talking about a higher level protocol that actually runs on top of TCP). The initial intent with this article was to make it a big write up about everything TCP, but then it turned out to be massive, and I decided to simplify and split it up in smaller articles, which for the purposes of this article took TCP slightly out of context. Fear not though, as the following code shows you how to accomplish it via TCP instead.
 

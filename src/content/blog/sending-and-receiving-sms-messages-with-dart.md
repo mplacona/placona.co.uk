@@ -16,7 +16,7 @@ The library itself is a wrapper to the [Twilio API](https://www.twilio.com/docs/
 
 The principle is that all you should need to do before you can get coding, is <a title="Create a Twilio account" href="https://www.twilio.com/" target="_blank">crate a Twilio account</a>, and make a note of the account ID and the token it will provide you with. After that, you can get coding.
 
-### <span style="text-decoration: underline;">Intro</span>
+## <span style="text-decoration: underline;">Intro</span>
 
 In a Dart application, you can do the following to get the library installed:
 
@@ -38,7 +38,7 @@ This gives you a Twilio object, and you can use that to call the methods in the 
 
 Everything being OK so far, you should now be able to actually send an SMS message using the number Twilio gave you when you created your account. You can also find this on your Twilio account under <a title="Twilio numbers" href="https://www.twilio.com/user/account/phone-numbers/incoming" target="_blank">the numbers section</a>.
 
-### <span style="text-decoration: underline;">Sending</span>
+## <span style="text-decoration: underline;">Sending</span>
 
 An SMS message is composed of three main parts:
 
@@ -87,7 +87,7 @@ If you execute this code, you will be able to verify two things:
   * you've now got a new message on the phone you've chosen
   * under your Twilio account, you will also be able to read this message if you <a title="Twilio - View logs" href="https://www.twilio.com/user/account/log/messages" target="_blank">view the logs</a>.
 
-### <span style="text-decoration: underline;">Listing</span>
+## <span style="text-decoration: underline;">Listing</span>
 
 I bet you're somehow impressed by now as to how little you actually had to code to get our little application to send an SMS message. But we need a way to be able to retrieve those messages from the server without having to have a device in our hands all the time. the next thing we're going to do, is come up with a way to list our messages. We can do that by using the method `readSMSList`, which does exactly what it says in the tin, it will give you a list of all the SMS messages in an account.
 
@@ -97,7 +97,7 @@ twilio.readSMSList().then((response){
 }).catchError((error) => print(error.toString()));
 ```
 
-### <span style="text-decoration: underline;">Reading</span>
+## <span style="text-decoration: underline;">Reading</span>
 
 Very simple and very neat. Get a JSON packet back, and iterate through the results. Each of the messages has a `sid`, which is the ID for this message, so the next thing we need to do, is to be able to drill down to each of the messages from a list of messages.
 
@@ -109,7 +109,7 @@ twilio.readSMS(sId).then((response) => print(response.toString())).catchError((e
 
 And the above will give you all the information pertaining a single message.
 
-### <span style="text-decoration: underline;">Wrap up...</span>
+## <span style="text-decoration: underline;">Wrap up...</span>
 
 So in this article, we've gone through the following:
 

@@ -2,6 +2,7 @@
 import { getCollection, render, type CollectionEntry } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PostCard from '../components/PostCard.astro';
+import { groupPostsByYear, relatedPosts } from '../utils/posts';
 
 type PostProps = { kind: 'post'; post: CollectionEntry<'blog'> };
 type ArchiveProps = {
@@ -43,6 +44,7 @@ let Content: any;
 let newer: CollectionEntry<'blog'> | undefined;
 let older: CollectionEntry<'blog'> | undefined;
 let readingMinutes = 0;
+let related: CollectionEntry<'blog'>[] = [];
 
 if (props.kind === 'post') {
   post = props.post;
@@ -52,6 +54,7 @@ if (props.kind === 'post') {
   const index = allPosts.findIndex((item) => item.id === post!.id);
   newer = allPosts[index - 1];
   older = allPosts[index + 1];
+  related = relatedPosts(post, allPosts);
 
   // Prose only: fenced code is skimmed, not read at prose speed, so counting it
   // inflates the estimate on the more technical posts.
@@ -72,7 +75,12 @@ if (props.kind === 'post') {
       <p class="lede">Page {props.page} of {props.pageCount}.</p>
     </section>
     <section class="post-list" aria-label={`Writing archive page ${props.page}`}>
-      {props.posts.map((post) => <PostCard post={post} />)}
+      {groupPostsByYear(props.posts).map((group) => (
+        <div class="year-group">
+          <p class="year-label">{group.year}</p>
+          {group.posts.map((post) => <PostCard post={post} />)}
+        </div>
+      ))}
     </section>
     <nav class="pagination" aria-label="Writing archive pages">
       {props.page > 2 && <a href={props.page === 3 ? '/page2/' : `/page${props.page - 1}/`}>← Newer</a>}
@@ -91,6 +99,12 @@ if (props.kind === 'post') {
     categories={post!.data.categories}
   >
     <article class="post">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">WRITING</a>
+        {post!.data.categories?.[0] && (
+          <><span class="sep" aria-hidden="true">/</span><a href={`/search/?q=${encodeURIComponent(post!.data.categories[0])}`}>{post!.data.categories[0].toUpperCase()}</a></>
+        )}
+      </nav>
       <header class="post-header">
         <h1>{post!.data.title}</h1>
         {post!.data.description && <p class="lede">{post!.data.description}</p>}
@@ -98,12 +112,41 @@ if (props.kind === 'post') {
           <time datetime={post!.data.pubDate.toISOString().slice(0, 10)}>
             {post!.data.pubDate.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
           </time>
-          {post!.data.categories?.map((category) => <span class="chip">{category}</span>)}
           <span class="sep" aria-hidden="true">·</span>
           <span>{readingMinutes} min read</span>
+          <span class="sep" aria-hidden="true">·</span>
+          <span>Marcos Placona</span>
         </p>
       </header>
       <div class="prose"><Content /></div>
+
+      {post!.data.categories && post!.data.categories.length > 0 && (
+        <div class="tag-row">
+          <p class="eyebrow">Filed under</p>
+          <div class="tag-list">
+            {post!.data.categories.map((category) => (
+              <a class="tag" href={`/search/?q=${encodeURIComponent(category)}`}>{category}</a>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {related.length > 0 && (
+        <section class="related" aria-labelledby="related-heading">
+          <p class="eyebrow" id="related-heading">More on this</p>
+          <div class="related-list">
+            {related.map((item) => (
+              <a href={`/${item.data.slug}/`}>
+                <time datetime={item.data.pubDate.toISOString().slice(0, 10)}>
+                  {item.data.pubDate.toLocaleDateString('en-GB', { month: 'short', year: 'numeric' }).toUpperCase()}
+                </time>
+                <span class="related-title">{item.data.title}</span>
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
+
       <nav class="article-nav" aria-label="Article navigation">
         {newer && (
           <a class="nav-prev" href={`/${newer.data.slug}/`} rel="prev">
