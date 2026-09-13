@@ -17,23 +17,23 @@ When you’re managing multiple domains, especially if you’re working on SEO f
 
 I love using **Cloudflare Workers** for everythign I can, and this seemed like the perfect opportunity. Let’s break down why this approach works, and how it  benefits my SEO strategy.
 
-### What’s the Goal?
+## What’s the Goal?
 
 In my case, I have a domain, `postbits.net`, that I want to redirect to my another project, `microwidgets.dev`. Instead of just setting up a simple redirect, I’ve chosen to add a little intelligence into the mix by using a Cloudflare Worker. Specifically, I’m blocking Googlebots from crawling `postbits.net` and ensuring that all other traffic is cleanly redirected to `microwidgets.dev` with a 301 status code.
 
-### Why Block Googlebot?
+## Why Block Googlebot?
 
 You might be wondering: why would you block Googlebot in the first place? After all, isn’t SEO all about getting Google to crawl your site?
 
 True—but it’s also about **controlling** what Google indexes. I want Google to focus on my main project, `microwidgets.dev`, not the legacy, less important or in this case slightly polluted domain. By blocking Googlebot from the redirecting domain, I’m essentially telling Google to concentrate its efforts on my primary website and not on the other domain.
 
-### The Power of 301 Redirects
+## The Power of 301 Redirects
 
 A 301 redirect tells search engines that the domain or page has permanently moved. It’s one of the most effective ways to pass SEO value from one domain to another. By using a 301 redirect from `postbits.net` to `microwidgets.dev`, I’m transferring any link equity or authority that `postbits.net` has accumulated over time directly to `microwidgets.dev`.
 
 The key here is **link consolidation**. Even if `postbits.net` has a few backlinks, I don’t want those to go to waste. With a well-placed 301 redirect, those backlinks now contribute to the SEO strength of `microwidgets.dev`, improving its Domain Rating.
 
-### How Cloudflare Workers Make It Easy
+## How Cloudflare Workers Make It Easy
 
 Cloudflare Workers allow you to run lightweight JavaScript code directly on Cloudflare’s edge network. This is perfect for handling requests before they hit your server, meaning you can create efficient rules for bots and redirects without messing with your backend infrastructure.
 
@@ -45,7 +45,7 @@ Here’s a quick rundown of what I did:
 
 With this setup, I’m ensuring that any SEO value associated with `postbits.net` is passed directly to my main site, while keeping Google’s focus sharp on `microwidgets.dev`.
 
-### The Benefits for Your SEO
+## The Benefits for Your SEO
 
 By redirecting one domain to another while controlling Googlebot, you get a few benefits that can directly contribute to boosting your Domain Rating (DR):
 
@@ -55,11 +55,11 @@ By redirecting one domain to another while controlling Googlebot, you get a few 
    
 3. **Focus on One Domain**: By directing all traffic to a single site, you reduce fragmentation. This means all SEO signals (backlinks, traffic, etc.) are focused on `microwidgets.dev`, which in turn can improve your DR over time.
 
-### How I did it
+## How I did it
 
 Here’s exactly how I set up my Cloudflare Worker and configured the DNS for the `postbits.net` domain to redirect traffic to `microwidgets.dev` while blocking Googlebot. You can follow these steps to implement it on your own domains.
 
-#### 1. Add Your Domain to Cloudflare
+### 1. Add Your Domain to Cloudflare
 
 First, if you haven't already, add the domain you want to redirect, in my case `postbits.net`, replace that with whatever domain you bought:
 
@@ -70,7 +70,7 @@ First, if you haven't already, add the domain you want to redirect, in my case `
 
 Once this is done, Cloudflare will manage your DNS, and you can proceed with the rest of the setup.
 
-#### 2. Configure DNS for the Domain
+### 2. Configure DNS for the Domain
 
 Next, set up DNS records for `postbits.net` within Cloudflare. This is essential to ensure all traffic is routed through Cloudflare so that the Worker can intercept and process requests.
 
@@ -87,7 +87,7 @@ Next, set up DNS records for `postbits.net` within Cloudflare. This is essential
 
 These settings ensure that both `postbits.net` and `www.postbits.net` are properly routed through Cloudflare’s network.
 
-#### 3. Create and Deploy the Cloudflare Worker
+### 3. Create and Deploy the Cloudflare Worker
 
 Now, let’s set up the Worker that will handle the redirect and block Googlebot. Follow these steps:
 
@@ -115,7 +115,7 @@ async function handleRequest(request) {
 
 -  **Deploy** the Worker by clicking the "Deploy" button.
 
-#### 4. Set Up Routes for the Worker
+### 4. Set Up Routes for the Worker
 
 Now, you need to set up a route so that the Worker runs for all traffic to `postbits.net`.
 
@@ -125,13 +125,13 @@ Now, you need to set up a route so that the Worker runs for all traffic to `post
 
 This ensures that any requests to `postbits.net` or `www.postbits.net` will trigger the Worker, allowing it to perform the redirect and block Googlebot.
 
-#### 5. Check SSL Settings
+### 5. Check SSL Settings
 
 For the redirect to work smoothly over HTTPS, ensure that **SSL/TLS** is properly configured in Cloudflare.
 
 - Go to the **SSL/TLS** tab in Cloudflare and set the mode to **Full** or **Full (Strict)**. This ensures secure traffic handling between Cloudflare and your origin server, even if you’re just redirecting.
 
-### Final Thoughts
+## Final Thoughts
 
 Setting up smart redirects with Cloudflare Workers might seem like a small tweak, but it can have a significant impact on your SEO strategy. By blocking bots and redirecting traffic correctly, you ensure that your primary site gets all the SEO value, while avoiding potential penalties or wasted crawl budget on irrelevant domains.
 

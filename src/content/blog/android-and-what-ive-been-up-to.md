@@ -1,6 +1,6 @@
 ---
 title: "Android and what I've been up to"
-description: "I jumped into the Android bandwagon about two months ago, and so far I can't cease to be impressed."
+description: "First impressions after two months on Android: what impressed me most about app installation, openness, and building for the platform."
 pubDate: "2010-07-27T16:20:18.000Z"
 slug: "android-and-what-ive-been-up-to"
 categories: ["Android"]

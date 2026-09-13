@@ -10,15 +10,15 @@ draft: false
 
 The jQuery UI team have done it again. This Friday is only a point release to the jQuery UI 1.7 <a href="/jquery-ui-1-7-released/" target="_blank">released last week</a> but with some great improvements.
 
-### Droppable 
+## Droppable 
 
   * Fixed: Droppable: option accept setter .droppable('option', 'accept', selector) fails (<a title="http://dev.jqueryui.com/ticket/4278" href="http://bugs.jqueryui.com/ticket/4278" target="_blank">4278</a>) 
 
-### Resizable 
+## Resizable 
 
   * Fixed: Resizable with containment boundary - aspectRatio breaks (<a title="http://dev.jqueryui.com/ticket/4199" href="http://bugs.jqueryui.com/ticket/4199" target="_blank">4199</a>) 
 
-### Selectable 
+## Selectable 
 
   * Fixed: Selectable: option appendTo is ignored, helper always appends to body (<a title="http://dev.jqueryui.com/ticket/4341" href="http://bugs.jqueryui.com/ticket/4341" target="_blank">4341</a>) 
 

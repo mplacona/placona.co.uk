@@ -14,7 +14,7 @@ Publishing usually brings a great deal of improvement, and <a title="Apache 101 
 
 It's been proved that loading assets from different domains helps "trick" the browser into multi-tasking, so it doesn't have to wait until **asset1** on the domain **domain.com** is loaded to start downloading **asset2** on the same domain.
 
-### <span style="text-decoration: underline;">The first approach:</span>
+## <span style="text-decoration: underline;">The first approach:</span>
 
 Most people simply create sub-domains such as **assets1. domain.com**, **assets2.domain.com** and so on. The assets are then called from the sub-domains, so the browser "thinks" it's coming from a different location, when in reality, they normally always target the same structure.
 
@@ -24,7 +24,7 @@ A downside to it is that you're still hitting your webserver, and now even harde
 
 <img src="/images/legacy/cdn_mockup1.png" alt="Sub-domains approach" width="461" height="242" />
 
-### <span style="text-decoration: underline;">The second approach:</span>
+## <span style="text-decoration: underline;">The second approach:</span>
 
 This consists in having a second webserver only to load assets while your main webserver deals with the other calls. A summary of this would be something like:
 
@@ -34,7 +34,7 @@ Basically what this horribly mocked-up image is trying to say is: You have two w
 
 The concept is really pretty, but it also means you'll now have to maintain two webservers. The second one (lighttpd) should really be a one off, as once it's configured, it will just serve static contents, but still, it's two webservers on your server, and if anything goes wrong, it's a bit difficult to find what and where it went wrong.
 
-### <span style="text-decoration: underline;">The third approach:</span>
+## <span style="text-decoration: underline;">The third approach:</span>
 
 This is by far my favourite one. Basically it consists in hosting your assets somewhere else, where you wont have to maintain or keep an eye on performance, as this server's primary task is to serve this kind of content. A "Buzz Word" really springs to mind here, as we are talking about the so called "**<a title="Cloud Computing" href="https://en.wikipedia.org/wiki/Cloud_computing" target="_blank">Cloud Computing</a>**". Basically it consists of a network of servers in strategic places. We call it strategic places, as the servers are located near you. Well, not near you, but from your IP, it redirects you to the closest server, from where you're gonna be picking up the assets as they are needed.
 

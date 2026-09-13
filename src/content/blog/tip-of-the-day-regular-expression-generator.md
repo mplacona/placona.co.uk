@@ -1,6 +1,6 @@
 ---
 title: "Tip of the day: Regular Expression Generator"
-description: "I have just came across this very nice service which promises to write Regular Expressions for you."
+description: "A handy service that writes regular expressions for you and translates the pattern into several programming languages, sparing you the pain."
 pubDate: "2009-03-05T00:00:00.000Z"
 slug: "tip-of-the-day-regular-expression-generator"
 categories: ["technology"]

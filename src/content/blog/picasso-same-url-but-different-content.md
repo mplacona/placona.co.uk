@@ -17,7 +17,7 @@ Picasso.with(context).load("http://i.imgur.com/DvpvklR.png").into(imageView);
 
 Doing the same thing without the library is a whole different story, and Picasso even takes care of [caching and transformations](https://square.github.io/picasso/#features) for me.
 
-### Until I hit a snag
+## Until I hit a snag
 
 Today I was working on a [demo](https://medium.com/@mplacona/exploring-the-vastness-of-realm-a-cross-platform-mobile-database-cda48ad76616) with a [RecyclerView](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.html) that loads random images from the internet to display as icons for each one of the items. The naive implementation on my View Adapter looked like this:
 
@@ -105,7 +105,7 @@ Now let's look at the logs:
 
 Each one of my URLs now started a request that was _created_, _enqueued_ and _executed_. And sure enough, now each one of the items on my RecyclerView has a different image for its icon.
 
-### But there is a better way. Right?
+## But there is a better way. Right?
 
 I found a few threads like [this one](https://github.com/square/picasso/issues/438) indicating that a combination of the [invalidate()](https://square.github.io/picasso/2.x/picasso/com/squareup/picasso/Picasso.html#invalidate-java.lang.String-) method,  [MemoryPolicy](https://square.github.io/picasso/2.x/picasso/com/squareup/picasso/MemoryPolicy.html) and [NetworkPolicy](https://square.github.io/picasso/2.x/picasso/com/squareup/picasso/NetworkPolicy.html) should get this to work. So something like this should do the trick right?
 
@@ -124,6 +124,6 @@ Nope! Doing so presented the same behaviour as before, where only one item is ev
 
 So for the time being, I will stick to the solution where I add a query parameter to each one of the images to make sure I always get random results on the same URL.
 
-### Know the solution?
+## Know the solution?
 
 I would love to hear from you what the correct/less hacky solution you found to this problem. Drop a comment bellow if you know how to make this work without having to fiddle with the URL.
