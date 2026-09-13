@@ -1,6 +1,6 @@
 ---
 title: "Mozilla Firefox 3 Alpha 1 ready to be downloaded"
-description: "Yes, it seems that Mozilla just released the new version of Firefox codenamed Gran Paradiso."
+description: "Firefox 3 Alpha 1, codenamed Gran Paradiso, is out — first impressions after writing this very post in an early, surprisingly stable build."
 pubDate: "2006-12-11T00:00:00.000Z"
 slug: "mozilla-firefox-3-alpha-1-ready-to-be-downloaded"
 categories: ["Misc"]

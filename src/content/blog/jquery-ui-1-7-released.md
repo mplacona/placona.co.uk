@@ -12,25 +12,25 @@ The <a href="http://blog.jqueryui.com" target="_blank">jQuery UI team</a> has ma
   
 Some of the changes made by the jQuery team today were:
 
-  * #### jQuery 1.3 compatibility
+  * **jQuery 1.3 compatibility**
 
-  * #### Revamped and optimized plugins
+  * **Revamped and optimized plugins**
 
-  * #### CSS framework
+  * **CSS framework**
 
-  * #### Themeroller v2
+  * **Themeroller v2**
 
-  * #### Demos & Documentation
+  * **Demos & Documentation**
 
-  * #### Full offline documentation
+  * **Full offline documentation**
 
-  * #### Major website improvements
+  * **Major website improvements**
 
-  * #### CSS framework and themes on Google AJAX Libraries API
+  * **CSS framework and themes on Google AJAX Libraries API**
 
-  * #### Themes bundle
+  * **Themes bundle**
 
-  * #### A new dedicated blog
+  * **A new dedicated blog**
 
 The full post can be found **<a href="http://blog.jqueryui.com/2009/03/jquery-ui-17/" target="_blank">here</a>** with all the details and news, and if you want to download the library, simply click <a href="https://jqueryui.com/download" target="_blank"><strong>here</strong></a>
   

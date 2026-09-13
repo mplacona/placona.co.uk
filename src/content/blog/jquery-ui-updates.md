@@ -1,6 +1,6 @@
 ---
 title: "jQuery UI Updates"
-description: "The jQuery UI team has just started a weekly series on what's happening with jQuery UI."
+description: "The jQuery UI team's new weekly digest of releases and news, including a first look at which companies are already using jQuery UI in production."
 pubDate: "2009-03-13T00:00:00.000Z"
 slug: "jquery-ui-updates"
 categories: ["Javascript"]

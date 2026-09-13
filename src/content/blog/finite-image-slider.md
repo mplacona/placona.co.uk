@@ -1,6 +1,6 @@
 ---
 title: "Finite image slider"
-description: "I've been asked to come up with an image slider prototype for something new we were doing at work."
+description: "Building an image slider prototype at work with two unusual requirements that ruled out every existing jQuery plugin, so I built one myself."
 pubDate: "2012-08-26T00:08:25.000Z"
 slug: "finite-image-slider"
 categories: ["Javascript"]

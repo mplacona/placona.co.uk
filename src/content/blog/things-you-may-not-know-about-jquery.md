@@ -1,6 +1,6 @@
 ---
 title: "Things you may not know about jQuery"
-description: "I just came across this very interesting list of things you can do with jQuery ."
+description: "A quick pointer to a great list of lesser-known jQuery tricks worth bookmarking, including one gem that has nothing to do with jQuery at all."
 pubDate: "2009-02-19T00:00:00.000Z"
 slug: "things-you-may-not-know-about-jquery"
 categories: ["javascript"]
