@@ -2,11 +2,23 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PostCard from '../components/PostCard.astro';
+import { groupPostsByYear } from '../utils/posts';
 
 const all = (await getCollection('blog', ({ data }) => !data.draft))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 const posts = all.slice(0, 10);
 const total = all.length;
+const groups = groupPostsByYear(posts);
+
+// Powers the instant dropdown below the homepage search box. The same
+// title+description substring match as /search/, just rendered as suggestions
+// instead of a full filtered list.
+const searchData = all.map((post) => ({
+  title: post.data.title,
+  description: post.data.description,
+  url: `/${post.data.slug}/`
+}));
+const searchDataJson = JSON.stringify(searchData).replace(/</g, '\\u003c');
 ---
 
 <BaseLayout
@@ -14,25 +26,183 @@ const total = all.length;
   canonicalPath="/"
 >
   <section class="hero">
-    <p class="eyebrow">Developer relations · software · independent products</p>
-    <h1>Developer relations, software and useful side quests.</h1>
-    <p>I write about building things for developers, independent products and the occasional useful side quest.</p>
-    <div class="byline">
-      <img src="/images/marcos_bw_200_optim.jpg" alt="" width="44" height="44" loading="lazy" />
-      <p>
-        <strong>Marcos Placona</strong> — developer relations leader and consultant,
-        building small local-first apps. <a href="/about/">More about me</a>.
-      </p>
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Developer relations · software · independent products</p>
+        <h1>Developer relations, from someone who still ships code.</h1>
+        <p>I write about developer relations, running AI on hardware I own, and the small native apps I build as side quests.</p>
+        <div class="byline">
+          <img src="/images/marcos_bw_200_optim.jpg" alt="" width="44" height="44" loading="lazy" />
+          <p>
+            <strong>Marcos Placona</strong> — developer relations leader, consultant
+            and builder of small local-first apps. <a href="/about/">More about me</a>.
+          </p>
+        </div>
+      </div>
+      <div class="finder">
+        <form class="finder-form" action="/search/" method="get">
+          <label class="search-label" for="quick-search">{`Search ${total} posts`}</label>
+          <input
+            id="quick-search"
+            class="finder-input"
+            type="search"
+            name="q"
+            placeholder={`Search ${total} posts`}
+            autocomplete="off"
+            role="combobox"
+            aria-autocomplete="list"
+            aria-expanded="false"
+            aria-controls="quick-search-results"
+          />
+          <ul id="quick-search-results" class="finder-results" role="listbox" hidden></ul>
+        </form>
+      </div>
+      <div class="hero-terminal" aria-hidden="true">
+        <div class="terminal">
+          <div class="terminal-bar">
+            <span class="terminal-dot terminal-dot-red"></span>
+            <span class="terminal-dot terminal-dot-yellow"></span>
+            <span class="terminal-dot terminal-dot-green"></span>
+            <span class="terminal-title">marcos@mac-mini — zsh</span>
+          </div>
+          <div class="terminal-body">
+            <div class="terminal-line">
+              <span class="terminal-prompt">marcos@mac-mini ~ %</span>
+              <span class="terminal-cmd">ls shipped/</span>
+            </div>
+            <div class="terminal-line terminal-output">devrel-bridge/  green-room/  mentiondrop/  voicecrisp/</div>
+            <div class="terminal-line">
+              <span class="terminal-prompt">marcos@mac-mini ~ %</span>
+              <span class="terminal-cmd">whoami</span>
+            </div>
+            <div class="terminal-line terminal-output">developer relations · software · independent apps</div>
+            <div class="terminal-line">
+              <span class="terminal-prompt">marcos@mac-mini ~ %</span>
+              <span class="terminal-cursor"></span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
+
+  <script type="application/json" id="quick-search-data" is:inline set:html={searchDataJson} />
   <section class="content-section" aria-labelledby="latest-writing">
     <div class="section-heading">
       <h2 id="latest-writing">Latest writing</h2>
       <p class="eyebrow">{total} articles</p>
     </div>
     <div class="post-list">
-      {posts.map((post) => <PostCard post={post} />)}
+      {groups.map((group) => (
+        <div class="year-group">
+          <p class="year-label">{group.year}</p>
+          {group.posts.map((post) => <PostCard post={post} />)}
+        </div>
+      ))}
     </div>
     <p><a class="button-secondary" href="/search/">Browse all writing</a></p>
   </section>
 </BaseLayout>
+
+<script is:inline>
+  (() => {
+    const data = JSON.parse(document.getElementById('quick-search-data').textContent);
+    const input = document.getElementById('quick-search');
+    const list = document.getElementById('quick-search-results');
+    let activeIndex = -1;
+
+    const matchesFor = (needle) => {
+      needle = needle.trim().toLowerCase();
+      if (!needle) return [];
+      return data.filter((post) => `${post.title} ${post.description}`.toLowerCase().includes(needle));
+    };
+
+    const close = () => {
+      list.hidden = true;
+      list.replaceChildren();
+      input.setAttribute('aria-expanded', 'false');
+      input.removeAttribute('aria-activedescendant');
+      activeIndex = -1;
+    };
+
+    const render = (matches) => {
+      list.replaceChildren();
+      if (!matches.length) {
+        close();
+        return;
+      }
+      matches.slice(0, 8).forEach((post, i) => {
+        const li = document.createElement('li');
+        li.id = `quick-search-option-${i}`;
+        li.setAttribute('role', 'option');
+        const a = document.createElement('a');
+        a.href = post.url;
+        a.tabIndex = -1;
+        const title = document.createElement('span');
+        title.className = 'result-title';
+        title.textContent = post.title;
+        a.appendChild(title);
+        if (post.description) {
+          const desc = document.createElement('span');
+          desc.className = 'result-desc';
+          desc.textContent = post.description;
+          a.appendChild(desc);
+        }
+        li.appendChild(a);
+        list.appendChild(li);
+      });
+      list.hidden = false;
+      input.setAttribute('aria-expanded', 'true');
+      activeIndex = -1;
+      input.removeAttribute('aria-activedescendant');
+    };
+
+    const setActive = (index) => {
+      const items = Array.from(list.children);
+      items.forEach((li) => li.classList.remove('active'));
+      if (index < 0 || index >= items.length) {
+        activeIndex = -1;
+        input.removeAttribute('aria-activedescendant');
+        return;
+      }
+      activeIndex = index;
+      items[index].classList.add('active');
+      items[index].scrollIntoView({ block: 'nearest' });
+      input.setAttribute('aria-activedescendant', items[index].id);
+    };
+
+    input.addEventListener('input', () => render(matchesFor(input.value)));
+
+    input.addEventListener('keydown', (event) => {
+      const items = Array.from(list.children);
+      if (event.key === 'ArrowDown') {
+        if (list.hidden || !items.length) return;
+        event.preventDefault();
+        setActive((activeIndex + 1) % items.length);
+      } else if (event.key === 'ArrowUp') {
+        if (list.hidden || !items.length) return;
+        event.preventDefault();
+        setActive((activeIndex - 1 + items.length) % items.length);
+      } else if (event.key === 'Enter') {
+        if (activeIndex >= 0 && items[activeIndex]) {
+          event.preventDefault();
+          window.location.href = items[activeIndex].querySelector('a').href;
+        }
+        // Otherwise fall through to the form's normal GET submit, which lands
+        // on /search/?q=... exactly like typing there directly.
+      } else if (event.key === 'Escape') {
+        close();
+      }
+    });
+
+    list.addEventListener('mousedown', (event) => {
+      // mousedown, not click: fires before the input's blur hides the list.
+      const li = event.target.closest('li');
+      if (li) window.location.href = li.querySelector('a').href;
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!event.target.closest('.finder-form')) close();
+    });
+  })();
+</script>

@@ -41,8 +41,8 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
   const count = document.querySelector('#result-count');
   const items = Array.from(document.querySelectorAll('#results > li'));
 
-  input.addEventListener('input', (event) => {
-    const needle = event.target.value.trim().toLowerCase();
+  const filter = (needle) => {
+    needle = needle.trim().toLowerCase();
     let shown = 0;
     for (const li of items) {
       const match = !needle || li.dataset.haystack.includes(needle);
@@ -52,5 +52,14 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
     count.textContent = needle
       ? `${shown} result${shown === 1 ? '' : 's'}`
       : `${items.length} articles`;
-  });
+  };
+
+  input.addEventListener('input', (event) => filter(event.target.value));
+
+  // Arriving from the homepage's search box or a topic pill (?q=...).
+  const initial = new URLSearchParams(window.location.search).get('q');
+  if (initial) {
+    input.value = initial;
+    filter(initial);
+  }
 </script>
