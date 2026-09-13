@@ -12,6 +12,7 @@ export type App = {
   supportEmail: string;
   supportGuidance: string;
   appStoreUrl?: string;
+  relatedLinks?: { href: string; label: string; description: string }[];
 };
 
 export const apps: App[] = [
@@ -37,6 +38,14 @@ export const apps: App[] = [
     tagline: 'Walk on prepared.',
     status: 'Available now on the App Store',
     appStoreUrl: 'https://apps.apple.com/gb/app/green-room-talk-day-prep/id6802224870',
+    relatedLinks: [
+      {
+        href: '/apps/green-room/speaker-prep-checklist/',
+        label: 'What speakers need from you',
+        description:
+          'A checklist for conference organisers, covering the room, AV, running order and contact details speakers need before they go on stage. Free to copy, no app required.'
+      }
+    ],
     description: 'Green Room turns a conference speaking engagement into a dated flight plan, so the right preparation happens at the right time.',
     boundaryHeading: 'A timeline for the things that derail a talk.',
     boundary: 'Build a flight plan around an event date, surface blockers before they become stage-day surprises, then turn debrief lessons into checks for the next event. The first event is free; a one-time lifetime unlock adds unlimited events, specialist protocols, your personal runbook and export.',

@@ -27,6 +27,17 @@ const { app } = Astro.props;
       </div>
       <p>{app.boundary}</p>
     </section>
+    {app.relatedLinks && (
+      <section class="content-section">
+        <p class="eyebrow">Also useful</p>
+        {app.relatedLinks.map((link) => (
+          <div class="related-link">
+            <h2><a href={link.href}>{link.label}</a></h2>
+            <p>{link.description}</p>
+          </div>
+        ))}
+      </section>
+    )}
     <section class="content-section callout">
       <p class="eyebrow">Privacy</p>
       <h2>Private by design.</h2>
@@ -35,3 +46,8 @@ const { app } = Astro.props;
     </section>
   </article>
 </BaseLayout>
+
+<style>
+  .related-link h2 { margin: 0 0 0.4rem; font-size: clamp(1.3rem, 2.3vw, 1.7rem); }
+  .related-link p { margin: 0; max-width: 42rem; color: var(--ink-2); }
+</style>
