@@ -211,7 +211,7 @@ captureButton.setOnTouchListener { _, event ->
 
 If you are running CameraX version `1.0.0-alpha01` you will notice a red squiggly line under the `startRecording` and `stopRecording` methods. This is because this functionality is still highly experimental and likely to change and is still restricted.
 
-<img class="alignnone size-full" src="/images/2019/05/camerax-04.png" alt="Error with " />
+<img class="alignnone size-full" src="/images/2019/05/camerax-04.png" alt="Red squiggly error under the experimental startRecording and stopRecording methods" />
 
 You can tell the compiler to ignore those by adding the following to the top of this class:
 

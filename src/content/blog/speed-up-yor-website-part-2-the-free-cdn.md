@@ -14,7 +14,7 @@ Basically, as I've already stated on my <a title="Speed up your website - Part 
   
 In other words, if you're in Japan, why should you have to wait for the data to travel from Europe, if there's a server just next door to you.
 
-![CDN With multiple=](/images/legacy/cdn_mockup3.png)
+![CDN with multiple servers around the world](/images/legacy/cdn_mockup3.png)
 
 What you can see from the image, is that you have all of your servers in a "<a title="Wikipedia - Cloud Computing" href="https://en.wikipedia.org/wiki/Cloud_computing" target="_blank">Cloud of Computers</a>", and the requests are mapped to the nearest one. In some cases you have more than one server per country or region. The beauty of it, is that applications deployed on the cloud are highly <a title="Wikipedia - Scalability" href="https://en.wikipedia.org/wiki/Scalability" target="_blank">scalable</a>, and you normally don't need to manage the servers, as they are managed by the provider.
   
