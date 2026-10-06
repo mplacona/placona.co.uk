@@ -43,6 +43,9 @@ const { app } = Astro.props;
       <h2>Private by design.</h2>
       <p>{app.privacy}</p>
       <a class="text-link" href={`/apps/${app.slug}/privacy/`}>Read the privacy page <span aria-hidden="true">→</span></a>
+      {app.appStoreUrl && (
+        <p><a class="text-link" href={`/apps/${app.slug}/support/`}>Get support <span aria-hidden="true">→</span></a></p>
+      )}
     </section>
   </article>
 </BaseLayout>
