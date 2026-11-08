@@ -18,5 +18,25 @@ const { app } = Astro.props;
     <h1>Support</h1>
     <p>For support, launch questions or feedback, email <a href={`mailto:${app.supportEmail}`}>{app.supportEmail}</a>.</p>
     <p>{app.supportGuidance}</p>
+    {app.faq && (
+      <>
+        <h2>Frequently asked questions</h2>
+        {app.faq.map((item) => (
+          <>
+            <h3>{item.question}</h3>
+            <p set:html={item.answer} />
+          </>
+        ))}
+      </>
+    )}
+    {app.termsUrl && (
+      <>
+        <h2>Terms and privacy</h2>
+        <p>
+          Use of {app.name} is covered by Apple's <a href={app.termsUrl}>Standard End User License Agreement</a>.
+          See how your data is handled on the <a href={`/apps/${app.slug}/privacy/`}>privacy page</a>.
+        </p>
+      </>
+    )}
   </article>
 </BaseLayout>
