@@ -11,8 +11,16 @@ const { app } = Astro.props;
 <BaseLayout title={`${app.name} — ${app.tagline}`} description={app.description} canonicalPath={`/apps/${app.slug}/`}>
   <article class="app-page">
     <section class="hero">
+      {app.icon && <img class="app-icon" src={app.icon} alt={`${app.name} app icon`} width="128" height="128" />}
       <p class="eyebrow">{app.status}</p>
-      <h1>{app.tagline}</h1>
+      {app.icon ? (
+        <>
+          <h1>{app.name}</h1>
+          <p class="app-subtitle">{app.tagline}</p>
+        </>
+      ) : (
+        <h1>{app.tagline}</h1>
+      )}
       <p class="lede">{app.description}</p>
       {app.appStoreUrl ? (
         <a class="button-secondary" href={app.appStoreUrl}>Download on the App Store</a>
@@ -27,6 +35,14 @@ const { app } = Astro.props;
       </div>
       <p>{app.boundary}</p>
     </section>
+    {app.features && (
+      <section class="content-section">
+        <p class="eyebrow">Highlights</p>
+        <ul class="feature-list">
+          {app.features.map((feature) => <li>{feature}</li>)}
+        </ul>
+      </section>
+    )}
     {app.relatedLinks && (
       <section class="content-section">
         <p class="eyebrow">Also useful</p>
@@ -51,6 +67,11 @@ const { app } = Astro.props;
 </BaseLayout>
 
 <style>
+  .app-icon { display: block; width: 128px; height: 128px; margin-bottom: 1.25rem; border-radius: 22.5%; box-shadow: 0 0 0 1px var(--line); }
+  .app-subtitle { margin: -0.25rem 0 1rem; font-size: 1.25rem; font-weight: 700; color: var(--ink-2); }
+  .feature-list { margin: 0; padding-left: 1.25rem; max-width: 42rem; font-size: 1.1rem; line-height: 1.6; }
+  .feature-list li + li { margin-top: 0.6rem; }
+  .feature-list li::marker { color: var(--accent); }
   .related-link h2 { margin: 0 0 0.4rem; font-size: clamp(1.3rem, 2.3vw, 1.7rem); }
   .related-link p { margin: 0; max-width: 42rem; color: var(--ink-2); }
 </style>
